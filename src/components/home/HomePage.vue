@@ -77,7 +77,9 @@
           </svg>
           <div class="absolute inset-0 bg-white/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        <span class="font-elegant text-sm md:text-base font-medium tracking-wide">联系我们</span>
+        <span class="font-elegant text-sm md:text-base font-medium tracking-wide">
+          {{ t('common.contactUs') }}
+        </span>
         <svg
           class="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1"
           fill="none"
@@ -118,6 +120,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   pageData: {
@@ -128,6 +131,7 @@ const props = defineProps({
 
 const emit = defineEmits(['scroll-down'])
 const router = useRouter()
+const { t } = useI18n()
 
 const scrollDown = () => {
   emit('scroll-down')

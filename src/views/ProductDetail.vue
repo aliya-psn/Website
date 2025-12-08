@@ -180,9 +180,10 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import productConfig from '../data/product.json'
+import { useI18nData } from '../composables/useI18nData'
 
 const route = useRoute()
+const { productData: productConfig } = useI18nData()
 const showQRCodeModal = ref(false)
 const currentImageIndex = ref(0)
 
@@ -192,7 +193,7 @@ const productDetail = computed(() => {
   const productSlug = route.params.slug || route.params.id
 
   // 在所有产品系列中查找产品
-  for (const product of productConfig.products || []) {
+  for (const product of productConfig.value.products || []) {
     if (product.productList) {
       // 通过slug查找
       if (productSlug && typeof productSlug === 'string') {

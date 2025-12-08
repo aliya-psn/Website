@@ -42,7 +42,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import dataSource from '../data/data.json'
+import { useI18nData } from '../composables/useI18nData'
 
 const props = defineProps({
   slug: {
@@ -51,16 +51,18 @@ const props = defineProps({
   }
 })
 
+const { dataSource } = useI18nData()
+
 // 根据 slug 获取关于我们的数据
 const aboutData = computed(() => {
   const aboutMap = {
-    'our-story': dataSource.about?.ourStory,
-    'our-introduction': dataSource.about?.ourIntroduction,
-    'our-technology': dataSource.about?.ourTechnology,
-    'our-strategy': dataSource.about?.ourStrategy
+    'our-story': dataSource.value.about?.ourStory,
+    'our-introduction': dataSource.value.about?.ourIntroduction,
+    'our-technology': dataSource.value.about?.ourTechnology,
+    'our-strategy': dataSource.value.about?.ourStrategy
   }
   
-  return aboutMap[props.slug] || dataSource.about?.ourStory
+  return aboutMap[props.slug] || dataSource.value.about?.ourStory
 })
 </script>
 

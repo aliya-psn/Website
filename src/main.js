@@ -2,9 +2,10 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
-import dataSource from './data/data.json'
+import i18n, { initLocale } from './i18n'
 
-// 设置页面标题
-document.title = dataSource.title
+// 启动应用前根据 IP / localStorage 确定语言
+const resolvedLocale = await initLocale()
+document.title = i18n.global.t('title')
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(i18n).mount('#app')

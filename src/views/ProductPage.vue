@@ -132,9 +132,10 @@
 <script setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import dataSource from '../data/product.json'
+import { useI18nData } from '../composables/useI18nData'
 
 const router = useRouter()
+const { productData: productDataSource } = useI18nData()
 
 const props = defineProps({
   slug: {
@@ -145,7 +146,7 @@ const props = defineProps({
 
 // 根据 slug 获取产品数据
 const productData = computed(() => {
-  const product = dataSource.products?.find(p => p.slug === props.slug)
+  const product = productDataSource.value.products?.find(p => p.slug === props.slug)
   
   return product
 })

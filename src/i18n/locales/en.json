@@ -1,0 +1,396 @@
+{
+  "title": "Beautiful Diary",
+  "home": {
+    "backgroundImage": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "brand": {
+      "name": "Beautiful Diary",
+      "subtitle": "Record Your Beauty",
+      "logo": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+    },
+    "hero": {
+      "title": "Invite You",
+      "subtitle": "Discover Its Beauty"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Timeless Beauty",
+    "description": "We infuse our products with revitalizing, scientifically-rich signature formulas that give skin new life and energy, revealing the miraculous beauty of frozen time.",
+    "buttonText": "Start Experience",
+    "experienceImage": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "productImage": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80"
+  },
+  "origin": {
+    "title": "Brand Origin",
+    "description": "Since its founding in 2020, Beautiful Diary has been committed to combining Eastern traditional beauty wisdom with modern advanced skincare technology. We deeply research the fusion of traditional Chinese herbal essences and modern biotechnology, dedicated to exquisite formulations, exceptional quality, and unparalleled experiences. Beautiful Diary passionately provides top-tier skincare solutions that exceed expectations. Our mission is to enhance quality of life and reveal timeless natural beauty.",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  "footer": {
+    "text": "Registration No.: XXXXXXXXX | Copyright © 2024",
+    "copyright": "ICP Registration No.: Shanghai ICP No. xxx"
+  },
+  "navItems": [
+    {
+      "id": "home",
+      "name": "Home",
+      "hasDropdown": false
+    },
+    {
+      "id": "products",
+      "name": "Product Collections",
+      "hasDropdown": true,
+      "dropdownItems": [
+        {
+          "id": 1,
+          "title": "Life Matrix Collection",
+          "description": "Revealing Youthful Vitality",
+          "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+          "slug": "life-matrix-collection"
+        },
+        {
+          "id": 2,
+          "title": "Platinum Collection",
+          "description": "Luxurious Ultimate Rejuvenation",
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+          "slug": "platinum-collection"
+        },
+        {
+          "id": 3,
+          "title": "Caviar Collection",
+          "description": "Lift and Firm",
+          "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
+          "slug": "caviar-collection"
+        },
+        {
+          "id": 4,
+          "title": "Pure White Collection",
+          "description": "Brighten and Firm",
+          "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
+          "slug": "pure-white-collection"
+        },
+        {
+          "id": 5,
+          "title": "Golden Radiance Collection",
+          "description": "Revitalize and Nourish",
+          "image": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
+          "slug": "golden-radiance-collection"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "hasDropdown": true,
+      "dropdownItems": [
+        {
+          "name": "Our Introduction",
+          "slug": "our-introduction"
+        },
+        {
+          "name": "Our Story",
+          "slug": "our-story"
+        },
+        {
+          "name": "Our Technology",
+          "slug": "our-technology"
+        },
+        {
+          "name": "Our Strategy",
+          "slug": "our-strategy"
+        }
+      ]
+    },
+    {
+      "id": "join",
+      "name": "Join Us",
+      "hasDropdown": false,
+      "slug": "join-us"
+    }
+  ],
+  "about": {
+    "ourStory": {
+      "title": "Our Story",
+      "description": "Rooted in Chinese traditional beauty culture, Beautiful Diary combines millennia of herbal wisdom with modern biotechnology, integrating advanced anti-aging technology with precious natural ingredients. Inspired by the fusion of Eastern aesthetics and modern technology, we meticulously craft top-tier skincare solutions to enhance quality of life and reveal timeless beauty.",
+      "sections": [
+        {
+          "title": "Inheriting Eastern Beauty Wisdom",
+          "description": "China has a long-standing traditional beauty culture, leading innovation in skincare and cosmetics from ancient court secrets to modern technological research. From the herbal essences of the Compendium of Materia Medica to today's modern biotechnology, we continuously inherit and innovate rejuvenating science.",
+          "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+          "title": "Born in China",
+          "description": "Beautiful Diary was born in China and represents domestic high-end beauty brands. We deeply explore traditional Chinese herbal essences, combining modern biotechnology and advanced skincare technology, dedicated to creating exclusive skincare solutions for Asian women. In the context of the new era, Beautiful Diary has become a leader in domestic beauty innovation, and this pioneering approach is shaping the entire industry."
+        }
+      ]
+    },
+    "ourIntroduction": {
+      "title": "Our Introduction",
+      "description": "Beautiful Diary is a domestic beauty brand focused on high-end skincare, committed to combining modern advanced anti-aging technology with precious natural herbal ingredients, providing exceptional skincare experiences for every woman pursuing beauty.",
+      "sections": [
+        {
+          "title": "Brand Philosophy",
+          "description": "Beautiful Diary believes that true beauty comes from inner health and vitality. Through scientific formulations and exquisite craftsmanship, we help skin restore its youthful state and reveal natural beauty."
+        },
+        {
+          "title": "Core Values",
+          "description": "We insist on using the finest raw materials and adopting the most advanced technology to ensure that every product brings significant improvement effects to the skin."
+        }
+      ]
+    },
+    "ourTechnology": {
+      "title": "Our Technology",
+      "description": "Beautiful Diary adopts modern advanced skin repair technology and nano-nutrient delivery systems to ensure active ingredients can penetrate deep into the skin layers and exert maximum efficacy.",
+      "sections": [
+        {
+          "title": "Skin Repair Technology",
+          "description": "We use cutting-edge skin repair technology that can precisely identify and repair damaged skin tissue, promote collagen production, and restore skin elasticity and firmness."
+        },
+        {
+          "title": "Nano-Nutrient Delivery",
+          "description": "Through unique nano-nutrient delivery technology, we can directly deliver precious active ingredients to the deep layers of the skin, ensuring nutrients are fully absorbed and utilized."
+        }
+      ]
+    },
+    "ourStrategy": {
+      "title": "Our Strategy",
+      "description": "Beautiful Diary is committed to becoming a globally leading high-end skincare brand, providing the highest quality skincare solutions to global consumers through continuous innovation and exceptional quality.",
+      "sections": [
+        {
+          "title": "Innovation & R&D",
+          "description": "We continuously invest in R&D, constantly exploring new skincare technologies and ingredients to ensure our products remain at the industry forefront."
+        },
+        {
+          "title": "Global Expansion",
+          "description": "Beautiful Diary is expanding its business globally, establishing strategic alliances with top research institutions and partners to jointly promote the development of the skincare industry."
+        }
+      ]
+    }
+  },
+  "joinUs": {
+    "title": "Franchise Partnership",
+    "subtitle": "Join Beautiful Diary, Create a Wealthy Future Together",
+    "description": "Beautiful Diary sincerely invites ambitious individuals to join our franchise system and jointly explore the high-end skincare market. We provide comprehensive brand support, professional operational guidance, and generous profit returns, looking forward to working together for mutual success.",
+    "sections": [
+      {
+        "title": "Why Choose to Join Beautiful Diary",
+        "description": "As a high-end skincare brand, Beautiful Diary has strong brand influence and market competitiveness. By joining us, you will receive comprehensive support, including brand authorization, product supply, marketing support, training guidance, etc., making your entrepreneurial journey smoother.",
+        "features": [
+          "Strong brand influence and market recognition",
+          "Complete product system and continuous new product support",
+          "Professional marketing promotion and training guidance",
+          "Generous profit margins and flexible franchise policies"
+        ]
+      },
+      {
+        "title": "Franchise Advantages",
+        "description": "We provide comprehensive support services for franchisees, from site selection and decoration to operational management, from product training to marketing promotion, assisting you throughout the process to quickly launch and achieve continuous profitability.",
+        "positions": [
+          "Brand Authorization & Image Support",
+          "Product Supply & Inventory Management",
+          "Marketing Promotion & Advertising Support",
+          "Professional Training & Operational Guidance"
+        ]
+      },
+      {
+        "title": "Our Commitment",
+        "description": "We promise to provide fair cooperation opportunities for every franchise partner, respect every partner, provide continuous support and services, and are committed to creating a mutually beneficial cooperation environment for mutual development and growth."
+      }
+    ],
+    "contact": {
+      "title": "Franchise Inquiry",
+      "email": "franchise@meiliriji.com",
+      "phone": "400-XXX-XXXX"
+    }
+  },
+  "product": {
+    "qrCodeModal": {
+      "title": "Scan to Purchase",
+      "description": "Use WeChat to scan the QR code below to visit the official mini-program for purchase",
+      "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram",
+      "qrCodeAlt": "Mini-program QR Code",
+      "footerText": "Beautiful Diary Official Mini-program"
+    },
+    "allProductsSection": {
+      "title": "All Products",
+      "description": "Explore Beautiful Diary's complete product collection and discover your exclusive skincare solution"
+    },
+    "products": [
+      {
+        "slug": "life-matrix-collection",
+        "title": "Life Matrix Collection",
+        "description": "The Life Matrix Collection is Beautiful Diary's masterpiece of time reversal, combining traditional herbal essences with modern biotechnology. Meticulously crafted to awaken youthful vitality, this prestigious collection combines cutting-edge skincare technology with unique active complexes and nano-nutrient delivery technology, precisely targeting multiple aging pathways. Rich in powerful revitalizing active ingredients, it restores skin's youthful vitality from within, providing an unparalleled luxurious anti-aging experience.",
+        "productImage1": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+        "productImage2": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "productList": [
+          {
+            "id": 1,
+            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": ["New"],
+            "productName": "Platinum Rare Haute Rejuvenation Mask",
+            "benefits": ["Anti-wrinkle", "Renew", "Smooth", "Ultimate Rejuvenation"],
+            "price": 1358,
+            "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
+            "keywords": ["Anti-wrinkle", "Renew", "Smooth"],
+            "benefitDetails": [
+              "Dual intensive care meticulously developed for those who demand perfect skin.",
+              "After 15 minutes of use, improves skin texture; skin radiance, smoothness, plumpness, hydration, and overall skin quality are significantly enhanced.*",
+              "After 4 weeks of use, skin firmness and elasticity are significantly improved, skin becomes smoother, revealing youthful vitality.*",
+              "After 8 weeks of use, plumps collagen fibers.*"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "platinum-collection",
+        "title": "Platinum Collection",
+        "description": "The Platinum Collection is the pinnacle of Beautiful Diary's luxurious skincare, combining precious platinum ingredients with advanced anti-aging technology. Each product is carefully formulated by Beautiful Diary, designed to bring ultimate rejuvenation experience to the skin. Through unique formulations and exceptional craftsmanship, it helps restore skin firmness, elasticity, and radiance, revealing unparalleled luxurious beauty.",
+        "productImage1": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "productList": [
+          {
+            "id": 1,
+            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": ["New"],
+            "productName": "Platinum Rare Haute Rejuvenation Mask",
+            "benefits": ["Anti-wrinkle", "Renew", "Smooth", "Ultimate Rejuvenation"],
+            "price": 1358,
+            "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
+            "keywords": ["Anti-wrinkle", "Renew", "Smooth"],
+            "benefitDetails": [
+              "Dual intensive care meticulously developed for those who demand perfect skin.",
+              "After 15 minutes of use, improves skin texture; skin radiance, smoothness, plumpness, hydration, and overall skin quality are significantly enhanced.*",
+              "After 4 weeks of use, skin firmness and elasticity are significantly improved, skin becomes smoother, revealing youthful vitality.*",
+              "After 8 weeks of use, plumps collagen fibers.*"
+            ]
+          },
+          {
+            "id": 2,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": ["Star Selection"],
+            "productName": "Platinum Rare Haute Rejuvenation Cream",
+            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Cream"],
+            "price": 1428
+          },
+          {
+            "id": 3,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": [],
+            "productName": "Platinum Rare Haute Rejuvenation Eye Cream",
+            "benefits": ["Firm", "Renew", "Smooth", "Eye Rejuvenation Care"],
+            "price": 925
+          },
+          {
+            "id": 4,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": ["Star Selection"],
+            "productName": "Platinum Rare Haute Rejuvenation Night Serum",
+            "benefits": ["Firm", "Renew", "Smooth", "Night Rejuvenation Serum"],
+            "price": 1235
+          },
+          {
+            "id": 5,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": [],
+            "productName": "Platinum Rare Haute Rejuvenation Eye Serum",
+            "benefits": ["Firm", "Renew", "Smooth", "Eye Rejuvenation Serum"],
+            "price": 985
+          },
+          {
+            "id": 6,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": [],
+            "productName": "Platinum Rare Haute Rejuvenation Serum",
+            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Serum"],
+            "price": 1120
+          },
+          {
+            "id": 7,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": [],
+            "productName": "Platinum Rare Haute Rejuvenation Cream",
+            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Cream"],
+            "price": 1428
+          },
+          {
+            "id": 8,
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": ["Star Selection"],
+            "productName": "Platinum Rejuvenation Essence",
+            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Essence"],
+            "price": 180
+          }
+        ]
+      },
+      {
+        "slug": "caviar-collection",
+        "title": "Caviar Collection",
+        "description": "The Caviar Collection is Beautiful Diary's meticulously crafted firming and lifting series, centered on precious caviar extracts, combined with advanced firming and lifting technology, bringing exceptional firming and lifting effects to the skin. Beautiful Diary's unique formula can penetrate deep into the skin layers, activate collagen production, effectively improve skin sagging and drooping issues, allowing the skin to regain a youthful, firm state.",
+        "productImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
+        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "productList": [
+          {
+            "id": 1,
+            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "tags": ["New"],
+            "productName": "Platinum Rare Haute Rejuvenation Mask",
+            "benefits": ["Anti-wrinkle", "Renew", "Smooth", "Ultimate Rejuvenation"],
+            "price": 1358,
+            "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
+            "keywords": ["Anti-wrinkle", "Renew", "Smooth"],
+            "benefitDetails": [
+              "Dual intensive care meticulously developed for those who demand perfect skin.",
+              "After 15 minutes of use, improves skin texture; skin radiance, smoothness, plumpness, hydration, and overall skin quality are significantly enhanced.*",
+              "After 4 weeks of use, skin firmness and elasticity are significantly improved, skin becomes smoother, revealing youthful vitality.*",
+              "After 8 weeks of use, plumps collagen fibers.*"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "pure-white-collection",
+        "title": "Pure White Collection",
+        "description": "The Pure White Collection is Beautiful Diary's professional series focused on skin brightening and firming, helping skin restore pure, translucent radiance through unique brightening formulas and firming technology. Beautiful Diary products can effectively fade spots, even skin tone, while improving skin firmness, allowing the skin to present a natural, pure beautiful state.",
+        "productImage1": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
+        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "productList": []
+      },
+      {
+        "slug": "golden-radiance-collection",
+        "title": "Golden Radiance Collection",
+        "description": "The Golden Radiance Collection is Beautiful Diary's revitalizing series crafted with golden luxurious texture, bringing dual effects of revitalization and nourishment to the skin. Rich in precious golden ingredients and nourishing essences, it can deeply nourish the skin and restore skin vitality and radiance. Beautiful Diary's unique formula allows the skin to radiate golden brilliance, showcasing unparalleled luxurious charm.",
+        "productImage1": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
+        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "productList": []
+      }
+    ]
+  },
+  "common": {
+    "viewDetails": "View Details",
+    "viewAllProducts": "View All Products",
+    "all": "All",
+    "filter": "Filter",
+    "category": "Category",
+    "sort": "Sort",
+    "sortBy": "Sort:",
+    "default": "Default",
+    "priceLowToHigh": "Price: Low to High",
+    "priceHighToLow": "Price: High to Low",
+    "name": "Name",
+    "noProducts": "No Products",
+    "productName": "Product Name",
+    "price": "Price",
+    "contactUs": "Contact Us",
+    "aboutUs": "About Us"
+  }
+}
+

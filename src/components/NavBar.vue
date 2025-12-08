@@ -16,9 +16,9 @@
         <div
           class="text-white font-elegant text-xl md:text-2xl lg:text-3xl tracking-wide"
         >
-          {{ dataSource.home.brand.name }}
+          {{ dataSource?.home?.brand?.name }}
           <span
-            v-if="dataSource.home.brand.subtitle"
+            v-if="dataSource?.home?.brand?.subtitle"
             class="block text-xs md:text-sm font-light mt-1 opacity-90"
           >
             {{ dataSource.home.brand.subtitle }}
@@ -94,7 +94,9 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import ProductsDropdown from './ProductsDropdown.vue'
 import AboutDropdown from './AboutDropdown.vue'
-import dataSource from '../data/data.json'
+import { useI18nData } from '../composables/useI18nData'
+
+const { dataSource } = useI18nData()
 
 const props = defineProps({
   isVisible: {
@@ -114,7 +116,7 @@ const isScrolled = ref(false)
 // 当前下拉菜单的菜单项
 const currentDropdownItems = computed(() => {
   if (!currentDropdownId.value) return []
-  const navItem = dataSource.navItems.find(
+  const navItem = dataSource.value?.navItems?.find(
     (item) => item.id === currentDropdownId.value
   )
   return navItem?.dropdownItems || []

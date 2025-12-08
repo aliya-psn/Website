@@ -20,7 +20,9 @@ import HomePage from '../components/home/HomePage.vue'
 import ExperienceSection from '../components/home/ExperienceSection.vue'
 import OriginSection from '../components/home/OriginSection.vue'
 import AllProductsSection from '../components/home/AllProductsSection.vue'
-import dataSource from '../data/data.json'
+import { useI18nData } from '../composables/useI18nData'
+
+const { dataSource } = useI18nData()
 
 // 获取 NavBar 控制方法
 const navBarControl = inject('navBarControl', null)

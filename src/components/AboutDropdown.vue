@@ -31,7 +31,7 @@
       <!-- 标题 -->
       <div class="text-center mb-10 md:mb-12">
         <h2 class="text-2xl md:text-3xl font-elegant text-white/90 tracking-wider mb-2">
-          关于我们
+          {{ t('common.aboutUs') }}
         </h2>
         <div class="w-20 h-px bg-linear-to-r from-transparent via-white/40 to-transparent mx-auto"></div>
       </div>
@@ -80,6 +80,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   data: {
@@ -92,6 +93,7 @@ const props = defineProps({
 const emit = defineEmits(['item-click', 'close'])
 
 const navHeight = ref(80) // 默认导航栏高度
+const { t } = useI18n()
 
 const handleItemClick = (item) => {
   emit('item-click', item)

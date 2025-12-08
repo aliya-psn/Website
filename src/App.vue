@@ -13,7 +13,9 @@
 import { ref, provide, onMounted, onUnmounted } from 'vue'
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
-import dataSource from './data/data.json'
+import { useI18nData } from './composables/useI18nData'
+
+const { dataSource } = useI18nData()
 
 const isNavBarVisible = ref(true)
 let lastScrollTop = 0

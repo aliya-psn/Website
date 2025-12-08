@@ -75,7 +75,7 @@
               <button
                 class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
               >
-                查看详情
+                {{ t('common.viewDetails') }}
               </button>
             </div>
           </div>
@@ -88,7 +88,7 @@
           @click="goToAllProducts"
           class="px-8 py-3 rounded-lg bg-gray-900 text-white flex items-center justify-center mx-auto hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-elegant font-medium text-base"
         >
-          <span>查看全部产品</span>
+          <span>{{ t('common.viewAllProducts') }}</span>
           <svg
             class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
             fill="none"
@@ -111,14 +111,18 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import productData from '../../data/product.json'
+import { useI18nData } from '../../composables/useI18nData'
+import { useI18n } from 'vue-i18n'
+
+const { productData } = useI18nData()
+const { t } = useI18n()
 
 const router = useRouter()
 
 // 获取全部产品区域配置
 const sectionData = computed(() => {
   return (
-    productData.allProductsSection || {
+    productData.value.allProductsSection || {
       title: '全部产品',
       description: '探索美丽日记的完整产品系列，发现适合您的专属护肤方案',
     }
@@ -128,7 +132,7 @@ const sectionData = computed(() => {
 // 获取所有产品（扁平化）
 const allProducts = computed(() => {
   const products = []
-  productData.products?.forEach((category) => {
+  productData.value.products?.forEach((category) => {
     if (category.productList && category.productList.length > 0) {
       category.productList.forEach((product) => {
         products.push({
@@ -149,11 +153,12 @@ const displayedProducts = computed(() => {
 
 // 获取标签样式
 const getTagClass = (tag) => {
-  if (tag === '新品') {
+  // 支持中英文标签
+  if (tag === '新品' || tag === 'New') {
     return 'bg-blue-900 text-white'
-  } else if (tag === '明星臻选') {
+  } else if (tag === '明星臻选' || tag === 'Star Selection') {
     return 'bg-yellow-400 text-gray-900'
-  } else if (tag === '特价') {
+  } else if (tag === '特价' || tag === 'Special') {
     return 'bg-red-500 text-white'
   }
   return 'bg-gray-200 text-gray-700'

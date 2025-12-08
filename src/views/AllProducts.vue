@@ -6,7 +6,7 @@
         <!-- 左侧筛选栏 -->
         <aside class="w-full lg:w-64 shrink-0">
           <div class="bg-white border border-gray-200 rounded-lg p-6 sticky top-24">
-            <h2 class="text-lg font-semibold text-gray-900 mb-6 font-elegant">筛选</h2>
+            <h2 class="text-lg font-semibold text-gray-900 mb-6 font-elegant">{{ t('common.filter') }}</h2>
             
             <!-- 分类筛选 -->
             <div class="mb-6">
@@ -14,7 +14,7 @@
                 @click="toggleCategoryFilter"
                 class="w-full flex items-center justify-between text-base font-medium text-gray-900 mb-4 hover:text-gray-700 transition-colors"
               >
-                <span class="font-elegant">分类</span>
+                <span class="font-elegant">{{ t('common.category') }}</span>
                 <svg
                   :class="['w-5 h-5 transition-transform', categoryFilterOpen ? 'rotate-180' : '']"
                   fill="none"
@@ -49,7 +49,7 @@
                     class="w-4 h-4 text-gray-900 border-gray-300 focus:outline-none focus:ring-0"
                   />
                   <span class="ml-3 text-sm text-gray-700 group-hover:text-gray-900 transition-colors font-light">
-                    全部
+                    {{ t('common.all') }}
                   </span>
                 </label>
               </div>
@@ -62,19 +62,19 @@
           <!-- 排序栏 -->
           <div class="flex items-center justify-between mb-8">
             <h1 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900">
-              全部产品
+              {{ t('product.allProductsSection.title') }}
             </h1>
             <div class="flex items-center gap-4">
-              <label class="text-sm text-gray-700 font-light font-elegant">排序：</label>
+              <label class="text-sm text-gray-700 font-light font-elegant">{{ t('common.sortBy') }}</label>
               <div class="relative">
                 <select
                   v-model="sortBy"
                   class="appearance-none px-5 py-2.5 pr-10 border border-gray-300 rounded-lg text-sm text-gray-900 bg-white focus:outline-none focus:ring-0 focus:border-gray-400 transition-all duration-200 hover:border-gray-400 shadow-sm hover:shadow-md font-light cursor-pointer"
                 >
-                  <option value="default">默认</option>
-                  <option value="price-asc">价格：低到高</option>
-                  <option value="price-desc">价格：高到低</option>
-                  <option value="name-asc">名称</option>
+                  <option value="default">{{ t('common.default') }}</option>
+                  <option value="price-asc">{{ t('common.priceLowToHigh') }}</option>
+                  <option value="price-desc">{{ t('common.priceHighToLow') }}</option>
+                  <option value="name-asc">{{ t('common.name') }}</option>
                 </select>
                 <!-- 自定义下拉箭头 -->
                 <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
@@ -130,7 +130,7 @@
                     @click.stop="goToProductDetail(product)"
                     class="px-4 py-2 bg-white border border-gray-300 text-gray-900 text-xs font-medium rounded hover:bg-gray-50 hover:border-gray-400 transition-all duration-200"
                   >
-                    查看详情
+                    {{ t('common.viewDetails') }}
                   </button>
                 </div>
               </div>
@@ -139,7 +139,7 @@
 
           <!-- 空状态 -->
           <div v-if="displayedProducts.length === 0" class="text-center py-20">
-            <p class="text-gray-500 text-lg font-light">暂无产品</p>
+            <p class="text-gray-500 text-lg font-light">{{ t('common.noProducts') }}</p>
           </div>
         </main>
       </div>
@@ -148,11 +148,14 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import productData from '../data/product.json'
+import { useI18nData } from '../composables/useI18nData'
+import { useI18n } from 'vue-i18n'
 
 const router = useRouter()
+const { productData } = useI18nData()
+const { t } = useI18n()
 
 // 筛选状态
 const categoryFilterOpen = ref(true)
@@ -163,13 +166,13 @@ const sortBy = ref('default')
 
 // 获取所有分类
 const categories = computed(() => {
-  return productData.products || []
+  return productData.value.products || []
 })
 
 // 获取所有产品（扁平化）
 const allProducts = computed(() => {
   const products = []
-  productData.products?.forEach(category => {
+  productData.value.products?.forEach(category => {
     if (category.productList && category.productList.length > 0) {
       category.productList.forEach(product => {
         products.push({
@@ -222,11 +225,12 @@ const toggleCustomFilter = () => {
 
 // 获取标签样式
 const getTagClass = (tag) => {
-  if (tag === '新品') {
+  // 支持中英文标签
+  if (tag === '新品' || tag === 'New') {
     return 'bg-blue-900 text-white'
-  } else if (tag === '明星臻选') {
+  } else if (tag === '明星臻选' || tag === 'Star Selection') {
     return 'bg-yellow-400 text-gray-900'
-  } else if (tag === '特价') {
+  } else if (tag === '特价' || tag === 'Special') {
     return 'bg-red-500 text-white'
   }
   return 'bg-gray-200 text-gray-700'

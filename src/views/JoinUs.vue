@@ -135,10 +135,13 @@
 </template>
 
 <script setup>
-import dataSource from '../data/data.json'
+import { computed } from 'vue'
+import { useI18nData } from '../composables/useI18nData'
+
+const { dataSource } = useI18nData()
 
 // 获取加盟合作页面数据
-const joinData = dataSource.joinUs || {}
+const joinData = computed(() => dataSource.value.joinUs || {})
 </script>
 
 <style scoped>
