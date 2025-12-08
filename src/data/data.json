@@ -1,0 +1,207 @@
+{
+  "title": "美丽日记",
+  "home": {
+    "backgroundImage": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "brand": {
+      "name": "美丽日记",
+      "subtitle": "记录你的美",
+      "logo": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+    },
+    "hero": {
+      "title": "邀请您",
+      "subtitle": "发现它的美"
+    }
+  },
+  "experience": {
+    "title": "体验",
+    "subtitle": "永恒之美",
+    "description": "我们将焕活且富含科学成分的标志性配方融入产品，赋予肌肤新的生命与能量，展现时间静止的奇迹之美。",
+    "buttonText": "开始体验",
+    "experienceImage": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "productImage": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80"
+  },
+  "origin": {
+    "title": "品牌起源",
+    "description": "自2020年创立以来，美丽日记一直致力于将东方传统美容智慧与现代先进护肤科技相结合。我们深入研究中国传统草本精华与现代生物科技的融合，致力于精致的配方、卓越的品质和无与伦比的体验，美丽日记热情地提供超越期望的顶级护肤解决方案。我们的使命是提高生活质量，展现永恒的自然之美。",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  "footer": {
+    "text": "备案号：XXXXXXXXX | 版权所有 © 2024",
+    "copyright": "ICP备案号：沪ICP备xxx号"
+  },
+  "navItems": [
+    {
+      "id": "home",
+      "name": "首页",
+      "hasDropdown": false
+    },
+    {
+      "id": "products",
+      "name": "产品系列",
+      "hasDropdown": true,
+      "dropdownItems": [
+        {
+          "id": 1,
+          "title": "长续内源生机",
+          "description": "臻现年轻生命力",
+          "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+          "slug": "life-matrix-collection"
+        },
+        {
+          "id": 2,
+          "title": "臻爱铂金",
+          "description": "奢华至臻焕颜新生",
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+          "slug": "platinum-collection"
+        },
+        {
+          "id": 3,
+          "title": "鱼子精华",
+          "description": "提升和紧致",
+          "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
+          "slug": "caviar-collection"
+        },
+        {
+          "id": 4,
+          "title": "纯皙紧致",
+          "description": "焕亮和紧致",
+          "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
+          "slug": "pure-white-collection"
+        },
+        {
+          "id": 5,
+          "title": "金颜亮采",
+          "description": "焕活和滋养",
+          "image": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
+          "slug": "golden-radiance-collection"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "name": "关于我们",
+      "hasDropdown": true,
+      "dropdownItems": [
+        {
+          "name": "我们的介绍",
+          "slug": "our-introduction"
+        },
+        {
+          "name": "我们的故事",
+          "slug": "our-story"
+        },
+        {
+          "name": "我们的技术",
+          "slug": "our-technology"
+        },
+        {
+          "name": "我们的战略",
+          "slug": "our-strategy"
+        }
+      ]
+    },
+    {
+      "id": "join",
+      "name": "加盟",
+      "hasDropdown": false,
+      "slug": "join-us"
+    }
+  ],
+  "about": {
+    "ourStory": {
+      "title": "我们的故事",
+      "description": "植根于中华传统美容文化，美丽日记融合了千年草本智慧与现代生物科技，结合先进的抗衰老技术与珍贵天然成分。受东方美学与现代科技融合的启发，我们精心打造顶级护肤解决方案，提升生活品质，展现永恒之美。",
+      "sections": [
+        {
+          "title": "传承东方美容智慧",
+          "description": "中国拥有悠久的传统美容文化，从古代宫廷秘方到现代科技研发，一直引领着护肤美妆的创新。从《本草纲目》的草本精华到今天的现代生物科技，我们不断传承并创新焕新的科学。",
+          "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+          "title": "诞生于中国",
+          "description": "美丽日记诞生于中国，是国产高端美妆品牌的代表。我们深入挖掘中国传统草本精华，结合现代生物科技和先进护肤技术，致力于为亚洲女性打造专属的护肤方案。在新时代的背景下，美丽日记成为国产美妆创新的引领者，这一开创性方法正在塑造着整个行业。"
+        }
+      ]
+    },
+    "ourIntroduction": {
+      "title": "我们的介绍",
+      "description": "美丽日记是一家专注于高端护肤的国产美妆品牌，致力于将现代先进的抗衰老科技与珍贵的天然草本成分相结合，为每一位追求美丽的女性提供卓越的护肤体验。",
+      "sections": [
+        {
+          "title": "品牌理念",
+          "description": "美丽日记相信，真正的美丽源于内在的健康与活力。我们通过科学配方和精湛工艺，帮助肌肤恢复年轻状态，展现自然之美。"
+        },
+        {
+          "title": "核心价值",
+          "description": "我们坚持使用最优质的原料，采用最先进的科技，确保每一款产品都能为肌肤带来显著的改善效果。"
+        }
+      ]
+    },
+    "ourTechnology": {
+      "title": "我们的技术",
+      "description": "美丽日记采用现代先进的肌肤修复技术和纳米营养输送系统，确保活性成分能够深入肌肤底层，发挥最大功效。",
+      "sections": [
+        {
+          "title": "肌肤修复技术",
+          "description": "我们运用前沿的肌肤修复技术，能够精准识别并修复受损的肌肤组织，促进胶原蛋白生成，恢复肌肤的弹性和紧致。"
+        },
+        {
+          "title": "纳米营养输送",
+          "description": "通过独特的纳米营养输送技术，我们能够将珍贵的活性成分直接输送到肌肤深层，确保营养成分被充分吸收和利用。"
+        }
+      ]
+    },
+    "ourStrategy": {
+      "title": "我们的战略",
+      "description": "美丽日记致力于成为全球领先的高端护肤品牌，通过持续创新和卓越品质，为全球消费者提供最优质的护肤解决方案。",
+      "sections": [
+        {
+          "title": "创新研发",
+          "description": "我们持续投入研发，不断探索新的护肤科技和成分，确保产品始终处于行业前沿。"
+        },
+        {
+          "title": "全球布局",
+          "description": "美丽日记正在全球范围内扩展业务，与顶尖的科研机构和合作伙伴建立战略联盟，共同推动护肤行业的发展。"
+        }
+      ]
+    }
+  },
+  "joinUs": {
+    "title": "加盟合作",
+    "subtitle": "携手美丽日记，共创财富未来",
+    "description": "美丽日记诚邀有志之士加入我们的加盟体系，共同开拓高端护肤市场。我们提供完善的品牌支持、专业的运营指导和丰厚的利润回报，期待与您携手共赢。",
+    "sections": [
+      {
+        "title": "为什么选择加盟美丽日记",
+        "description": "美丽日记作为高端护肤品牌，拥有强大的品牌影响力和市场竞争力。加盟我们，您将获得全方位的支持，包括品牌授权、产品供应、营销支持、培训指导等，让您的创业之路更加顺畅。",
+        "features": [
+          "强大的品牌影响力和市场认知度",
+          "完善的产品体系和持续的新品支持",
+          "专业的营销推广和培训指导",
+          "丰厚的利润空间和灵活的加盟政策"
+        ]
+      },
+      {
+        "title": "加盟优势",
+        "description": "我们为加盟商提供全方位的支持服务，从选址装修到运营管理，从产品培训到营销推广，全程协助您快速启动并持续盈利。",
+        "positions": [
+          "品牌授权与形象支持",
+          "产品供应与库存管理",
+          "营销推广与广告支持",
+          "专业培训与运营指导"
+        ]
+      },
+      {
+        "title": "我们的承诺",
+        "description": "我们承诺为每一位加盟伙伴提供公平的合作机会，尊重每一位合作伙伴，提供持续的支持和服务，并致力于创造一个互利共赢的合作环境，共同发展壮大。"
+      }
+    ],
+    "contact": {
+      "title": "加盟咨询",
+      "email": "franchise@meiliriji.com",
+      "phone": "400-XXX-XXXX"
+    }
+  }
+}

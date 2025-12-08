@@ -1,0 +1,167 @@
+{
+  "qrCodeModal": {
+    "title": "扫码购买",
+    "description": "使用微信扫描下方二维码，前往官方小程序购买",
+    "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram",
+    "qrCodeAlt": "小程序二维码",
+    "footerText": "美丽日记官方小程序"
+  },
+  "allProductsSection": {
+    "title": "全部产品",
+    "description": "探索美丽日记的完整产品系列，发现适合您的专属护肤方案"
+  },
+  "products": [
+    {
+      "slug": "life-matrix-collection",
+      "title": "长续内源生机系列",
+      "description": "长续内源生机系列是美丽日记的时光倒流杰作，融合了传统草本精华与现代生物科技。精心打造以唤醒年轻活力，这一尊贵系列将前沿护肤科技与独特的活性复合物和纳米营养输送技术相结合，精准靶向多种衰老途径。富含强效焕活活性成分，从内而外恢复肌肤的青春活力，提供无与伦比的奢华抗衰老体验。",
+      "productImage1": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+      "productImage2": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+      "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+      "productList": [{
+        "id": 1,
+        "slug": "platinum-rare-haute-rejuvenation-mask",
+        "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+        "tags": ["新品"],
+        "productName": "臻爱铂金尊宠面膜",
+        "benefits": ["抗皱", "焕新", "柔滑", "全然卓效焕颜新生"],
+        "price": 1358,
+        "specification": "精华液 12X0.7ml+铂金面膜 20ml",
+        "keywords": ["抗皱", "焕新", "柔滑"],
+        "benefitDetails": [
+          "为苛求完美肌肤者臻研的二重密集护理。",
+          "使用15分钟后,改善皮肤纹路;肌肤光泽度、平滑度、丰盈感、保湿度以及整体肤质显著提升。*",
+          "使用4周后,肌肤紧致度和弹性显著提升,肌肤更加柔滑,焕启年轻活力*。",
+          "使用8周后,丰盈胶原纤维。*"
+        ]
+      }]
+    },
+    {
+      "slug": "platinum-collection",
+      "title": "臻爱铂金系列",
+      "description": "臻爱铂金系列是美丽日记奢华护肤的巅峰之作，融合了珍贵的铂金成分与先进的抗衰老科技。每一款产品都经过美丽日记精心调配，旨在为肌肤带来至臻的焕颜新生体验。通过独特的配方和卓越的工艺，帮助肌肤恢复紧致、弹性和光泽，展现无与伦比的奢华之美。",
+      "productImage1": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+      "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+      "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+      "productList": [
+        {
+          "id": 1,
+          "slug": "platinum-rare-haute-rejuvenation-mask",
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": ["新品"],
+          "productName": "臻爱铂金尊宠面膜",
+          "benefits": ["抗皱", "焕新", "柔滑", "全然卓效焕颜新生"],
+          "price": 1358,
+          "specification": "精华液 12X0.7ml+铂金面膜 20ml",
+          "keywords": ["抗皱", "焕新", "柔滑"],
+          "benefitDetails": [
+            "为苛求完美肌肤者臻研的二重密集护理。",
+            "使用15分钟后,改善皮肤纹路;肌肤光泽度、平滑度、丰盈感、保湿度以及整体肤质显著提升。*",
+            "使用4周后,肌肤紧致度和弹性显著提升,肌肤更加柔滑,焕启年轻活力*。",
+            "使用8周后,丰盈胶原纤维。*"
+          ]
+        },
+        {
+          "id": 2,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": ["明星臻选"],
+          "productName": "臻爱铂金尊宠乳霜",
+          "benefits": ["紧致", "焕新", "柔滑", "焕颜新生乳霜"],
+          "price": 1428
+        },
+        {
+          "id": 3,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": [],
+          "productName": "臻爱铂金尊宠眼霜",
+          "benefits": ["紧致", "焕新", "柔滑", "焕颜新生眼部护理"],
+          "price": 925
+        },
+        {
+          "id": 4,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": ["明星臻选"],
+          "productName": "臻爱铂金尊宠夜间精华液",
+          "benefits": ["紧致", "焕新", "柔滑", "夜间焕颜精华液"],
+          "price": 1235
+        },
+        {
+          "id": 5,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": [],
+          "productName": "臻爱铂金尊宠眼部精华",
+          "benefits": ["紧致", "焕新", "柔滑", "眼部焕颜精华"],
+          "price": 985
+        },
+        {
+          "id": 6,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": [],
+          "productName": "臻爱铂金尊宠精华液",
+          "benefits": ["紧致", "焕新", "柔滑", "焕颜新生精华"],
+          "price": 1120
+        },
+        {
+          "id": 7,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": [],
+          "productName": "臻爱铂金尊宠乳霜",
+          "benefits": ["紧致", "焕新", "柔滑", "焕颜新生乳霜"],
+          "price": 1428
+        },
+        {
+          "id": 8,
+          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+          "tags": ["明星臻选"],
+          "productName": "臻爱铂金焕颜精粹露",
+          "benefits": ["紧致", "焕新", "柔滑", "焕颜精粹"],
+          "price": 180
+        }
+      ]
+    },
+    {
+      "slug": "caviar-collection",
+      "title": "鱼子精华系列",
+      "description": "鱼子精华系列是美丽日记精心打造的紧致提升系列，以珍贵的鱼子提取物为核心，结合先进的紧致提升技术，为肌肤带来卓越的紧致和提升效果。美丽日记独特的配方能够深入肌肤底层，激活胶原蛋白生成，有效改善肌肤松弛和下垂问题，让肌肤重获年轻紧致的状态。",
+      "productImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
+      "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+      "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+      "productList": [{
+        "id": 1,
+        "slug": "platinum-rare-haute-rejuvenation-mask",
+        "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+        "tags": ["新品"],
+        "productName": "臻爱铂金尊宠面膜",
+        "benefits": ["抗皱", "焕新", "柔滑", "全然卓效焕颜新生"],
+        "price": 1358,
+        "specification": "精华液 12X0.7ml+铂金面膜 20ml",
+        "keywords": ["抗皱", "焕新", "柔滑"],
+        "benefitDetails": [
+          "为苛求完美肌肤者臻研的二重密集护理。",
+          "使用15分钟后,改善皮肤纹路;肌肤光泽度、平滑度、丰盈感、保湿度以及整体肤质显著提升。*",
+          "使用4周后,肌肤紧致度和弹性显著提升,肌肤更加柔滑,焕启年轻活力*。",
+          "使用8周后,丰盈胶原纤维。*"
+        ]
+      }]
+    },
+    {
+      "slug": "pure-white-collection",
+      "title": "纯皙紧致系列",
+      "description": "纯皙紧致系列是美丽日记专注于肌肤焕亮和紧致的专业系列，通过独特的亮白配方和紧致科技，帮助肌肤恢复纯净透亮的光泽。美丽日记产品能够有效淡化色斑，均匀肤色，同时提升肌肤紧致度，让肌肤呈现出自然纯净的美丽状态。",
+      "productImage1": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
+      "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+      "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+      "productList": []
+    },
+    {
+      "slug": "golden-radiance-collection",
+      "title": "金颜亮采系列",
+      "description": "金颜亮采系列是美丽日记以黄金般的奢华质感打造的焕活系列，为肌肤带来焕活和滋养的双重功效。富含珍贵的黄金成分和滋养精华，能够深层滋养肌肤，恢复肌肤的活力和光泽。美丽日记独特的配方让肌肤焕发出如黄金般璀璨的光彩，展现无与伦比的奢华魅力。",
+      "productImage1": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
+      "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+      "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+      "productList": []
+    }
+  ]
+}
+
