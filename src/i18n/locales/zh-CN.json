@@ -1,13 +1,12 @@
 {
   "title": "FANTASYCARE",
   "home": {
-    "backgroundImage": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "backgroundImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "backgroundImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage1": "/src/assets/home/4.png",
+    "backgroundImage": "/src/assets/home/5.png",
+    "backgroundImage2": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage3": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "brand": {
-      "name": "FANTASYCARE",
-      "subtitle": "记录你的美",
-      "logo": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+      "name": "FANTASYCARE"
     },
     "hero": {
       "title": "由内滋养，外在完美",
@@ -19,8 +18,8 @@
     "subtitle": "定义美的维度",
     "description": "真正的奢华在于将美变成一门精确且可预测的科学。",
     "buttonText": "开始购买",
-    "experienceImage": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "productImage": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80"
+      "experienceImage": "/src/assets/home/4.png",
+      "productImage": "/src/assets/product/3.png"
   },
   "origin": {
     "title": "品牌起源",
@@ -37,12 +36,12 @@
     "title": "根植于医学，精炼于科学",
     "subtitle": "协同。实现终极再生。",
     "buttonText": "科学探索",
-    "collageImage": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      "collageImage": "/src/assets/home/5.png"
   },
   "luxuryCare": {
     "primaryText": "真正的奢华护理不在于对抗，而在于滋养；",
     "secondaryText": "璀璨的再生不是来自匆忙的展示，而是来自内在的秩序。",
-    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+      "image": "/src/assets/home/5.png"
   },
   "developmentHistory": [
     {
@@ -51,7 +50,7 @@
       "description": [
         "诞生于新西兰皮肤科实验室的革命性洞察：真正的美丽源于内部细胞秩序的重建。我们致力于将美学医疗效果融入口服技术。"
       ],
-      "image": "https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "image": "/src/assets/science/development/1.png"
     },
     {
       "year": "2020",
@@ -59,7 +58,7 @@
       "description": [
         "建立了完整的制药级研发与供应链体系，以制药的严谨标准定义内蕴之美——为每一个承诺奠定坚实的信任基石。"
       ],
-      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "image": "/src/assets/science/development/2.png"
     },
     {
       "year": "2023",
@@ -67,7 +66,7 @@
       "description": [
         "奢华至臻焕颜新生科技的全新里程碑。通过臻爱铂金尊宠密集修护精华液,Niehans 博士的恒久之梦跃达巅峰。"
       ],
-      "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "image": "/src/assets/science/development/3.png"
     },
     {
       "year": "2025",
@@ -75,7 +74,7 @@
       "description": [
         "全产品线获得新西兰GMP、HACCP、Halal认证，品质获得国际认可。业务稳步拓展至亚太和欧洲重点市场，建立科学品牌的全球标杆。"
       ],
-      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "image": "/src/assets/science/development/4.png"
     },
     {
       "year": "未来",
@@ -83,14 +82,14 @@
       "description": [
         "我们持续深入皮肤科学与营养学的前沿领域，通过不懈的科学研究重塑美丽的未来边界。"
       ],
-      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      "image": "/src/assets/science/development/5.png"
     }
   ],
   "keyIngredients": {
     "title": "科研团队&核心成分",
     "drShona": {
       "name": "Dr Shona Dalzell",
-      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "image": "/src/assets/house/key/1.png",
       "background": [
         "1993年毕业于奥克兰大学",
         "新西兰美学医学学会（NZSCM）会员，持有美学医学文凭",
@@ -104,17 +103,17 @@
     "clinicalCooperation": {
       "title": "医疗美学临床合作",
       "description": "与知名诊所包括CACI、Skin Institute The Cosmetic Clinic和KAIZ Skin Body & Injectable Clinic等联合推出\"口服+光子嫩肤\"等套餐。医师教育体系：推出\"全球口服医疗美学医师认证计划\"，培训了2000多名皮肤科医生，并开发了AI辅助决策系统。",
-      "teamImage": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "teamImage": "/src/assets/house/key/2.png"
     }
   },
   "technologyAndPatents": {
     "qualification": {
       "title": "成分与技术认证流程",
-      "certificateImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "certificateImage": "/src/assets/house/tech/1.png"
     },
     "patents": {
       "title": "成分专利",
-      "patentImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "patentImage": "/src/assets/house/tech/2.png"
     }
   },
   "honorsAwards": {
@@ -122,35 +121,35 @@
     "awards": [
       {
         "name": "2025 南十字星国际医疗美容金奖",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "2025 新西兰膳食营养补充剂银蕨奖",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "摩纳哥王妃抗衰老配方创新巅峰奖",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "瑞士营养创新技术金奖",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "欧洲营养保健峰会年度影响力标杆品牌",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "国际美业创新奖年度消费者信赖口服品牌",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "意大利米兰全球膳食补充剂发明大奖",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       },
       {
         "name": "维纳斯凝光宝石奖",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/membership/1.png"
       }
     ]
   },
@@ -173,21 +172,21 @@
           "id": 1,
           "title": "基础焕活系列",
           "description": "聚焦于日夜间基础维护，巩固肌肤屏障，提供核心营养。",
-          "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+          "image": "/src/assets/product/3.png",
           "slug": "basic-revitalization-collection"
         },
         {
           "id": 2,
           "title": "进阶修护系列",
           "description": "针对暗沉、皱纹、松弛等专项问题，提供高浓度靶向修护。",
-          "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
+          "image": "/src/assets/product/3.png",
           "slug": "advanced-repair-collection"
         },
         {
           "id": 3,
           "title": "限量尊享系列",
           "description": "融汇年度前沿科研成果，为追求极致的客户提供先锋护理体验。",
-          "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
+          "image": "/src/assets/home/5.png",
           "slug": "limited-exclusive-collection"
         }
       ]
@@ -257,7 +256,7 @@
           {
             "id": 1,
             "slug": "basic-revitalization-collection-1",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "tags": ["新品"],
             "productName": "木瓜饮",
             "price": 49,
@@ -267,7 +266,7 @@
           {
             "id": 2,
             "slug": "basic-revitalization-collection-2",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "美白片",
             "price": 79,
             "specification": "",
@@ -276,7 +275,7 @@
           {
             "id": 3,
             "slug": "basic-revitalization-collection-3",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "维生素",
             "price": 19,
             "specification": "",
@@ -285,7 +284,7 @@
           {
             "id": 4,
             "slug": "basic-revitalization-collection-4",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "腿丸",
             "price": 39,
             "specification": "",
@@ -299,7 +298,7 @@
           {
             "id": 1,
             "slug": "advanced-repair-collection-1",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "抗衰",
             "price": 129,
             "specification": "",
@@ -308,7 +307,7 @@
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "美白",
             "price": 129,
             "specification": "",
@@ -317,7 +316,7 @@
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "卵巢",
             "price": 129,
             "specification": "",
@@ -326,7 +325,7 @@
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "image": "/src/assets/product/3.png",
             "productName": "生发",
             "price": 99,
             "specification": "",
@@ -348,22 +347,22 @@
       {
         "title": "多维数据采集",
         "description": "20+参数包括皮肤亮度、纹理密度和微循环状态。",
-        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/service/1.png"
       },
       {
         "title": "动态方案优化",
         "description": "根据皮肤状况变化进行季度更新",
-        "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/service/2.png"
       },
       {
         "title": "专属定制包装",
         "description": "个性化礼品盒，刻有您的专属ID",
-        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "image": "/src/assets/member/service/4.png"
       }
     ],
     "globalConsultation": {
       "title": "全球美学咨询",
-      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "image": "/src/assets/member/service/1.png",
       "features": [
         "国际认证医师支持系统",
         "与10+国家口服美学专家合作。",
@@ -383,63 +382,63 @@
         {
           "period": "SHORT",
           "description": "7天皮肤屏障改善预测",
-          "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          "image": "/src/assets/member/membership/1.png"
         },
         {
           "period": "MEDIUM",
           "description": "30天胶原蛋白再生轨迹分析",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          "image": "/src/assets/member/membership/3.png"
         },
         {
           "period": "LONG-TERM",
           "description": "90天全面焕新进度预测",
-          "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          "image": "/src/assets/member/membership/4.png"
         }
       ]
     },
     "allergenAlert": {
       "title": "过敏原敏感度预警系统 实时成分兼容性分析",
-      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "image": "/src/assets/member/membership/5.png"
     },
     "dosageOptimization": {
       "title": "个性化剂量优化算法",
       "people": [
         {
-          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/1.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/3.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/4.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1594824476968-48fd8a6c5fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/5.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/6.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/7.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/9.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1594824476968-48fd8a6c5fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/1.png"
         },
         {
-          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/3.png"
         }
       ]
     },
     "userExperience": {
       "title": "用户体验生态系统",
-      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "image": "/src/assets/member/membership/4.png"
     },
     "userFeedback": {
       "title": "用户反馈",
-      "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "image": "/src/assets/member/membership/5.png"
     },
     "skinRenewal": {
       "title": "皮肤更新日志",
@@ -448,7 +447,7 @@
     },
     "expertQA": {
       "title": "专家问答环节",
-      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      "image": "/src/assets/member/membership/6.png"
     },
     "milestoneBadges": {
       "title": "皮肤更新里程碑徽章",
@@ -456,17 +455,17 @@
         {
           "period": "25-Day",
           "description": "坚持徽章（每日使用验证）",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/7.png"
         },
         {
           "period": "90-Day",
           "description": "蜕变徽章（可见效果确认）",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/9.png"
         },
         {
           "period": "180-Day",
           "description": "精通徽章（持续皮肤健康优化）",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+          "image": "/src/assets/member/membership/1.png"
         }
       ]
     }
