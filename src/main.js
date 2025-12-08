@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 import i18n, { initLocale } from './i18n'
 
-// 启动应用前根据 IP / localStorage 确定语言
+// 启动应用前确定语言
 const resolvedLocale = await initLocale()
 document.title = i18n.global.t('title')
 

@@ -1,31 +1,158 @@
 {
-  "title": "Beautiful Diary",
+  "title": "FANTASYCARE",
   "home": {
     "backgroundImage": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "backgroundImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "backgroundImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "brand": {
-      "name": "Beautiful Diary",
+      "name": "FANTASYCARE",
       "subtitle": "Record Your Beauty",
       "logo": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
     },
     "hero": {
-      "title": "Invite You",
-      "subtitle": "Discover Its Beauty"
+      "title": "NOURISHED WITHIN, PERFECTED OUT.",
+      "subtitle": "Nourished Deeply Luxuriously Revitalized"
     }
   },
   "experience": {
-    "title": "Experience",
-    "subtitle": "Timeless Beauty",
-    "description": "We infuse our products with revitalizing, scientifically-rich signature formulas that give skin new life and energy, revealing the miraculous beauty of frozen time.",
-    "buttonText": "Start Experience",
+    "title": "Redefine",
+    "subtitle": "the Dimensions of Beauty",
+    "description": "True luxury lies in making beauty a precise and predictable science.",
+    "buttonText": "Start Shopping",
     "experienceImage": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "productImage": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80"
   },
   "origin": {
     "title": "Brand Origin",
-    "description": "Since its founding in 2020, Beautiful Diary has been committed to combining Eastern traditional beauty wisdom with modern advanced skincare technology. We deeply research the fusion of traditional Chinese herbal essences and modern biotechnology, dedicated to exquisite formulations, exceptional quality, and unparalleled experiences. Beautiful Diary passionately provides top-tier skincare solutions that exceed expectations. Our mission is to enhance quality of life and reveal timeless natural beauty.",
-    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    "description": [
+      "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
+      "In The Cosmetic Clinic founded by Dr. Shona Dalzell, cutting-edge equipment brings immediate changes, yet fails to satisfy beauty seekers' longing for 'lasting radiance';",
+      "Skin Research Laboratory: As a dermatology Ph.D. from the University of Auckland, she saw the essence of the problem—external manifestations all stem from imbalances in cellular state.",
+      "When medicine meets aesthetics, a revolutionary vision was born:",
+      "Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.",
+      "After seven years of R&D, Fantasy Care embarked on the concept of \"Luxurious Nourishment from Within,\" pioneering a new era of oral medical aesthetics."
+    ]
+  },
+  "scientificExploration": {
+    "title": "Rooted in Medicine, Refined by Science",
+    "subtitle": "Synergy. For Ultimate Regeneration.",
+    "buttonText": "Scientific Exploration",
+    "collageImage": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  "luxuryCare": {
+    "primaryText": "True luxurious care lies not in confrontation, but in nourishment;",
+    "secondaryText": "Brilliant regeneration comes not from hasty display, but from internal order.",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+  },
+  "developmentHistory": [
+    {
+      "year": "2016",
+      "title": "Medical Inspiration",
+      "description": [
+        "Born from a revolutionary insight in a New Zealand dermatological laboratory: True beauty stems from the reconstruction of internal cellular order. We aspire to integrate aesthetic medical effects into oral technology."
+      ],
+      "image": "https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "2020",
+      "title": "System Forging",
+      "description": [
+        "Established a comprehensive pharmaceutical grade R&D and supply chain system, defining internal beauty with the rigorous standards of pharmaceuticals—laying a solid cornerstone of trust for every commitment."
+      ],
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "2021",
+      "title": "Ceremony",
+      "description": [
+        "A new milestone in luxurious, ultimate rejuvenating and regenerating technology. Through the cherished Platinum Supreme Intensive Repair Essence, Dr. Niehans' enduring dream reaches its peak."
+      ],
+      "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "2025",
+      "title": "Global Certification",
+      "description": [
+        "The entire product line has been awarded New Zealand GMP, HACCP, and Halal certifications, with quality earning international recognition. Business has steadily expanded to key markets in Asia-Pacific and Europe, establishing a global benchmark for scientific brands."
+      ],
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "Future",
+      "title": "Endless Exploration",
+      "description": [
+        "We continue to delve into the forefront of skin science and nutrition, reshaping the future boundaries of beauty through relentless scientific research."
+      ],
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    }
+  ],
+  "keyIngredients": {
+    "title": "R&D Team & Key Ingredients",
+    "drShona": {
+      "name": "Dr Shona Dalzell",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "background": [
+        "Graduated from the University of Auckland in 1993",
+        "A member of the New Zealand Society of Aesthetic Medicine (NZSCM) and holding a diploma in aesthetic medicine",
+        "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+        "Fellow of the Royal College of General Practitioners of New Zealand (FRNZGP)",
+        "Member of the New Zealand Skin Cancer Medical Association (MNZSCM)",
+        "Certified Skin Cancer Specialist (MACP) by the Chinese Medical Doctor Association",
+        "Certified Skin Cancer Specialist, Venous Disease Specialist, Certified Sclerotherapy Specialist, Venous Medicine Specialist, Aesthetic Medicine Specialist"
+      ]
+    },
+    "clinicalCooperation": {
+      "title": "Medical Aesthetic Clinical Cooperation",
+      "description": "Jointly launched packages such as \"Oral + Photofacial\" with renowned clinics including CACI, Skin Institute The Cosmetic Clinic, and KAIZ Skin Body & Injectable Clinic. Physician Education System: Launched the \"Global Oral Medical Aesthetics Physician Certification Program\", trained over 2,000 dermatologists and developed an AI-assisted decision-making system.",
+      "teamImage": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    }
+  },
+  "technologyAndPatents": {
+    "qualification": {
+      "title": "Ingredients & Technology Qualification process",
+      "certificateImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "patents": {
+      "title": "Ingredient patent",
+      "patentImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    }
+  },
+  "honorsAwards": {
+    "title": "Honors & Awards",
+    "awards": [
+      {
+        "name": "2025 Southern Cross International Medical Aesthetics Gold Award",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "2025 New Zealand Silver Fern Award for Dietary Nutritional Supplements",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Princess of Monaco Pinnacle Award for Anti-Aging Formula Innovation",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Switzerland Nutritional Innovation Technology Gold Award",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Annual Influential Benchmark Brand | European Nutrition & Health Summit",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Annual Consumer-Trusted Oral Brand | International Beauty Industry Innovation Award",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Milan, Italy Global Dietary Supplement Invention Grand Award",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Venus Luminous Gem Award",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ]
   },
   "footer": {
     "text": "Registration No.: XXXXXXXXX | Copyright © 2024",
@@ -80,128 +207,184 @@
       ]
     },
     {
-      "id": "about",
-      "name": "About Us",
+      "id": "science-analysis",
+      "name": "Science Analysis",
       "hasDropdown": true,
       "dropdownItems": [
         {
-          "name": "Our Introduction",
-          "slug": "our-introduction"
+          "name": "Origin",
+          "slug": "origin"
         },
         {
-          "name": "Our Story",
-          "slug": "our-story"
+          "name": "Development History",
+          "slug": "development-history"
         },
         {
-          "name": "Our Technology",
-          "slug": "our-technology"
-        },
-        {
-          "name": "Our Strategy",
-          "slug": "our-strategy"
+          "name": "Honors & Awards",
+          "slug": "honors-awards"
         }
       ]
     },
     {
-      "id": "join",
-      "name": "Join Us",
-      "hasDropdown": false,
-      "slug": "join-us"
+      "id": "brand-heritage",
+      "name": "The House (Brand Heritage)",
+      "hasDropdown": true,
+      "dropdownItems": [
+        {
+          "name": "Key Ingredients",
+          "slug": "key-ingredients"
+        },
+        {
+          "name": "Technology and Patents",
+          "slug": "Technology and Patents"
+        }
+      ]
+    },
+    {
+      "id": "membership",
+      "name": "Membership Center",
+      "hasDropdown": true,
+      "dropdownItems": [
+        {
+          "name": "Exclusive Services",
+          "slug": "exclusive-services"
+        },
+        {
+          "name": "Membership System",
+          "slug": "membership-system"
+        }
+      ]
     }
   ],
-  "about": {
-    "ourStory": {
-      "title": "Our Story",
-      "description": "Rooted in Chinese traditional beauty culture, Beautiful Diary combines millennia of herbal wisdom with modern biotechnology, integrating advanced anti-aging technology with precious natural ingredients. Inspired by the fusion of Eastern aesthetics and modern technology, we meticulously craft top-tier skincare solutions to enhance quality of life and reveal timeless beauty.",
-      "sections": [
-        {
-          "title": "Inheriting Eastern Beauty Wisdom",
-          "description": "China has a long-standing traditional beauty culture, leading innovation in skincare and cosmetics from ancient court secrets to modern technological research. From the herbal essences of the Compendium of Materia Medica to today's modern biotechnology, we continuously inherit and innovate rejuvenating science.",
-          "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-        },
-        {
-          "title": "Born in China",
-          "description": "Beautiful Diary was born in China and represents domestic high-end beauty brands. We deeply explore traditional Chinese herbal essences, combining modern biotechnology and advanced skincare technology, dedicated to creating exclusive skincare solutions for Asian women. In the context of the new era, Beautiful Diary has become a leader in domestic beauty innovation, and this pioneering approach is shaping the entire industry."
-        }
-      ]
-    },
-    "ourIntroduction": {
-      "title": "Our Introduction",
-      "description": "Beautiful Diary is a domestic beauty brand focused on high-end skincare, committed to combining modern advanced anti-aging technology with precious natural herbal ingredients, providing exceptional skincare experiences for every woman pursuing beauty.",
-      "sections": [
-        {
-          "title": "Brand Philosophy",
-          "description": "Beautiful Diary believes that true beauty comes from inner health and vitality. Through scientific formulations and exquisite craftsmanship, we help skin restore its youthful state and reveal natural beauty."
-        },
-        {
-          "title": "Core Values",
-          "description": "We insist on using the finest raw materials and adopting the most advanced technology to ensure that every product brings significant improvement effects to the skin."
-        }
-      ]
-    },
-    "ourTechnology": {
-      "title": "Our Technology",
-      "description": "Beautiful Diary adopts modern advanced skin repair technology and nano-nutrient delivery systems to ensure active ingredients can penetrate deep into the skin layers and exert maximum efficacy.",
-      "sections": [
-        {
-          "title": "Skin Repair Technology",
-          "description": "We use cutting-edge skin repair technology that can precisely identify and repair damaged skin tissue, promote collagen production, and restore skin elasticity and firmness."
-        },
-        {
-          "title": "Nano-Nutrient Delivery",
-          "description": "Through unique nano-nutrient delivery technology, we can directly deliver precious active ingredients to the deep layers of the skin, ensuring nutrients are fully absorbed and utilized."
-        }
-      ]
-    },
-    "ourStrategy": {
-      "title": "Our Strategy",
-      "description": "Beautiful Diary is committed to becoming a globally leading high-end skincare brand, providing the highest quality skincare solutions to global consumers through continuous innovation and exceptional quality.",
-      "sections": [
-        {
-          "title": "Innovation & R&D",
-          "description": "We continuously invest in R&D, constantly exploring new skincare technologies and ingredients to ensure our products remain at the industry forefront."
-        },
-        {
-          "title": "Global Expansion",
-          "description": "Beautiful Diary is expanding its business globally, establishing strategic alliances with top research institutions and partners to jointly promote the development of the skincare industry."
-        }
+  "exclusiveServices": {
+    "title": "Exclusive Services",
+    "subtitle": "AI-Powered Precision Skincare Solutions",
+    "description": "Our intelligent skin analysis system combines your unique skin profile and personal needs to generate tailored skincare regimens.",
+    "services": [
+      {
+        "title": "Multidimensional Data Collection",
+        "description": "20+ parameters including skin brightness texture density, and microcirculation status.",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "title": "Dynamic Plan Optimization",
+        "description": "Quarterly updates based on skin condition changes",
+        "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "title": "Exclusive Custom Packaging",
+        "description": "Personalized gift boxes engraved with your unique ID",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "globalConsultation": {
+      "title": "Global Aesthetic Consultation",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "features": [
+        "Internationally Certified Physician Support System",
+        "Collaborates with 10+ countries' oral aesthetic experts.",
+        "24/7 online skin health consultation services.",
+        "Post-treatment care plans (coordinated with clinical procedures)."
       ]
     }
   },
-  "joinUs": {
-    "title": "Franchise Partnership",
-    "subtitle": "Join Beautiful Diary, Create a Wealthy Future Together",
-    "description": "Beautiful Diary sincerely invites ambitious individuals to join our franchise system and jointly explore the high-end skincare market. We provide comprehensive brand support, professional operational guidance, and generous profit returns, looking forward to working together for mutual success.",
-    "sections": [
-      {
-        "title": "Why Choose to Join Beautiful Diary",
-        "description": "As a high-end skincare brand, Beautiful Diary has strong brand influence and market competitiveness. By joining us, you will receive comprehensive support, including brand authorization, product supply, marketing support, training guidance, etc., making your entrepreneurial journey smoother.",
-        "features": [
-          "Strong brand influence and market recognition",
-          "Complete product system and continuous new product support",
-          "Professional marketing promotion and training guidance",
-          "Generous profit margins and flexible franchise policies"
-        ]
-      },
-      {
-        "title": "Franchise Advantages",
-        "description": "We provide comprehensive support services for franchisees, from site selection and decoration to operational management, from product training to marketing promotion, assisting you throughout the process to quickly launch and achieve continuous profitability.",
-        "positions": [
-          "Brand Authorization & Image Support",
-          "Product Supply & Inventory Management",
-          "Marketing Promotion & Advertising Support",
-          "Professional Training & Operational Guidance"
-        ]
-      },
-      {
-        "title": "Our Commitment",
-        "description": "We promise to provide fair cooperation opportunities for every franchise partner, respect every partner, provide continuous support and services, and are committed to creating a mutually beneficial cooperation environment for mutual development and growth."
-      }
-    ],
-    "contact": {
-      "title": "Franchise Inquiry",
-      "email": "franchise@meiliriji.com",
-      "phone": "400-XXX-XXXX"
+  "membershipSystem": {
+    "title": "Membership Program",
+    "professionalSupport": "Professional Support",
+    "certificationProgram": "Global Oral Medical Aesthetics Physician Certification Program",
+    "aiDevelopment": "Development of AI decision making systems",
+    "predictiveModeling": {
+      "title": "Skin Condition Predictive Modeling",
+      "models": [
+        {
+          "period": "SHORT",
+          "description": "7-day skin barrier improvement forecast",
+          "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          "period": "MEDIUM",
+          "description": "30-day collagen regeneration trajectory analysis",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          "period": "LONG-TERM",
+          "description": "90-day comprehensive rejuvenation progress prediction",
+          "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        }
+      ]
+    },
+    "allergenAlert": {
+      "title": "Allergen Sensitivity Alert System Real-time ingredient compatibility analysis",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "dosageOptimization": {
+      "title": "Personalized dosage optimization algorithms",
+      "people": [
+        {
+          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1594824476968-48fd8a6c5fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1594824476968-48fd8a6c5fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        }
+      ]
+    },
+    "userExperience": {
+      "title": "User Experience Ecosystem",
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "userFeedback": {
+      "title": "User Feedback",
+      "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "skinRenewal": {
+      "title": "Skin Renewal Journals",
+      "subtitle": "User Uploaded Before and After Videos",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+    "expertQA": {
+      "title": "Expert Q&A Sessions",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "milestoneBadges": {
+      "title": "Skin Renewal Milestone Badges",
+      "badges": [
+        {
+          "period": "25-Day",
+          "description": "Consistency Badge (daily usage verification)",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "period": "90-Day",
+          "description": "Transformation Badge (visible results confirmation)",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "period": "180-Day",
+          "description": "Mastery Badge (sustained skin health optimization)",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        }
+      ]
     }
   },
   "product": {
@@ -210,166 +393,94 @@
       "description": "Use WeChat to scan the QR code below to visit the official mini-program for purchase",
       "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram",
       "qrCodeAlt": "Mini-program QR Code",
-      "footerText": "Beautiful Diary Official Mini-program"
-    },
-    "allProductsSection": {
-      "title": "All Products",
-      "description": "Explore Beautiful Diary's complete product collection and discover your exclusive skincare solution"
+      "footerText": "FANTASYCARE Official Mini-program"
     },
     "products": [
       {
-        "slug": "life-matrix-collection",
-        "title": "Life Matrix Collection",
-        "description": "The Life Matrix Collection is Beautiful Diary's masterpiece of time reversal, combining traditional herbal essences with modern biotechnology. Meticulously crafted to awaken youthful vitality, this prestigious collection combines cutting-edge skincare technology with unique active complexes and nano-nutrient delivery technology, precisely targeting multiple aging pathways. Rich in powerful revitalizing active ingredients, it restores skin's youthful vitality from within, providing an unparalleled luxurious anti-aging experience.",
-        "productImage1": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "slug": "basic-revitalization-collection",
         "productList": [
           {
             "id": 1,
-            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "slug": "basic-revitalization-collection-1",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
             "tags": ["New"],
-            "productName": "Platinum Rare Haute Rejuvenation Mask",
-            "benefits": ["Anti-wrinkle", "Renew", "Smooth", "Ultimate Rejuvenation"],
-            "price": 1358,
+            "productName": "Papaya Drink",
+            "price": 49,
             "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
-            "keywords": ["Anti-wrinkle", "Renew", "Smooth"],
-            "benefitDetails": [
-              "Dual intensive care meticulously developed for those who demand perfect skin.",
-              "After 15 minutes of use, improves skin texture; skin radiance, smoothness, plumpness, hydration, and overall skin quality are significantly enhanced.*",
-              "After 4 weeks of use, skin firmness and elasticity are significantly improved, skin becomes smoother, revealing youthful vitality.*",
-              "After 8 weeks of use, plumps collagen fibers.*"
-            ]
-          }
-        ]
-      },
-      {
-        "slug": "platinum-collection",
-        "title": "Platinum Collection",
-        "description": "The Platinum Collection is the pinnacle of Beautiful Diary's luxurious skincare, combining precious platinum ingredients with advanced anti-aging technology. Each product is carefully formulated by Beautiful Diary, designed to bring ultimate rejuvenation experience to the skin. Through unique formulations and exceptional craftsmanship, it helps restore skin firmness, elasticity, and radiance, revealing unparalleled luxurious beauty.",
-        "productImage1": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
-        "productList": [
-          {
-            "id": 1,
-            "slug": "platinum-rare-haute-rejuvenation-mask",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["New"],
-            "productName": "Platinum Rare Haute Rejuvenation Mask",
-            "benefits": ["Anti-wrinkle", "Renew", "Smooth", "Ultimate Rejuvenation"],
-            "price": 1358,
-            "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
-            "keywords": ["Anti-wrinkle", "Renew", "Smooth"],
-            "benefitDetails": [
-              "Dual intensive care meticulously developed for those who demand perfect skin.",
-              "After 15 minutes of use, improves skin texture; skin radiance, smoothness, plumpness, hydration, and overall skin quality are significantly enhanced.*",
-              "After 4 weeks of use, skin firmness and elasticity are significantly improved, skin becomes smoother, revealing youthful vitality.*",
-              "After 8 weeks of use, plumps collagen fibers.*"
-            ]
+            "benefitDetails": []
           },
           {
             "id": 2,
+            "slug": "basic-revitalization-collection-2",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["Star Selection"],
-            "productName": "Platinum Rare Haute Rejuvenation Cream",
-            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Cream"],
-            "price": 1428
+            "productName": "Whitening Tablets",
+            "price": 79,
+            "specification": "",
+            "benefitDetails": []
           },
           {
             "id": 3,
+            "slug": "basic-revitalization-collection-3",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "Platinum Rare Haute Rejuvenation Eye Cream",
-            "benefits": ["Firm", "Renew", "Smooth", "Eye Rejuvenation Care"],
-            "price": 925
+            "productName": "Vitamins",
+            "price": 19,
+            "specification": "",
+            "benefitDetails": []
           },
           {
             "id": 4,
+            "slug": "basic-revitalization-collection-4",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["Star Selection"],
-            "productName": "Platinum Rare Haute Rejuvenation Night Serum",
-            "benefits": ["Firm", "Renew", "Smooth", "Night Rejuvenation Serum"],
-            "price": 1235
-          },
-          {
-            "id": 5,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "Platinum Rare Haute Rejuvenation Eye Serum",
-            "benefits": ["Firm", "Renew", "Smooth", "Eye Rejuvenation Serum"],
-            "price": 985
-          },
-          {
-            "id": 6,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "Platinum Rare Haute Rejuvenation Serum",
-            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Serum"],
-            "price": 1120
-          },
-          {
-            "id": 7,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "Platinum Rare Haute Rejuvenation Cream",
-            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Cream"],
-            "price": 1428
-          },
-          {
-            "id": 8,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["Star Selection"],
-            "productName": "Platinum Rejuvenation Essence",
-            "benefits": ["Firm", "Renew", "Smooth", "Rejuvenation Essence"],
-            "price": 180
+            "productName": "Leg Pills",
+            "price": 39,
+            "specification": "",
+            "benefitDetails": []
           }
         ]
       },
       {
-        "slug": "caviar-collection",
-        "title": "Caviar Collection",
-        "description": "The Caviar Collection is Beautiful Diary's meticulously crafted firming and lifting series, centered on precious caviar extracts, combined with advanced firming and lifting technology, bringing exceptional firming and lifting effects to the skin. Beautiful Diary's unique formula can penetrate deep into the skin layers, activate collagen production, effectively improve skin sagging and drooping issues, allowing the skin to regain a youthful, firm state.",
-        "productImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "slug": "advanced-repair-collection",
         "productList": [
           {
             "id": 1,
-            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "slug": "advanced-repair-collection-1",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["New"],
-            "productName": "Platinum Rare Haute Rejuvenation Mask",
-            "benefits": ["Anti-wrinkle", "Renew", "Smooth", "Ultimate Rejuvenation"],
-            "price": 1358,
-            "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
-            "keywords": ["Anti-wrinkle", "Renew", "Smooth"],
-            "benefitDetails": [
-              "Dual intensive care meticulously developed for those who demand perfect skin.",
-              "After 15 minutes of use, improves skin texture; skin radiance, smoothness, plumpness, hydration, and overall skin quality are significantly enhanced.*",
-              "After 4 weeks of use, skin firmness and elasticity are significantly improved, skin becomes smoother, revealing youthful vitality.*",
-              "After 8 weeks of use, plumps collagen fibers.*"
-            ]
+            "productName": "Anti-Aging",
+            "price": 129,
+            "specification": "",
+            "benefitDetails": []
+          },
+          {
+            "id": 2,
+            "slug": "advanced-repair-collection-1",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "productName": "Whitening",
+            "price": 129,
+            "specification": "",
+            "benefitDetails": []
+          },
+          {
+            "id": 3,
+            "slug": "advanced-repair-collection-1",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "productName": "Ovarian",
+            "price": 129,
+            "specification": "",
+            "benefitDetails": []
+          },
+          {
+            "id": 4,
+            "slug": "advanced-repair-collection-1",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "productName": "Hair Growth",
+            "price": 99,
+            "specification": "",
+            "benefitDetails": []
           }
         ]
       },
       {
-        "slug": "pure-white-collection",
-        "title": "Pure White Collection",
-        "description": "The Pure White Collection is Beautiful Diary's professional series focused on skin brightening and firming, helping skin restore pure, translucent radiance through unique brightening formulas and firming technology. Beautiful Diary products can effectively fade spots, even skin tone, while improving skin firmness, allowing the skin to present a natural, pure beautiful state.",
-        "productImage1": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
-        "productList": []
-      },
-      {
-        "slug": "golden-radiance-collection",
-        "title": "Golden Radiance Collection",
-        "description": "The Golden Radiance Collection is Beautiful Diary's revitalizing series crafted with golden luxurious texture, bringing dual effects of revitalization and nourishment to the skin. Rich in precious golden ingredients and nourishing essences, it can deeply nourish the skin and restore skin vitality and radiance. Beautiful Diary's unique formula allows the skin to radiate golden brilliance, showcasing unparalleled luxurious charm.",
-        "productImage1": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "slug": "limited-exclusive-collection",
         "productList": []
       }
     ]
@@ -377,6 +488,7 @@
   "common": {
     "viewDetails": "View Details",
     "viewAllProducts": "View All Products",
+    "seriesProducts": "Series Products",
     "all": "All",
     "filter": "Filter",
     "category": "Category",
@@ -389,8 +501,7 @@
     "noProducts": "No Products",
     "productName": "Product Name",
     "price": "Price",
-    "contactUs": "Contact Us",
-    "aboutUs": "About Us"
+    "contactUs": "Contact Us"
   }
 }
 

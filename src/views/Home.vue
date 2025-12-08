@@ -9,8 +9,11 @@
     <!-- 品牌起源区域 -->
     <OriginSection :originData="dataSource.origin" />
 
-    <!-- 全部产品展示区域 -->
-    <AllProductsSection />
+    <!-- 科学探索区域 -->
+    <ScientificExplorationSection :sectionData="dataSource.scientificExploration" />
+
+    <!-- 奢华护理区域 -->
+    <LuxuryCareSection :sectionData="dataSource.luxuryCare" />
   </div>
 </template>
 
@@ -19,7 +22,8 @@ import { inject } from 'vue'
 import HomePage from '../components/home/HomePage.vue'
 import ExperienceSection from '../components/home/ExperienceSection.vue'
 import OriginSection from '../components/home/OriginSection.vue'
-import AllProductsSection from '../components/home/AllProductsSection.vue'
+import ScientificExplorationSection from '../components/home/ScientificExplorationSection.vue'
+import LuxuryCareSection from '../components/home/LuxuryCareSection.vue'
 import { useI18nData } from '../composables/useI18nData'
 
 const { dataSource } = useI18nData()

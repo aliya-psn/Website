@@ -5,7 +5,7 @@ import { resolveLocaleFromIp } from '../utils/ipLocaleResolver'
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'zh-CN', // 初始值，稍后会根据 IP 或 localStorage 覆盖
+  locale: 'zh-CN', // 初始值
   fallbackLocale: 'zh-CN',
   messages: {
     'zh-CN': zhCN,
@@ -15,14 +15,14 @@ const i18n = createI18n({
 
 // 初始化语言：优先本地存储，其次 IP 映射，最后默认中文
 export async function initLocale() {
-  const saved = localStorage.getItem('locale')
+  const saved = sessionStorage.getItem('locale')
   if (saved) {
     i18n.global.locale.value = saved
     return saved
   }
   const ipLocale = await resolveLocaleFromIp()
   i18n.global.locale.value = ipLocale
-  localStorage.setItem('locale', ipLocale)
+  sessionStorage.setItem('locale', ipLocale)
   return ipLocale
 }
 

@@ -5,24 +5,41 @@
   <!-- 路由视图 -->
   <router-view />
 
-  <!-- 底部备案说明 - 所有页面都显示 -->
-  <Footer :footerData="dataSource.footer" />
+  <!-- 底部备案说明 - 根据路由 meta 判断是否显示 -->
+  <Footer v-if="showFooter" :footerData="dataSource.footer" />
 </template>
 
 <script setup>
-import { ref, provide, onMounted, onUnmounted } from 'vue'
+import { ref, provide, computed, onMounted, onUnmounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
 import { useI18nData } from './composables/useI18nData'
 
 const { dataSource } = useI18nData()
+const route = useRoute()
 
 const isNavBarVisible = ref(true)
 let lastScrollTop = 0
 let scrollTimeout = null
 let isProgrammaticScroll = false // 标志：是否正在执行程序化滚动
+let isScrollDisabled = false // 标志：是否禁用滚动监听（用于特殊页面）
 const SCROLL_THRESHOLD = 5 // 滚动阈值，避免微小滚动触发切换
 const HIDE_NAVBAR_THRESHOLD = 80 // 距离顶部超过xpx才隐藏导航栏
+
+// 根据路由 meta 判断是否显示 Footer
+const showFooter = computed(() => {
+  return !route.meta?.hideFooter
+})
+
+// 根据路由 meta 判断是否禁用滚动监听
+watch(() => route.meta?.fullscreen, (fullscreen) => {
+  isScrollDisabled = !!fullscreen
+  if (fullscreen) {
+    // 全屏页面始终显示导航栏
+    isNavBarVisible.value = true
+  }
+}, { immediate: true })
 
 // 提供控制 NavBar 显示/隐藏的方法给子组件
 const hideNavBar = () => {
@@ -46,6 +63,11 @@ provide('navBarControl', {
 
 // 监听滚动事件，判断滚动方向
 const handleScroll = () => {
+  // 如果禁用滚动监听（全屏页面），直接返回
+  if (isScrollDisabled) {
+    return
+  }
+  
   // 如果正在执行程序化滚动，暂时不处理自动显示逻辑，防止点击设置导航隐藏影响了滑动
   if (isProgrammaticScroll) {
     lastScrollTop = window.pageYOffset || document.documentElement.scrollTop

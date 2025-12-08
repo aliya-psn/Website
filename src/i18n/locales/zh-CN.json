@@ -1,31 +1,158 @@
 {
-  "title": "美丽日记",
+  "title": "FANTASYCARE",
   "home": {
     "backgroundImage": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "backgroundImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "backgroundImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "brand": {
-      "name": "美丽日记",
+      "name": "FANTASYCARE",
       "subtitle": "记录你的美",
       "logo": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
     },
     "hero": {
-      "title": "邀请您",
-      "subtitle": "发现它的美"
+      "title": "由内滋养，外在完美",
+      "subtitle": "深层滋养，奢华焕活"
     }
   },
   "experience": {
-    "title": "体验",
-    "subtitle": "永恒之美",
-    "description": "我们将焕活且富含科学成分的标志性配方融入产品，赋予肌肤新的生命与能量，展现时间静止的奇迹之美。",
-    "buttonText": "开始体验",
+    "title": "重新",
+    "subtitle": "定义美的维度",
+    "description": "真正的奢华在于将美变成一门精确且可预测的科学。",
+    "buttonText": "开始购买",
     "experienceImage": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "productImage": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80"
   },
   "origin": {
     "title": "品牌起源",
-    "description": "自2020年创立以来，美丽日记一直致力于将东方传统美容智慧与现代先进护肤科技相结合。我们深入研究中国传统草本精华与现代生物科技的融合，致力于精致的配方、卓越的品质和无与伦比的体验，美丽日记热情地提供超越期望的顶级护肤解决方案。我们的使命是提高生活质量，展现永恒的自然之美。",
-    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    "description": [
+      "从美学诊所到细胞实验室的蜕变，一切始于两个空间的对话。",
+      "Dr Shona Dalzell博士创立的The Cosmetic Clinic中，尖端设备带来即刻改变，却无法满足求美者对“持久光彩”的渴望；",
+      "皮肤研究实验室：作为奥克兰大学皮肤学博士，她洞见问题本质——外在显化，皆源于细胞状态的失衡。",
+      "当医学遇见美学，一个颠覆性的构想诞生：",
+      "将医美诊所的精准效能，转化为可口服的细胞级营养指令。",
+      "历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。"
+    ]
+  },
+  "scientificExploration": {
+    "title": "根植于医学，精炼于科学",
+    "subtitle": "协同。实现终极再生。",
+    "buttonText": "科学探索",
+    "collageImage": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  "luxuryCare": {
+    "primaryText": "真正的奢华护理不在于对抗，而在于滋养；",
+    "secondaryText": "璀璨的再生不是来自匆忙的展示，而是来自内在的秩序。",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+  },
+  "developmentHistory": [
+    {
+      "year": "2016",
+      "title": "医学启发",
+      "description": [
+        "诞生于新西兰皮肤科实验室的革命性洞察：真正的美丽源于内部细胞秩序的重建。我们致力于将美学医疗效果融入口服技术。"
+      ],
+      "image": "https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "2020",
+      "title": "系统锻造",
+      "description": [
+        "建立了完整的制药级研发与供应链体系，以制药的严谨标准定义内蕴之美——为每一个承诺奠定坚实的信任基石。"
+      ],
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "2023",
+      "title": "仪典",
+      "description": [
+        "奢华至臻焕颜新生科技的全新里程碑。通过臻爱铂金尊宠密集修护精华液,Niehans 博士的恒久之梦跃达巅峰。"
+      ],
+      "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "2025",
+      "title": "全球认证",
+      "description": [
+        "全产品线获得新西兰GMP、HACCP、Halal认证，品质获得国际认可。业务稳步拓展至亚太和欧洲重点市场，建立科学品牌的全球标杆。"
+      ],
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "year": "未来",
+      "title": "无尽探索",
+      "description": [
+        "我们持续深入皮肤科学与营养学的前沿领域，通过不懈的科学研究重塑美丽的未来边界。"
+      ],
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    }
+  ],
+  "keyIngredients": {
+    "title": "科研团队&核心成分",
+    "drShona": {
+      "name": "Dr Shona Dalzell",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "background": [
+        "1993年毕业于奥克兰大学",
+        "新西兰美学医学学会（NZSCM）会员，持有美学医学文凭",
+        "医学学士和外科学士（MBChB）",
+        "新西兰皇家全科医师学院院士（FRNZGP）",
+        "新西兰皮肤癌医学协会会员（MNZSCM）",
+        "中国医师协会认证皮肤癌专科医师（MACP）",
+        "认证皮肤癌专科医师、静脉疾病专科医师、认证硬化疗法专科医师、静脉医学专科医师、美学医学专科医师"
+      ]
+    },
+    "clinicalCooperation": {
+      "title": "医疗美学临床合作",
+      "description": "与知名诊所包括CACI、Skin Institute The Cosmetic Clinic和KAIZ Skin Body & Injectable Clinic等联合推出\"口服+光子嫩肤\"等套餐。医师教育体系：推出\"全球口服医疗美学医师认证计划\"，培训了2000多名皮肤科医生，并开发了AI辅助决策系统。",
+      "teamImage": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    }
+  },
+  "technologyAndPatents": {
+    "qualification": {
+      "title": "成分与技术认证流程",
+      "certificateImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "patents": {
+      "title": "成分专利",
+      "patentImage": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    }
+  },
+  "honorsAwards": {
+    "title": "荣誉奖项",
+    "awards": [
+      {
+        "name": "2025 南十字星国际医疗美容金奖",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "2025 新西兰膳食营养补充剂银蕨奖",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "摩纳哥王妃抗衰老配方创新巅峰奖",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "瑞士营养创新技术金奖",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "欧洲营养保健峰会年度影响力标杆品牌",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "国际美业创新奖年度消费者信赖口服品牌",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "意大利米兰全球膳食补充剂发明大奖",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "维纳斯凝光宝石奖",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ]
   },
   "footer": {
     "text": "备案号：XXXXXXXXX | 版权所有 © 2024",
@@ -44,339 +171,310 @@
       "dropdownItems": [
         {
           "id": 1,
-          "title": "长续内源生机",
-          "description": "臻现年轻生命力",
+          "title": "基础焕活系列",
+          "description": "聚焦于日夜间基础维护，巩固肌肤屏障，提供核心营养。",
           "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-          "slug": "life-matrix-collection"
+          "slug": "basic-revitalization-collection"
         },
         {
           "id": 2,
-          "title": "臻爱铂金",
-          "description": "奢华至臻焕颜新生",
+          "title": "进阶修护系列",
+          "description": "针对暗沉、皱纹、松弛等专项问题，提供高浓度靶向修护。",
           "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
-          "slug": "platinum-collection"
+          "slug": "advanced-repair-collection"
         },
         {
           "id": 3,
-          "title": "鱼子精华",
-          "description": "提升和紧致",
+          "title": "限量尊享系列",
+          "description": "融汇年度前沿科研成果，为追求极致的客户提供先锋护理体验。",
           "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
-          "slug": "caviar-collection"
-        },
-        {
-          "id": 4,
-          "title": "纯皙紧致",
-          "description": "焕亮和紧致",
-          "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
-          "slug": "pure-white-collection"
-        },
-        {
-          "id": 5,
-          "title": "金颜亮采",
-          "description": "焕活和滋养",
-          "image": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
-          "slug": "golden-radiance-collection"
+          "slug": "limited-exclusive-collection"
         }
       ]
     },
     {
-      "id": "about",
-      "name": "关于我们",
+      "id": "science-analysis",
+      "name": "科学解析",
       "hasDropdown": true,
       "dropdownItems": [
         {
-          "name": "我们的介绍",
-          "slug": "our-introduction"
+          "name": "起源",
+          "slug": "origin"
         },
         {
-          "name": "我们的故事",
-          "slug": "our-story"
+          "name": "发展历程",
+          "slug": "development-history"
         },
         {
-          "name": "我们的技术",
-          "slug": "our-technology"
-        },
-        {
-          "name": "我们的战略",
-          "slug": "our-strategy"
+          "name": "荣誉奖项",
+          "slug": "honors-awards"
         }
       ]
     },
     {
-      "id": "join",
-      "name": "加盟",
-      "hasDropdown": false,
-      "slug": "join-us"
-    }
-  ],
-  "about": {
-    "ourStory": {
-      "title": "我们的故事",
-      "description": "植根于中华传统美容文化，美丽日记融合了千年草本智慧与现代生物科技，结合先进的抗衰老技术与珍贵天然成分。受东方美学与现代科技融合的启发，我们精心打造顶级护肤解决方案，提升生活品质，展现永恒之美。",
-      "sections": [
+      "id": "brand-heritage",
+      "name": "The House(品牌传承)",
+      "hasDropdown": true,
+      "dropdownItems": [
         {
-          "title": "传承东方美容智慧",
-          "description": "中国拥有悠久的传统美容文化，从古代宫廷秘方到现代科技研发，一直引领着护肤美妆的创新。从《本草纲目》的草本精华到今天的现代生物科技，我们不断传承并创新焕新的科学。",
-          "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+          "name": "核心成分",
+          "slug": "key-ingredients"
         },
         {
-          "title": "诞生于中国",
-          "description": "美丽日记诞生于中国，是国产高端美妆品牌的代表。我们深入挖掘中国传统草本精华，结合现代生物科技和先进护肤技术，致力于为亚洲女性打造专属的护肤方案。在新时代的背景下，美丽日记成为国产美妆创新的引领者，这一开创性方法正在塑造着整个行业。"
+          "name": "技术与专利",
+          "slug": "Technology and Patents"
         }
       ]
     },
-    "ourIntroduction": {
-      "title": "我们的介绍",
-      "description": "美丽日记是一家专注于高端护肤的国产美妆品牌，致力于将现代先进的抗衰老科技与珍贵的天然草本成分相结合，为每一位追求美丽的女性提供卓越的护肤体验。",
-      "sections": [
+    {
+      "id": "membership",
+      "name": "会员中心",
+      "hasDropdown": true,
+     "dropdownItems": [
         {
-          "title": "品牌理念",
-          "description": "美丽日记相信，真正的美丽源于内在的健康与活力。我们通过科学配方和精湛工艺，帮助肌肤恢复年轻状态，展现自然之美。"
+          "name": "专属服务",
+          "slug": "exclusive-services"
         },
         {
-          "title": "核心价值",
-          "description": "我们坚持使用最优质的原料，采用最先进的科技，确保每一款产品都能为肌肤带来显著的改善效果。"
-        }
-      ]
-    },
-    "ourTechnology": {
-      "title": "我们的技术",
-      "description": "美丽日记采用现代先进的肌肤修复技术和纳米营养输送系统，确保活性成分能够深入肌肤底层，发挥最大功效。",
-      "sections": [
-        {
-          "title": "肌肤修复技术",
-          "description": "我们运用前沿的肌肤修复技术，能够精准识别并修复受损的肌肤组织，促进胶原蛋白生成，恢复肌肤的弹性和紧致。"
-        },
-        {
-          "title": "纳米营养输送",
-          "description": "通过独特的纳米营养输送技术，我们能够将珍贵的活性成分直接输送到肌肤深层，确保营养成分被充分吸收和利用。"
-        }
-      ]
-    },
-    "ourStrategy": {
-      "title": "我们的战略",
-      "description": "美丽日记致力于成为全球领先的高端护肤品牌，通过持续创新和卓越品质，为全球消费者提供最优质的护肤解决方案。",
-      "sections": [
-        {
-          "title": "创新研发",
-          "description": "我们持续投入研发，不断探索新的护肤科技和成分，确保产品始终处于行业前沿。"
-        },
-        {
-          "title": "全球布局",
-          "description": "美丽日记正在全球范围内扩展业务，与顶尖的科研机构和合作伙伴建立战略联盟，共同推动护肤行业的发展。"
+          "name": "会员体系",
+          "slug": "membership-system"
         }
       ]
     }
-  },
-  "joinUs": {
-    "title": "加盟合作",
-    "subtitle": "携手美丽日记，共创财富未来",
-    "description": "美丽日记诚邀有志之士加入我们的加盟体系，共同开拓高端护肤市场。我们提供完善的品牌支持、专业的运营指导和丰厚的利润回报，期待与您携手共赢。",
-    "sections": [
-      {
-        "title": "为什么选择加盟美丽日记",
-        "description": "美丽日记作为高端护肤品牌，拥有强大的品牌影响力和市场竞争力。加盟我们，您将获得全方位的支持，包括品牌授权、产品供应、营销支持、培训指导等，让您的创业之路更加顺畅。",
-        "features": [
-          "强大的品牌影响力和市场认知度",
-          "完善的产品体系和持续的新品支持",
-          "专业的营销推广和培训指导",
-          "丰厚的利润空间和灵活的加盟政策"
-        ]
-      },
-      {
-        "title": "加盟优势",
-        "description": "我们为加盟商提供全方位的支持服务，从选址装修到运营管理，从产品培训到营销推广，全程协助您快速启动并持续盈利。",
-        "positions": [
-          "品牌授权与形象支持",
-          "产品供应与库存管理",
-          "营销推广与广告支持",
-          "专业培训与运营指导"
-        ]
-      },
-      {
-        "title": "我们的承诺",
-        "description": "我们承诺为每一位加盟伙伴提供公平的合作机会，尊重每一位合作伙伴，提供持续的支持和服务，并致力于创造一个互利共赢的合作环境，共同发展壮大。"
-      }
-    ],
-    "contact": {
-      "title": "加盟咨询",
-      "email": "franchise@meiliriji.com",
-      "phone": "400-XXX-XXXX"
-    }
-  },
+  ],
   "product": {
     "qrCodeModal": {
       "title": "扫码购买",
       "description": "使用微信扫描下方二维码，前往官方小程序购买",
       "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram",
       "qrCodeAlt": "小程序二维码",
-      "footerText": "美丽日记官方小程序"
-    },
-    "allProductsSection": {
-      "title": "全部产品",
-      "description": "探索美丽日记的完整产品系列，发现适合您的专属护肤方案"
+      "footerText": "FANTASYCARE官方小程序"
     },
     "products": [
       {
-        "slug": "life-matrix-collection",
-        "title": "长续内源生机系列",
-        "description": "长续内源生机系列是美丽日记的时光倒流杰作，融合了传统草本精华与现代生物科技。精心打造以唤醒年轻活力，这一尊贵系列将前沿护肤科技与独特的活性复合物和纳米营养输送技术相结合，精准靶向多种衰老途径。富含强效焕活活性成分，从内而外恢复肌肤的青春活力，提供无与伦比的奢华抗衰老体验。",
-        "productImage1": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "slug": "basic-revitalization-collection",
         "productList": [
           {
             "id": 1,
-            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "slug": "basic-revitalization-collection-1",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
             "tags": ["新品"],
-            "productName": "臻爱铂金尊宠面膜",
-            "benefits": ["抗皱", "焕新", "柔滑", "全然卓效焕颜新生"],
-            "price": 1358,
+            "productName": "木瓜饮",
+            "price": 49,
             "specification": "精华液 12X0.7ml+铂金面膜 20ml",
-            "keywords": ["抗皱", "焕新", "柔滑"],
-            "benefitDetails": [
-              "为苛求完美肌肤者臻研的二重密集护理。",
-              "使用15分钟后,改善皮肤纹路;肌肤光泽度、平滑度、丰盈感、保湿度以及整体肤质显著提升。*",
-              "使用4周后,肌肤紧致度和弹性显著提升,肌肤更加柔滑,焕启年轻活力*。",
-              "使用8周后,丰盈胶原纤维。*"
-            ]
-          }
-        ]
-      },
-      {
-        "slug": "platinum-collection",
-        "title": "臻爱铂金系列",
-        "description": "臻爱铂金系列是美丽日记奢华护肤的巅峰之作，融合了珍贵的铂金成分与先进的抗衰老科技。每一款产品都经过美丽日记精心调配，旨在为肌肤带来至臻的焕颜新生体验。通过独特的配方和卓越的工艺，帮助肌肤恢复紧致、弹性和光泽，展现无与伦比的奢华之美。",
-        "productImage1": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
-        "productList": [
-          {
-            "id": 1,
-            "slug": "platinum-rare-haute-rejuvenation-mask",
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["新品"],
-            "productName": "臻爱铂金尊宠面膜",
-            "benefits": ["抗皱", "焕新", "柔滑", "全然卓效焕颜新生"],
-            "price": 1358,
-            "specification": "精华液 12X0.7ml+铂金面膜 20ml",
-            "keywords": ["抗皱", "焕新", "柔滑"],
-            "benefitDetails": [
-              "为苛求完美肌肤者臻研的二重密集护理。",
-              "使用15分钟后,改善皮肤纹路;肌肤光泽度、平滑度、丰盈感、保湿度以及整体肤质显著提升。*",
-              "使用4周后,肌肤紧致度和弹性显著提升,肌肤更加柔滑,焕启年轻活力*。",
-              "使用8周后,丰盈胶原纤维。*"
-            ]
+            "benefitDetails": []
           },
           {
             "id": 2,
+            "slug": "basic-revitalization-collection-2",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["明星臻选"],
-            "productName": "臻爱铂金尊宠乳霜",
-            "benefits": ["紧致", "焕新", "柔滑", "焕颜新生乳霜"],
-            "price": 1428
+            "productName": "美白片",
+            "price": 79,
+            "specification": "",
+            "benefitDetails": []
           },
           {
             "id": 3,
+            "slug": "basic-revitalization-collection-3",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "臻爱铂金尊宠眼霜",
-            "benefits": ["紧致", "焕新", "柔滑", "焕颜新生眼部护理"],
-            "price": 925
+            "productName": "维生素",
+            "price": 19,
+            "specification": "",
+            "benefitDetails": []
           },
           {
             "id": 4,
+            "slug": "basic-revitalization-collection-4",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["明星臻选"],
-            "productName": "臻爱铂金尊宠夜间精华液",
-            "benefits": ["紧致", "焕新", "柔滑", "夜间焕颜精华液"],
-            "price": 1235
-          },
-          {
-            "id": 5,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "臻爱铂金尊宠眼部精华",
-            "benefits": ["紧致", "焕新", "柔滑", "眼部焕颜精华"],
-            "price": 985
-          },
-          {
-            "id": 6,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "臻爱铂金尊宠精华液",
-            "benefits": ["紧致", "焕新", "柔滑", "焕颜新生精华"],
-            "price": 1120
-          },
-          {
-            "id": 7,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": [],
-            "productName": "臻爱铂金尊宠乳霜",
-            "benefits": ["紧致", "焕新", "柔滑", "焕颜新生乳霜"],
-            "price": 1428
-          },
-          {
-            "id": 8,
-            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["明星臻选"],
-            "productName": "臻爱铂金焕颜精粹露",
-            "benefits": ["紧致", "焕新", "柔滑", "焕颜精粹"],
-            "price": 180
+            "productName": "腿丸",
+            "price": 39,
+            "specification": "",
+            "benefitDetails": []
           }
         ]
       },
       {
-        "slug": "caviar-collection",
-        "title": "鱼子精华系列",
-        "description": "鱼子精华系列是美丽日记精心打造的紧致提升系列，以珍贵的鱼子提取物为核心，结合先进的紧致提升技术，为肌肤带来卓越的紧致和提升效果。美丽日记独特的配方能够深入肌肤底层，激活胶原蛋白生成，有效改善肌肤松弛和下垂问题，让肌肤重获年轻紧致的状态。",
-        "productImage1": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "slug": "advanced-repair-collection",
         "productList": [
           {
             "id": 1,
-            "slug": "platinum-rare-haute-rejuvenation-mask",
+            "slug": "advanced-repair-collection-1",
             "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
-            "tags": ["新品"],
-            "productName": "臻爱铂金尊宠面膜",
-            "benefits": ["抗皱", "焕新", "柔滑", "全然卓效焕颜新生"],
-            "price": 1358,
-            "specification": "精华液 12X0.7ml+铂金面膜 20ml",
-            "keywords": ["抗皱", "焕新", "柔滑"],
-            "benefitDetails": [
-              "为苛求完美肌肤者臻研的二重密集护理。",
-              "使用15分钟后,改善皮肤纹路;肌肤光泽度、平滑度、丰盈感、保湿度以及整体肤质显著提升。*",
-              "使用4周后,肌肤紧致度和弹性显著提升,肌肤更加柔滑,焕启年轻活力*。",
-              "使用8周后,丰盈胶原纤维。*"
-            ]
+            "productName": "抗衰",
+            "price": 129,
+            "specification": "",
+            "benefitDetails": []
+          },
+          {
+            "id": 2,
+            "slug": "advanced-repair-collection-1",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "productName": "美白",
+            "price": 129,
+            "specification": "",
+            "benefitDetails": []
+          },
+          {
+            "id": 3,
+            "slug": "advanced-repair-collection-1",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "productName": "卵巢",
+            "price": 129,
+            "specification": "",
+            "benefitDetails": []
+          },
+          {
+            "id": 4,
+            "slug": "advanced-repair-collection-1",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+            "productName": "生发",
+            "price": 99,
+            "specification": "",
+            "benefitDetails": []
           }
         ]
       },
       {
-        "slug": "pure-white-collection",
-        "title": "纯皙紧致系列",
-        "description": "纯皙紧致系列是美丽日记专注于肌肤焕亮和紧致的专业系列，通过独特的亮白配方和紧致科技，帮助肌肤恢复纯净透亮的光泽。美丽日记产品能够有效淡化色斑，均匀肤色，同时提升肌肤紧致度，让肌肤呈现出自然纯净的美丽状态。",
-        "productImage1": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
-        "productList": []
-      },
-      {
-        "slug": "golden-radiance-collection",
-        "title": "金颜亮采系列",
-        "description": "金颜亮采系列是美丽日记以黄金般的奢华质感打造的焕活系列，为肌肤带来焕活和滋养的双重功效。富含珍贵的黄金成分和滋养精华，能够深层滋养肌肤，恢复肌肤的活力和光泽。美丽日记独特的配方让肌肤焕发出如黄金般璀璨的光彩，展现无与伦比的奢华魅力。",
-        "productImage1": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80",
-        "productImage2": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
-        "decorativeImage": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+        "slug": "limited-exclusive-collection",
         "productList": []
       }
     ]
   },
+  "exclusiveServices": {
+    "title": "专属服务",
+    "subtitle": "AI驱动的精准护肤解决方案",
+    "description": "我们的智能皮肤分析系统结合您独特的皮肤特征和个人需求，生成量身定制的护肤方案。",
+    "services": [
+      {
+        "title": "多维数据采集",
+        "description": "20+参数包括皮肤亮度、纹理密度和微循环状态。",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "title": "动态方案优化",
+        "description": "根据皮肤状况变化进行季度更新",
+        "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "title": "专属定制包装",
+        "description": "个性化礼品盒，刻有您的专属ID",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "globalConsultation": {
+      "title": "全球美学咨询",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "features": [
+        "国际认证医师支持系统",
+        "与10+国家口服美学专家合作。",
+        "24/7在线皮肤健康咨询服务。",
+        "术后护理计划（与临床程序协调）。"
+      ]
+    }
+  },
+  "membershipSystem": {
+    "title": "会员计划",
+    "professionalSupport": "专业支持",
+    "certificationProgram": "全球口服医疗美学医师认证计划",
+    "aiDevelopment": "AI决策系统开发",
+    "predictiveModeling": {
+      "title": "皮肤状况预测建模",
+      "models": [
+        {
+          "period": "SHORT",
+          "description": "7天皮肤屏障改善预测",
+          "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          "period": "MEDIUM",
+          "description": "30天胶原蛋白再生轨迹分析",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          "period": "LONG-TERM",
+          "description": "90天全面焕新进度预测",
+          "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        }
+      ]
+    },
+    "allergenAlert": {
+      "title": "过敏原敏感度预警系统 实时成分兼容性分析",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "dosageOptimization": {
+      "title": "个性化剂量优化算法",
+      "people": [
+        {
+          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1594824476968-48fd8a6c5fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1594824476968-48fd8a6c5fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        }
+      ]
+    },
+    "userExperience": {
+      "title": "用户体验生态系统",
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "userFeedback": {
+      "title": "用户反馈",
+      "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "skinRenewal": {
+      "title": "皮肤更新日志",
+      "subtitle": "用户上传前后对比视频",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+    "expertQA": {
+      "title": "专家问答环节",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    },
+    "milestoneBadges": {
+      "title": "皮肤更新里程碑徽章",
+      "badges": [
+        {
+          "period": "25-Day",
+          "description": "坚持徽章（每日使用验证）",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "period": "90-Day",
+          "description": "蜕变徽章（可见效果确认）",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        },
+        {
+          "period": "180-Day",
+          "description": "精通徽章（持续皮肤健康优化）",
+          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        }
+      ]
+    }
+  },
   "common": {
     "viewDetails": "查看详情",
     "viewAllProducts": "查看全部产品",
+    "seriesProducts": "系列产品",
     "all": "全部",
     "filter": "筛选",
     "category": "分类",
@@ -389,8 +487,7 @@
     "noProducts": "暂无产品",
     "productName": "产品名称",
     "price": "价格",
-    "contactUs": "联系我们",
-    "aboutUs": "关于我们"
+    "contactUs": "联系我们"
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <!-- 全部产品展示区域 - 首页第四个页面 -->
+  <!-- 全部产品展示区域 -->
   <section
     id="all-products-section"
     class="relative bg-linear-to-br from-gray-50 via-white to-gray-50 overflow-hidden py-16 md:py-24"
@@ -124,7 +124,7 @@ const sectionData = computed(() => {
   return (
     productData.value.allProductsSection || {
       title: '全部产品',
-      description: '探索美丽日记的完整产品系列，发现适合您的专属护肤方案',
+      description: '探索FANTASYCARE的完整产品系列，发现适合您的专属护肤方案',
     }
   )
 })

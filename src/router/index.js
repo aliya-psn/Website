@@ -1,10 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import ProductPage from '../views/ProductPage.vue'
-import ProductDetail from '../views/ProductDetail.vue'
-import AboutUs from '../views/AboutUs.vue'
-import JoinUs from '../views/JoinUs.vue'
-import AllProducts from '../views/AllProducts.vue'
+import ProductPage from '../views/product/ProductPage.vue'
+import ProductDetail from '../views/product/ProductDetail.vue'
+import Origin from '../views/science/Origin.vue'
+import DevelopmentHistory from '../views/science/DevelopmentHistory.vue'
+import HonorsAwards from '../views/science/HonorsAwards.vue'
+import KeyIngredients from '../views/house/KeyIngredients.vue'
+import TechnologyAndPatents from '../views/house/TechnologyAndPatents.vue'
+import ExclusiveServices from '../views/member/ExclusiveServices.vue'
+import MembershipSystem from '../views/member/MembershipSystem.vue'
+import AllProducts from '../views/product/AllProducts.vue'
 
 const routes = [
   {
@@ -13,15 +18,43 @@ const routes = [
     component: Home
   },
   {
-    path: '/about/:slug',
-    name: 'AboutUs',
-    component: AboutUs,
-    props: true
+    path: '/origin/honors-awards',
+    name: 'HonorsAwards',
+    component: HonorsAwards
   },
   {
-    path: '/join-us',
-    name: 'JoinUs',
-    component: JoinUs
+    path: '/origin/development-history',
+    name: 'DevelopmentHistory',
+    component: DevelopmentHistory,
+    meta: {
+      fullscreen: true,
+      hideFooter: true
+    }
+  },
+  {
+    path: '/origin',
+    name: 'Origin',
+    component: Origin
+  },
+  {
+    path: '/key-ingredients',
+    name: 'KeyIngredients',
+    component: KeyIngredients
+  },
+  {
+    path: '/technology-and-patents',
+    name: 'TechnologyAndPatents',
+    component: TechnologyAndPatents
+  },
+  {
+    path: '/exclusive-services',
+    name: 'ExclusiveServices',
+    component: ExclusiveServices
+  },
+  {
+    path: '/membership-system',
+    name: 'MembershipSystem',
+    component: MembershipSystem
   },
   {
     path: '/all-products',

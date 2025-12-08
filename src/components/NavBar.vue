@@ -17,12 +17,6 @@
           class="text-white font-elegant text-xl md:text-2xl lg:text-3xl tracking-wide"
         >
           {{ dataSource?.home?.brand?.name }}
-          <span
-            v-if="dataSource?.home?.brand?.subtitle"
-            class="block text-xs md:text-sm font-light mt-1 opacity-90"
-          >
-            {{ dataSource.home.brand.subtitle }}
-          </span>
         </div>
       </div>
 
@@ -60,8 +54,8 @@
     <!-- 导航下拉菜单 - 在导航栏下方 -->
     <div ref="dropdownContainer" class="relative">
       <transition name="slide-down">
-        <!-- 产品系列下拉菜单 -->
-        <ProductsDropdown
+        <!-- 产品系列 下拉菜单 -->
+        <MenuDropdown
           v-if="
             showDropdown &&
             currentDropdownId === 'products' &&
@@ -73,15 +67,41 @@
         />
       </transition>
       <transition name="slide-down">
-        <!-- 关于我们下拉菜单 -->
-        <AboutDropdown
+        <!-- 科学解析 下拉菜单 -->
+        <MenuDropdown
           v-if="
             showDropdown &&
-            currentDropdownId === 'about' &&
+            currentDropdownId === 'science-analysis' &&
             currentDropdownItems.length > 0
           "
           :data="currentDropdownItems"
-          @item-click="handleAboutItemClick"
+          @item-click="handleScienceItemClick"
+          @close="closeDropdown"
+        />
+      </transition>
+      <transition name="slide-down">
+        <!-- 品牌传承 下拉菜单 -->
+        <MenuDropdown
+          v-if="
+            showDropdown &&
+            currentDropdownId === 'brand-heritage' &&
+            currentDropdownItems.length > 0
+          "
+          :data="currentDropdownItems"
+          @item-click="handleBrandHeritageItemClick"
+          @close="closeDropdown"
+        />
+      </transition>
+      <transition name="slide-down">
+        <!-- 会员中心 下拉菜单 -->
+        <MenuDropdown
+          v-if="
+            showDropdown &&
+            currentDropdownId === 'membership' &&
+            currentDropdownItems.length > 0
+          "
+          :data="currentDropdownItems"
+          @item-click="handleItemClick"
           @close="closeDropdown"
         />
       </transition>
@@ -92,8 +112,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import ProductsDropdown from './ProductsDropdown.vue'
-import AboutDropdown from './AboutDropdown.vue'
+import MenuDropdown from './MenuDropdown.vue'
 import { useI18nData } from '../composables/useI18nData'
 
 const { dataSource } = useI18nData()
@@ -186,16 +205,39 @@ onUnmounted(() => {
 })
 
 const handleItemClick = (item) => {
-  if (typeof item === 'object' && item.id) {
-    const slug = item.slug
-    router.push(`/${slug}`)
+  if (typeof item === 'object') {
+    const slug = item.slug || (item.id && typeof item.id === 'string' ? item.id : null)
+    if (slug) {
+      router.push(`/${slug}`)
+    }
   }
   closeDropdown()
 }
 
-const handleAboutItemClick = (item) => {
+const handleScienceItemClick = (item) => {
   if (typeof item === 'object' && item.slug) {
-    router.push(`/about/${item.slug}`)
+    // 起源页面使用特殊路由 /origin
+    if (item.slug === 'origin') {
+      router.push('/origin')
+    } else {
+      // 其他页面使用 /origin/ 前缀
+      router.push(`/origin/${item.slug}`)
+    }
+  }
+  closeDropdown()
+}
+
+const handleBrandHeritageItemClick = (item) => {
+  if (typeof item === 'object' && item.slug) {
+    // 核心成分页面使用特殊路由 /key-ingredients
+    if (item.slug === 'key-ingredients') {
+      router.push('/key-ingredients')
+    } else if (item.slug === 'Technology and Patents') {
+      // 技术与专利页面使用特殊路由 /technology-and-patents
+      router.push('/technology-and-patents')
+    } else {
+      router.push(`/origin/${item.slug}`)
+    }
   }
   closeDropdown()
 }
