@@ -14,27 +14,31 @@
   "luxuryCare": {
     "image": "/src/assets/home/5.png"
   },
+  "menu": {
+    "scienceAnalysis": {
+      "origin": "/src/assets/science/menu/1.png",
+      "developmentHistory": "/src/assets/science/menu/2.png",
+      "honorsAwards": "/src/assets/science/menu/3.png"
+    },
+    "brandHeritage": {
+      "key": "/src/assets/house/menu/1.png",
+      "technology": "/src/assets/house/menu/2.png"
+    },
+    "membership": {
+      "services": "/src/assets/member/menu/1.png",
+      "system": "/src/assets/member/menu/2.png"
+    }
+  },
+  "product": {
+    "default": "/src/assets/product/3.png",
+    "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
+  },
   "developmentHistory": {
     "1": "/src/assets/science/development/1.png",
     "2": "/src/assets/science/development/2.png",
     "3": "/src/assets/science/development/3.png",
     "4": "/src/assets/science/development/4.png",
     "5": "/src/assets/science/development/5.png"
-  },
-  "keyIngredients": {
-    "drShona": "/src/assets/house/key/1.png",
-    "teamImage": "/src/assets/house/key/2.png"
-  },
-  "technologyAndPatents": {
-    "certificateImage": "/src/assets/house/tech/1.png",
-    "patentImage": "/src/assets/house/tech/2.png"
-  },
-  "honorsAwards": {
-    "default": "/src/assets/member/membership/1.png"
-  },
-  "product": {
-    "default": "/src/assets/product/3.png",
-    "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
   },
   "member": {
     "service": {

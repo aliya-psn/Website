@@ -18,7 +18,7 @@
     "subtitle": "定义美的维度",
     "description": "真正的奢华在于将美变成一门精确且可预测的科学。",
     "buttonText": "开始购买",
-      "productImage": "experience.productImage"
+    "productImage": "experience.productImage"
   },
   "origin": {
     "title": "品牌愿景",
@@ -33,13 +33,48 @@
     "title": "根植于医学，精炼于科学",
     "subtitle": "协同。实现终极再生。",
     "buttonText": "科学探索",
-      "collageImage": "scientificExploration.collageImage"
+    "collageImage": "scientificExploration.collageImage"
   },
   "luxuryCare": {
     "primaryText": "真正的奢华护理不在于对抗，而在于滋养；",
     "secondaryText": "璀璨的再生不是来自匆忙的展示，而是来自内在的秩序。",
-      "image": "luxuryCare.image"
+    "image": "luxuryCare.image"
   },
+  "mapNewsletter": {
+    "title": "订阅我们的新闻通讯",
+    "placeholder": "请在此输入您的电子邮件。",
+    "buttonText": "登记",
+    "submitting": "提交中...",
+    "successMessage": "订阅成功！",
+    "errorMessage": "订阅失败，请稍后重试。"
+  },
+  "originHistory": [
+    {
+      "title": "品牌起源",
+      "subtitle": "从医美诊所到细胞实验室的蜕变一切始于两个空间的对话",
+      "description": "Dr Shona Dalzell博士创立的The Cosmetic Clinic中，尖端设备带来即刻改变，却无法满足求美者对“持久光彩”的渴望；\n 皮肤研究实验室：作为奥克兰大学皮肤学博士，她洞见问题本质——外在显化，皆源于细胞状态的失衡。\n当医学遇见美学，一个颠覆性的构想诞生：\n 将医美诊所的精准效能，转化为可口服的细胞级营养指令。\n 历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。"
+    },
+    {
+      "title": "品牌愿景",
+      "subtitle": "Fantasy Care，以医学为笔，以时间为纸，书写由内而外的焕活诗篇。",
+      "description": "我们坚信，内蕴，是最高级的奢护；新生，是最从容的抵达。\n 在这里，美是一场精准的细胞内驭，一次忠于自我的科学仪式。"
+    },
+    {
+      "title": "内蕴",
+      "subtitle": "医美科技的口服化革命",
+      "description": "我们深入肌底，以精准营养激活肌肤内在的焕活程序。如同为细胞提供一张精准的“修复蓝图”，促进胶原自生、强化防御屏障，实现由内而外的系统性改善。这不仅是护理，更是一场引导肌肤走向自我新生的科学仪式。"
+    },
+    {
+      "title": "奢护",
+      "subtitle": "医药级的品质承诺",
+      "description": "奢华的基石，是无可挑剔的严谨。从全球甄选经临床验证的活性成分，到遵循药品级GMP标准的生产环境，我们以科学量尺，严格把控从原料至成品的每一环节。这份近乎偏执的承诺，只为确保每一次服用，都是安全、纯净、高效的奢宠体验。"
+    },
+    {
+      "title": "新生",
+      "subtitle": "整体状态的焕然一新",
+      "description": "新生，是身心协同的最终杰作。它呈现为肌肤的细腻光采、发丝的强大韧性与身心的从容活力。我们追求的不是短暂的修饰，而是持久、稳定、可见的整体状态提升，让您由内而外，悦然新生。"
+    }
+  ],
   "developmentHistory": [
     {
       "year": "2016",
@@ -195,14 +230,17 @@
       "dropdownItems": [
         {
           "name": "起源",
+          "image": "menu.scienceAnalysis.origin",
           "slug": "origin"
         },
         {
           "name": "发展历程",
+          "image": "menu.scienceAnalysis.developmentHistory",
           "slug": "development-history"
         },
         {
           "name": "荣誉奖项",
+          "image": "menu.scienceAnalysis.honorsAwards",
           "slug": "honors-awards"
         }
       ]
@@ -214,10 +252,12 @@
       "dropdownItems": [
         {
           "name": "核心成分",
+          "image": "menu.brandHeritage.key",
           "slug": "key-ingredients"
         },
         {
           "name": "技术与专利",
+          "image": "menu.brandHeritage.technology",
           "slug": "Technology and Patents"
         }
       ]
@@ -226,13 +266,15 @@
       "id": "membership",
       "name": "会员中心",
       "hasDropdown": true,
-     "dropdownItems": [
+      "dropdownItems": [
         {
           "name": "专属服务",
+          "image": "menu.membership.services",
           "slug": "exclusive-services"
         },
         {
           "name": "会员体系",
+          "image": "menu.membership.system",
           "slug": "membership-system"
         }
       ]

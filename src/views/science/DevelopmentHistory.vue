@@ -155,36 +155,35 @@ const switchToYear = (index) => {
   currentIndex.value = index
 }
 
-// 滚动处理
-let scrollAccumulator = 0
-let scrollTimeout = null
-const SCROLL_THRESHOLD = 100 // 滚动阈值，需要累积到这个值才切换
+// 滚动处理：手势分组，停止 1 段时间后才解锁
+let isSwitching = false
+let switchUnlockTimer = null
+const QUIET_WINDOW_MS = 320 // 手势结束判定的静默时长
 
 const handleWheel = (e) => {
-  // 累积滚动量
-  scrollAccumulator += Math.abs(e.deltaY)
-  
-  // 清除之前的定时器
-  clearTimeout(scrollTimeout)
-  
-  // 如果累积滚动量超过阈值，执行切换
-  if (scrollAccumulator >= SCROLL_THRESHOLD) {
-    scrollAccumulator = 0 // 重置累积量
-    
-    // 向下滚动：切换到下一个年份
-    if (e.deltaY > 0 && currentIndex.value < historyList.value.length - 1) {
-      switchToYear(currentIndex.value + 1)
-    }
-    // 向上滚动：切换到上一个年份
-    else if (e.deltaY < 0 && currentIndex.value > 0) {
-      switchToYear(currentIndex.value - 1)
-    }
+  e.preventDefault?.()
+
+  // 只要还有滚动事件进来，就持续延后解锁时间
+  clearTimeout(switchUnlockTimer)
+  switchUnlockTimer = setTimeout(() => {
+    isSwitching = false
+  }, QUIET_WINDOW_MS)
+
+  if (isSwitching) return
+
+  // 向下滚动：切换到下一个年份
+  if (e.deltaY > 0 && currentIndex.value < historyList.value.length - 1) {
+    switchToYear(currentIndex.value + 1)
   }
-  
-  // 如果一段时间没有滚动，重置累积量
-  scrollTimeout = setTimeout(() => {
-    scrollAccumulator = 0
-  }, 300)
+  // 向上滚动：切换到上一个年份
+  else if (e.deltaY < 0 && currentIndex.value > 0) {
+    switchToYear(currentIndex.value - 1)
+  } else {
+    return
+  }
+
+  // 锁定，等待滚动完全停止后自动解锁
+  isSwitching = true
 }
 
 onMounted(() => {
@@ -198,7 +197,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('wheel', handleWheel)
-  clearTimeout(scrollTimeout)
+  clearTimeout(switchUnlockTimer)
 })
 </script>
 

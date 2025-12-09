@@ -38,6 +38,41 @@
     "secondaryText": "Brilliant regeneration comes not from hasty display, but from internal order.",
     "image": "luxuryCare.image"
   },
+  "mapNewsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "placeholder": "Please enter your email address here.",
+    "buttonText": "Register",
+    "submitting": "Submitting...",
+    "successMessage": "Subscription successful!",
+    "errorMessage": "Subscription failed, please try again later."
+  },
+  "originHistory": [
+    {
+      "title": "Brand Origin",
+      "subtitle": "From an aesthetic clinic to a cellular laboratory—the transformation began with a dialogue between two spaces.",
+      "description": "In The Cosmetic Clinic founded by Dr Shona Dalzell, cutting-edge devices delivered instant changes yet could not satisfy the desire for lasting radiance;\n Skin research laboratory: as a dermatology PhD from the University of Auckland, she saw the essence—external manifestations stem from imbalances at the cellular level.\nWhen medicine met aesthetics, a disruptive idea was born:\n Translate the precise efficacy of aesthetic clinics into oral, cellular-level nutritional directives.\n After seven years of R&D, Fantasy Care launched with \"luxurious nourishment from within,\" ushering in a new era of oral medical aesthetics."
+    },
+    {
+      "title": "Brand Vision",
+      "subtitle": "Fantasy Care writes a revitalizing ode from within—medicine as the pen, time as the paper.",
+      "description": "We believe inner richness is the highest form of luxury care; renewal is the calmest arrival.\n Here, beauty is a precise intracellular stewardship—a scientific ritual faithful to oneself."
+    },
+    {
+      "title": "Inner Richness",
+      "subtitle": "An oral revolution in medical-aesthetic technology",
+      "description": "We delve deep to activate the skin’s internal revitalization program with precise nutrition—like providing cells a tailored “repair blueprint.” We boost collagen genesis, fortify the defense barrier, and achieve system-wide improvement from within. This is not just care; it is a scientific ritual guiding the skin to renewed life."
+    },
+    {
+      "title": "Luxurious Care",
+      "subtitle": "A pharmaceutical-grade quality commitment",
+      "description": "The cornerstone of luxury is uncompromising rigor. From globally sourced, clinically validated actives to GMP-grade production, we measure with scientific standards and scrutinize every step from raw ingredients to finished products. This near-obsessive promise ensures every serving is safe, pure, and efficacious."
+    },
+    {
+      "title": "Renewal",
+      "subtitle": "Holistic revitalization, inside and out",
+      "description": "Renewal is the ultimate work of body–mind synergy. It reveals itself as refined skin radiance, resilient hair strength, and composed vitality. We pursue not brief embellishment but durable, stable, visible improvement of the whole state—so you are renewed from within, naturally aglow."
+    }
+  ],
   "developmentHistory": [
     {
       "year": "2016",

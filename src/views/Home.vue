@@ -14,6 +14,9 @@
 
     <!-- 奢华护理区域 -->
     <LuxuryCareSection :sectionData="dataSource.luxuryCare" />
+
+    <!-- 地图和邮箱订阅区域 -->
+    <MapNewsletterSection :sectionData="dataSource.mapNewsletter" />
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import ExperienceSection from '../components/home/ExperienceSection.vue'
 import OriginSection from '../components/home/OriginSection.vue'
 import ScientificExplorationSection from '../components/home/ScientificExplorationSection.vue'
 import LuxuryCareSection from '../components/home/LuxuryCareSection.vue'
+import MapNewsletterSection from '../components/home/MapNewsletterSection.vue'
 import { useI18nData } from '../composables/useI18nData'
 
 const { dataSource } = useI18nData()
