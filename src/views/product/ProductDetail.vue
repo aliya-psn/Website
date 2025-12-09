@@ -40,7 +40,7 @@
           <!-- 右侧：产品展示和功效 -->
           <div class="space-y-6">
             <!-- 产品图片轮播区域 -->
-            <div class="relative bg-white rounded-2xl p-6 md:p-8 shadow-xl overflow-hidden">
+            <div class="relative overflow-hidden">
               <!-- 图片容器 -->
               <div 
                 class="flex transition-transform duration-500 ease-in-out"
@@ -49,7 +49,7 @@
                 <div
                   v-for="(img, index) in productImages"
                   :key="index"
-                  class="min-w-full flex items-center justify-center p-4"
+                  class="min-w-full flex items-center justify-center"
                 >
                   <LazyImage
                     :src="img"
@@ -95,11 +95,6 @@
                 ></button>
               </div>
             </div>
-
-            <!-- 功效标题 -->
-            <h3 class="text-xl md:text-2xl font-elegant font-bold text-gray-900">
-              功效
-            </h3>
 
             <!-- 详细功效说明 -->
             <div v-if="productDetail.benefitDetails" class="space-y-3">

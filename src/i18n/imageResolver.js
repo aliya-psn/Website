@@ -9,7 +9,7 @@ import i18n from './index.js'
  * 
  * @example
  * getImagePath('home.backgroundImage1') // => "/src/assets/home/4.png"
- * getImagePath('product.default') // => "/src/assets/product/3.png"
+ * getImagePath('product.1') // => "/src/assets/product/1.png"
  */
 export function getImagePath(key) {
   if (!key) return ''

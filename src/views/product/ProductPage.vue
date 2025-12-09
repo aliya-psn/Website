@@ -4,26 +4,34 @@
     <!-- 主内容区域 -->
     <div class="pt-24 md:pt-28">
       <!-- 标题区域 -->
-      <div class="bg-white py-12 md:py-16">
+      <div class="bg-white py-8">
         <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 tracking-tight">
             {{ productData.title }}
           </h1>
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto font-light">
-            {{ productData.description }}
+          <p v-if="productData.shortDescription" class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto font-light">
+            {{ productData.shortDescription }}
           </p>
         </div>
       </div>
 
-      <!-- 产品展示区域 -->
-      <div class="bg-blue-50 py-8 md:py-12 relative overflow-hidden">
-        <!-- 背景装饰 - 模糊的白色云朵效果 -->
-        <div class="absolute inset-0 opacity-30">
-          <div class="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div class="absolute bottom-10 left-10 w-56 h-56 bg-white rounded-full blur-3xl"></div>
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+      <!-- 详细描述区域 -->
+      <div v-if="productData.description && Array.isArray(productData.description) && productData.description.length > 0" class="bg-white py-2">
+        <div class="max-w-3xl mx-auto px-6 md:px-12">
+          <div class="space-y-2 text-center">
+            <p
+              v-for="(desc, index) in productData.description"
+              :key="index"
+              class="text-sm md:text-base text-gray-600 leading-relaxed font-light tracking-wide"
+            >
+              {{ desc }}
+            </p>
+          </div>
         </div>
+      </div>
 
+      <!-- 产品展示区域 -->
+      <div class="py-2 md:py-4 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6">
             <!-- 产品图片 -->
@@ -31,8 +39,8 @@
               <LazyImage 
                 :src="productData.productImage" 
                 :alt="productData.title"
-                container-class="w-40 md:w-48 h-auto"
-                image-class="w-full h-full object-contain shadow-2xl rounded-lg bg-white/50 p-3"
+                container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] min-w-96 md:min-w-[28rem] lg:min-w-[40rem] h-auto"
+                image-class="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -134,7 +142,8 @@ const productData = computed(() => {
     return {
       ...product,
       title: dropdownItem.title,
-      description: dropdownItem.description,
+      shortDescription: dropdownItem.description, // 简短描述（用于标题下方）
+      description: product.description || dropdownItem.description, // 详细描述（可能是数组）
       productImage: dropdownItem.image
     }
   }

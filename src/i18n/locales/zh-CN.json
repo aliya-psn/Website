@@ -25,14 +25,14 @@
       ]
     },
     "scientificExploration": {
-      "title": "根植于医学，精炼于科学",
-      "subtitle": "协同。实现终极再生。",
+      "title": "源于医学，成于科学",
+      "subtitle": "协同，直至新生。",
       "buttonText": "科学探索",
       "collageImage": "home.scientificExploration.collageImage"
     },
     "luxuryCare": {
-      "primaryText": "真正的奢华护理不在于对抗，而在于滋养；",
-      "secondaryText": "璀璨的再生不是来自匆忙的展示，而是来自内在的秩序。",
+      "primaryText": "真正的奢护，不在于对抗，而在于滋养；",
+      "secondaryText": "璀璨的新生，不显露于仓促，而源于内在的秩序。",
       "image": "home.luxuryCare.image"
     },
     "mapNewsletter": {
@@ -47,7 +47,7 @@
   "originHistory": [
     {
       "title": "品牌起源",
-      "subtitle": "从医美诊所到细胞实验室的蜕变一切始于两个空间的对话",
+      "subtitle": "从医美诊所到细胞实验室的蜕变，一切始于两个空间的对话",
       "description": "Dr Shona Dalzell博士创立的The Cosmetic Clinic中，尖端设备带来即刻改变，却无法满足求美者对“持久光彩”的渴望；\n 皮肤研究实验室：作为奥克兰大学皮肤学博士，她洞见问题本质——外在显化，皆源于细胞状态的失衡。\n当医学遇见美学，一个颠覆性的构想诞生：\n 将医美诊所的精准效能，转化为可口服的细胞级营养指令。\n 历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。",
       "image": "science.originHistory.1"
     },
@@ -207,21 +207,21 @@
           "id": 1,
           "title": "基础焕活系列",
           "description": "聚焦于日夜间基础维护，巩固肌肤屏障，提供核心营养。",
-          "image": "product.default",
+          "image": "product.1",
           "slug": "basic-revitalization-collection"
         },
         {
           "id": 2,
           "title": "进阶修护系列",
           "description": "针对暗沉、皱纹、松弛等专项问题，提供高浓度靶向修护。",
-          "image": "product.default",
+          "image": "product.2",
           "slug": "advanced-repair-collection"
         },
         {
           "id": 3,
           "title": "限量尊享系列",
           "description": "融汇年度前沿科研成果，为追求极致的客户提供先锋护理体验。",
-          "image": "home.backgroundImage",
+          "image": "product.3",
           "slug": "limited-exclusive-collection"
         }
       ]
@@ -298,17 +298,17 @@
           {
             "id": 1,
             "slug": "basic-revitalization-collection-1",
-            "image": "product.default",
+            "image": "product.1",
             "tags": ["新品"],
             "productName": "木瓜饮",
             "price": 49,
-            "specification": "精华液 12X0.7ml+铂金面膜 20ml",
+            "specification": "",
             "benefitDetails": []
           },
           {
             "id": 2,
             "slug": "basic-revitalization-collection-2",
-            "image": "product.default",
+            "image": "product.2",
             "productName": "美白片",
             "price": 79,
             "specification": "",
@@ -317,7 +317,7 @@
           {
             "id": 3,
             "slug": "basic-revitalization-collection-3",
-            "image": "product.default",
+            "image": "product.3",
             "productName": "维生素",
             "price": 19,
             "specification": "",
@@ -326,7 +326,7 @@
           {
             "id": 4,
             "slug": "basic-revitalization-collection-4",
-            "image": "product.default",
+            "image": "product.4",
             "productName": "腿丸",
             "price": 39,
             "specification": "",
@@ -340,7 +340,7 @@
           {
             "id": 1,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
+            "image": "product.1",
             "productName": "抗衰",
             "price": 129,
             "specification": "",
@@ -349,7 +349,7 @@
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
+            "image": "product.2",
             "productName": "美白",
             "price": 129,
             "specification": "",
@@ -358,7 +358,7 @@
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
+            "image": "product.3",
             "productName": "卵巢",
             "price": 129,
             "specification": "",
@@ -367,7 +367,7 @@
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
+            "image": "product.4",
             "productName": "生发",
             "price": 99,
             "specification": "",
@@ -377,28 +377,34 @@
       },
       {
         "slug": "limited-exclusive-collection",
-        "productList": []
+        "productList": [],
+        "description": [
+          "为每一位追求并重塑美的用户独家打造。",
+          "每一份补剂都承载专属意义；",
+          "每一粒胶囊唤醒身体的每个细胞，",
+          "从细胞到全身层层滋养。"
+        ]
       }
     ]
   },
   "exclusiveServices": {
     "title": "专属服务",
-    "subtitle": "AI驱动的精准护肤解决方案",
-    "description": "我们的智能皮肤分析系统结合您独特的皮肤特征和个人需求，生成量身定制的护肤方案。",
+    "subtitle": "基于AI皮肤检测的精准方案",
+    "description": "通过智能皮肤分析系统，结合用户肤质特征与需求，生成个性化产品组合方案。",
     "services": [
       {
         "title": "多维数据采集",
-        "description": "20+参数包括皮肤亮度、纹理密度和微循环状态。",
+        "description": "肤色亮度、纹理密度、微循环状态等20+参数",
         "image": "member.service.1"
       },
       {
         "title": "动态方案优化",
-        "description": "根据皮肤状况变化进行季度更新",
+        "description": "每季度根据肤质变化进行方案优化",
         "image": "member.service.2"
       },
       {
         "title": "专属定制包装",
-        "description": "个性化礼品盒，刻有您的专属ID",
+        "description": "刻有用户ID的尊享礼盒设计",
         "image": "member.service.3"
       }
     ],
@@ -439,23 +445,23 @@
       ]
     },
     "allergenAlert": {
-      "title": "过敏原敏感度预警系统 实时成分兼容性分析",
+      "title": "成分敏感度预警系统（细胞免疫）",
       "image": "member.membership.4"
     },
     "dosageOptimization": {
-      "title": "个性化剂量优化算法",
+      "title": "个性化营养配比建议（营养师）",
       "image": "member.membership.5"
     },
     "userExperience": {
-      "title": "用户体验生态系统",
+      "title": "用户反馈（品牌手册反馈）",
       "image": "member.membership.6"
     },
     "userFeedback": {
-      "title": "用户反馈",
+      "title": "真实体验生态圈（用户数据图）",
       "image": "member.membership.7"
     },
     "skinRenewal": {
-      "title": "皮肤更新日志",
+      "title": "焕肤日记",
       "videoUrl": "video.sample"
     },
     "expertQA": {
@@ -466,7 +472,7 @@
       "title": "皮肤更新里程碑徽章",
       "badges": [
         {
-          "period": "25-天",
+          "period": "28-天",
           "description": "坚持徽章（每日使用验证）",
           "image": "member.membership.7"
         },

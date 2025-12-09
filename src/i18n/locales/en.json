@@ -47,32 +47,32 @@
   "originHistory": [
     {
       "title": "Brand Origin",
-      "subtitle": "From an aesthetic clinic to a cellular laboratory—the transformation began with a dialogue between two spaces.",
-      "description": "In The Cosmetic Clinic founded by Dr Shona Dalzell, cutting-edge devices delivered instant changes yet could not satisfy the desire for lasting radiance;\n Skin research laboratory: as a dermatology PhD from the University of Auckland, she saw the essence—external manifestations stem from imbalances at the cellular level.\nWhen medicine met aesthetics, a disruptive idea was born:\n Translate the precise efficacy of aesthetic clinics into oral, cellular-level nutritional directives.\n After seven years of R&D, Fantasy Care launched with \"luxurious nourishment from within,\" ushering in a new era of oral medical aesthetics.",
+      "subtitle": "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
+      "description": "At The Cosmetic Clinic founded by Dr. Shona Dalzell, cutting-edge equipment delivered immediate transformations—yet failed to satisfy aesthetic seekers’ longing for long-lasting radiance. In the skin research laboratory: as a PhD in Dermatology from the University of Auckland, she discerned the core of the problem—all external manifestations stem from imbalances in cellular states.When medicine meets aesthetics, a revolutionary vision was born:Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.After seven years of R&D, Fantasy Care embarked on the concept of Luxurious Nourishment from Within, pioneering a new era of oral medical aesthetics.",
       "image": "science.originHistory.1"
     },
     {
       "title": "Brand Vision",
-      "subtitle": "Fantasy Care writes a revitalizing ode from within—medicine as the pen, time as the paper.",
-      "description": "We believe inner richness is the highest form of luxury care; renewal is the calmest arrival.\n Here, beauty is a precise intracellular stewardship—a scientific ritual faithful to oneself.",
+      "subtitle": "Fantasy Care: With medicine as the brush and time as the canvas.",
+      "description": "we compose a poem of inner-to-outer revitalization.We firmly believe that nourishment from within is the ultimate luxury in care; regeneration is the most graceful attainment.Here, beauty is a precise mastery of cellular vitality—a scientific ritual loyal to one’s true self.",
       "image": "science.originHistory.2"
     },
     {
-      "title": "Inner Richness",
-      "subtitle": "An oral revolution in medical-aesthetic technology",
-      "description": "We delve deep to activate the skin's internal revitalization program with precise nutrition—like providing cells a tailored \"repair blueprint.\" We boost collagen genesis, fortify the defense barrier, and achieve system-wide improvement from within. This is not just care; it is a scientific ritual guiding the skin to renewed life.",
+      "title": "Nourishment from Within",
+      "subtitle": "The Oral Revolution of Medical Aesthetic Technology",
+      "description": "We delve deep into the skin’s foundational layers, activating the skin’s intrinsic revitalization program with targeted nutrition.Like providing cells with a precise repair blueprint, we promote collagen self-synthesis, strengthen the defensive barrier, and achieve systematic improvements from within.This is not merely skincare—it is a scientific ritual guiding the skin toward self-regeneration.",
       "image": "science.originHistory.3"
     },
     {
       "title": "Luxurious Care",
-      "subtitle": "A pharmaceutical-grade quality commitment",
-      "description": "The cornerstone of luxury is uncompromising rigor. From globally sourced, clinically validated actives to GMP-grade production, we measure with scientific standards and scrutinize every step from raw ingredients to finished products. This near-obsessive promise ensures every serving is safe, pure, and efficacious.",
+      "subtitle": "A Commitment to Pharmaceutical-Grade Quality",
+      "description": "The cornerstone of luxury lies in impeccable rigor.From globally sourcing clinically validated active ingredients to adhering to pharmaceutical-grade GMP production standards, we strictly oversee every step—from raw materials to finished products—with scientific precision.This near-obsessive commitment ensures that every dose delivers a safe, pure, and high-efficacy luxurious experience.",
       "image": "science.originHistory.4"
     },
     {
-      "title": "Renewal",
-      "subtitle": "Holistic revitalization, inside and out",
-      "description": "Renewal is the ultimate work of body–mind synergy. It reveals itself as refined skin radiance, resilient hair strength, and composed vitality. We pursue not brief embellishment but durable, stable, visible improvement of the whole state—so you are renewed from within, naturally aglow.",
+      "title": "Regeneration",
+      "subtitle": "A Comprehensive Transformation of Overall Vitality",
+      "description": "Regeneration is the ultimate masterpiece of mind-body synergy.It manifests as the skin’s delicate radiance, the hair’s robust resilience, and the calm vitality of body and mind.We pursue not fleeting modification, but long-lasting, stable, and visible improvements in overall well-being—empowering you to embrace a radiant new self from within.",
       "image": "science.originHistory.5"
     }
   ],
@@ -81,7 +81,7 @@
       "year": "2016",
       "title": "Medical Inspiration",
       "description": [
-        "Born from a revolutionary insight in a New Zealand dermatological laboratory: True beauty stems from the reconstruction of internal cellular order. We aspire to integrate aesthetic medical effects into oral technology."
+        "Born from a revolutionary insight in a New Zealand dermatological laboratory: True beauty stems from the reconstruction of internal cellular order.We aspire to integrate aesthetic medical effects into oral technology."
       ],
       "image": "science.developmentHistory.1"
     },
@@ -89,15 +89,15 @@
       "year": "2020",
       "title": "System Forging",
       "description": [
-        "Established a comprehensive pharmaceutical grade R&D and supply chain system, defining internal beauty with the rigorous standards of pharmaceuticals—laying a solid cornerstone of trust for every commitment."
+        "Established a comprehensive pharmaceutical-grade R&D and supply chain system, defining internal beauty with the rigorous standards of pharmaceuticals—laying a solid cornerstone of trust for every commitment."
       ],
       "image": "science.developmentHistory.2"
     },
     {
       "year": "2023",
-      "title": "Ceremony",
+      "title": "Brilliant Inauguration",
       "description": [
-        "A new milestone in luxurious, ultimate rejuvenating and regenerating technology. Through the cherished Platinum Supreme Intensive Repair Essence, Dr. Niehans' enduring dream reaches its peak."
+        "Fantasy Care was elegantly launched in New Zealand.Its medical aesthetic-grade oral concept quickly gained recognition and endorsement from pioneering women worldwide."
       ],
       "image": "science.developmentHistory.3"
     },
@@ -105,12 +105,12 @@
       "year": "2025",
       "title": "Global Certification",
       "description": [
-        "The entire product line has been awarded New Zealand GMP, HACCP, and Halal certifications, with quality earning international recognition. Business has steadily expanded to key markets in Asia-Pacific and Europe, establishing a global benchmark for scientific brands."
+        "The entire product line has been awarded New Zealand GMP, HACCP, and Halal certifications, with quality earning international recognition.Business has steadily expanded to key markets in Asia-Pacific and Europe, establishing a global benchmark for scientific brands."
       ],
       "image": "science.developmentHistory.4"
     },
     {
-      "year": "Future",
+      "year": "The Future",
       "title": "Endless Exploration",
       "description": [
         "We continue to delve into the forefront of skin science and nutrition, reshaping the future boundaries of beauty through relentless scientific research."
@@ -200,35 +200,35 @@
     },
     {
       "id": "products",
-      "name": "Product Collections",
+      "name": "Product Collection",
       "hasDropdown": true,
       "dropdownItems": [
         {
           "id": 1,
-          "title": "Basic Revitalization Collection",
-          "description": "Focus on daily and nightly basic maintenance, strengthen skin barrier, provide core nutrition.",
-          "image": "product.default",
+          "title": "Essential Revitalization Collection",
+          "description": "Focuses on day-night foundational care, strengthens the skin barrier, and delivers core nutrition.",
+          "image": "product.1",
           "slug": "basic-revitalization-collection"
         },
         {
           "id": 2,
-          "title": "Advanced Repair Collection",
-          "description": "Target specific issues such as dullness, wrinkles, and sagging with high-concentration targeted repair.",
-          "image": "product.default",
+          "title": "Elevated Restoration Collection",
+          "description": "Targets specific concerns such as dullness, wrinkles, and sagging, delivering high-potency targeted restoration.",
+          "image": "product.2",
           "slug": "advanced-repair-collection"
         },
         {
           "id": 3,
-          "title": "Limited Exclusive Collection",
-          "description": "Integrating annual cutting-edge scientific research achievements, providing pioneering care experience for clients pursuing excellence.",
-          "image": "home.backgroundImage",
+          "title": "Limited Edition Privilege Collection",
+          "description": "Integrates cutting-edge annual scientific research findings, offering pioneering care experiences for clients pursuing excellence.",
+          "image": "product.3",
           "slug": "limited-exclusive-collection"
         }
       ]
     },
     {
       "id": "science-analysis",
-      "name": "Science Analysis",
+      "name": "Scientific Insights",
       "hasDropdown": true,
       "dropdownItems": [
         {
@@ -237,7 +237,7 @@
           "slug": "origin"
         },
         {
-          "name": "Development History",
+          "name": "Development Journey",
           "image": "menu.scienceAnalysis.developmentHistory",
           "slug": "development-history"
         },
@@ -250,7 +250,7 @@
     },
     {
       "id": "brand-heritage",
-      "name": "The House (Brand Heritage)",
+      "name": "The House",
       "hasDropdown": true,
       "dropdownItems": [
         {
@@ -276,7 +276,7 @@
           "slug": "exclusive-services"
         },
         {
-          "name": "Membership System",
+          "name": "Membership Program",
           "image": "menu.membership.system",
           "slug": "membership-system"
         }
@@ -290,17 +290,17 @@
     "services": [
       {
         "title": "Multidimensional Data Collection",
-        "description": "20+ parameters including skin brightness texture density, and microcirculation status.",
+        "description": "20+ parameters including skin brightness, texture density, and microcirculation status.",
         "image": "member.service.1"
       },
       {
         "title": "Dynamic Plan Optimization",
-        "description": "Quarterly updates based on skin condition changes",
+        "description": "Quarterly updates based on skin condition changes.",
         "image": "member.service.2"
       },
       {
         "title": "Exclusive Custom Packaging",
-        "description": "Personalized gift boxes engraved with your unique ID",
+        "description": "Personalized gift boxes engraved with your unique ID.",
         "image": "member.service.3"
       }
     ],
@@ -368,7 +368,7 @@
       "title": "Skin Renewal Milestone Badges",
       "badges": [
         {
-          "period": "25-Day",
+          "period": "28-Day",
           "description": "Consistency Badge (daily usage verification)",
           "image": "member.membership.7"
         },
@@ -400,18 +400,18 @@
           {
             "id": 1,
             "slug": "basic-revitalization-collection-1",
-            "image": "product.default",
+            "image": "product.1",
             "tags": ["New"],
-            "productName": "Papaya Drink",
+            "productName": "Fantasycare Kacip Fatimah& Papaya Drink",
             "price": 49,
-            "specification": "Essence 12X0.7ml + Platinum Mask 20ml",
+            "specification": "",
             "benefitDetails": []
           },
           {
             "id": 2,
             "slug": "basic-revitalization-collection-2",
-            "image": "product.default",
-            "productName": "Whitening Tablets",
+            "image": "product.2",
+            "productName": "Fantasycare Skin Whitening Tablet",
             "price": 79,
             "specification": "",
             "benefitDetails": []
@@ -419,8 +419,8 @@
           {
             "id": 3,
             "slug": "basic-revitalization-collection-3",
-            "image": "product.default",
-            "productName": "Vitamins",
+            "image": "product.3",
+            "productName": "FANTASYCARE Cinnamon &llibiscus Sabdariffawith Multi-Vitamins",
             "price": 19,
             "specification": "",
             "benefitDetails": []
@@ -428,8 +428,8 @@
           {
             "id": 4,
             "slug": "basic-revitalization-collection-4",
-            "image": "product.default",
-            "productName": "Leg Pills",
+            "image": "product.4",
+            "productName": "FANTASYCARE AMPK Fat-BurningLeg Slimming Pills",
             "price": 39,
             "specification": "",
             "benefitDetails": []
@@ -442,8 +442,8 @@
           {
             "id": 1,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
-            "productName": "Anti-Aging",
+            "image": "product.1",
+            "productName": "Fantasycare Hera Golden Apple Capsules",
             "price": 129,
             "specification": "",
             "benefitDetails": []
@@ -451,8 +451,8 @@
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
-            "productName": "Whitening",
+            "image": "product.2",
+            "productName": "Fantasycare Lilith Red Diamond Vial Capsules",
             "price": 129,
             "specification": "",
             "benefitDetails": []
@@ -460,8 +460,8 @@
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
-            "productName": "Ovarian",
+            "image": "product.3",
+            "productName": "Fantasycare Rhea Purple Amber Vial Capsules",
             "price": 129,
             "specification": "",
             "benefitDetails": []
@@ -469,8 +469,8 @@
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
-            "image": "product.default",
-            "productName": "Hair Growth",
+            "image": "product.4",
+            "productName": "Fantasycare Freya Black Diamond Vial Capsules",
             "price": 99,
             "specification": "",
             "benefitDetails": []
@@ -479,7 +479,13 @@
       },
       {
         "slug": "limited-exclusive-collection",
-        "productList": []
+        "productList": [],
+        "description": [
+          "Exclusively crafted for every user who pursues and reimagines beauty.",
+          "Every supplement carries its own exclusive significance;",
+          "every capsule revitalizes every cell in the body,",
+          "nurturing from cells to the entire physique."
+        ]
       }
     ]
   },
