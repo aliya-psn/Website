@@ -15,12 +15,14 @@
           class="award-item flex flex-col"
         >
           <!-- 图片区域（黑色矩形） -->
-          <div class="w-full aspect-[4/3] bg-gray-900 mb-4 overflow-hidden">
-            <img
+          <div class="w-full aspect-4/3 bg-gray-900 mb-4 overflow-hidden rounded-lg">
+            <LazyImage
               v-if="award.image"
               :src="award.image"
               :alt="award.name"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gray-800"
             />
             <div
               v-else
@@ -43,6 +45,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 

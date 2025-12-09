@@ -8,10 +8,11 @@
       <!-- 右下角图片区域 - 顶部与主标题对齐 -->
       <div class="luxury-image-container absolute top-4 md:top-6 lg:top-8 xl:top-10 right-6 md:right-8 lg:right-12 xl:right-16 w-full md:w-4/5 lg:w-3/4 xl:w-2/3 h-[40vh] md:h-[45vh] lg:h-[50vh] xl:h-[55vh] z-0 overflow-visible">
         <div class="luxury-image-wrapper w-full h-full">
-          <img
+          <LazyImage
             :src="sectionData.image"
             :alt="sectionData.primaryText"
-            class="w-full h-full object-contain object-bottom-right"
+            container-class="w-full h-full"
+            image-class="w-full h-full object-contain object-bottom-right"
           />
         </div>
       </div>
@@ -36,6 +37,8 @@
 </template>
 
 <script setup>
+import LazyImage from '../LazyImage.vue'
+
 defineProps({
   sectionData: {
     type: Object,

@@ -51,10 +51,12 @@
                   :key="index"
                   class="min-w-full flex items-center justify-center p-4"
                 >
-                  <img
+                  <LazyImage
                     :src="img"
                     :alt="productDetail.productName"
-                    class="w-48 md:w-56 h-auto object-contain"
+                    container-class="w-48 md:w-56 h-auto"
+                    image-class="w-full h-full object-contain"
+                    root-margin="100px"
                   />
                 </div>
               </div>
@@ -144,10 +146,11 @@
             
             <!-- 二维码区域 -->
             <div class="bg-white p-4 rounded-lg border-2 border-gray-200 inline-block mb-4">
-              <img
+              <LazyImage
                 :src="productConfig.qrCodeModal.qrCodeImage"
                 :alt="productConfig.qrCodeModal.qrCodeAlt"
-                class="w-48 h-48"
+                container-class="w-48 h-48"
+                image-class="w-full h-full object-contain"
               />
             </div>
             
@@ -165,6 +168,7 @@
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const route = useRoute()
 const { productData: productConfig } = useI18nData()

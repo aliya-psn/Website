@@ -28,10 +28,11 @@
           <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6">
             <!-- 产品图片 -->
             <div class="shrink-0">
-              <img 
+              <LazyImage 
                 :src="productData.productImage" 
                 :alt="productData.title"
-                class="w-40 md:w-48 h-auto object-contain shadow-2xl rounded-lg bg-white/50 p-3"
+                container-class="w-40 md:w-48 h-auto"
+                image-class="w-full h-full object-contain shadow-2xl rounded-lg bg-white/50 p-3"
               />
             </div>
           </div>
@@ -55,10 +56,11 @@
             >
               <!-- 产品图片区域 -->
               <div class="relative bg-gray-50 aspect-square overflow-hidden">
-                <img
+                <LazyImage
                   :src="product.image"
                   :alt="product.productName"
-                  class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  container-class="w-full h-full"
+                  image-class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
                 <!-- 标签 -->
                 <div v-if="product.tags && product.tags.length > 0" class="absolute top-3 left-3 flex flex-col gap-2">
@@ -105,6 +107,7 @@ import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const router = useRouter()
 const { t } = useI18n()

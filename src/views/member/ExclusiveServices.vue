@@ -23,11 +23,12 @@
           class="service-card flex flex-col"
         >
           <!-- 图片区域 -->
-          <div class="w-full aspect-square mb-6 overflow-hidden bg-gray-100">
-            <img
+          <div class="w-full aspect-square mb-6 overflow-hidden bg-gray-100 rounded-lg">
+            <LazyImage
               :src="service.image"
               :alt="service.title"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
             />
           </div>
           
@@ -43,11 +44,12 @@
 
       <!-- 底部大图部分 -->
       <div class="mt-20">
-        <div class="w-full mb-6 overflow-hidden bg-gray-100">
-          <img
+        <div class="w-full mb-6 overflow-hidden bg-gray-100 rounded-lg">
+          <LazyImage
             :src="exclusiveServicesData.globalConsultation.image"
             :alt="exclusiveServicesData.globalConsultation.title"
-            class="w-full h-auto object-cover"
+            container-class="w-full"
+            image-class="w-full h-auto object-cover"
           />
         </div>
         
@@ -72,6 +74,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 

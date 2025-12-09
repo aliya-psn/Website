@@ -10,10 +10,11 @@
         <!-- 证书图片 -->
         <div class="flex justify-center max-w-5xl mx-auto">
           <div class="w-full max-w-4xl">
-            <img
+            <LazyImage
               :src="technologyData.qualification.certificateImage"
               :alt="technologyData.qualification.title"
-              class="w-full h-auto rounded-lg shadow-lg"
+              container-class="w-full"
+              image-class="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -28,10 +29,11 @@
         <!-- 专利图片 -->
         <div class="flex justify-center max-w-5xl mx-auto">
           <div class="w-full max-w-4xl">
-            <img
+            <LazyImage
               :src="technologyData.patents.patentImage"
               :alt="technologyData.patents.title"
-              class="w-full h-auto rounded-lg shadow-lg"
+              container-class="w-full"
+              image-class="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -43,6 +45,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 

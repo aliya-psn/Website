@@ -30,11 +30,13 @@
             :key="index"
             class="model-card flex flex-col"
           >
-            <div class="w-full aspect-[4/3] mb-4 overflow-hidden  bg-gray-100">
-              <img
+            <div class="w-full aspect-4/3 mb-4 overflow-hidden rounded-lg">
+              <LazyImage
                 :src="model.image"
                 :alt="model.period"
-                class="w-full h-full object-cover"
+                container-class="w-full h-full"
+                image-class="w-full h-full object-cover"
+                skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
               />
             </div>
             <div class="text-center">
@@ -51,11 +53,13 @@
           {{ membershipData.allergenAlert.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden bg-gray-100">
-            <img
+          <div class="w-full aspect-video overflow-hidden rounded-lg">
+            <LazyImage
               :src="membershipData.allergenAlert.image"
               :alt="membershipData.allergenAlert.title"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
         </div>
@@ -67,11 +71,13 @@
           {{ membershipData.dosageOptimization.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden bg-gray-100">
-            <img
+          <div class="w-full aspect-video overflow-hidden rounded-lg">
+            <LazyImage
               :src="membershipData.dosageOptimization.image"
               :alt="membershipData.dosageOptimization.title"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
         </div>
@@ -83,11 +89,13 @@
           {{ membershipData.userExperience.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden bg-gray-100">
-            <img
+          <div class="w-full aspect-video overflow-hidden rounded-lg">
+            <LazyImage
               :src="membershipData.userExperience.image"
               :alt="membershipData.userExperience.title"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
         </div>
@@ -99,11 +107,13 @@
           {{ membershipData.userFeedback.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden bg-gray-100">
-            <img
+          <div class="w-full aspect-video overflow-hidden rounded-lg">
+            <LazyImage
               :src="membershipData.userFeedback.image"
               :alt="membershipData.userFeedback.title"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
         </div>
@@ -142,11 +152,13 @@
           {{ membershipData.expertQA.title }}
         </h2>
         <div class="w-full max-w-4xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg bg-gray-100">
-            <img
+          <div class="w-full aspect-video overflow-hidden rounded-lg">
+            <LazyImage
               :src="membershipData.expertQA.image"
               :alt="membershipData.expertQA.title"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
         </div>
@@ -163,11 +175,13 @@
             :key="index"
             class="badge-card flex flex-col items-center"
           >
-            <div class="w-36 h-36 md:w-46 md:h-46 mb-4 overflow-hidden  bg-gray-100">
-              <img
+            <div class="w-36 h-36 md:w-46 md:h-46 mb-4 overflow-hidden rounded-lg">
+              <LazyImage
                 :src="badge.image"
                 :alt="badge.period"
-                class="w-full h-full object-cover"
+                container-class="w-full h-full"
+                image-class="w-full h-full object-cover"
+                skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
               />
             </div>
             <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">{{ badge.period }}</p>
@@ -182,6 +196,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 
@@ -242,6 +257,11 @@ const membershipData = computed(() => {
 .model-card:hover,
 .badge-card:hover {
   transform: translateY(-4px);
+}
+
+/* 图片容器圆角过渡 */
+.lazy-image-container {
+  border-radius: inherit;
 }
 </style>
 

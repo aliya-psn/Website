@@ -33,10 +33,11 @@
       <!-- 文档拼贴图区域 - 占据约2/3空间 -->
       <div class="relative w-full flex items-center justify-center">
         <div class="w-full max-w-6xl">
-          <img
+          <LazyImage
             :src="sectionData.collageImage"
             :alt="sectionData.title"
-            class="w-full h-auto object-contain"
+            container-class="w-full"
+            image-class="w-full h-auto object-contain"
           />
         </div>
       </div>
@@ -46,6 +47,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import LazyImage from '../LazyImage.vue'
 
 const router = useRouter()
 

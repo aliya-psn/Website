@@ -11,10 +11,11 @@
         <!-- 左侧：肖像照片 -->
         <div class="flex justify-center lg:justify-start items-center">
           <div class="relative w-72 h-88 md:w-96 md:h-[28rem]">
-            <img
+            <LazyImage
               :src="keyIngredientsData.drShona.image"
               :alt="keyIngredientsData.drShona.name"
-              class="w-full h-full object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -53,10 +54,11 @@
         <!-- 团队图片 -->
         <div class="flex justify-center max-w-5xl mx-auto">
           <div class="w-full max-w-4xl">
-            <img
+            <LazyImage
               :src="keyIngredientsData.clinicalCooperation.teamImage"
               :alt="keyIngredientsData.clinicalCooperation.title"
-              class="w-full h-auto rounded-lg shadow-lg"
+              container-class="w-full"
+              image-class="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -68,6 +70,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 

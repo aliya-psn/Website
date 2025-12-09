@@ -35,10 +35,11 @@
         >
           <!-- 产品图片区域 -->
           <div class="relative bg-gray-50 aspect-square overflow-hidden">
-            <img
+            <LazyImage
               :src="product.image"
               :alt="product.productName"
-              class="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
             />
             <!-- 标签 -->
             <div
@@ -113,6 +114,7 @@ import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18nData } from '../../composables/useI18nData'
 import { useI18n } from 'vue-i18n'
+import LazyImage from '../LazyImage.vue'
 
 const { productData } = useI18nData()
 const { t } = useI18n()

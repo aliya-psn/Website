@@ -93,10 +93,11 @@
             >
               <!-- 产品图片区域 -->
               <div class="relative bg-gray-50 aspect-square overflow-hidden">
-                <img
+                <LazyImage
                   :src="product.image"
                   :alt="product.productName"
-                  class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  container-class="w-full h-full"
+                  image-class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
                 <!-- 标签 -->
                 <div v-if="product.tags && product.tags.length > 0" class="absolute top-3 left-3 flex flex-col gap-2">
@@ -149,6 +150,7 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18nData } from '../../composables/useI18nData'
 import { useI18n } from 'vue-i18n'
+import LazyImage from '../../components/LazyImage.vue'
 
 const router = useRouter()
 const { productData } = useI18nData()

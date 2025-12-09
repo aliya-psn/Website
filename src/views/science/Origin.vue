@@ -56,10 +56,11 @@
                     <div class="relative w-96 h-96 md:w-[28rem] md:h-[28rem] lg:w-[28rem] lg:h-[28rem]">
                       <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
                       <div class="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>
-                      <img
+                      <LazyImage
                         :src="currentSlide.image"
                         :alt="currentSlide.title"
-                        class="relative w-full h-full object-cover rounded-full shadow-2xl ring-4 ring-white/20"
+                        container-class="relative w-full h-full rounded-full overflow-hidden"
+                        image-class="w-full h-full object-cover rounded-full shadow-2xl ring-4 ring-white/20"
                       />
                       <div class="absolute -inset-4 rounded-full bg-white/5 blur-xl"></div>
                     </div>
@@ -105,6 +106,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, inject } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 
