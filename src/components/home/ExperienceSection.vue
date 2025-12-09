@@ -2,71 +2,50 @@
   <!-- 体验区域 - 首页第二个页面 -->
   <section 
     id="experience-section"
-    class="relative bg-linear-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden"
+    class="relative min-h-screen bg-white overflow-hidden"
   >
-    <!-- 装饰性背景元素 -->
-    <div class="absolute inset-0 opacity-30 pointer-events-none">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-blue-100 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-100 rounded-full blur-3xl"></div>
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-100 rounded-full blur-3xl"></div>
-    </div>
-    
     <!-- 内容区域 -->
-    <div class="relative z-10 flex flex-col lg:flex-row">
-      <!-- 左侧内容 -->
-      <div class="flex-1 flex flex-col justify-center px-10 md:px-12 lg:px-18 xl:px-30 py-16 lg:py-20">
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-20">
+      <!-- 上半部分：标题、描述、按钮 -->
+      <div class="flex-1 flex flex-col items-center justify-center text-center mb-12 md:mb-16">
         <!-- 标题 -->
-        <div class="mb-8 animate-slide-in-left-delay">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-gray-900 mb-2 tracking-tight leading-tight">
+        <div class="mb-6 md:mb-8 animate-slide-in-left-delay">
+          <h2 class="hero-title-main text-4xl md:text-5xl lg:text-6xl font-elegant font-bold mb-2 tracking-tight leading-tight">
             {{ experienceData.title }}
           </h2>
-          <h3 class="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-gray-900 tracking-tight leading-tight">
+          <h3 class="hero-title-sub text-4xl md:text-5xl lg:text-6xl font-elegant font-bold tracking-tight leading-tight">
             {{ experienceData.subtitle }}
           </h3>
-          <!-- 装饰线条 -->
-          <div class="mt-4 w-16 h-0.5 bg-linear-to-r from-gray-900 to-transparent"></div>
         </div>
 
         <!-- 描述文字 -->
-        <p class="text-base md:text-lg text-gray-700 mb-10 max-w-xl leading-relaxed animate-fade-in-up-delay font-light">
+        <p class="hero-description text-base md:text-lg lg:text-xl text-gray-700 mb-8 md:mb-10 max-w-2xl leading-relaxed animate-fade-in-up-delay font-light">
           {{ experienceData.description }}
         </p>
 
         <!-- 体验按钮 -->
-        <div class="mb-10 animate-fade-in-up-delay-2">
+        <div class="animate-fade-in-up-delay-2">
           <button 
             @click="goToAllProducts"
-            class="px-8 py-3 rounded-lg bg-gray-900 text-white flex items-center justify-center hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-elegant font-medium text-base"
+            class="hero-button px-8 py-3 md:px-10 md:py-4 rounded-lg bg-gray-900 text-white flex items-center justify-center hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-elegant font-medium text-base md:text-lg relative overflow-hidden"
           >
-            <span>{{ experienceData.buttonText }}</span>
-            <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="relative z-10">{{ experienceData.buttonText }}</span>
+            <svg class="w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform group-hover:translate-x-1 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
+            <div class="hero-button-shine"></div>
           </button>
-        </div>
-
-        <!-- 产品图片 -->
-        <div class="animate-fade-in-up-delay-3">
-          <div class="relative inline-block">
-            <img 
-              :src="experienceData.productImage" 
-              alt="产品"
-              class="w-40 md:w-48 lg:w-56 h-auto object-contain shadow-xl rounded-lg"
-            />
-          </div>
         </div>
       </div>
 
-      <!-- 右侧图片 -->
-      <div class="flex-1 relative flex items-center justify-center pr-8 md:pr-12 lg:pr-16 xl:pr-20 animate-fade-in-right">
-        <div class="w-full max-w-2xl h-[70vh] relative overflow-hidden rounded-2xl shadow-2xl">
+      <!-- 下半部分：产品图片 -->
+      <div class="flex-1 flex items-center justify-center animate-fade-in-up-delay-3">
+        <div class="relative">
           <img 
-            :src="experienceData.experienceImage" 
-            alt="眼部特写"
-            class="w-full h-full object-cover object-center"
+            :src="experienceData.productImage" 
+            alt="产品"
+            class="w-64 md:w-80 lg:w-96 xl:w-[28rem] h-auto object-contain shadow-2xl rounded-lg"
           />
-          <!-- 渐变遮罩 -->
-          <div class="absolute inset-0 bg-linear-to-br from-transparent via-transparent to-gray-900/5"></div>
         </div>
       </div>
     </div>
@@ -109,7 +88,7 @@ onMounted(() => {
   setTimeout(() => {
     const experienceSection = document.getElementById('experience-section')
     if (experienceSection) {
-      const animatedElements = experienceSection.querySelectorAll('.animate-slide-in-left-delay, .animate-fade-in-up-delay, .animate-fade-in-up-delay-2, .animate-fade-in-up-delay-3, .animate-fade-in-right')
+      const animatedElements = experienceSection.querySelectorAll('.animate-slide-in-left-delay, .animate-fade-in-up-delay, .animate-fade-in-up-delay-2, .animate-fade-in-up-delay-3')
       animatedElements.forEach(el => {
         observer.observe(el)
       })
@@ -127,8 +106,7 @@ onMounted(() => {
 .animate-slide-in-left-delay,
 .animate-fade-in-up-delay,
 .animate-fade-in-up-delay-2,
-.animate-fade-in-up-delay-3,
-.animate-fade-in-right {
+.animate-fade-in-up-delay-3 {
   opacity: 0;
 }
 
@@ -147,10 +125,6 @@ onMounted(() => {
 
 .animate-fade-in-up-delay-3.animate-on-scroll {
   animation: fadeInUp 0.8s ease-out 0.8s both;
-}
-
-.animate-fade-in-right.animate-on-scroll {
-  animation: fadeInRight 1s ease-out 0.3s both;
 }
 
 @keyframes slideInLeft {
@@ -175,15 +149,139 @@ onMounted(() => {
   }
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
+/* 高级文字特效 */
+.hero-title-main {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+  position: relative;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-title-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShine 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero-title-sub {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #2d2d2d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+  position: relative;
+  animation: titleGlow 3s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  100% {
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
   }
 }
+
+@keyframes titleShine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.hero-description {
+  color: #4a4a4a;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  position: relative;
+}
+
+.hero-description::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2), transparent);
+  animation: lineExpand 2s ease-in-out infinite;
+}
+
+@keyframes lineExpand {
+  0%, 100% {
+    width: 60px;
+    opacity: 0.5;
+  }
+  50% {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+/* 高级按钮特效 */
+.hero-button {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.hero-button:hover::before {
+  left: 100%;
+}
+
+.hero-button-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.hero-button:hover .hero-button-shine {
+  left: 100%;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 </style>
 

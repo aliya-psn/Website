@@ -1,8 +1,8 @@
 {
   "title": "FANTASYCARE",
   "home": {
-    "backgroundImage1": "/src/assets/home/4.png",
-    "backgroundImage": "/src/assets/home/5.png",
+    "backgroundImage1": "home.backgroundImage1",
+    "backgroundImage": "home.backgroundImage",
     "brand": {
       "name": "FANTASYCARE"
     },
@@ -16,15 +16,12 @@
     "subtitle": "the Dimensions of Beauty",
     "description": "True luxury lies in making beauty a precise and predictable science.",
     "buttonText": "Start Shopping",
-    "experienceImage": "/src/assets/home/4.png",
-    "productImage": "/src/assets/product/3.png"
+    "productImage": "experience.productImage"
   },
   "origin": {
-    "title": "Brand Origin",
+    "title": "Brand Vision",
+    "subtitle": "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
     "description": [
-      "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
-      "In The Cosmetic Clinic founded by Dr. Shona Dalzell, cutting-edge equipment brings immediate changes, yet fails to satisfy beauty seekers' longing for 'lasting radiance';",
-      "Skin Research Laboratory: As a dermatology Ph.D. from the University of Auckland, she saw the essence of the problem—external manifestations all stem from imbalances in cellular state.",
       "When medicine meets aesthetics, a revolutionary vision was born:",
       "Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.",
       "After seven years of R&D, Fantasy Care embarked on the concept of \"Luxurious Nourishment from Within,\" pioneering a new era of oral medical aesthetics."
@@ -34,12 +31,12 @@
     "title": "Rooted in Medicine, Refined by Science",
     "subtitle": "Synergy. For Ultimate Regeneration.",
     "buttonText": "Scientific Exploration",
-    "collageImage": "/src/assets/home/5.png"
+    "collageImage": "scientificExploration.collageImage"
   },
   "luxuryCare": {
     "primaryText": "True luxurious care lies not in confrontation, but in nourishment;",
     "secondaryText": "Brilliant regeneration comes not from hasty display, but from internal order.",
-    "image": "/src/assets/home/5.png"
+    "image": "luxuryCare.image"
   },
   "developmentHistory": [
     {
@@ -48,7 +45,7 @@
       "description": [
         "Born from a revolutionary insight in a New Zealand dermatological laboratory: True beauty stems from the reconstruction of internal cellular order. We aspire to integrate aesthetic medical effects into oral technology."
       ],
-      "image": "/src/assets/science/development/1.png"
+      "image": "developmentHistory.1"
     },
     {
       "year": "2020",
@@ -56,7 +53,7 @@
       "description": [
         "Established a comprehensive pharmaceutical grade R&D and supply chain system, defining internal beauty with the rigorous standards of pharmaceuticals—laying a solid cornerstone of trust for every commitment."
       ],
-      "image": "/src/assets/science/development/2.png"
+      "image": "developmentHistory.2"
     },
     {
       "year": "2021",
@@ -64,7 +61,7 @@
       "description": [
         "A new milestone in luxurious, ultimate rejuvenating and regenerating technology. Through the cherished Platinum Supreme Intensive Repair Essence, Dr. Niehans' enduring dream reaches its peak."
       ],
-      "image": "/src/assets/science/development/3.png"
+      "image": "developmentHistory.3"
     },
     {
       "year": "2025",
@@ -72,7 +69,7 @@
       "description": [
         "The entire product line has been awarded New Zealand GMP, HACCP, and Halal certifications, with quality earning international recognition. Business has steadily expanded to key markets in Asia-Pacific and Europe, establishing a global benchmark for scientific brands."
       ],
-      "image": "/src/assets/science/development/4.png"
+      "image": "developmentHistory.4"
     },
     {
       "year": "Future",
@@ -80,14 +77,14 @@
       "description": [
         "We continue to delve into the forefront of skin science and nutrition, reshaping the future boundaries of beauty through relentless scientific research."
       ],
-      "image": "/src/assets/science/development/5.png"
+      "image": "developmentHistory.5"
     }
   ],
   "keyIngredients": {
     "title": "R&D Team & Key Ingredients",
     "drShona": {
       "name": "Dr Shona Dalzell",
-      "image": "/src/assets/house/key/1.png",
+      "image": "keyIngredients.drShona",
       "background": [
         "Graduated from the University of Auckland in 1993",
         "A member of the New Zealand Society of Aesthetic Medicine (NZSCM) and holding a diploma in aesthetic medicine",
@@ -101,17 +98,17 @@
     "clinicalCooperation": {
       "title": "Medical Aesthetic Clinical Cooperation",
       "description": "Jointly launched packages such as \"Oral + Photofacial\" with renowned clinics including CACI, Skin Institute The Cosmetic Clinic, and KAIZ Skin Body & Injectable Clinic. Physician Education System: Launched the \"Global Oral Medical Aesthetics Physician Certification Program\", trained over 2,000 dermatologists and developed an AI-assisted decision-making system.",
-      "teamImage": "/src/assets/house/key/2.png"
+      "teamImage": "keyIngredients.teamImage"
     }
   },
   "technologyAndPatents": {
     "qualification": {
       "title": "Ingredients & Technology Qualification process",
-      "certificateImage": "/src/assets/house/tech/1.png"
+      "certificateImage": "technologyAndPatents.certificateImage"
     },
     "patents": {
       "title": "Ingredient patent",
-      "patentImage": "/src/assets/house/tech/2.png"
+      "patentImage": "technologyAndPatents.patentImage"
     }
   },
   "honorsAwards": {
@@ -119,35 +116,35 @@
     "awards": [
       {
         "name": "2025 Southern Cross International Medical Aesthetics Gold Award",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "2025 New Zealand Silver Fern Award for Dietary Nutritional Supplements",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "Princess of Monaco Pinnacle Award for Anti-Aging Formula Innovation",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "Switzerland Nutritional Innovation Technology Gold Award",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "Annual Influential Benchmark Brand | European Nutrition & Health Summit",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "Annual Consumer-Trusted Oral Brand | International Beauty Industry Innovation Award",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "Milan, Italy Global Dietary Supplement Invention Grand Award",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       },
       {
         "name": "Venus Luminous Gem Award",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "honorsAwards.default"
       }
     ]
   },
@@ -170,35 +167,35 @@
           "id": 1,
           "title": "Life Matrix Collection",
           "description": "Revealing Youthful Vitality",
-          "image": "/src/assets/product/3.png",
+          "image": "product.default",
           "slug": "life-matrix-collection"
         },
         {
           "id": 2,
           "title": "Platinum Collection",
           "description": "Luxurious Ultimate Rejuvenation",
-          "image": "/src/assets/product/3.png",
+          "image": "product.default",
           "slug": "platinum-collection"
         },
         {
           "id": 3,
           "title": "Caviar Collection",
           "description": "Lift and Firm",
-          "image": "/src/assets/home/5.png",
+          "image": "home.backgroundImage",
           "slug": "caviar-collection"
         },
         {
           "id": 4,
           "title": "Pure White Collection",
           "description": "Brighten and Firm",
-          "image": "/src/assets/product/3.png",
+          "image": "product.default",
           "slug": "pure-white-collection"
         },
         {
           "id": 5,
           "title": "Golden Radiance Collection",
           "description": "Revitalize and Nourish",
-          "image": "/src/assets/home/4.png",
+          "image": "home.backgroundImage1",
           "slug": "golden-radiance-collection"
         }
       ]
@@ -261,22 +258,22 @@
       {
         "title": "Multidimensional Data Collection",
         "description": "20+ parameters including skin brightness texture density, and microcirculation status.",
-        "image": "/src/assets/member/service/1.png"
+        "image": "member.service.1"
       },
       {
         "title": "Dynamic Plan Optimization",
         "description": "Quarterly updates based on skin condition changes",
-        "image": "/src/assets/member/service/2.png"
+        "image": "member.service.2"
       },
       {
         "title": "Exclusive Custom Packaging",
         "description": "Personalized gift boxes engraved with your unique ID",
-        "image": "/src/assets/member/membership/1.png"
+        "image": "member.membership.1"
       }
     ],
     "globalConsultation": {
       "title": "Global Aesthetic Consultation",
-      "image": "/src/assets/member/service/1.png",
+      "image": "member.service.1",
       "features": [
         "Internationally Certified Physician Support System",
         "Collaborates with 10+ countries' oral aesthetic experts.",
@@ -296,72 +293,72 @@
         {
           "period": "SHORT",
           "description": "7-day skin barrier improvement forecast",
-          "image": "/src/assets/member/service/1.png"
+          "image": "member.service.1"
         },
         {
           "period": "MEDIUM",
           "description": "30-day collagen regeneration trajectory analysis",
-          "image": "/src/assets/member/membership/1.png"
+          "image": "member.membership.1"
         },
         {
           "period": "LONG-TERM",
           "description": "90-day comprehensive rejuvenation progress prediction",
-          "image": "/src/assets/member/service/2.png"
+          "image": "member.service.2"
         }
       ]
     },
     "allergenAlert": {
       "title": "Allergen Sensitivity Alert System Real-time ingredient compatibility analysis",
-      "image": "/src/assets/member/membership/5.png"
+      "image": "member.membership.5"
     },
     "dosageOptimization": {
       "title": "Personalized dosage optimization algorithms",
       "people": [
         {
-          "image": "/src/assets/member/membership/1.png"
+          "image": "member.membership.1"
         },
         {
-          "image": "/src/assets/member/membership/3.png"
+          "image": "member.membership.3"
         },
         {
-          "image": "/src/assets/member/membership/4.png"
+          "image": "member.membership.4"
         },
         {
-          "image": "/src/assets/member/membership/5.png"
+          "image": "member.membership.5"
         },
         {
-          "image": "/src/assets/member/membership/6.png"
+          "image": "member.membership.6"
         },
         {
-          "image": "/src/assets/member/membership/7.png"
+          "image": "member.membership.7"
         },
         {
-          "image": "/src/assets/member/membership/9.png"
+          "image": "member.membership.9"
         },
         {
-          "image": "/src/assets/member/membership/1.png"
+          "image": "member.membership.1"
         },
         {
-          "image": "/src/assets/member/membership/3.png"
+          "image": "member.membership.3"
         }
       ]
     },
     "userExperience": {
       "title": "User Experience Ecosystem",
-      "image": "/src/assets/member/membership/4.png"
+      "image": "member.membership.4"
     },
     "userFeedback": {
       "title": "User Feedback",
-      "image": "/src/assets/member/membership/5.png"
+      "image": "member.membership.5"
     },
     "skinRenewal": {
       "title": "Skin Renewal Journals",
       "subtitle": "User Uploaded Before and After Videos",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      "videoUrl": "video.sample"
     },
     "expertQA": {
       "title": "Expert Q&A Sessions",
-      "image": "/src/assets/member/membership/6.png"
+      "image": "member.membership.6"
     },
     "milestoneBadges": {
       "title": "Skin Renewal Milestone Badges",
@@ -369,17 +366,17 @@
         {
           "period": "25-Day",
           "description": "Consistency Badge (daily usage verification)",
-          "image": "/src/assets/member/membership/7.png"
+          "image": "member.membership.7"
         },
         {
           "period": "90-Day",
           "description": "Transformation Badge (visible results confirmation)",
-          "image": "/src/assets/member/membership/9.png"
+          "image": "member.membership.9"
         },
         {
           "period": "180-Day",
           "description": "Mastery Badge (sustained skin health optimization)",
-          "image": "/src/assets/member/membership/1.png"
+          "image": "member.membership.1"
         }
       ]
     }
@@ -388,7 +385,7 @@
     "qrCodeModal": {
       "title": "Scan to Purchase",
       "description": "Use WeChat to scan the QR code below to visit the official mini-program for purchase",
-      "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram",
+      "qrCodeImage": "product.qrCodeImage",
       "qrCodeAlt": "Mini-program QR Code",
       "footerText": "FANTASYCARE Official Mini-program"
     },
@@ -399,7 +396,7 @@
           {
             "id": 1,
             "slug": "basic-revitalization-collection-1",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "tags": ["New"],
             "productName": "Papaya Drink",
             "price": 49,
@@ -409,7 +406,7 @@
           {
             "id": 2,
             "slug": "basic-revitalization-collection-2",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Whitening Tablets",
             "price": 79,
             "specification": "",
@@ -418,7 +415,7 @@
           {
             "id": 3,
             "slug": "basic-revitalization-collection-3",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Vitamins",
             "price": 19,
             "specification": "",
@@ -427,7 +424,7 @@
           {
             "id": 4,
             "slug": "basic-revitalization-collection-4",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Leg Pills",
             "price": 39,
             "specification": "",
@@ -441,7 +438,7 @@
           {
             "id": 1,
             "slug": "advanced-repair-collection-1",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Anti-Aging",
             "price": 129,
             "specification": "",
@@ -450,7 +447,7 @@
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Whitening",
             "price": 129,
             "specification": "",
@@ -459,7 +456,7 @@
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Ovarian",
             "price": 129,
             "specification": "",
@@ -468,7 +465,7 @@
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
-            "image": "/src/assets/product/3.png",
+            "image": "product.default",
             "productName": "Hair Growth",
             "price": 99,
             "specification": "",

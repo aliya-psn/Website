@@ -28,9 +28,6 @@
           <h3 class="text-gray-800 text-sm md:text-base font-medium mb-1">
             {{ item.title || item.name }}
           </h3>
-          <p v-if="item.description" class="text-gray-600 text-xs md:text-sm">
-            {{ item.description }}
-          </p>
         </div>
 
         <!-- 图片区域 -->

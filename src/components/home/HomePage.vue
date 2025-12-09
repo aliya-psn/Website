@@ -25,7 +25,7 @@
         class="text-white text-4xl md:text-6xl lg:text-7xl font-system text-center leading-tight mb-8 hero-title font-semibold"
       >
         {{ pageData.home.hero.title }}<br />
-        <span class="font-light hero-subtitle">{{
+        <span class="block font-light hero-subtitle text-2xl md:text-3xl lg:text-4xl mt-6 md:mt-8">{{
           pageData.home.hero.subtitle
         }}</span>
       </h2>
