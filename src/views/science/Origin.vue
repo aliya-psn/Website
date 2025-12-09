@@ -7,7 +7,7 @@
       <div class="absolute inset-0 particle-background particle-layer-2"></div>
     </div>
     
-    <div class="max-w-7xl mx-auto px-2 md:px-6 py-12 md:py-16 relative z-10">
+    <div class="max-w-[90rem] mx-auto px-2 md:px-6 py-12 md:py-16 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         <!-- 左侧：时间轴，使用标题作为节点 -->
         <div class="lg:col-span-2 flex flex-col items-center lg:items-start -ml-2 lg:ml-0">
@@ -53,7 +53,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center h-full">
                   <!-- 左侧：圆形图片 -->
                   <div class="flex justify-center lg:justify-start">
-                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                    <div class="relative w-96 h-96 md:w-[28rem] md:h-[28rem] lg:w-[28rem] lg:h-[28rem]">
                       <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
                       <div class="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>
                       <img
@@ -67,7 +67,7 @@
 
                   <!-- 右侧：文本内容 -->
                   <div class="flex flex-col justify-center space-y-6 relative">
-                    <div class="absolute -top-10 -right-10 text-white/10 text-9xl md:text-[12rem] font-bold select-none pointer-events-none z-0">
+                    <div class="absolute -top-10 -right-10 text-white/10 text-7xl md:text-8xl lg:text-9xl font-bold select-none pointer-events-none z-0">
                       {{ currentSlide.title }}
                     </div>
                     

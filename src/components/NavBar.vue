@@ -229,12 +229,12 @@ const handleScienceItemClick = (item) => {
 
 const handleBrandHeritageItemClick = (item) => {
   if (typeof item === 'object' && item.slug) {
-    // 核心成分页面使用特殊路由 /key-ingredients
+    // 核心成分页面
     if (item.slug === 'key-ingredients') {
       router.push('/key-ingredients')
-    } else if (item.slug === 'Technology and Patents') {
-      // 技术与专利页面使用特殊路由 /technology-and-patents
-      router.push('/technology-and-patents')
+    } else if (item.slug === 'Technology') {
+      // 技术与专利页面
+      router.push('/technology')
     } else {
       router.push(`/origin/${item.slug}`)
     }

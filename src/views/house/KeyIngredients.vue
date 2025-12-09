@@ -6,15 +6,15 @@
         {{ keyIngredientsData.title }}
       </h1>
 
-      <!-- Dr Shona Dalzell 部分 -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20 items-start">
+      <!-- Dr Shona Dalzell -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20 items-center">
         <!-- 左侧：肖像照片 -->
-        <div class="flex justify-center lg:justify-start">
-          <div class="relative w-64 h-80 md:w-80 md:h-96">
+        <div class="flex justify-center lg:justify-start items-center">
+          <div class="relative w-72 h-88 md:w-96 md:h-[28rem]">
             <img
               :src="keyIngredientsData.drShona.image"
               :alt="keyIngredientsData.drShona.name"
-              class="w-full h-full object-cover rounded-lg shadow-xl"
+              class="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -25,10 +25,17 @@
             {{ keyIngredientsData.drShona.name }}
           </h2>
           
-          <div class="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed font-light">
-            <p v-for="(info, index) in keyIngredientsData.drShona.background" :key="index">
-              {{ info }}
-            </p>
+          <div class="space-y-4">
+            <div class="space-y-2">
+              <p v-for="(info, index) in keyIngredientsData.drShona.background1" :key="`bg1-${index}`" class="text-xs md:text-sm text-gray-900 leading-snug font-light tracking-normal">
+                {{ info }}
+              </p>
+            </div>
+            <div class="space-y-2 mt-6 md:mt-8">
+              <p v-for="(info, index) in keyIngredientsData.drShona.background2" :key="`bg2-${index}`" class="text-xs md:text-sm text-gray-500 leading-snug font-light tracking-normal">
+                {{ info }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -71,7 +78,8 @@ const keyIngredientsData = computed(() => {
     drShona: {
       name: '',
       image: '',
-      background: []
+      background1: [],
+      background2: []
     },
     clinicalCooperation: {
       title: '',

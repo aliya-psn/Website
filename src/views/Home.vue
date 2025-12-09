@@ -4,19 +4,19 @@
     <HomePage :pageData="dataSource" @scroll-down="scrollDown" />
 
     <!-- 体验区域 -->
-    <ExperienceSection :experienceData="dataSource.experience" />
+    <ExperienceSection :experienceData="dataSource.home.experience" />
 
     <!-- 品牌起源区域 -->
-    <OriginSection :originData="dataSource.origin" />
+    <OriginSection :originData="dataSource.home.origin" />
 
     <!-- 科学探索区域 -->
-    <ScientificExplorationSection :sectionData="dataSource.scientificExploration" />
+    <ScientificExplorationSection :sectionData="dataSource.home.scientificExploration" />
 
     <!-- 奢华护理区域 -->
-    <LuxuryCareSection :sectionData="dataSource.luxuryCare" />
+    <LuxuryCareSection :sectionData="dataSource.home.luxuryCare" />
 
     <!-- 地图和邮箱订阅区域 -->
-    <MapNewsletterSection :sectionData="dataSource.mapNewsletter" />
+    <MapNewsletterSection :sectionData="dataSource.home.mapNewsletter" />
   </div>
 </template>
 

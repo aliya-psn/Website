@@ -1,78 +1,79 @@
 {
   "title": "FANTASYCARE",
   "home": {
-    "backgroundImage1": "home.backgroundImage1",
     "backgroundImage": "home.backgroundImage",
-    "backgroundImage2": "home.backgroundImage2",
-    "backgroundImage3": "home.backgroundImage3",
     "brand": {
       "name": "FANTASYCARE"
     },
     "hero": {
       "title": "由内滋养，外在完美",
       "subtitle": "深层滋养，奢华焕活"
+    },
+    "experience": {
+      "heading": "重新定义美的维度",
+      "description": "真正的奢华在于将美变成一门精确且可预测的科学。",
+      "buttonText": "开始购买",
+      "productImage": "home.experience.productImage"
+    },
+    "origin": {
+      "title": "品牌愿景",
+      "subtitle": "从美学诊所到细胞实验室的蜕变，一切始于两个空间的对话。",
+      "description": [
+        "当医学遇见美学，一个颠覆性的构想诞生：",
+        "将医美诊所的精准效能，转化为可口服的细胞级营养指令。",
+        "历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。"
+      ]
+    },
+    "scientificExploration": {
+      "title": "根植于医学，精炼于科学",
+      "subtitle": "协同。实现终极再生。",
+      "buttonText": "科学探索",
+      "collageImage": "home.scientificExploration.collageImage"
+    },
+    "luxuryCare": {
+      "primaryText": "真正的奢华护理不在于对抗，而在于滋养；",
+      "secondaryText": "璀璨的再生不是来自匆忙的展示，而是来自内在的秩序。",
+      "image": "home.luxuryCare.image"
+    },
+    "mapNewsletter": {
+      "title": "订阅我们的新闻通讯",
+      "placeholder": "请在此输入您的电子邮件。",
+      "buttonText": "登记",
+      "submitting": "提交中...",
+      "successMessage": "订阅成功！",
+      "errorMessage": "订阅失败，请稍后重试。"
     }
-  },
-  "experience": {
-    "title": "重新",
-    "subtitle": "定义美的维度",
-    "description": "真正的奢华在于将美变成一门精确且可预测的科学。",
-    "buttonText": "开始购买",
-    "productImage": "experience.productImage"
-  },
-  "origin": {
-    "title": "品牌愿景",
-    "subtitle": "从美学诊所到细胞实验室的蜕变，一切始于两个空间的对话。",
-    "description": [
-      "当医学遇见美学，一个颠覆性的构想诞生：",
-      "将医美诊所的精准效能，转化为可口服的细胞级营养指令。",
-      "历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。"
-    ]
-  },
-  "scientificExploration": {
-    "title": "根植于医学，精炼于科学",
-    "subtitle": "协同。实现终极再生。",
-    "buttonText": "科学探索",
-    "collageImage": "scientificExploration.collageImage"
-  },
-  "luxuryCare": {
-    "primaryText": "真正的奢华护理不在于对抗，而在于滋养；",
-    "secondaryText": "璀璨的再生不是来自匆忙的展示，而是来自内在的秩序。",
-    "image": "luxuryCare.image"
-  },
-  "mapNewsletter": {
-    "title": "订阅我们的新闻通讯",
-    "placeholder": "请在此输入您的电子邮件。",
-    "buttonText": "登记",
-    "submitting": "提交中...",
-    "successMessage": "订阅成功！",
-    "errorMessage": "订阅失败，请稍后重试。"
   },
   "originHistory": [
     {
       "title": "品牌起源",
       "subtitle": "从医美诊所到细胞实验室的蜕变一切始于两个空间的对话",
-      "description": "Dr Shona Dalzell博士创立的The Cosmetic Clinic中，尖端设备带来即刻改变，却无法满足求美者对“持久光彩”的渴望；\n 皮肤研究实验室：作为奥克兰大学皮肤学博士，她洞见问题本质——外在显化，皆源于细胞状态的失衡。\n当医学遇见美学，一个颠覆性的构想诞生：\n 将医美诊所的精准效能，转化为可口服的细胞级营养指令。\n 历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。"
+      "description": "Dr Shona Dalzell博士创立的The Cosmetic Clinic中，尖端设备带来即刻改变，却无法满足求美者对“持久光彩”的渴望；\n 皮肤研究实验室：作为奥克兰大学皮肤学博士，她洞见问题本质——外在显化，皆源于细胞状态的失衡。\n当医学遇见美学，一个颠覆性的构想诞生：\n 将医美诊所的精准效能，转化为可口服的细胞级营养指令。\n 历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。",
+      "image": "science.originHistory.1"
     },
     {
       "title": "品牌愿景",
       "subtitle": "Fantasy Care，以医学为笔，以时间为纸，书写由内而外的焕活诗篇。",
-      "description": "我们坚信，内蕴，是最高级的奢护；新生，是最从容的抵达。\n 在这里，美是一场精准的细胞内驭，一次忠于自我的科学仪式。"
+      "description": "我们坚信，内蕴，是最高级的奢护；新生，是最从容的抵达。\n 在这里，美是一场精准的细胞内驭，一次忠于自我的科学仪式。",
+      "image": "science.originHistory.2"
     },
     {
       "title": "内蕴",
       "subtitle": "医美科技的口服化革命",
-      "description": "我们深入肌底，以精准营养激活肌肤内在的焕活程序。如同为细胞提供一张精准的“修复蓝图”，促进胶原自生、强化防御屏障，实现由内而外的系统性改善。这不仅是护理，更是一场引导肌肤走向自我新生的科学仪式。"
+      "description": "我们深入肌底，以精准营养激活肌肤内在的焕活程序。如同为细胞提供一张精准的“修复蓝图”，促进胶原自生、强化防御屏障，实现由内而外的系统性改善。这不仅是护理，更是一场引导肌肤走向自我新生的科学仪式。",
+      "image": "science.originHistory.3"
     },
     {
       "title": "奢护",
       "subtitle": "医药级的品质承诺",
-      "description": "奢华的基石，是无可挑剔的严谨。从全球甄选经临床验证的活性成分，到遵循药品级GMP标准的生产环境，我们以科学量尺，严格把控从原料至成品的每一环节。这份近乎偏执的承诺，只为确保每一次服用，都是安全、纯净、高效的奢宠体验。"
+      "description": "奢华的基石，是无可挑剔的严谨。从全球甄选经临床验证的活性成分，到遵循药品级GMP标准的生产环境，我们以科学量尺，严格把控从原料至成品的每一环节。这份近乎偏执的承诺，只为确保每一次服用，都是安全、纯净、高效的奢宠体验。",
+      "image": "science.originHistory.4"
     },
     {
       "title": "新生",
       "subtitle": "整体状态的焕然一新",
-      "description": "新生，是身心协同的最终杰作。它呈现为肌肤的细腻光采、发丝的强大韧性与身心的从容活力。我们追求的不是短暂的修饰，而是持久、稳定、可见的整体状态提升，让您由内而外，悦然新生。"
+      "description": "新生，是身心协同的最终杰作。它呈现为肌肤的细腻光采、发丝的强大韧性与身心的从容活力。我们追求的不是短暂的修饰，而是持久、稳定、可见的整体状态提升，让您由内而外，悦然新生。",
+      "image": "science.originHistory.5"
     }
   ],
   "developmentHistory": [
@@ -82,7 +83,7 @@
       "description": [
         "诞生于新西兰皮肤科实验室的革命性洞察：真正的美丽源于内部细胞秩序的重建。我们致力于将美学医疗效果融入口服技术。"
       ],
-      "image": "developmentHistory.1"
+      "image": "science.developmentHistory.1"
     },
     {
       "year": "2020",
@@ -90,7 +91,7 @@
       "description": [
         "建立了完整的制药级研发与供应链体系，以制药的严谨标准定义内蕴之美——为每一个承诺奠定坚实的信任基石。"
       ],
-      "image": "developmentHistory.2"
+      "image": "science.developmentHistory.2"
     },
     {
       "year": "2023",
@@ -98,7 +99,7 @@
       "description": [
         "奢华至臻焕颜新生科技的全新里程碑。通过臻爱铂金尊宠密集修护精华液,Niehans 博士的恒久之梦跃达巅峰。"
       ],
-      "image": "developmentHistory.3"
+      "image": "science.developmentHistory.3"
     },
     {
       "year": "2025",
@@ -106,7 +107,7 @@
       "description": [
         "全产品线获得新西兰GMP、HACCP、Halal认证，品质获得国际认可。业务稳步拓展至亚太和欧洲重点市场，建立科学品牌的全球标杆。"
       ],
-      "image": "developmentHistory.4"
+      "image": "science.developmentHistory.4"
     },
     {
       "year": "未来",
@@ -114,7 +115,7 @@
       "description": [
         "我们持续深入皮肤科学与营养学的前沿领域，通过不懈的科学研究重塑美丽的未来边界。"
       ],
-      "image": "developmentHistory.5"
+      "image": "science.developmentHistory.5"
     }
   ],
   "keyIngredients": {
@@ -122,10 +123,12 @@
     "drShona": {
       "name": "Dr Shona Dalzell",
       "image": "keyIngredients.drShona",
-      "background": [
+      "background1": [
         "1993年毕业于奥克兰大学",
         "新西兰美学医学学会（NZSCM）会员，持有美学医学文凭",
-        "医学学士和外科学士（MBChB）",
+        "医学学士和外科学士（MBChB）"
+      ],
+      "background2": [
         "新西兰皇家全科医师学院院士（FRNZGP）",
         "新西兰皮肤癌医学协会会员（MNZSCM）",
         "中国医师协会认证皮肤癌专科医师（MACP）",
@@ -138,14 +141,14 @@
       "teamImage": "keyIngredients.teamImage"
     }
   },
-  "technologyAndPatents": {
+  "technology": {
     "qualification": {
       "title": "成分与技术认证流程",
-      "certificateImage": "technologyAndPatents.certificateImage"
+      "certificateImage": "technology.certificateImage"
     },
     "patents": {
       "title": "成分专利",
-      "patentImage": "technologyAndPatents.patentImage"
+      "patentImage": "technology.patentImage"
     }
   },
   "honorsAwards": {
@@ -153,35 +156,35 @@
     "awards": [
       {
         "name": "2025 南十字星国际医疗美容金奖",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.1"
       },
       {
         "name": "2025 新西兰膳食营养补充剂银蕨奖",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.2"
       },
       {
         "name": "摩纳哥王妃抗衰老配方创新巅峰奖",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.3"
       },
       {
         "name": "瑞士营养创新技术金奖",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.4"
       },
       {
         "name": "欧洲营养保健峰会年度影响力标杆品牌",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.5"
       },
       {
         "name": "国际美业创新奖年度消费者信赖口服品牌",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.6"
       },
       {
         "name": "意大利米兰全球膳食补充剂发明大奖",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.7"
       },
       {
         "name": "维纳斯凝光宝石奖",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.8"
       }
     ]
   },
@@ -258,7 +261,7 @@
         {
           "name": "技术与专利",
           "image": "menu.brandHeritage.technology",
-          "slug": "Technology and Patents"
+          "slug": "Technology"
         }
       ]
     },
@@ -396,7 +399,7 @@
       {
         "title": "专属定制包装",
         "description": "个性化礼品盒，刻有您的专属ID",
-        "image": "member.service.4"
+        "image": "member.service.3"
       }
     ],
     "globalConsultation": {
@@ -419,90 +422,61 @@
       "title": "皮肤状况预测建模",
       "models": [
         {
-          "period": "SHORT",
+          "period": "短期",
           "description": "7天皮肤屏障改善预测",
           "image": "member.membership.1"
         },
         {
-          "period": "MEDIUM",
+          "period": "中期",
           "description": "30天胶原蛋白再生轨迹分析",
-          "image": "member.membership.3"
+          "image": "member.membership.2"
         },
         {
-          "period": "LONG-TERM",
+          "period": "长期",
           "description": "90天全面焕新进度预测",
-          "image": "member.membership.4"
+          "image": "member.membership.3"
         }
       ]
     },
     "allergenAlert": {
       "title": "过敏原敏感度预警系统 实时成分兼容性分析",
-      "image": "member.membership.5"
+      "image": "member.membership.4"
     },
     "dosageOptimization": {
       "title": "个性化剂量优化算法",
-      "people": [
-        {
-          "image": "member.membership.1"
-        },
-        {
-          "image": "member.membership.3"
-        },
-        {
-          "image": "member.membership.4"
-        },
-        {
-          "image": "member.membership.5"
-        },
-        {
-          "image": "member.membership.6"
-        },
-        {
-          "image": "member.membership.7"
-        },
-        {
-          "image": "member.membership.9"
-        },
-        {
-          "image": "member.membership.1"
-        },
-        {
-          "image": "member.membership.3"
-        }
-      ]
+      "image": "member.membership.5"
     },
     "userExperience": {
       "title": "用户体验生态系统",
-      "image": "member.membership.4"
+      "image": "member.membership.6"
     },
     "userFeedback": {
       "title": "用户反馈",
-      "image": "member.membership.5"
+      "image": "member.membership.7"
     },
     "skinRenewal": {
       "title": "皮肤更新日志",
-      "subtitle": "用户上传前后对比视频",
       "videoUrl": "video.sample"
     },
     "expertQA": {
       "title": "专家问答环节",
-      "image": "member.membership.6"
+      "image": "member.membership.9"
     },
     "milestoneBadges": {
       "title": "皮肤更新里程碑徽章",
       "badges": [
         {
-          "period": "25-Day",
+          "period": "25-天",
           "description": "坚持徽章（每日使用验证）",
           "image": "member.membership.7"
         },
         {
-          "period": "90-Day",
+          "period": "90-天",
           "description": "蜕变徽章（可见效果确认）",
-          "image": "member.membership.9"
+          "image": "member.membership.2"
         },
         {
-          "period": "180-Day",
+          "period": "180-天",
           "description": "精通徽章（持续皮肤健康优化）",
           "image": "member.membership.1"
         }
@@ -528,4 +502,3 @@
     "contactUs": "联系我们"
   }
 }
-

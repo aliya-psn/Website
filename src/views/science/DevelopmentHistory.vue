@@ -8,7 +8,7 @@
       <div class="absolute inset-0 particle-background particle-layer-2"></div>
     </div>
     
-    <div class="max-w-7xl mx-auto px-2 md:px-6 py-12 md:py-16 relative z-10">
+    <div class="max-w-[90rem] mx-auto px-2 md:px-6 py-12 md:py-16 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         <!-- 左侧：时间轴 - 占用窄位置 -->
         <div class="lg:col-span-2 flex flex-col items-center lg:items-start -ml-2 lg:ml-0">
@@ -58,7 +58,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center h-full">
                   <!-- 左侧：圆形图片 - 带发光效果 -->
                   <div class="flex justify-center lg:justify-start">
-                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                    <div class="relative w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[28rem] lg:h-[28rem]">
                       <!-- 发光效果 -->
                       <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
                       <div class="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>

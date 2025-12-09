@@ -6,7 +6,7 @@ import Origin from '../views/science/Origin.vue'
 import DevelopmentHistory from '../views/science/DevelopmentHistory.vue'
 import HonorsAwards from '../views/science/HonorsAwards.vue'
 import KeyIngredients from '../views/house/KeyIngredients.vue'
-import TechnologyAndPatents from '../views/house/TechnologyAndPatents.vue'
+import Technology from '../views/house/Technology.vue'
 import ExclusiveServices from '../views/member/ExclusiveServices.vue'
 import MembershipSystem from '../views/member/MembershipSystem.vue'
 import AllProducts from '../views/product/AllProducts.vue'
@@ -18,9 +18,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/origin/honors-awards',
-    name: 'HonorsAwards',
-    component: HonorsAwards
+    path: '/origin',
+    name: 'Origin',
+    component: Origin
   },
   {
     path: '/origin/development-history',
@@ -32,9 +32,9 @@ const routes = [
     }
   },
   {
-    path: '/origin',
-    name: 'Origin',
-    component: Origin
+    path: '/origin/honors-awards',
+    name: 'HonorsAwards',
+    component: HonorsAwards
   },
   {
     path: '/key-ingredients',
@@ -42,9 +42,9 @@ const routes = [
     component: KeyIngredients
   },
   {
-    path: '/technology-and-patents',
-    name: 'TechnologyAndPatents',
-    component: TechnologyAndPatents
+    path: '/technology',
+    name: 'Technology',
+    component: Technology
   },
   {
     path: '/exclusive-services',

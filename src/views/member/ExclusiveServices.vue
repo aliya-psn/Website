@@ -23,7 +23,7 @@
           class="service-card flex flex-col"
         >
           <!-- 图片区域 -->
-          <div class="w-full aspect-square mb-6 overflow-hidden rounded-lg bg-gray-100">
+          <div class="w-full aspect-square mb-6 overflow-hidden bg-gray-100">
             <img
               :src="service.image"
               :alt="service.title"
@@ -43,7 +43,7 @@
 
       <!-- 底部大图部分 -->
       <div class="mt-20">
-        <div class="w-full mb-6 overflow-hidden rounded-lg bg-gray-100">
+        <div class="w-full mb-6 overflow-hidden bg-gray-100">
           <img
             :src="exclusiveServicesData.globalConsultation.image"
             :alt="exclusiveServicesData.globalConsultation.title"

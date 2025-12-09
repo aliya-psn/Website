@@ -1,7 +1,6 @@
 {
   "title": "FANTASYCARE",
   "home": {
-    "backgroundImage1": "home.backgroundImage1",
     "backgroundImage": "home.backgroundImage",
     "brand": {
       "name": "FANTASYCARE"
@@ -9,68 +8,72 @@
     "hero": {
       "title": "NOURISHED WITHIN, PERFECTED OUT.",
       "subtitle": "Nourished Deeply Luxuriously Revitalized"
+    },
+    "experience": {
+      "heading": "Redefine the Dimensions of Beauty",
+      "description": "True luxury lies in making beauty a precise and predictable science.",
+      "buttonText": "Start Shopping",
+      "productImage": "home.experience.productImage"
+    },
+    "origin": {
+      "title": "Brand Vision",
+      "subtitle": "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
+      "description": [
+        "When medicine meets aesthetics, a revolutionary vision was born:",
+        "Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.",
+        "After seven years of R&D, Fantasy Care embarked on the concept of \"Luxurious Nourishment from Within,\" pioneering a new era of oral medical aesthetics."
+      ]
+    },
+    "scientificExploration": {
+      "title": "Rooted in Medicine, Refined by Science",
+      "subtitle": "Synergy. For Ultimate Regeneration.",
+      "buttonText": "Scientific Exploration",
+      "collageImage": "home.scientificExploration.collageImage"
+    },
+    "luxuryCare": {
+      "primaryText": "True luxurious care lies not in confrontation, but in nourishment;",
+      "secondaryText": "Brilliant regeneration comes not from hasty display, but from internal order.",
+      "image": "home.luxuryCare.image"
+    },
+    "mapNewsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "placeholder": "Please enter your email address here.",
+      "buttonText": "Register",
+      "submitting": "Submitting...",
+      "successMessage": "Subscription successful!",
+      "errorMessage": "Subscription failed, please try again later."
     }
-  },
-  "experience": {
-    "title": "Redefine",
-    "subtitle": "the Dimensions of Beauty",
-    "description": "True luxury lies in making beauty a precise and predictable science.",
-    "buttonText": "Start Shopping",
-    "productImage": "experience.productImage"
-  },
-  "origin": {
-    "title": "Brand Vision",
-    "subtitle": "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
-    "description": [
-      "When medicine meets aesthetics, a revolutionary vision was born:",
-      "Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.",
-      "After seven years of R&D, Fantasy Care embarked on the concept of \"Luxurious Nourishment from Within,\" pioneering a new era of oral medical aesthetics."
-    ]
-  },
-  "scientificExploration": {
-    "title": "Rooted in Medicine, Refined by Science",
-    "subtitle": "Synergy. For Ultimate Regeneration.",
-    "buttonText": "Scientific Exploration",
-    "collageImage": "scientificExploration.collageImage"
-  },
-  "luxuryCare": {
-    "primaryText": "True luxurious care lies not in confrontation, but in nourishment;",
-    "secondaryText": "Brilliant regeneration comes not from hasty display, but from internal order.",
-    "image": "luxuryCare.image"
-  },
-  "mapNewsletter": {
-    "title": "Subscribe to Our Newsletter",
-    "placeholder": "Please enter your email address here.",
-    "buttonText": "Register",
-    "submitting": "Submitting...",
-    "successMessage": "Subscription successful!",
-    "errorMessage": "Subscription failed, please try again later."
   },
   "originHistory": [
     {
       "title": "Brand Origin",
       "subtitle": "From an aesthetic clinic to a cellular laboratory—the transformation began with a dialogue between two spaces.",
-      "description": "In The Cosmetic Clinic founded by Dr Shona Dalzell, cutting-edge devices delivered instant changes yet could not satisfy the desire for lasting radiance;\n Skin research laboratory: as a dermatology PhD from the University of Auckland, she saw the essence—external manifestations stem from imbalances at the cellular level.\nWhen medicine met aesthetics, a disruptive idea was born:\n Translate the precise efficacy of aesthetic clinics into oral, cellular-level nutritional directives.\n After seven years of R&D, Fantasy Care launched with \"luxurious nourishment from within,\" ushering in a new era of oral medical aesthetics."
+      "description": "In The Cosmetic Clinic founded by Dr Shona Dalzell, cutting-edge devices delivered instant changes yet could not satisfy the desire for lasting radiance;\n Skin research laboratory: as a dermatology PhD from the University of Auckland, she saw the essence—external manifestations stem from imbalances at the cellular level.\nWhen medicine met aesthetics, a disruptive idea was born:\n Translate the precise efficacy of aesthetic clinics into oral, cellular-level nutritional directives.\n After seven years of R&D, Fantasy Care launched with \"luxurious nourishment from within,\" ushering in a new era of oral medical aesthetics.",
+      "image": "science.originHistory.1"
     },
     {
       "title": "Brand Vision",
       "subtitle": "Fantasy Care writes a revitalizing ode from within—medicine as the pen, time as the paper.",
-      "description": "We believe inner richness is the highest form of luxury care; renewal is the calmest arrival.\n Here, beauty is a precise intracellular stewardship—a scientific ritual faithful to oneself."
+      "description": "We believe inner richness is the highest form of luxury care; renewal is the calmest arrival.\n Here, beauty is a precise intracellular stewardship—a scientific ritual faithful to oneself.",
+      "image": "science.originHistory.2"
     },
     {
       "title": "Inner Richness",
       "subtitle": "An oral revolution in medical-aesthetic technology",
-      "description": "We delve deep to activate the skin’s internal revitalization program with precise nutrition—like providing cells a tailored “repair blueprint.” We boost collagen genesis, fortify the defense barrier, and achieve system-wide improvement from within. This is not just care; it is a scientific ritual guiding the skin to renewed life."
+      "description": "We delve deep to activate the skin's internal revitalization program with precise nutrition—like providing cells a tailored \"repair blueprint.\" We boost collagen genesis, fortify the defense barrier, and achieve system-wide improvement from within. This is not just care; it is a scientific ritual guiding the skin to renewed life.",
+      "image": "science.originHistory.3"
     },
     {
       "title": "Luxurious Care",
       "subtitle": "A pharmaceutical-grade quality commitment",
-      "description": "The cornerstone of luxury is uncompromising rigor. From globally sourced, clinically validated actives to GMP-grade production, we measure with scientific standards and scrutinize every step from raw ingredients to finished products. This near-obsessive promise ensures every serving is safe, pure, and efficacious."
+      "description": "The cornerstone of luxury is uncompromising rigor. From globally sourced, clinically validated actives to GMP-grade production, we measure with scientific standards and scrutinize every step from raw ingredients to finished products. This near-obsessive promise ensures every serving is safe, pure, and efficacious.",
+      "image": "science.originHistory.4"
     },
     {
       "title": "Renewal",
       "subtitle": "Holistic revitalization, inside and out",
-      "description": "Renewal is the ultimate work of body–mind synergy. It reveals itself as refined skin radiance, resilient hair strength, and composed vitality. We pursue not brief embellishment but durable, stable, visible improvement of the whole state—so you are renewed from within, naturally aglow."
+      "description": "Renewal is the ultimate work of body–mind synergy. It reveals itself as refined skin radiance, resilient hair strength, and composed vitality. We pursue not brief embellishment but durable, stable, visible improvement of the whole state—so you are renewed from within, naturally aglow.",
+      "image": "science.originHistory.5"
     }
   ],
   "developmentHistory": [
@@ -80,7 +83,7 @@
       "description": [
         "Born from a revolutionary insight in a New Zealand dermatological laboratory: True beauty stems from the reconstruction of internal cellular order. We aspire to integrate aesthetic medical effects into oral technology."
       ],
-      "image": "developmentHistory.1"
+      "image": "science.developmentHistory.1"
     },
     {
       "year": "2020",
@@ -88,15 +91,15 @@
       "description": [
         "Established a comprehensive pharmaceutical grade R&D and supply chain system, defining internal beauty with the rigorous standards of pharmaceuticals—laying a solid cornerstone of trust for every commitment."
       ],
-      "image": "developmentHistory.2"
+      "image": "science.developmentHistory.2"
     },
     {
-      "year": "2021",
+      "year": "2023",
       "title": "Ceremony",
       "description": [
         "A new milestone in luxurious, ultimate rejuvenating and regenerating technology. Through the cherished Platinum Supreme Intensive Repair Essence, Dr. Niehans' enduring dream reaches its peak."
       ],
-      "image": "developmentHistory.3"
+      "image": "science.developmentHistory.3"
     },
     {
       "year": "2025",
@@ -104,7 +107,7 @@
       "description": [
         "The entire product line has been awarded New Zealand GMP, HACCP, and Halal certifications, with quality earning international recognition. Business has steadily expanded to key markets in Asia-Pacific and Europe, establishing a global benchmark for scientific brands."
       ],
-      "image": "developmentHistory.4"
+      "image": "science.developmentHistory.4"
     },
     {
       "year": "Future",
@@ -112,7 +115,7 @@
       "description": [
         "We continue to delve into the forefront of skin science and nutrition, reshaping the future boundaries of beauty through relentless scientific research."
       ],
-      "image": "developmentHistory.5"
+      "image": "science.developmentHistory.5"
     }
   ],
   "keyIngredients": {
@@ -120,10 +123,12 @@
     "drShona": {
       "name": "Dr Shona Dalzell",
       "image": "keyIngredients.drShona",
-      "background": [
+      "background1": [
         "Graduated from the University of Auckland in 1993",
         "A member of the New Zealand Society of Aesthetic Medicine (NZSCM) and holding a diploma in aesthetic medicine",
-        "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+        "Bachelor of Medicine and Bachelor of Surgery (MBChB)"
+      ],
+      "background2": [
         "Fellow of the Royal College of General Practitioners of New Zealand (FRNZGP)",
         "Member of the New Zealand Skin Cancer Medical Association (MNZSCM)",
         "Certified Skin Cancer Specialist (MACP) by the Chinese Medical Doctor Association",
@@ -136,14 +141,14 @@
       "teamImage": "keyIngredients.teamImage"
     }
   },
-  "technologyAndPatents": {
+  "technology": {
     "qualification": {
       "title": "Ingredients & Technology Qualification process",
-      "certificateImage": "technologyAndPatents.certificateImage"
+      "certificateImage": "technology.certificateImage"
     },
     "patents": {
       "title": "Ingredient patent",
-      "patentImage": "technologyAndPatents.patentImage"
+      "patentImage": "technology.patentImage"
     }
   },
   "honorsAwards": {
@@ -151,35 +156,35 @@
     "awards": [
       {
         "name": "2025 Southern Cross International Medical Aesthetics Gold Award",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.1"
       },
       {
         "name": "2025 New Zealand Silver Fern Award for Dietary Nutritional Supplements",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.2"
       },
       {
         "name": "Princess of Monaco Pinnacle Award for Anti-Aging Formula Innovation",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.3"
       },
       {
         "name": "Switzerland Nutritional Innovation Technology Gold Award",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.4"
       },
       {
         "name": "Annual Influential Benchmark Brand | European Nutrition & Health Summit",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.5"
       },
       {
         "name": "Annual Consumer-Trusted Oral Brand | International Beauty Industry Innovation Award",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.6"
       },
       {
         "name": "Milan, Italy Global Dietary Supplement Invention Grand Award",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.7"
       },
       {
         "name": "Venus Luminous Gem Award",
-        "image": "honorsAwards.default"
+        "image": "science.awardsHistory.8"
       }
     ]
   },
@@ -200,38 +205,24 @@
       "dropdownItems": [
         {
           "id": 1,
-          "title": "Life Matrix Collection",
-          "description": "Revealing Youthful Vitality",
+          "title": "Basic Revitalization Collection",
+          "description": "Focus on daily and nightly basic maintenance, strengthen skin barrier, provide core nutrition.",
           "image": "product.default",
-          "slug": "life-matrix-collection"
+          "slug": "basic-revitalization-collection"
         },
         {
           "id": 2,
-          "title": "Platinum Collection",
-          "description": "Luxurious Ultimate Rejuvenation",
+          "title": "Advanced Repair Collection",
+          "description": "Target specific issues such as dullness, wrinkles, and sagging with high-concentration targeted repair.",
           "image": "product.default",
-          "slug": "platinum-collection"
+          "slug": "advanced-repair-collection"
         },
         {
           "id": 3,
-          "title": "Caviar Collection",
-          "description": "Lift and Firm",
+          "title": "Limited Exclusive Collection",
+          "description": "Integrating annual cutting-edge scientific research achievements, providing pioneering care experience for clients pursuing excellence.",
           "image": "home.backgroundImage",
-          "slug": "caviar-collection"
-        },
-        {
-          "id": 4,
-          "title": "Pure White Collection",
-          "description": "Brighten and Firm",
-          "image": "product.default",
-          "slug": "pure-white-collection"
-        },
-        {
-          "id": 5,
-          "title": "Golden Radiance Collection",
-          "description": "Revitalize and Nourish",
-          "image": "home.backgroundImage1",
-          "slug": "golden-radiance-collection"
+          "slug": "limited-exclusive-collection"
         }
       ]
     },
@@ -242,14 +233,17 @@
       "dropdownItems": [
         {
           "name": "Origin",
+          "image": "menu.scienceAnalysis.origin",
           "slug": "origin"
         },
         {
           "name": "Development History",
+          "image": "menu.scienceAnalysis.developmentHistory",
           "slug": "development-history"
         },
         {
           "name": "Honors & Awards",
+          "image": "menu.scienceAnalysis.honorsAwards",
           "slug": "honors-awards"
         }
       ]
@@ -261,11 +255,13 @@
       "dropdownItems": [
         {
           "name": "Key Ingredients",
+          "image": "menu.brandHeritage.key",
           "slug": "key-ingredients"
         },
         {
-          "name": "Technology and Patents",
-          "slug": "Technology and Patents"
+          "name": "Technology",
+          "image": "menu.brandHeritage.technology",
+          "slug": "Technology"
         }
       ]
     },
@@ -276,10 +272,12 @@
       "dropdownItems": [
         {
           "name": "Exclusive Services",
+          "image": "menu.membership.services",
           "slug": "exclusive-services"
         },
         {
           "name": "Membership System",
+          "image": "menu.membership.system",
           "slug": "membership-system"
         }
       ]
@@ -303,7 +301,7 @@
       {
         "title": "Exclusive Custom Packaging",
         "description": "Personalized gift boxes engraved with your unique ID",
-        "image": "member.membership.1"
+        "image": "member.service.3"
       }
     ],
     "globalConsultation": {
@@ -328,17 +326,17 @@
         {
           "period": "SHORT",
           "description": "7-day skin barrier improvement forecast",
-          "image": "member.service.1"
+          "image": "member.membership.1"
         },
         {
           "period": "MEDIUM",
           "description": "30-day collagen regeneration trajectory analysis",
-          "image": "member.membership.1"
+          "image": "member.membership.2"
         },
         {
           "period": "LONG-TERM",
           "description": "90-day comprehensive rejuvenation progress prediction",
-          "image": "member.service.2"
+          "image": "member.membership.3"
         }
       ]
     },
@@ -348,52 +346,23 @@
     },
     "dosageOptimization": {
       "title": "Personalized dosage optimization algorithms",
-      "people": [
-        {
-          "image": "member.membership.1"
-        },
-        {
-          "image": "member.membership.3"
-        },
-        {
-          "image": "member.membership.4"
-        },
-        {
-          "image": "member.membership.5"
-        },
-        {
-          "image": "member.membership.6"
-        },
-        {
-          "image": "member.membership.7"
-        },
-        {
-          "image": "member.membership.9"
-        },
-        {
-          "image": "member.membership.1"
-        },
-        {
-          "image": "member.membership.3"
-        }
-      ]
+      "image": "member.membership.5"
     },
     "userExperience": {
       "title": "User Experience Ecosystem",
-      "image": "member.membership.4"
+      "image": "member.membership.6"
     },
     "userFeedback": {
       "title": "User Feedback",
-      "image": "member.membership.5"
+      "image": "member.membership.7"
     },
     "skinRenewal": {
       "title": "Skin Renewal Journals",
-      "subtitle": "User Uploaded Before and After Videos",
       "videoUrl": "video.sample"
     },
     "expertQA": {
       "title": "Expert Q&A Sessions",
-      "image": "member.membership.6"
+      "image": "member.membership.9"
     },
     "milestoneBadges": {
       "title": "Skin Renewal Milestone Badges",
@@ -406,7 +375,7 @@
         {
           "period": "90-Day",
           "description": "Transformation Badge (visible results confirmation)",
-          "image": "member.membership.9"
+          "image": "member.membership.2"
         },
         {
           "period": "180-Day",

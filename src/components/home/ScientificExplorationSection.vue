@@ -6,7 +6,7 @@
   >
     <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
       <!-- 顶部文字和按钮区域 - 占据约1/3空间 -->
-      <div class="text-center mb-8 md:mb-12 lg:mb-16">
+      <div class="text-center mb-4">
         <!-- 标题 -->
         <h2
           class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 md:mb-4 lg:mb-5"
@@ -23,6 +23,7 @@
         
         <!-- 按钮 -->
         <button
+          @click="handleButtonClick"
           class="bg-gray-900 text-white px-8 py-3 md:px-10 md:py-3.5 lg:px-12 lg:py-4 rounded-lg text-sm md:text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors duration-300"
         >
           {{ sectionData.buttonText }}
@@ -44,12 +45,20 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 defineProps({
   sectionData: {
     type: Object,
     required: true,
   },
 })
+
+const handleButtonClick = () => {
+  router.push('/origin')
+}
 </script>
 
 <style scoped>

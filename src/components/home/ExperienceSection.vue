@@ -9,13 +9,12 @@
       <!-- 上半部分：标题、描述、按钮 -->
       <div class="flex-1 flex flex-col items-center justify-center text-center mb-12 md:mb-16">
         <!-- 标题 -->
-        <div class="mb-6 md:mb-8 animate-slide-in-left-delay">
-          <h2 class="hero-title-main text-4xl md:text-5xl lg:text-6xl font-elegant font-bold mb-2 tracking-tight leading-tight">
-            {{ experienceData.title }}
+        <div class="mb-6 md:mb-8 animate-slide-in-left-delay hero-title-wrapper">
+          <h2 class="hero-title text-4xl md:text-5xl lg:text-6xl font-elegant font-bold tracking-tight leading-tight">
+            <span class="hero-title-text">{{ experienceData.heading }}</span>
+            <span class="hero-title-glow"></span>
+            <span class="hero-title-shine"></span>
           </h2>
-          <h3 class="hero-title-sub text-4xl md:text-5xl lg:text-6xl font-elegant font-bold tracking-tight leading-tight">
-            {{ experienceData.subtitle }}
-          </h3>
         </div>
 
         <!-- 描述文字 -->
@@ -40,12 +39,13 @@
 
       <!-- 下半部分：产品图片 -->
       <div class="flex-1 flex items-center justify-center animate-fade-in-up-delay-3">
-        <div class="relative">
+        <div class="relative product-image-container">
           <img 
             :src="experienceData.productImage" 
             alt="产品"
-            class="w-64 md:w-80 lg:w-96 xl:w-[28rem] h-auto object-contain shadow-2xl rounded-lg"
+            class="product-image w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] h-auto object-contain"
           />
+          <div class="product-glow"></div>
         </div>
       </div>
     </div>
@@ -149,42 +149,125 @@ onMounted(() => {
   }
 }
 
-/* 高级文字特效 */
-.hero-title-main {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+/* 标题容器 - 同一行显示 */
+.hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+
+.hero-title {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.03em;
+}
+
+.hero-title-text {
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1a1a1a 25%,
+    #2d2d2d 50%,
+    #1a1a1a 75%,
+    #000000 100%
+  );
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: 0.05em;
-  position: relative;
-  animation: titleGlow 3s ease-in-out infinite alternate;
+  animation: gradientShift 4s ease infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  transition: filter 0.3s ease;
 }
 
-.hero-title-main::before {
-  content: '';
+.hero-title-glow {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(45, 45, 45, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: titleShine 4s ease-in-out infinite;
-  pointer-events: none;
+  animation: glowPulse 3s ease-in-out infinite;
+  filter: blur(8px);
+  opacity: 0.6;
 }
 
-.hero-title-sub {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #2d2d2d 100%);
+.hero-title-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: shineSweep 3s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: 0.05em;
-  position: relative;
-  animation: titleGlow 3s ease-in-out infinite alternate-reverse;
+}
+
+.hero-title-wrapper:hover .hero-title-text {
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 30px rgba(0, 0, 0, 0.3));
+  transform: scale(1.02);
+}
+
+.hero-title-wrapper:hover .hero-title-glow {
+  opacity: 0.9;
+  filter: blur(12px);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shineSweep {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 @keyframes titleGlow {
@@ -281,6 +364,58 @@ onMounted(() => {
 .hero-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 产品图片特效 */
+.product-image-container {
+  position: relative;
+}
+
+.product-image {
+  position: relative;
+  z-index: 2;
+  animation: floatImage 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.15));
+}
+
+.product-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulseGlow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.02);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 
 </style>

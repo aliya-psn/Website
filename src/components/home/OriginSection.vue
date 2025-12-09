@@ -6,24 +6,25 @@
   >
     <!-- 装饰性背景元素 -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-gray-100/20 to-transparent rounded-full blur-3xl"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-tl from-gray-100/20 to-transparent rounded-full blur-3xl"></div>
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-linear-to-br from-gray-100/20 to-transparent rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-tl from-gray-100/20 to-transparent rounded-full blur-3xl"></div>
     </div>
 
     <!-- 内容区域 -->
-    <div class="relative z-10  flex flex-col items-center justify-center px-6 md:px-8 lg:px-12 xl:px-16 py-16 md:py-24">
+    <div class="relative z-10  flex flex-col items-center justify-center px-6 md:px-8 lg:px-12 xl:px-16 pt-8 md:pt-12 pb-16 md:pb-24">
       <div class="w-full max-w-4xl">
         <!-- 标题 -->
         <h2
-          class="origin-title text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 md:mb-10"
+          class="origin-title text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-12 md:mb-16"
         >
-          {{ originData.title }}
+          <span class="origin-title-text">{{ originData.title }}</span>
+          <span class="origin-title-glow"></span>
         </h2>
 
         <!-- 副标题 -->
         <p
           v-if="originData.subtitle"
-          class="origin-subtitle text-base md:text-lg text-center mb-10 md:mb-12 font-normal leading-relaxed origin-fade-in"
+          class="origin-subtitle text-lg md:text-xl text-center mb-14 md:mb-20 font-light origin-fade-in"
         >
           {{ originData.subtitle }}
         </p>
@@ -33,7 +34,7 @@
           <p
             v-for="(paragraph, index) in originData.description"
             :key="index"
-            class="origin-paragraph text-base md:text-lg leading-relaxed font-normal text-center origin-fade-in"
+            class="origin-paragraph text-sm md:text-base leading-7 font-light text-center origin-fade-in"
             :style="{ animationDelay: `${(index + 1) * 0.15}s` }"
           >
             {{ paragraph }}
@@ -54,33 +55,85 @@ defineProps({
 </script>
 
 <style scoped>
-/* 标题高级特效 */
+/* 标题 */
 .origin-title {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.origin-title-text {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #1a1a1a 30%,
+    #2d2d2d 50%,
+    #1a1a1a 70%,
+    #0a0a0a 100%
+  );
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-size: 200% 100%;
-  animation: titleGradientShift 6s ease-in-out infinite;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  position: relative;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.05));
+  animation: elegantGradient 8s ease-in-out infinite;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.origin-title-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(45, 45, 45, 0.4) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: elegantGradient 8s ease-in-out infinite reverse;
+  filter: blur(6px);
+  opacity: 0.5;
 }
 
 .origin-title::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2), transparent);
-  animation: lineExpand 3s ease-in-out infinite;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.15),
+    transparent
+  );
+  animation: elegantLineExpand 4s ease-in-out infinite;
+  border-radius: 1px;
 }
 
-@keyframes titleGradientShift {
+.origin-title:hover .origin-title-text {
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.12));
+}
+
+.origin-title:hover::after {
+  animation-duration: 2s;
+}
+
+@keyframes elegantGradient {
   0%, 100% {
     background-position: 0% 50%;
   }
@@ -89,80 +142,51 @@ defineProps({
   }
 }
 
-@keyframes lineExpand {
+@keyframes elegantLineExpand {
   0%, 100% {
-    width: 80px;
-    opacity: 0.4;
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    width: 100px;
+    opacity: 0.6;
   }
   50% {
-    width: 150px;
-    opacity: 0.8;
+    width: 180px;
+    opacity: 1;
+  }
+  80% {
+    width: 100px;
+    opacity: 0.6;
   }
 }
 
-/* 副标题特效 */
+/* 副标题 */
 .origin-subtitle {
   color: #6b7280;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
-  position: relative;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 1.75;
 }
 
-.origin-subtitle::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -20px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
-  animation: subtitleLine 1.5s ease-out 0.5s forwards;
-}
-
-@keyframes subtitleLine {
-  to {
-    width: 100px;
-  }
-}
-
-/* 段落高级特效 */
+/* 段落  */
 .origin-paragraph {
   color: #4b5563;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.8;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
-  position: relative;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
 }
 
-.origin-paragraph::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -12px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
-  transition: width 1s ease;
-}
-
-.origin-paragraph:hover::before {
-  width: 120px;
-}
-
-/* 淡入动画 */
+/* 淡入动画 - 基本过渡 */
 .origin-fade-in {
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: elegantFadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes elegantFadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;

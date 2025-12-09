@@ -7,7 +7,7 @@
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 text-center mb-4 tracking-tight">
           {{ membershipData.title }}
         </h1>
-        <div class="text-center mb-8 space-y-2">
+        <div class="text-center mb-8 space-y-1">
           <p class="text-base md:text-lg text-gray-600 font-light">
             {{ membershipData.professionalSupport }}
           </p>
@@ -30,7 +30,7 @@
             :key="index"
             class="model-card flex flex-col"
           >
-            <div class="w-full aspect-[4/3] mb-4 overflow-hidden rounded-lg bg-gray-100">
+            <div class="w-full aspect-[4/3] mb-4 overflow-hidden  bg-gray-100">
               <img
                 :src="model.image"
                 :alt="model.period"
@@ -51,7 +51,7 @@
           {{ membershipData.allergenAlert.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg bg-gray-100">
+          <div class="w-full aspect-video overflow-hidden bg-gray-100">
             <img
               :src="membershipData.allergenAlert.image"
               :alt="membershipData.allergenAlert.title"
@@ -66,19 +66,13 @@
         <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
           {{ membershipData.dosageOptimization.title }}
         </h2>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-4 max-w-6xl mx-auto">
-          <div
-            v-for="(person, index) in membershipData.dosageOptimization.people"
-            :key="index"
-            class="person-item"
-          >
-            <div class="w-full aspect-square overflow-hidden rounded-lg bg-gray-100">
-              <img
-                :src="person.image"
-                :alt="`Person ${index + 1}`"
-                class="w-full h-full object-cover"
-              />
-            </div>
+        <div class="w-full max-w-5xl mx-auto">
+          <div class="w-full aspect-video overflow-hidden bg-gray-100">
+            <img
+              :src="membershipData.dosageOptimization.image"
+              :alt="membershipData.dosageOptimization.title"
+              class="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -89,7 +83,7 @@
           {{ membershipData.userExperience.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg bg-gray-100">
+          <div class="w-full aspect-video overflow-hidden bg-gray-100">
             <img
               :src="membershipData.userExperience.image"
               :alt="membershipData.userExperience.title"
@@ -105,7 +99,7 @@
           {{ membershipData.userFeedback.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg bg-gray-100">
+          <div class="w-full aspect-video overflow-hidden bg-gray-100">
             <img
               :src="membershipData.userFeedback.image"
               :alt="membershipData.userFeedback.title"
@@ -120,9 +114,6 @@
         <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-4">
           {{ membershipData.skinRenewal.title }}
         </h2>
-        <p class="text-base md:text-lg text-gray-600 text-center mb-8 font-light">
-          {{ membershipData.skinRenewal.subtitle }}
-        </p>
         <div class="w-full max-w-5xl mx-auto">
           <div class="w-full aspect-video bg-gray-900 rounded-lg overflow-hidden">
             <video
@@ -139,7 +130,6 @@
                 <svg class="w-16 h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
-                <p class="text-lg">{{ membershipData.skinRenewal.subtitle }}</p>
               </div>
             </div>
           </div>
@@ -167,13 +157,13 @@
         <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-12">
           {{ membershipData.milestoneBadges.title }}
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
           <div
             v-for="(badge, index) in membershipData.milestoneBadges.badges"
             :key="index"
             class="badge-card flex flex-col items-center"
           >
-            <div class="w-32 h-32 md:w-40 md:h-40 mb-4 overflow-hidden rounded-full bg-gray-100">
+            <div class="w-36 h-36 md:w-46 md:h-46 mb-4 overflow-hidden  bg-gray-100">
               <img
                 :src="badge.image"
                 :alt="badge.period"
