@@ -100,7 +100,7 @@ export function resolveImages(data) {
   
   if (typeof data === 'string') {
     // 如果字符串看起来像键名（不包含路径分隔符且不是URL），尝试解析
-    if (!data.includes('/') && !data.startsWith('http') && !data.startsWith('https')) {
+    if (!data.includes('/') && !data.startsWith('http') && !data.startsWith('https') && (data.includes('image') || data.includes('Image'))) {
       return getImagePath(data)
     }
     return data
