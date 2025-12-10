@@ -1,5 +1,32 @@
 import i18n from './index.js'
 
+// 预加载 assets 下的所有静态资源，构建后会返回指向指纹化文件的真实 URL
+const assetModules = import.meta.glob('../assets/**/*', {
+  eager: true,
+  import: 'default'
+})
+
+/**
+ * 将类似 /src/assets/xxx.png 的路径转换为构建后可访问的资源 URL
+ * @param {string} path
+ * @returns {string}
+ */
+function resolveAssetPath(path) {
+  if (!path || typeof path !== 'string') return ''
+
+  // 仅处理以 /src/assets/ 开头的路径
+  const prefix = '/src/assets/'
+  if (path.startsWith(prefix)) {
+    const relativePath = path.slice(prefix.length) // 例如 home/4.png
+    const moduleKey = `../assets/${relativePath}`   // 与 glob key 匹配
+    const resolved = assetModules[moduleKey]
+    if (resolved) return resolved
+    console.warn(`Asset not found in glob: ${moduleKey}`)
+  }
+
+  return path
+}
+
 /**
  * 图片路径解析工具
  * 根据键名从 images.json 中获取实际的图片路径
@@ -14,8 +41,11 @@ import i18n from './index.js'
 export function getImagePath(key) {
   if (!key) return ''
   
-  // 如果已经是完整路径（以 http:// 或 https:// 或 / 开头），直接返回
-  if (key.startsWith('http://') || key.startsWith('https://') || key.startsWith('/')) {
+  // http/https 的 URL 直接返回；根路径但非 /src/assets 也直接返回
+  if (key.startsWith('http://') || key.startsWith('https://')) {
+    return key
+  }
+  if (key.startsWith('/') && !key.startsWith('/src/assets/')) {
     return key
   }
   
@@ -43,7 +73,10 @@ export function getImagePath(key) {
       }
     }
     
-    return typeof result === 'string' ? result : key
+    if (typeof result === 'string') {
+      return resolveAssetPath(result)
+    }
+    return key
   } catch (error) {
     console.error('Error resolving image path:', error)
     return key
