@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <!-- 导航菜单 -->
+      <!-- 桌面端导航菜单 -->
       <div class="hidden md:flex items-center gap-8 lg:gap-10">
         <template v-for="item in dataSource.navItems" :key="item.id">
           <!-- 有下拉菜单的项 -->
@@ -49,6 +49,42 @@
           </router-link>
         </template>
       </div>
+
+      <!-- 移动端汉堡菜单按钮 -->
+      <button
+        @click="toggleMobileMenu"
+        class="md:hidden text-white p-2 focus:outline-none"
+        aria-label="菜单"
+      >
+        <svg
+          v-if="!isMobileMenuOpen"
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+        <svg
+          v-else
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
     </div>
 
     <!-- 导航下拉菜单 - 在导航栏下方 -->
@@ -106,6 +142,99 @@
         />
       </transition>
     </div>
+
+    <!-- 移动端侧边栏菜单 -->
+    <teleport to="body">
+      <transition name="slide-right">
+        <div
+          v-if="isMobileMenuOpen"
+          class="mobile-menu-overlay fixed inset-0 bg-black/60 z-[9998] md:hidden"
+          @click="closeMobileMenu"
+        ></div>
+      </transition>
+      <transition name="slide-right">
+        <div
+          v-if="isMobileMenuOpen"
+          class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-[9999] md:hidden overflow-y-auto shadow-2xl"
+        >
+        <!-- 移动端菜单头部 -->
+        <div class="flex items-center justify-between p-6 border-b border-white/20 bg-slate-900/50">
+          <div class="text-white font-elegant text-xl font-semibold">
+            {{ dataSource?.home?.brand?.name }}
+          </div>
+          <button
+            @click="closeMobileMenu"
+            class="text-white p-2 hover:text-gray-300 transition-colors rounded-full hover:bg-white/10"
+            aria-label="关闭菜单"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 移动端菜单项 -->
+        <div class="py-2">
+          <template v-for="item in dataSource.navItems" :key="item.id">
+            <!-- 有下拉菜单的项 -->
+            <div v-if="item.hasDropdown" class="border-b border-white/10">
+              <div
+                @click="toggleMobileDropdown(item.id)"
+                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-white font-elegant text-base cursor-pointer hover:bg-white/10 transition-colors active:bg-white/15"
+                :class="{ 'bg-white/15': mobileDropdownId === item.id }"
+              >
+                <span class="font-medium">{{ item.name }}</span>
+                <svg
+                  class="w-5 h-5 transition-transform duration-300 text-white/80"
+                  :class="{ 'rotate-180': mobileDropdownId === item.id }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <!-- 移动端下拉菜单项 -->
+              <transition name="mobile-dropdown">
+                <div
+                  v-if="mobileDropdownId === item.id"
+                  class="bg-slate-800/70 border-l-2 border-white/20"
+                >
+                  <div
+                    v-for="subItem in item.dropdownItems"
+                    :key="subItem.id || subItem.slug"
+                    @click="handleMobileSubItemClick(item.id, subItem)"
+                    class="mobile-sub-item px-10 py-3.5 text-gray-200 text-sm cursor-pointer hover:bg-white/15 hover:text-white transition-colors active:bg-white/20 font-medium"
+                  >
+                    {{ subItem.title || subItem.name }}
+                  </div>
+                </div>
+              </transition>
+            </div>
+            <!-- 没有下拉菜单的项 -->
+            <router-link
+              v-else
+              :to="item.slug ? `/${item.slug}` : '/'"
+              @click="closeMobileMenu"
+              class="mobile-nav-item block px-6 py-4 text-white font-elegant text-base border-b border-white/10 hover:bg-white/10 transition-colors active:bg-white/15 font-medium"
+            >
+              {{ item.name }}
+            </router-link>
+          </template>
+        </div>
+      </div>
+    </transition>
+    </teleport>
   </nav>
 </template>
 
@@ -131,6 +260,8 @@ const currentDropdownId = ref('')
 const dropdownContainer = ref(null)
 const navElement = ref(null)
 const isScrolled = ref(false)
+const isMobileMenuOpen = ref(false)
+const mobileDropdownId = ref('')
 
 // 当前下拉菜单的菜单项
 const currentDropdownItems = computed(() => {
@@ -159,6 +290,50 @@ const closeDropdown = () => {
       currentDropdownId.value = ''
     }
   }, 300)
+}
+
+// 移动端菜单控制
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+  if (!isMobileMenuOpen.value) {
+    mobileDropdownId.value = ''
+  }
+  // 防止背景滚动
+  if (isMobileMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+}
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+  mobileDropdownId.value = ''
+  document.body.style.overflow = ''
+}
+
+// 移动端下拉菜单切换
+const toggleMobileDropdown = (id) => {
+  if (mobileDropdownId.value === id) {
+    mobileDropdownId.value = ''
+  } else {
+    mobileDropdownId.value = id
+  }
+}
+
+// 移动端子菜单项点击处理
+const handleMobileSubItemClick = (parentId, subItem) => {
+  // 根据父菜单ID选择对应的处理函数
+  if (parentId === 'products') {
+    handleItemClick(subItem)
+  } else if (parentId === 'science-analysis') {
+    handleScienceItemClick(subItem)
+  } else if (parentId === 'brand-heritage') {
+    handleBrandHeritageItemClick(subItem)
+  } else if (parentId === 'membership') {
+    handleItemClick(subItem)
+  }
+  closeMobileMenu()
 }
 
 // 点击外部关闭下拉菜单
@@ -202,6 +377,8 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
   window.removeEventListener('scroll', handleScroll)
+  // 确保清理移动端菜单状态
+  document.body.style.overflow = ''
 })
 
 const handleItemClick = (item) => {
@@ -366,5 +543,108 @@ const scrollToTop = () => {
   transform: translateY(-100%) !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+/* 移动端菜单样式 */
+.mobile-menu-overlay {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.mobile-menu {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  /* 确保菜单在最上层 */
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  /* 提高背景对比度 */
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.98) 0%,
+    rgba(30, 41, 59, 0.98) 50%,
+    rgba(15, 23, 42, 0.98) 100%
+  ) !important;
+}
+
+.mobile-nav-item {
+  position: relative;
+}
+
+.mobile-nav-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-item:hover::after {
+  width: 100%;
+}
+
+.mobile-sub-item {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.mobile-sub-item::before {
+  content: '→';
+  position: absolute;
+  left: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+/* 移动端菜单滑入动画 */
+.slide-right-enter-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-right-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+}
+
+.slide-right-enter-from .mobile-menu-overlay {
+  opacity: 0;
+}
+
+.slide-right-enter-from .mobile-menu {
+  transform: translateX(100%);
+}
+
+.slide-right-leave-to .mobile-menu {
+  transform: translateX(100%);
+}
+
+/* 移动端下拉菜单动画 */
+.mobile-dropdown-enter-active {
+  transition: all 0.3s ease-out;
+  max-height: 1000px;
+}
+
+.mobile-dropdown-leave-active {
+  transition: all 0.3s ease-in;
+  max-height: 1000px;
+}
+
+.mobile-dropdown-enter-from {
+  opacity: 0;
+  max-height: 0;
+}
+
+.mobile-dropdown-leave-to {
+  opacity: 0;
+  max-height: 0;
 }
 </style>
