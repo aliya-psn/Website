@@ -19,7 +19,7 @@
               :src="currentData.image"
               :alt="currentData.title"
               container-class="relative w-full h-full rounded-full overflow-hidden"
-              image-class="w-full h-full object-cover rounded-full shadow-2xl ring-2 sm:ring-4 ring-white/20"
+              :image-class="`w-full h-full object-cover ${currentData.objectPosition || 'object-center'} rounded-full shadow-2xl ring-2 sm:ring-4 ring-white/20`"
             />
             <!-- 外圈光晕 -->
             <div class="absolute -inset-2 sm:-inset-4 rounded-full bg-white/5 blur-xl"></div>

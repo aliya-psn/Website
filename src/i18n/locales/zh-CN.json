@@ -49,7 +49,8 @@
       "title": "品牌起源",
       "subtitle": "从医美诊所到细胞实验室的蜕变，一切始于两个空间的对话",
       "description": "Dr Shona Dalzell博士创立的The Cosmetic Clinic中，尖端设备带来即刻改变，却无法满足求美者对“持久光彩”的渴望；\n 皮肤研究实验室：作为奥克兰大学皮肤学博士，她洞见问题本质——外在显化，皆源于细胞状态的失衡。\n当医学遇见美学，一个颠覆性的构想诞生：\n 将医美诊所的精准效能，转化为可口服的细胞级营养指令。\n 历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。",
-      "image": "science.originHistory.1"
+      "image": "science.originHistory.1",
+      "objectPosition": "object-right"
     },
     {
       "title": "品牌愿景",
@@ -67,7 +68,8 @@
       "title": "奢护",
       "subtitle": "医药级的品质承诺",
       "description": "奢华的基石，是无可挑剔的严谨。从全球甄选经临床验证的活性成分，到遵循药品级GMP标准的生产环境，我们以科学量尺，严格把控从原料至成品的每一环节。这份近乎偏执的承诺，只为确保每一次服用，都是安全、纯净、高效的奢宠体验。",
-      "image": "science.originHistory.4"
+      "image": "science.originHistory.4",
+      "objectPosition": "object-left-bottom"
     },
     {
       "title": "新生",
@@ -115,7 +117,8 @@
       "description": [
         "我们持续深入皮肤科学与营养学的前沿领域，通过不懈的科学研究重塑美丽的未来边界。"
       ],
-      "image": "science.developmentHistory.5"
+      "image": "science.developmentHistory.5",
+      "objectPosition": "object-center"
     }
   ],
   "keyIngredients": {
