@@ -62,8 +62,8 @@ export default defineConfig({
         },
       },
     },
-    // 启用压缩
-    minify: 'terser',
+    // 启用压缩（使用 esbuild，Vite 默认，更快且无需额外依赖）
+    minify: 'esbuild',
     // 增加 chunk 大小警告限制（因为图片可能较大）
     chunkSizeWarningLimit: 2000,
   },
