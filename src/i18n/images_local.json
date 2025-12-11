@@ -1,0 +1,96 @@
+{
+  "home": {
+    "backgroundImage1": "/src/assets/home/4.png",
+    "backgroundImage2": "/src/assets/home/5.png",
+    "backgroundImage3": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+
+    "experience": {
+      "productImage": "/src/assets/product/3.png"
+    },
+    "scientificExploration": {
+      "collageImage": "/src/assets/home/4.png"
+    },
+    "luxuryCare": {
+      "image": "/src/assets/home/5.png"
+    }
+  },
+  "menu": {
+    "scienceAnalysis": {
+      "origin": "/src/assets/science/menu/1.png",
+      "developmentHistory": "/src/assets/science/menu/2.png",
+      "honorsAwards": "/src/assets/science/menu/3.png"
+    },
+    "brandHeritage": {
+      "key": "/src/assets/house/menu/1.png",
+      "technology": "/src/assets/house/menu/2.png"
+    },
+    "membership": {
+      "services": "/src/assets/member/menu/1.png",
+      "system": "/src/assets/member/menu/2.png"
+    }
+  },
+  "product": {
+    "1": "/src/assets/product/1.png",
+    "2": "/src/assets/product/2.png",
+    "3": "/src/assets/product/3.png",
+    "4": "/src/assets/product/4.png",
+    "5": "/src/assets/product/5.png",
+    "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
+  },
+  "science": {
+    "originHistory": {
+      "1": "/src/assets/science/origin/1.png",
+      "2": "/src/assets/science/origin/2.png",
+      "3": "/src/assets/science/origin/3.png",
+      "4": "/src/assets/science/origin/4.png",
+      "5": "/src/assets/science/origin/5.png"
+    },
+    "developmentHistory": {
+      "1": "/src/assets/science/development/1.png",
+      "2": "/src/assets/science/development/2.png",
+      "3": "/src/assets/science/development/3.png",
+      "4": "/src/assets/science/development/4.png",
+      "5": "/src/assets/science/development/5.png"
+    },
+    "awardsHistory": {
+      "1": "/src/assets/science/awards/1.png",
+      "2": "/src/assets/science/awards/2.png",
+      "3": "/src/assets/science/awards/3.png",
+      "4": "/src/assets/science/awards/4.png",
+      "5": "/src/assets/science/awards/5.png",
+      "6": "/src/assets/science/awards/6.png",
+      "7": "/src/assets/science/awards/7.png",
+      "8": "/src/assets/science/awards/8.png"
+    }
+  },
+  "keyIngredients": {
+    "drShona": "/src/assets/house/key/1.png",
+    "teamImage": "/src/assets/house/key/2.png"
+  },
+  "technology": {
+    "certificateImage": "/src/assets/house/tech/1.png",
+    "patentImage": "/src/assets/house/tech/1.png"
+  },
+  "member": {
+    "service": {
+      "1": "/src/assets/member/service/1.png",
+      "2": "/src/assets/member/service/2.png",
+      "3": "/src/assets/member/service/3.png"
+    },
+    "membership": {
+      "1": "/src/assets/member/membership/1.png",
+      "2": "/src/assets/member/membership/2.png",
+      "3": "/src/assets/member/membership/3.png",
+      "4": "/src/assets/member/membership/4.png",
+      "5": "/src/assets/member/membership/5.png",
+      "6": "/src/assets/member/membership/6.png",
+      "7": "/src/assets/member/membership/7.png",
+      "8": "/src/assets/member/membership/8.png",
+      "9": "/src/assets/member/membership/9.png"
+    }
+  },
+  "video": {
+    "sample": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  }
+}

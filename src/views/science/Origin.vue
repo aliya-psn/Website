@@ -8,43 +8,43 @@
     @switch="switchToIndex"
   >
     <template #default="{ item: currentSlide }">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center h-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center h-full">
         <!-- 左侧：圆形图片 -->
-        <div class="flex justify-center lg:justify-start">
-          <div class="relative w-96 h-96 md:w-[28rem] md:h-[28rem] lg:w-[28rem] lg:h-[28rem]">
+        <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+          <div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]">
             <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
             <div class="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>
             <LazyImage
               :src="currentSlide.image || originData.image || ''"
               :alt="currentSlide.title"
               container-class="relative w-full h-full rounded-full overflow-hidden"
-              image-class="w-full h-full object-cover rounded-full shadow-2xl ring-4 ring-white/20"
+              image-class="w-full h-full object-cover rounded-full shadow-2xl ring-2 sm:ring-4 ring-white/20"
             />
-            <div class="absolute -inset-4 rounded-full bg-white/5 blur-xl"></div>
+            <div class="absolute -inset-2 sm:-inset-4 rounded-full bg-white/5 blur-xl"></div>
           </div>
         </div>
 
         <!-- 右侧：文本内容 -->
-        <div class="flex flex-col justify-center space-y-6 relative">
-          <div class="absolute -top-10 -right-10 text-white/10 text-7xl md:text-8xl lg:text-9xl font-bold select-none pointer-events-none z-0">
+        <div class="flex flex-col justify-center space-y-4 sm:space-y-6 relative order-1 lg:order-2">
+          <div class="absolute -top-4 -right-4 sm:-top-10 sm:-right-10 text-white/10 text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold select-none pointer-events-none z-0 overflow-hidden">
             {{ currentSlide.title }}
           </div>
           
           <div class="relative z-10">
-            <div class="mb-6">
-              <span class="text-xl md:text-2xl font-elegant font-medium text-white/80">
+            <div class="mb-4 sm:mb-6">
+              <span class="text-lg sm:text-xl md:text-2xl font-elegant font-medium text-white/80">
                 {{ originData.subtitle }}
               </span>
-              <h1 class="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-white mt-2 inline-block border-b-2 border-white/30 pb-2">
+              <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-white mt-1 sm:mt-2 inline-block border-b-2 border-white/30 pb-1 sm:pb-2">
                 {{ currentSlide.title }}
               </h1>
             </div>
             
-            <div class="space-y-4">
+            <div class="space-y-3 sm:space-y-4">
               <p
                 v-for="(paragraph, index) in formattedDescription(currentSlide)"
                 :key="index"
-                class="text-base md:text-lg text-white/80 leading-relaxed font-light"
+                class="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed font-light"
               >
                 {{ paragraph }}
               </p>

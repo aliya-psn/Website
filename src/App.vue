@@ -1,4 +1,10 @@
 <template>
+  <!-- 应用初始化 Loading -->
+  <AppLoading 
+    :visible="isLoading" 
+    :brand-text="loadingBrandText"
+  />
+
   <!-- 导航栏 - 固定在顶部，isNavBarVisible控制是否隐藏导航 -->
   <NavBar :isVisible="isNavBarVisible" />
 
@@ -12,12 +18,30 @@
 <script setup>
 import { ref, provide, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
+import AppLoading from './components/AppLoading.vue'
 import { useI18nData } from './composables/useI18nData'
 
 const { dataSource } = useI18nData()
 const route = useRoute()
+const { t } = useI18n()
+
+// Loading 状态 - 从全局状态获取（如果全局状态是 ref，直接使用；否则创建本地 ref）
+const isLoading = window.__APP_LOADING__ || ref(true)
+
+// 如果全局状态不存在，3秒后自动隐藏 loading（防止永久显示）
+if (!window.__APP_LOADING__) {
+  setTimeout(() => {
+    isLoading.value = false
+  }, 3000)
+}
+
+// Loading 品牌文字
+const loadingBrandText = computed(() => {
+  return 'FANTASYCARE'
+})
 
 const isNavBarVisible = ref(true)
 let lastScrollTop = 0
