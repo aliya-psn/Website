@@ -26,23 +26,24 @@
         <!-- 文字区域 -->
         <div class="px-4 py-4 text-center border-b border-gray-200">
           <h3 class="text-gray-800 text-sm md:text-base font-medium mb-1">
-            {{ item.title || item.name }}
+            {{ item.title }}
           </h3>
         </div>
 
         <!-- 图片区域 -->
         <div v-if="item.image" class="relative overflow-hidden bg-white h-[200px]">
-          <img
+          <LazyImage
             :src="item.image"
-            :alt="item.title || item.name"
-            class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-out"
+            :alt="item.title"
+            container-class="w-full h-full"
+            image-class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-out"
           />
           <!-- 渐变遮罩效果 -->
-          <div class="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
         <!-- 如果没有图片，显示占位符 -->
         <div v-else class="relative overflow-hidden bg-gray-100 h-[200px] flex items-center justify-center">
-          <span class="text-gray-400 text-sm">{{ item.title || item.name }}</span>
+          <span class="text-gray-400 text-sm">{{ item.title }}</span>
         </div>
       </div>
     </div>
@@ -51,6 +52,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import LazyImage from './LazyImage.vue'
 
 const props = defineProps({
   data: {

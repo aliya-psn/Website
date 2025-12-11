@@ -40,10 +40,12 @@
       <!-- 下半部分：产品图片 -->
       <div class="flex-1 flex items-center justify-center animate-fade-in-up-delay-3">
         <div class="relative product-image-container">
-          <img 
+          <LazyImage 
             :src="experienceData.productImage" 
             alt="产品"
-            class="product-image w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] h-auto object-contain"
+            container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] h-auto"
+            image-class="product-image w-full h-auto object-contain"
+            root-margin="200px"
           />
           <div class="product-glow"></div>
         </div>
@@ -55,6 +57,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import LazyImage from '../LazyImage.vue'
 
 const router = useRouter()
 

@@ -16,9 +16,9 @@
     
     <!-- 实际图片 -->
     <img
-      v-if="shouldLoad"
+      v-if="shouldLoad && resolvedSrc"
       ref="imgRef"
-      :src="src"
+      :src="resolvedSrc"
       :alt="alt"
       :class="[
         'lazy-image',
@@ -89,20 +89,45 @@ const imgRef = ref(null)
 const shouldLoad = ref(false)
 const isLoaded = ref(false)
 const hasError = ref(false)
+const resolvedSrc = ref('')
 let observer = null
+
+// 处理异步图片路径（可能是 Promise）
+const resolveImageSrc = async (src) => {
+  if (!src) return ''
+  
+  // 如果已经是字符串（非 Promise），直接返回
+  if (typeof src === 'string') {
+    return src
+  }
+  
+  // 如果是 Promise，等待解析
+  if (src instanceof Promise) {
+    try {
+      return await src
+    } catch (error) {
+      console.error('Failed to resolve image src:', error)
+      return ''
+    }
+  }
+  
+  return src
+}
 
 // 检查是否应该开始加载图片
 const checkIntersection = () => {
   if (!containerRef.value) return
   
   observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    async (entries) => {
+      for (const entry of entries) {
         if (entry.isIntersecting) {
           shouldLoad.value = true
+          // 解析图片路径（可能是 Promise）
+          resolvedSrc.value = await resolveImageSrc(props.src)
           observer?.unobserve(entry.target)
         }
-      })
+      }
     },
     {
       rootMargin: props.rootMargin,
@@ -123,10 +148,11 @@ const handleError = () => {
   isLoaded.value = false
 }
 
-onMounted(() => {
+onMounted(async () => {
   // 如果浏览器不支持 IntersectionObserver，直接加载
   if (!window.IntersectionObserver) {
     shouldLoad.value = true
+    resolvedSrc.value = await resolveImageSrc(props.src)
     return
   }
   

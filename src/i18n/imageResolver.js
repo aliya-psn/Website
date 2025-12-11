@@ -1,27 +1,55 @@
 import i18n from './index.js'
 
-// 预加载 assets 下的所有静态资源，构建后会返回指向指纹化文件的真实 URL
+// 按需加载 assets 下的静态资源，避免预加载所有图片导致性能问题
+// 使用 eager: false 实现懒加载，只有在实际使用时才加载图片
+// 注意：eager: false 时，assetModules[key] 是一个函数，需要调用才能获取资源
 const assetModules = import.meta.glob('../assets/**/*', {
-  eager: true,
+  eager: false,
   import: 'default'
 })
 
+// 缓存已解析的图片路径，避免重复解析
+const resolvedPathCache = new Map()
+
 /**
  * 将类似 /src/assets/xxx.png 的路径转换为构建后可访问的资源 URL
+ * 使用动态导入实现按需加载
  * @param {string} path
- * @returns {string}
+ * @returns {string|Promise<string>} 返回路径字符串或 Promise
  */
 function resolveAssetPath(path) {
   if (!path || typeof path !== 'string') return ''
+
+  // 检查缓存
+  if (resolvedPathCache.has(path)) {
+    return resolvedPathCache.get(path)
+  }
 
   // 仅处理以 /src/assets/ 开头的路径
   const prefix = '/src/assets/'
   if (path.startsWith(prefix)) {
     const relativePath = path.slice(prefix.length) // 例如 home/4.png
     const moduleKey = `../assets/${relativePath}`   // 与 glob key 匹配
-    const resolved = assetModules[moduleKey]
-    if (resolved) return resolved
-    console.warn(`Asset not found in glob: ${moduleKey}`)
+    const moduleLoader = assetModules[moduleKey]
+    
+    if (moduleLoader) {
+      // eager: false 时，moduleLoader 是一个函数
+      // 返回一个 Promise，在 LazyImage 组件中处理异步加载
+      const loadPromise = Promise.resolve(moduleLoader()).then(module => {
+        const resolved = module?.default || module || path
+        resolvedPathCache.set(path, resolved)
+        return resolved
+      }).catch(error => {
+        console.warn(`Failed to load asset: ${moduleKey}`, error)
+        return path
+      })
+      
+      // 将 Promise 缓存，避免重复加载
+      resolvedPathCache.set(path, loadPromise)
+      return loadPromise
+    } else {
+      console.warn(`Asset not found in glob: ${moduleKey}`)
+    }
   }
 
   return path
@@ -30,13 +58,14 @@ function resolveAssetPath(path) {
 /**
  * 图片路径解析工具
  * 根据键名从 images.json 中获取实际的图片路径
+ * 注意：由于使用按需加载，返回的可能是 Promise，需要在组件中处理
  * 
  * @param {string} key - 图片键名，支持点号分隔的路径，如 "home.backgroundImage1"
- * @returns {string} 图片路径
+ * @returns {string|Promise<string>} 图片路径或 Promise
  * 
  * @example
- * getImagePath('home.backgroundImage1') // => "/src/assets/home/4.png"
- * getImagePath('product.1') // => "/src/assets/product/1.png"
+ * getImagePath('home.backgroundImage1') // => Promise<string> 或 string
+ * getImagePath('product.1') // => Promise<string> 或 string
  */
 export function getImagePath(key) {
   if (!key) return ''
