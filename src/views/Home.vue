@@ -21,13 +21,15 @@
 </template>
 
 <script setup>
-import { inject } from 'vue'
+import { inject, defineAsyncComponent } from 'vue'
+// 首屏组件同步加载，确保快速显示
 import HomePage from '../components/home/HomePage.vue'
-import ExperienceSection from '../components/home/ExperienceSection.vue'
-import OriginSection from '../components/home/OriginSection.vue'
-import ScientificExplorationSection from '../components/home/ScientificExplorationSection.vue'
-import LuxuryCareSection from '../components/home/LuxuryCareSection.vue'
-import MapNewsletterSection from '../components/home/MapNewsletterSection.vue'
+// 其他组件懒加载，按需加载
+const ExperienceSection = defineAsyncComponent(() => import('../components/home/ExperienceSection.vue'))
+const OriginSection = defineAsyncComponent(() => import('../components/home/OriginSection.vue'))
+const ScientificExplorationSection = defineAsyncComponent(() => import('../components/home/ScientificExplorationSection.vue'))
+const LuxuryCareSection = defineAsyncComponent(() => import('../components/home/LuxuryCareSection.vue'))
+const MapNewsletterSection = defineAsyncComponent(() => import('../components/home/MapNewsletterSection.vue'))
 import { useI18nData } from '../composables/useI18nData'
 
 const { dataSource } = useI18nData()

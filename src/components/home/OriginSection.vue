@@ -15,7 +15,7 @@
       <div class="w-full max-w-4xl">
         <!-- 标题 -->
         <h2
-          class="origin-title text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-12 md:mb-16"
+          class="origin-title text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-16 md:mb-20 lg:mb-24"
         >
           <span class="origin-title-text">{{ originData.title }}</span>
           <span class="origin-title-glow"></span>
@@ -24,7 +24,7 @@
         <!-- 副标题 -->
         <p
           v-if="originData.subtitle"
-          class="origin-subtitle text-lg md:text-xl text-center mb-14 md:mb-20 font-light origin-fade-in"
+          class="origin-subtitle text-lg md:text-xl text-center mt-8 md:mt-12 lg:mt-16 mb-14 md:mb-20 font-light origin-fade-in"
         >
           {{ originData.subtitle }}
         </p>
@@ -58,7 +58,8 @@ defineProps({
 /* 标题 */
 .origin-title {
   position: relative;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }

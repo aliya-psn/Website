@@ -1,15 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
+// 首页使用同步导入，确保快速显示
 import Home from '../views/Home.vue'
-import ProductPage from '../views/product/ProductPage.vue'
-import ProductDetail from '../views/product/ProductDetail.vue'
-import Origin from '../views/science/Origin.vue'
-import DevelopmentHistory from '../views/science/DevelopmentHistory.vue'
-import HonorsAwards from '../views/science/HonorsAwards.vue'
-import KeyIngredients from '../views/house/KeyIngredients.vue'
-import Technology from '../views/house/Technology.vue'
-import ExclusiveServices from '../views/member/ExclusiveServices.vue'
-import MembershipSystem from '../views/member/MembershipSystem.vue'
-import AllProducts from '../views/product/AllProducts.vue'
+// 其他页面使用懒加载，按需加载
+const ProductPage = () => import('../views/product/ProductPage.vue')
+const ProductDetail = () => import('../views/product/ProductDetail.vue')
+const Origin = () => import('../views/science/Origin.vue')
+const DevelopmentHistory = () => import('../views/science/DevelopmentHistory.vue')
+const HonorsAwards = () => import('../views/science/HonorsAwards.vue')
+const KeyIngredients = () => import('../views/house/KeyIngredients.vue')
+const Technology = () => import('../views/house/Technology.vue')
+const ExclusiveServices = () => import('../views/member/ExclusiveServices.vue')
+const MembershipSystem = () => import('../views/member/MembershipSystem.vue')
+const AllProducts = () => import('../views/product/AllProducts.vue')
 
 const routes = [
   {

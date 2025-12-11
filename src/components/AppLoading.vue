@@ -35,23 +35,23 @@
         </div>
 
         <!-- 进度条 -->
-        <div class="flex flex-col items-center gap-3">
+        <!-- <div class="flex flex-col items-center gap-3">
           <div class="w-48 sm:w-64 md:w-80 h-1 bg-white/10 rounded-full overflow-hidden">
             <div
               class="h-full bg-gradient-to-r from-white/20 via-white/60 to-white/20 rounded-full animate-progress"
             ></div>
           </div>
-        </div>
+        </div> -->
 
         <!-- 加载点动画 -->
-        <div class="flex items-center gap-2">
+        <!-- <div class="flex items-center gap-2">
           <div
             v-for="i in 3"
             :key="i"
             class="w-2 h-2 rounded-full bg-white/60 animate-bounce-dot"
             :style="{ animationDelay: `${i * 0.2}s` }"
           ></div>
-        </div>
+        </div> -->
       </div>
     </div>
   </Transition>
