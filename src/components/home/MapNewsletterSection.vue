@@ -2,19 +2,17 @@
   <!-- 地图和邮箱订阅区域 - 首页底部 -->
   <section
     id="map-newsletter-section"
-    class="relative bg-white overflow-hidden py-12 md:py-16 lg:py-20"
+    class="relative bg-white overflow-hidden py-8 md:py-12 lg:py-16"
   >
-    <div class="container mx-auto px-4 md:px-8 max-w-6xl">
-      <!-- 地图区域 -->
-      <div class="mb-12 md:mb-16">
-        <div
-          id="map"
-          class="w-full h-[400px] md:h-[500px] rounded-lg shadow-lg overflow-hidden"
-        ></div>
-      </div>
+    <!-- 地图区域 - 独立容器，只保留左右边距 -->
+    <div class="mb-12 md:mb-16 px-4 md:px-8">
+      <div
+        id="map"
+        class="w-full h-[400px] md:h-[500px] rounded-lg shadow-lg overflow-hidden"
+      ></div>
 
-      <!-- 邮箱订阅区域 -->
-      <div class="max-w-xl mx-auto">
+    <!-- 邮箱订阅区域 -->
+    <div class="container mx-auto px-4 md:px-8 max-w-xl mt-8 md:mt-12 lg:mt-16">
         <h2 class="text-xl md:text-2xl font-bold text-gray-900 text-center mb-2">
           {{ sectionData.title }}
         </h2>

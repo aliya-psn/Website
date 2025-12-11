@@ -33,10 +33,10 @@
           </div>
           
           <!-- 标题和描述 -->
-          <h3 class="text-xl md:text-2xl font-elegant font-bold text-gray-900 mb-3">
+          <h3 class="text-xl md:text-2xl font-elegant font-bold text-gray-900 mb-3 text-center">
             {{ service.title }}
           </h3>
-          <p class="text-base text-gray-700 leading-relaxed font-light">
+          <p class="text-base text-gray-700 leading-relaxed font-light text-center">
             {{ service.description }}
           </p>
         </div>

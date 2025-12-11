@@ -24,24 +24,26 @@
         </h2>
         
         <!-- 预测模型 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          <div
-            v-for="(model, index) in membershipData.predictiveModeling.models"
-            :key="index"
-            class="model-card flex flex-col"
-          >
-            <div class="w-full aspect-4/3 mb-4 overflow-hidden rounded-lg">
-              <LazyImage
-                :src="model.image"
-                :alt="model.period"
-                container-class="w-full h-full"
-                image-class="w-full h-full object-cover"
-                skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
-              />
-            </div>
-            <div class="text-center">
-              <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">{{ model.period }}</p>
-              <p class="text-base text-gray-700 font-light">{{ model.description }}</p>
+        <div class="w-full max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
+            <div
+              v-for="(model, index) in membershipData.predictiveModeling.models"
+              :key="index"
+              class="model-card flex flex-col"
+            >
+              <div class="w-full aspect-4/3 mb-4 overflow-hidden rounded-lg">
+                <LazyImage
+                  :src="model.image"
+                  :alt="model.period"
+                  container-class="w-full h-full"
+                  image-class="w-full h-full object-cover"
+                  skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
+                />
+              </div>
+              <div class="text-center">
+                <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">{{ model.period }}</p>
+                <p class="text-base text-gray-700 font-light">{{ model.description }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +60,7 @@
               :src="membershipData.allergenAlert.image"
               :alt="membershipData.allergenAlert.title"
               container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              image-class="w-full h-full object-contain"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
@@ -76,7 +78,7 @@
               :src="membershipData.dosageOptimization.image"
               :alt="membershipData.dosageOptimization.title"
               container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              image-class="w-full h-full object-contain"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
@@ -151,7 +153,7 @@
         <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
           {{ membershipData.expertQA.title }}
         </h2>
-        <div class="w-full max-w-4xl mx-auto">
+        <div class="w-full max-w-5xl mx-auto">
           <div class="w-full aspect-video overflow-hidden rounded-lg">
             <LazyImage
               :src="membershipData.expertQA.image"
@@ -166,26 +168,28 @@
 
       <!-- 第八部分：Skin Renewal Milestone Badges -->
       <div>
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-12">
-          {{ membershipData.milestoneBadges.title }}
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
-          <div
-            v-for="(badge, index) in membershipData.milestoneBadges.badges"
-            :key="index"
-            class="badge-card flex flex-col items-center"
-          >
-            <div class="w-36 h-36 md:w-46 md:h-46 mb-4 overflow-hidden rounded-lg">
-              <LazyImage
-                :src="badge.image"
-                :alt="badge.period"
-                container-class="w-full h-full"
-                image-class="w-full h-full object-cover"
-                skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
-              />
+        <div class="w-full max-w-5xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-10">
+            {{ membershipData.milestoneBadges.title }}
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
+            <div
+              v-for="(badge, index) in membershipData.milestoneBadges.badges"
+              :key="index"
+              class="badge-card flex flex-col items-center"
+            >
+            <div class="w-full aspect-square mb-4 overflow-hidden rounded-lg">
+                <LazyImage
+                  :src="badge.image"
+                  :alt="badge.period"
+                  container-class="w-full h-full"
+                  image-class="w-full h-full object-contain"
+                  skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
+                />
+              </div>
+              <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">{{ badge.period }}</p>
+              <p class="text-base text-gray-700 text-center font-light">{{ badge.description }}</p>
             </div>
-            <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">{{ badge.period }}</p>
-            <p class="text-base text-gray-700 text-center font-light">{{ badge.description }}</p>
           </div>
         </div>
       </div>

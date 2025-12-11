@@ -26,7 +26,7 @@
         <!-- 文字区域 -->
         <div class="px-4 py-4 text-center border-b border-gray-200">
           <h3 class="text-gray-800 text-sm md:text-base font-medium mb-1">
-            {{ item.title }}
+            {{ item.title || item.name }}
           </h3>
         </div>
 
@@ -34,7 +34,7 @@
         <div v-if="item.image" class="relative overflow-hidden bg-white h-[200px]">
           <LazyImage
             :src="item.image"
-            :alt="item.title"
+            :alt="item.title || item.name"
             container-class="w-full h-full"
             image-class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-out"
           />
@@ -43,7 +43,7 @@
         </div>
         <!-- 如果没有图片，显示占位符 -->
         <div v-else class="relative overflow-hidden bg-gray-100 h-[200px] flex items-center justify-center">
-          <span class="text-gray-400 text-sm">{{ item.title }}</span>
+          <span class="text-gray-400 text-sm">{{ item.title || item.name }}</span>
         </div>
       </div>
     </div>

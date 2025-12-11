@@ -7,15 +7,14 @@
         {{ honorsAwardsData.title }}
       </h1>
 
-      <!-- 奖项网格 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      <!-- 上排：2 张 -->
+      <div v-if="topRow.length" class="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-12 mb-12">
         <div
-          v-for="(award, index) in honorsAwardsData.awards"
-          :key="index"
-          class="award-item flex flex-col"
+          v-for="(award, index) in topRow"
+          :key="'top-' + index"
+          class="award-item flex flex-col col-span-1 md:col-span-3"
         >
-          <!-- 图片区域（黑色矩形） -->
-          <div class="w-full aspect-4/3 bg-gray-900 mb-4 overflow-hidden rounded-lg">
+          <div class="w-full aspect-[9/14] bg-gray-900 mb-4 overflow-hidden rounded-lg">
             <LazyImage
               v-if="award.image"
               :src="award.image"
@@ -24,15 +23,62 @@
               image-class="w-full h-full object-cover"
               skeleton-class="bg-gray-800"
             />
-            <div
-              v-else
-              class="w-full h-full flex items-center justify-center bg-gray-900"
-            >
+            <div v-else class="w-full h-full flex items-center justify-center bg-gray-900">
               <span class="text-white text-sm opacity-50">Award Image</span>
             </div>
           </div>
-          
-          <!-- 文字描述 -->
+          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed">
+            {{ award.name }}
+          </p>
+        </div>
+      </div>
+
+      <!-- 中排：3 张 -->
+      <div v-if="middleRow.length" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+        <div
+          v-for="(award, index) in middleRow"
+          :key="'mid-' + index"
+          class="award-item flex flex-col"
+        >
+          <div class="w-full max-w-xs mx-auto aspect-[9/14] bg-gray-900 mb-4 overflow-hidden rounded-lg">
+            <LazyImage
+              v-if="award.image"
+              :src="award.image"
+              :alt="award.name"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gray-800"
+            />
+            <div v-else class="w-full h-full flex items-center justify-center bg-gray-900">
+              <span class="text-white text-sm opacity-50">Award Image</span>
+            </div>
+          </div>
+          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed">
+            {{ award.name }}
+          </p>
+        </div>
+      </div>
+
+      <!-- 下排：3 张 -->
+      <div v-if="bottomRow.length" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div
+          v-for="(award, index) in bottomRow"
+          :key="'bot-' + index"
+          class="award-item flex flex-col"
+        >
+          <div class="w-full max-w-xs mx-auto aspect-[9/14] bg-gray-900 mb-4 overflow-hidden rounded-lg">
+            <LazyImage
+              v-if="award.image"
+              :src="award.image"
+              :alt="award.name"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
+              skeleton-class="bg-gray-800"
+            />
+            <div v-else class="w-full h-full flex items-center justify-center bg-gray-900">
+              <span class="text-white text-sm opacity-50">Award Image</span>
+            </div>
+          </div>
           <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed">
             {{ award.name }}
           </p>
@@ -56,6 +102,11 @@ const honorsAwardsData = computed(() => {
     awards: []
   }
 })
+
+// 切分为 2 / 3 / 3 的布局
+const topRow = computed(() => honorsAwardsData.value.awards?.slice(0, 2) || [])
+const middleRow = computed(() => honorsAwardsData.value.awards?.slice(2, 5) || [])
+const bottomRow = computed(() => honorsAwardsData.value.awards?.slice(5, 8) || [])
 </script>
 
 <style scoped>

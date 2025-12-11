@@ -1,3 +1,4 @@
+<!-- 技术与专利 -->
 <template>
   <div class="min-h-screen bg-white pt-24 md:pt-28">
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">

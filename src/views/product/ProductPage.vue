@@ -15,37 +15,81 @@
         </div>
       </div>
 
-      <!-- 详细描述区域 -->
-      <div v-if="productData.description && Array.isArray(productData.description) && productData.description.length > 0" class="bg-white py-2">
-        <div class="max-w-3xl mx-auto px-6 md:px-12">
-          <div class="space-y-2 text-center">
-            <p
-              v-for="(desc, index) in productData.description"
-              :key="index"
-              class="text-sm md:text-base text-gray-600 leading-relaxed font-light tracking-wide"
-            >
-              {{ desc }}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 产品展示区域 -->
-      <div class="py-2 md:py-4 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6">
-            <!-- 产品图片 -->
-            <div class="shrink-0">
-              <LazyImage 
-                :src="productData.productImage" 
-                :alt="productData.title"
-                container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] min-w-96 md:min-w-[28rem] lg:min-w-[40rem] h-auto"
-                image-class="w-full h-full object-contain"
-              />
+      <!-- 描述和产品图片区域 -->
+      <!-- 有产品列表时使用左右布局，没有时保持原先的居中布局 -->
+      <template v-if="productData.productList && productData.productList.length > 0">
+        <div v-if="productData.description || productData.productImage" class="bg-white py-8 md:py-12">
+          <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+              <!-- 左侧：Logo 和描述 -->
+              <div class="flex-1 flex flex-col justify-center lg:justify-start">
+                <!-- Logo -->
+                <div class="mb-6">
+                  <h2 class="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-gray-900 tracking-wide">
+                    {{ dataSource?.home?.brand?.name || 'FANTASYCARE' }}
+                  </h2>
+                </div>
+                
+                <!-- 描述 -->
+                <div v-if="productData.description && Array.isArray(productData.description) && productData.description.length > 0" class="space-y-3">
+                  <p
+                    v-for="(desc, index) in productData.description"
+                    :key="index"
+                    class="text-sm md:text-base text-gray-600 leading-relaxed font-light"
+                  >
+                    {{ desc }}
+                  </p>
+                </div>
+                <p v-else-if="productData.shortDescription" class="text-sm md:text-base text-gray-600 leading-relaxed font-light">
+                  {{ productData.shortDescription }}
+                </p>
+              </div>
+              
+              <!-- 右侧：产品图片 -->
+              <div v-if="productData.productImage" class="flex-shrink-0 w-full lg:w-1/2">
+                <LazyImage 
+                  :src="productData.productImage" 
+                  :alt="productData.title"
+                  container-class="w-full h-auto"
+                  image-class="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </template>
+      <template v-else>
+        <div v-if="productData.description && Array.isArray(productData.description) && productData.description.length > 0" class="bg-white py-2">
+          <div class="max-w-3xl mx-auto px-6 md:px-12">
+            <div class="space-y-2 text-center">
+              <p
+                v-for="(desc, index) in productData.description"
+                :key="index"
+                class="text-sm md:text-base text-gray-600 leading-relaxed font-light tracking-wide"
+              >
+                {{ desc }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品展示区域 -->
+        <div class="py-2 md:py-4 relative overflow-hidden">
+          <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6">
+              <!-- 产品图片 -->
+              <div class="shrink-0">
+                <LazyImage 
+                  :src="productData.productImage" 
+                  :alt="productData.title"
+                  container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] min-w-96 md:min-w-[28rem] lg:min-w-[40rem] h-auto"
+                  image-class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
 
       <!-- 产品列表区域 -->
       <div v-if="productData.productList && productData.productList.length > 0" class="bg-white py-12 md:py-20">
@@ -54,8 +98,8 @@
             {{ t('common.seriesProducts') }}
           </h2>
           
-          <!-- 产品网格 -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <!-- 产品网格 - 每行两个 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div
               v-for="product in productData.productList"
               :key="product.id"
