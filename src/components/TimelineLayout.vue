@@ -40,7 +40,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8">
         <!-- 大屏幕：左侧时间轴 -->
-        <div class="hidden lg:block lg:col-span-2 flex flex-col items-start">
+        <div class="hidden lg:flex lg:col-span-2 flex-col items-start lg:justify-center lg:h-[700px]">
           <div class="relative flex flex-col items-start w-full">
             <div
               v-for="(item, index) in items"

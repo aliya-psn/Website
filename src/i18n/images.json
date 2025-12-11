@@ -34,6 +34,7 @@
     "3": "https://picturebed.pixelarrayai.com/310/product_3.png",
     "4": "https://picturebed.pixelarrayai.com/310/product_4.png",
     "5": "/src/assets/product/5.png",
+    "6": "https://picturebed.pixelarrayai.com/310/origin_5.png",
     "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
   },
   "science": {
@@ -52,14 +53,14 @@
       "5": "https://i.111666.best/image/3s2xYAyJYNHKaTDqYX0Tkk.png"
     },
     "awardsHistory": {
-      "1": "https://picturebed.pixelarrayai.com/310/award_1.png",
-      "2": "https://picturebed.pixelarrayai.com/310/award_2.png",
-      "3": "https://picturebed.pixelarrayai.com/310/award_3.png",
-      "4": "https://picturebed.pixelarrayai.com/310/award_4.png",
-      "5": "https://i.111666.best/image/QQkpwPUrhL22VFSLten1Hk.jpeg",
-      "6": "https://youke2.picui.cn/s1/2025/12/11/693a4d58e751d.png",
-      "7": "https://youke2.picui.cn/s1/2025/12/11/693a4d5e29f90.png",
-      "8": "https://picturebed.pixelarrayai.com/310/award_8.png"
+      "1": "https://picturebed.pixelarrayai.com/310/origin_5.png",
+      "2": "https://picturebed.pixelarrayai.com/310/origin_5.png",
+      "3": "https://picturebed.pixelarrayai.com/310/origin_4.png",
+      "4": "https://picturebed.pixelarrayai.com/310/origin_4.png",
+      "5": "https://picturebed.pixelarrayai.com/310/origin_4.png",
+      "6": "https://picturebed.pixelarrayai.com/310/origin_4.png",
+      "7": "https://picturebed.pixelarrayai.com/310/origin_4.png",
+      "8": "https://picturebed.pixelarrayai.com/310/origin_4.png"
     }
   },
   "keyIngredients": {

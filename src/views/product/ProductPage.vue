@@ -18,11 +18,11 @@
       <!-- 描述和产品图片区域 -->
       <!-- 有产品列表时使用左右布局，没有时保持原先的居中布局 -->
       <template v-if="productData.productList && productData.productList.length > 0">
-        <div v-if="productData.description || productData.productImage" class="bg-white py-8 md:py-12">
+        <div v-if="productData.description || productData.productImage" class="bg-white pt-8 md:pt-12">
           <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
               <!-- 左侧：Logo 和描述 -->
-              <div class="flex-1 flex flex-col justify-center lg:justify-start">
+              <div class="flex-1 flex flex-col justify-center lg:justify-start pl-6 lg:pl-12">
                 <!-- Logo -->
                 <div class="mb-6">
                   <h2 class="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-gray-900 tracking-wide">
@@ -46,11 +46,10 @@
               </div>
               
               <!-- 右侧：产品图片 -->
-              <div v-if="productData.productImage" class="flex-shrink-0 w-full lg:w-1/2">
+              <div v-if="productDataSource.descImage" class="flex-shrink-0 w-full lg:w-1/2 flex justify-center">
                 <LazyImage 
-                  :src="productData.productImage" 
-                  :alt="productData.title"
-                  container-class="w-full h-auto"
+                  :src="productDataSource.descImage" 
+                  container-class="w-full max-w-[240px] h-auto"
                   image-class="w-full h-full object-contain"
                 />
               </div>
@@ -92,58 +91,43 @@
       </template>
 
       <!-- 产品列表区域 -->
-      <div v-if="productData.productList && productData.productList.length > 0" class="bg-white py-12 md:py-20">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 class="text-3xl md:text-4xl font-elegant font-bold text-gray-900 text-center mb-12">
-            {{ t('common.seriesProducts') }}
-          </h2>
-          
+      <div v-if="productData.productList && productData.productList.length > 0" class="bg-white pb-12 md:pb-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-white">
           <!-- 产品网格 - 每行两个 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div
               v-for="product in productData.productList"
               :key="product.id"
               @click="goToProductDetail(product)"
-              class="product-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              class="product-card group bg-gray-500 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <!-- 产品图片区域 -->
-              <div class="relative bg-gray-50 aspect-square overflow-hidden">
+              <div class="relative w-full h-72 md:h-88 lg:h-120 overflow-hidden flex items-center justify-center mx-auto">
                 <LazyImage
                   :src="product.image"
                   :alt="product.productName"
-                  container-class="w-full h-full"
-                  image-class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  container-class="w-full h-full flex items-center justify-center"
+                  image-class="w-full h-full max-w-[55%] object-contain p-10 md:p-12 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
                 />
-                <!-- 标签 -->
-                <div v-if="product.tags && product.tags.length > 0" class="absolute top-3 left-3 flex flex-col gap-2">
-                  <span
-                    v-for="tag in product.tags"
-                    :key="tag"
-                    class="px-2 py-1 text-xs font-medium rounded"
-                    :class="tag === '新品' ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900'"
-                  >
-                    {{ tag }}
-                  </span>
-                </div>
               </div>
               
               <!-- 产品信息 -->
-              <div class="p-4 md:p-6">
+              <div class="p-6 md:p-8 text-center space-y-3">
                 <!-- 产品名称 -->
-                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-3 font-elegant">
+                <h3 class="text-base md:text-lg font-semibold text-white font-elegant">
                   {{ product.productName }}
                 </h3>
+
+                <!-- 产品描述 -->
+                <!-- <p class="text-sm md:text-base text-gray-200 font-light leading-relaxed">
+                  {{ product.description }}
+                </p> -->
                 
                 <!-- 价格 -->
-                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                  <span class="text-2xl md:text-3xl font-bold text-gray-900 font-elegant">
-                    ¥ {{ product.price.toLocaleString() }}
+                <div class="flex items-center justify-center pt-4">
+                  <span class="text-2xl md:text-3xl font-bold text-white font-elegant">
+                    $ {{ product.price.toLocaleString() }}
                   </span>
-                  <button
-                    class="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded hover:bg-gray-800 transition-colors"
-                  >
-                    {{ t('common.viewDetails') }}
-                  </button>
                 </div>
               </div>
             </div>

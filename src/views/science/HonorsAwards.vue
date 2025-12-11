@@ -1,6 +1,6 @@
 <!-- 荣誉奖项 -->
 <template>
-  <div class="min-h-screen bg-white pt-24 md:pt-28">
+  <div class="min-h-screen bg-white pt-16 md:pt-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
       <!-- 标题 -->
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 text-center mb-16 tracking-tight">
@@ -8,26 +8,23 @@
       </h1>
 
       <!-- 上排：2 张 -->
-      <div v-if="topRow.length" class="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-12 mb-12">
+      <div v-if="topRow.length" class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
         <div
           v-for="(award, index) in topRow"
           :key="'top-' + index"
-          class="award-item flex flex-col col-span-1 md:col-span-3"
+          class="award-item flex flex-col"
         >
-          <div class="w-full aspect-[9/14] bg-gray-900 mb-4 overflow-hidden rounded-lg">
+          <div class="w-full bg-gray-900 mb-4 overflow-hidden rounded-lg">
             <LazyImage
               v-if="award.image"
               :src="award.image"
               :alt="award.name"
-              container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              container-class="w-full"
+              image-class="w-full h-auto object-contain"
               skeleton-class="bg-gray-800"
             />
-            <div v-else class="w-full h-full flex items-center justify-center bg-gray-900">
-              <span class="text-white text-sm opacity-50">Award Image</span>
-            </div>
           </div>
-          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed">
+          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed text-center">
             {{ award.name }}
           </p>
         </div>
@@ -40,20 +37,17 @@
           :key="'mid-' + index"
           class="award-item flex flex-col"
         >
-          <div class="w-full max-w-xs mx-auto aspect-[9/14] bg-gray-900 mb-4 overflow-hidden rounded-lg">
+          <div class="w-full max-w-sm mx-auto bg-gray-900 mb-4 overflow-hidden rounded-lg">
             <LazyImage
               v-if="award.image"
               :src="award.image"
               :alt="award.name"
-              container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              container-class="w-full"
+              image-class="w-full h-auto object-contain"
               skeleton-class="bg-gray-800"
             />
-            <div v-else class="w-full h-full flex items-center justify-center bg-gray-900">
-              <span class="text-white text-sm opacity-50">Award Image</span>
-            </div>
           </div>
-          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed">
+          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed text-center">
             {{ award.name }}
           </p>
         </div>
@@ -66,20 +60,17 @@
           :key="'bot-' + index"
           class="award-item flex flex-col"
         >
-          <div class="w-full max-w-xs mx-auto aspect-[9/14] bg-gray-900 mb-4 overflow-hidden rounded-lg">
+          <div class="w-full max-w-sm mx-auto bg-gray-900 mb-4 overflow-hidden rounded-lg">
             <LazyImage
               v-if="award.image"
               :src="award.image"
               :alt="award.name"
-              container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              container-class="w-full"
+              image-class="w-full h-auto object-contain"
               skeleton-class="bg-gray-800"
             />
-            <div v-else class="w-full h-full flex items-center justify-center bg-gray-900">
-              <span class="text-white text-sm opacity-50">Award Image</span>
-            </div>
           </div>
-          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed">
+          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed text-center">
             {{ award.name }}
           </p>
         </div>

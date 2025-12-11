@@ -305,9 +305,9 @@
       }
     ],
     "globalConsultation": {
-      "title": "Global Aesthetic Consultation",
-      "image": "member.service.1",
+      "image": "member.service.3",
       "features": [
+        "Global Aesthetic Consultation",
         "Internationally Certified Physician Support System",
         "Collaborates with 10+ countries' oral aesthetic experts.",
         "24/7 online skin health consultation services.",
@@ -393,8 +393,10 @@
       "qrCodeAlt": "Mini-program QR Code",
       "footerText": "FANTASYCARE Official Mini-program"
     },
+    "descImage": "product.6",
     "products": [
       {
+        "title": "Basic Revitalization Collection",
         "slug": "basic-revitalization-collection",
         "productList": [
           {
@@ -404,7 +406,7 @@
             "tags": ["New"],
             "productName": "Fantasycare Kacip Fatimah& Papaya Drink",
             "price": 49,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -413,7 +415,7 @@
             "image": "product.2",
             "productName": "Fantasycare Skin Whitening Tablet",
             "price": 79,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -422,7 +424,7 @@
             "image": "product.3",
             "productName": "FANTASYCARE Cinnamon &llibiscus Sabdariffawith Multi-Vitamins",
             "price": 19,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -431,12 +433,13 @@
             "image": "product.4",
             "productName": "FANTASYCARE AMPK Fat-BurningLeg Slimming Pills",
             "price": 39,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           }
         ]
       },
       {
+        "title": "Advanced Repair Collection",
         "slug": "advanced-repair-collection",
         "productList": [
           {
@@ -445,7 +448,7 @@
             "image": "product.1",
             "productName": "Fantasycare Hera Golden Apple Capsules",
             "price": 129,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -454,7 +457,7 @@
             "image": "product.2",
             "productName": "Fantasycare Lilith Red Diamond Vial Capsules",
             "price": 129,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -463,7 +466,7 @@
             "image": "product.3",
             "productName": "Fantasycare Rhea Purple Amber Vial Capsules",
             "price": 129,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -472,12 +475,13 @@
             "image": "product.4",
             "productName": "Fantasycare Freya Black Diamond Vial Capsules",
             "price": 99,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           }
         ]
       },
       {
+        "title": "Limited Exclusive Collection",
         "slug": "limited-exclusive-collection",
         "productList": [],
         "description": [
@@ -492,7 +496,6 @@
   "common": {
     "viewDetails": "View Details",
     "viewAllProducts": "View All Products",
-    "seriesProducts": "Series Products",
     "all": "All",
     "filter": "Filter",
     "category": "Category",

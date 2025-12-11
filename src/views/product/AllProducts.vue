@@ -122,7 +122,7 @@
                 <!-- 价格 -->
                 <div class="flex items-center justify-between pt-4 border-t border-gray-100">
                   <span class="text-lg md:text-xl font-bold text-gray-900 font-elegant">
-                    ¥{{ product.price?.toLocaleString() }}
+                    ${{ product.price?.toLocaleString() }}
                   </span>
                   <button
                     @click.stop="goToProductDetail(product)"

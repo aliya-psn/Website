@@ -1,13 +1,13 @@
 <!-- 专属服务 -->
 <template>
-  <div class="min-h-screen bg-white pt-24 md:pt-28">
+  <div class="min-h-screen bg-white pt-16 md:pt-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
       <!-- 标题和描述 -->
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 mb-4 tracking-tight">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 mb-6 tracking-tight">
           {{ exclusiveServicesData.title }}
         </h1>
-        <h2 class="text-2xl md:text-3xl font-elegant font-medium text-gray-700 mb-6">
+        <h2 class="text-lg md:text-xl font-elegant font-medium text-gray-700 mb-3">
           {{ exclusiveServicesData.subtitle }}
         </h2>
         <p class="text-base md:text-lg text-gray-700 leading-relaxed font-light max-w-3xl mx-auto">
@@ -23,7 +23,7 @@
           class="service-card flex flex-col"
         >
           <!-- 图片区域 -->
-          <div class="w-full aspect-square mb-6 overflow-hidden bg-gray-100 rounded-lg">
+          <div class="w-full aspect-square mb-6 overflow-hidden bg-gray-100">
             <LazyImage
               :src="service.image"
               :alt="service.title"
@@ -44,7 +44,7 @@
 
       <!-- 底部大图部分 -->
       <div class="mt-20">
-        <div class="w-full mb-6 overflow-hidden bg-gray-100 rounded-lg">
+        <div class="w-full mb-6 overflow-hidden bg-gray-100">
           <LazyImage
             :src="exclusiveServicesData.globalConsultation.image"
             :alt="exclusiveServicesData.globalConsultation.title"
@@ -53,15 +53,11 @@
           />
         </div>
         
-        <h3 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 mb-6 text-center">
-          {{ exclusiveServicesData.globalConsultation.title }}
-        </h3>
-        
-        <div class="space-y-3 max-w-3xl mx-auto">
+        <div class="space-y-1 max-w-3xl mx-auto">
           <p
             v-for="(item, index) in exclusiveServicesData.globalConsultation.features"
             :key="index"
-            class="text-base md:text-lg text-gray-700 leading-relaxed font-light text-center"
+            class="text-sm md:text-base text-gray-700 leading-relaxed font-light text-center"
           >
             {{ item }}
           </p>

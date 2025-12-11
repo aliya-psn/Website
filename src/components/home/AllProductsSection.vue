@@ -71,7 +71,7 @@
               <span
                 class="text-base md:text-lg font-bold text-gray-900 font-elegant"
               >
-                ¥{{ product.price?.toLocaleString() }}
+                ${{ product.price?.toLocaleString() }}
               </span>
               <button
                 class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"

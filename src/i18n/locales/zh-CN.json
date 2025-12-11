@@ -119,7 +119,7 @@
     }
   ],
   "keyIngredients": {
-    "title": "科研团队&核心成分",
+    "title": "科研团队 & 核心成分",
     "drShona": {
       "name": "Dr Shona Dalzell",
       "image": "keyIngredients.drShona",
@@ -291,8 +291,10 @@
       "qrCodeAlt": "小程序二维码",
       "footerText": "FANTASYCARE官方小程序"
     },
+    "descImage": "product.6",
     "products": [
       {
+        "title": "基础焕活系列",
         "slug": "basic-revitalization-collection",
         "productList": [
           {
@@ -302,7 +304,7 @@
             "tags": ["新品"],
             "productName": "木瓜饮",
             "price": 49,
-            "specification": "",
+            "description": "木瓜饮",
             "benefitDetails": []
           },
           {
@@ -311,7 +313,7 @@
             "image": "product.2",
             "productName": "美白片",
             "price": 79,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -320,7 +322,7 @@
             "image": "product.3",
             "productName": "维生素",
             "price": 19,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -329,12 +331,13 @@
             "image": "product.4",
             "productName": "腿丸",
             "price": 39,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           }
         ]
       },
       {
+        "title": "进阶修护系列",
         "slug": "advanced-repair-collection",
         "productList": [
           {
@@ -343,7 +346,7 @@
             "image": "product.1",
             "productName": "抗衰",
             "price": 129,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -352,7 +355,7 @@
             "image": "product.2",
             "productName": "美白",
             "price": 129,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -361,7 +364,7 @@
             "image": "product.3",
             "productName": "卵巢",
             "price": 129,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           },
           {
@@ -370,12 +373,13 @@
             "image": "product.4",
             "productName": "生发",
             "price": 99,
-            "specification": "",
+            "description": "",
             "benefitDetails": []
           }
         ]
       },
       {
+        "title": "限量尊享系列",
         "slug": "limited-exclusive-collection",
         "productList": [],
         "description": [
@@ -409,9 +413,9 @@
       }
     ],
     "globalConsultation": {
-      "title": "全球美学咨询",
-      "image": "member.service.1",
+      "image": "member.service.3",
       "features": [
+        "全球美学咨询",
         "国际认证医师支持系统",
         "与10+国家口服美学专家合作。",
         "24/7在线皮肤健康咨询服务。",
@@ -492,7 +496,6 @@
   "common": {
     "viewDetails": "查看详情",
     "viewAllProducts": "查看全部产品",
-    "seriesProducts": "系列产品",
     "all": "全部",
     "filter": "筛选",
     "category": "分类",

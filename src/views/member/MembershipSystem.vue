@@ -1,6 +1,6 @@
 <!-- 会员体系 -->
 <template>
-  <div class="min-h-screen bg-white pt-24 md:pt-28">
+  <div class="min-h-screen bg-white pt-16 md:pt-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
       <!-- 第一部分：Membership Program / Skin Condition Predictive Modeling -->
       <div class="mb-20">
@@ -31,7 +31,7 @@
               :key="index"
               class="model-card flex flex-col"
             >
-              <div class="w-full aspect-4/3 mb-4 overflow-hidden rounded-lg">
+              <div class="w-full aspect-4/3 mb-4 overflow-hidden">
                 <LazyImage
                   :src="model.image"
                   :alt="model.period"
@@ -55,7 +55,7 @@
           {{ membershipData.allergenAlert.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg">
+          <div class="w-full aspect-video overflow-hidden">
             <LazyImage
               :src="membershipData.allergenAlert.image"
               :alt="membershipData.allergenAlert.title"
@@ -73,12 +73,12 @@
           {{ membershipData.dosageOptimization.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg">
+          <div class="w-full overflow-hidden">
             <LazyImage
               :src="membershipData.dosageOptimization.image"
               :alt="membershipData.dosageOptimization.title"
-              container-class="w-full h-full"
-              image-class="w-full h-full object-contain"
+              container-class="w-full"
+              image-class="w-full h-auto object-contain"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
@@ -91,12 +91,12 @@
           {{ membershipData.userExperience.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg">
+          <div class="w-full aspect-video overflow-hidden">
             <LazyImage
               :src="membershipData.userExperience.image"
               :alt="membershipData.userExperience.title"
-              container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              container-class="w-full"
+              image-class="w-full h-auto object-cover"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
@@ -109,7 +109,7 @@
           {{ membershipData.userFeedback.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg">
+          <div class="w-full aspect-video overflow-hidden">
             <LazyImage
               :src="membershipData.userFeedback.image"
               :alt="membershipData.userFeedback.title"
@@ -127,7 +127,7 @@
           {{ membershipData.skinRenewal.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video bg-gray-900 rounded-lg overflow-hidden">
+          <div class="w-full aspect-video bg-gray-900 overflow-hidden">
             <video
               v-if="membershipData.skinRenewal.videoUrl"
               :src="membershipData.skinRenewal.videoUrl"
@@ -154,7 +154,7 @@
           {{ membershipData.expertQA.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden rounded-lg">
+          <div class="w-full aspect-video overflow-hidden">
             <LazyImage
               :src="membershipData.expertQA.image"
               :alt="membershipData.expertQA.title"
@@ -178,7 +178,7 @@
               :key="index"
               class="badge-card flex flex-col items-center"
             >
-            <div class="w-full aspect-square mb-4 overflow-hidden rounded-lg">
+            <div class="w-full aspect-square mb-3 overflow-hidden">
                 <LazyImage
                   :src="badge.image"
                   :alt="badge.period"

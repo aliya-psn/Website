@@ -20,12 +20,12 @@
 
             <!-- 价格 -->
             <div class="text-5xl md:text-6xl font-bold text-gray-900 font-elegant">
-              ¥{{ productDetail.price?.toLocaleString() }}
+              ${{ productDetail.price?.toLocaleString() }}
             </div>
 
             <!-- 产品规格 -->
             <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed">
-              {{ productDetail.specification }}
+              {{ productDetail.description }}
             </p>
 
             <!-- 购买按钮 -->
