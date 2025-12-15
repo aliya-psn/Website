@@ -156,16 +156,16 @@
       <transition name="slide-right">
         <div
           v-if="isMobileMenuOpen"
-          class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-[9999] md:hidden overflow-y-auto shadow-2xl"
+          class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gray-50 z-[9999] md:hidden overflow-y-auto shadow-2xl"
         >
         <!-- 移动端菜单头部 -->
-        <div class="flex items-center justify-between p-6 border-b border-gray-200 bg-white">
-          <div class="text-gray-800 font-elegant text-xl font-semibold">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200 bg-gray-50">
+          <div class="text-gray-600 font-elegant text-xl font-semibold">
             {{ dataSource?.home?.brand?.name }}
           </div>
           <button
             @click="closeMobileMenu"
-            class="text-gray-800 p-2 hover:text-gray-600 transition-colors rounded-full hover:bg-gray-100"
+            class="text-gray-500 p-2 hover:text-gray-400 transition-colors rounded-full hover:bg-gray-100"
             aria-label="关闭菜单"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,12 +186,12 @@
             <div v-if="item.hasDropdown" class="border-b border-gray-200">
               <div
                 @click="toggleMobileDropdown(item.id)"
-                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-gray-800 font-elegant text-base cursor-pointer hover:bg-gray-100 transition-colors active:bg-gray-200"
+                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-gray-600 font-elegant text-base cursor-pointer hover:bg-gray-100 transition-colors active:bg-gray-200"
                 :class="{ 'bg-gray-100': mobileDropdownId === item.id }"
               >
                 <span class="font-medium">{{ item.name }}</span>
                 <svg
-                  class="w-5 h-5 transition-transform duration-300 text-gray-600"
+                  class="w-5 h-5 transition-transform duration-300 text-gray-500"
                   :class="{ 'rotate-180': mobileDropdownId === item.id }"
                   fill="none"
                   stroke="currentColor"
@@ -209,13 +209,13 @@
               <transition name="mobile-dropdown">
                 <div
                   v-if="mobileDropdownId === item.id"
-                  class="bg-gray-50 border-l-2 border-gray-300"
+                  class="bg-gray-100 border-l-2 border-gray-200"
                 >
                   <div
                     v-for="subItem in item.dropdownItems"
                     :key="subItem.id || subItem.slug"
                     @click="handleMobileSubItemClick(item.id, subItem)"
-                    class="mobile-sub-item px-10 py-3.5 text-gray-700 text-sm cursor-pointer hover:bg-gray-100 hover:text-gray-900 transition-colors active:bg-gray-200 font-medium"
+                    class="mobile-sub-item px-10 py-3.5 text-gray-500 text-sm cursor-pointer hover:bg-gray-200 hover:text-gray-600 transition-colors active:bg-gray-300 font-medium"
                   >
                     {{ subItem.title || subItem.name }}
                   </div>
@@ -227,7 +227,7 @@
               v-else
               :to="item.slug ? `/${item.slug}` : '/'"
               @click="closeMobileMenu"
-              class="mobile-nav-item block px-6 py-4 text-gray-800 font-elegant text-base border-b border-gray-200 hover:bg-gray-100 transition-colors active:bg-gray-200 font-medium"
+              class="mobile-nav-item block px-6 py-4 text-gray-600 font-elegant text-base border-b border-gray-200 hover:bg-gray-100 transition-colors active:bg-gray-200 font-medium"
             >
               {{ item.name }}
             </router-link>
@@ -546,17 +546,17 @@ const scrollToTop = () => {
 }
 
 .mobile-menu {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(229, 231, 235, 0.5);
   /* 确保菜单在最上层 */
   position: fixed !important;
   top: 0 !important;
   right: 0 !important;
-  /* 提高背景对比度 */
+  /* 浅色背景 */
   background: linear-gradient(
     180deg,
-    rgba(15, 23, 42, 0.98) 0%,
-    rgba(30, 41, 59, 0.98) 50%,
-    rgba(15, 23, 42, 0.98) 100%
+    rgba(249, 250, 251, 0.98) 0%,
+    rgba(243, 244, 246, 0.98) 50%,
+    rgba(249, 250, 251, 0.98) 100%
   ) !important;
 }
 
@@ -571,7 +571,7 @@ const scrollToTop = () => {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(156, 163, 175, 0.5), transparent);
   transition: width 0.3s ease;
 }
 
@@ -588,7 +588,7 @@ const scrollToTop = () => {
   content: '→';
   position: absolute;
   left: 1.5rem;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(107, 114, 128, 0.6);
   font-size: 0.875rem;
 }
 

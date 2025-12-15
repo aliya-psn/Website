@@ -31,18 +31,18 @@
         </div>
 
         <!-- 图片区域 -->
-        <div v-if="item.image" class="relative overflow-hidden bg-white h-[200px]">
+        <div v-if="item.image" class="relative overflow-hidden bg-white w-[250px] h-[250px] mx-auto">
           <LazyImage
             :src="item.image"
             :alt="item.title || item.name"
             container-class="w-full h-full"
-            :image-class="`w-full h-full object-cover ${item.objectPosition || 'object-center'} group-hover:scale-110 transition-transform duration-500 ease-out`"
+            :image-class="`min-w-full min-h-full w-full h-full ${item.objectFit || 'object-cover'} ${item.objectPosition || 'object-center'} group-hover:scale-110 transition-transform duration-500 ease-out`"
           />
           <!-- 渐变遮罩效果 -->
           <div class="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
         <!-- 如果没有图片，显示占位符 -->
-        <div v-else class="relative overflow-hidden bg-gray-100 h-[200px] flex items-center justify-center">
+        <div v-else class="relative overflow-hidden bg-gray-100 w-[250px] h-[250px] mx-auto flex items-center justify-center">
           <span class="text-gray-400 text-sm">{{ item.title || item.name }}</span>
         </div>
       </div>

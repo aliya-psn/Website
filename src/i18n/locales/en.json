@@ -237,7 +237,8 @@
         {
           "name": "Origin",
           "image": "menu.scienceAnalysis.origin",
-          "slug": "origin"
+          "slug": "origin",
+          "objectPosition": "object-[50%_20%]"
         },
         {
           "name": "Development Journey",
@@ -264,7 +265,8 @@
         {
           "name": "Technology",
           "image": "menu.brandHeritage.technology",
-          "slug": "Technology"
+          "slug": "Technology",
+          "objectPosition": "object-[50%_30%]"
         }
       ]
     },
