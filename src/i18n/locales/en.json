@@ -16,7 +16,7 @@
       "productImage": "home.experience.productImage"
     },
     "origin": {
-      "title": "Brand Vision",
+      "title": "Brand Origin",
       "subtitle": "Metamorphosis from Aesthetic Clinic to Cellular Laboratory. It all began with a dialogue between two spaces.",
       "description": [
         "When medicine meets aesthetics, a revolutionary vision was born:",
@@ -31,7 +31,7 @@
       "collageImage": "home.scientificExploration.collageImage"
     },
     "luxuryCare": {
-      "primaryText": "True luxurious care lies not in confrontation, but in nourishment;",
+      "primaryText": "True luxurious care lies not in confrontation, but in nourishment",
       "secondaryText": "Brilliant regeneration comes not from hasty display, but from internal order.",
       "image": "home.luxuryCare.image"
     },

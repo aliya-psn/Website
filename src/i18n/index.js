@@ -28,7 +28,7 @@ const i18n = createI18n({
 })
 
 // 动态加载语言文件
-async function loadLocale(locale) {
+export async function loadLocale(locale) {
   if (i18n.global.availableLocales.includes(locale)) {
     return locale
   }

@@ -1,7 +1,7 @@
 <template>
   <!-- 首页 -->
   <div class="relative min-h-screen">
-    <!-- 背景图片，带虚化 -->
+    <!-- 背景图片，带浅色遮罩 -->
     <div
       class="fixed inset-0 bg-cover bg-center bg-no-repeat z-0 transition-transform duration-700"
       :style="{
@@ -10,34 +10,33 @@
       }"
     >
       <div
-        class="absolute inset-0 bg-linear-to-b from-black/30 via-black/20 to-black/40"
+        class="absolute inset-0 bg-linear-to-b from-white/60 via-white/50 to-white/70"
       ></div>
     </div>
 
-    <!-- 导航栏占位，避免内容被固定导航栏遮挡 -->
-    <div class="h-20 md:h-24"></div>
+    <div class="h-[80px]"></div>
 
     <!-- 主标题 -->
     <div
       class="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-4 animate-fade-in-up"
     >
       <h2
-        class="text-white text-4xl md:text-6xl lg:text-7xl font-system text-center leading-tight mb-8 hero-title font-semibold"
+        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl font-system text-center leading-tight mb-4 md:mb-6 hero-title font-bold"
       >
         {{ pageData.home.hero.title }}<br />
-        <span class="block font-light hero-subtitle text-2xl md:text-3xl lg:text-4xl mt-6 md:mt-8">{{
+        <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3">{{
           pageData.home.hero.subtitle
         }}</span>
       </h2>
 
       <!-- 向下箭头 -->
-      <div
-        class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center cursor-pointer hover:bg-white/10 transition-all animate-bounce-slow hover:scale-110"
+      <!-- <div
+        class="w-12 h-12 rounded-full border-2 border-gray-800 flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-all animate-bounce-slow hover:scale-110"
         :style="{ marginTop: '60px' }"
         @click="scrollDown"
       >
         <svg
-          class="w-6 h-6 text-white"
+          class="w-6 h-6 text-gray-800"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -49,7 +48,7 @@
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -73,8 +72,6 @@ const scrollDown = () => {
   emit('scroll-down')
 }
 
-const goToConcat = () => {
-}
 </script>
 
 <style scoped>
@@ -155,43 +152,21 @@ const goToConcat = () => {
 
 /* 主标题特效 */
 .hero-title {
-  letter-spacing: 0.1em;
-  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .hero-subtitle {
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.01em;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.9) 50%,
-    rgba(255, 255, 255, 0.95) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
-    0 2px 25px rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-  animation: subtitleShine 2.5s ease-in-out infinite alternate;
+  color: rgba(31, 41, 55, 0.8);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@keyframes subtitleShine {
-  0% {
-    opacity: 0.9;
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
-  }
-  100% {
-    opacity: 1;
-    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
-  }
 }
 
 /* 下拉展开动画 */

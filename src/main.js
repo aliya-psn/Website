@@ -2,7 +2,7 @@ import { createApp, ref } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
-import i18n, { initLocale } from './i18n'
+import i18n, { initLocale, loadLocale } from './i18n'
 
 // 创建全局 loading 状态管理
 const loadingState = ref(true)
@@ -14,6 +14,8 @@ async function waitForResources() {
     // 初始化语言（优先使用缓存，避免网络请求）
     const saved = sessionStorage.getItem('locale')
     if (saved) {
+      // 先加载语言文件，再设置 locale
+      await loadLocale(saved)
       i18n.global.locale.value = saved
       document.title = i18n.global.t('title')
     } else {

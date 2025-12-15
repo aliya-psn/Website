@@ -3,36 +3,37 @@
   <nav
     ref="navElement"
     :class="[
-      'navbar fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4 md:py-6',
+      'navbar fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-2 md:py-4',
       { scrolled: isScrolled, 'navbar-hidden': !props.isVisible },
     ]"
   >
-    <div class="flex items-center justify-between mx-auto max-w-7xl">
+    <div class="flex items-center justify-center">
       <!-- Logo -->
       <div
         @click="scrollToTop"
         class="flex items-center gap-3 cursor-pointer group"
       >
-        <div
-          class="text-white font-elegant text-xl md:text-2xl lg:text-3xl tracking-wide"
-        >
-          {{ dataSource?.home?.brand?.name }}
-        </div>
+        <img
+          :src="logoImage"
+          alt="Logo"
+          class="h-4 md:h-6 lg:h-8 object-contain"
+          style="max-height: 100%;"
+        />
       </div>
 
       <!-- 桌面端导航菜单 -->
-      <div class="hidden md:flex items-center gap-8 lg:gap-10">
+      <div class="hidden md:flex items-center gap-8 lg:gap-10 ml-8 lg:ml-12">
         <template v-for="item in dataSource.navItems" :key="item.id">
           <!-- 有下拉菜单的项 -->
           <div v-if="item.hasDropdown" class="relative">
             <div
               @click.stop="toggleDropdown(item.id)"
-              class="nav-link text-white text-sm md:text-base font-elegant tracking-wider cursor-pointer relative group"
+              class="nav-link text-gray-800 text-sm md:text-base font-elegant tracking-wider cursor-pointer relative group"
               :class="{ active: showDropdown && currentDropdownId === item.id }"
             >
               {{ item.name }}
               <span
-                class="nav-underline absolute bottom-0 left-0 w-0 h-px bg-linear-to-r from-transparent via-white to-transparent transition-all duration-500 group-hover:w-full"
+                class="nav-underline absolute bottom-0 left-0 w-0 h-px bg-linear-to-r from-transparent via-gray-800 to-transparent transition-all duration-500 group-hover:w-full"
               ></span>
             </div>
           </div>
@@ -40,11 +41,11 @@
           <router-link
             v-else
             :to="item.slug ? `/${item.slug}` : '/'"
-            class="nav-link text-white text-sm md:text-base font-elegant tracking-wider relative group"
+            class="nav-link text-gray-800 text-sm md:text-base font-elegant tracking-wider relative group"
           >
             {{ item.name }}
             <span
-              class="nav-underline absolute bottom-0 left-0 w-0 h-px bg-linear-to-r from-transparent via-white to-transparent transition-all duration-500 group-hover:w-full"
+              class="nav-underline absolute bottom-0 left-0 w-0 h-px bg-linear-to-r from-transparent via-gray-800 to-transparent transition-all duration-500 group-hover:w-full"
             ></span>
           </router-link>
         </template>
@@ -53,7 +54,7 @@
       <!-- 移动端汉堡菜单按钮 -->
       <button
         @click="toggleMobileMenu"
-        class="md:hidden text-white p-2 focus:outline-none"
+        class="md:hidden text-gray-800 p-2 focus:outline-none absolute right-6"
         aria-label="菜单"
       >
         <svg
@@ -88,7 +89,7 @@
     </div>
 
     <!-- 导航下拉菜单 - 在导航栏下方 -->
-    <div ref="dropdownContainer" class="relative">
+    <div ref="dropdownContainer" class="relative z-50">
       <transition name="slide-down">
         <!-- 产品系列 下拉菜单 -->
         <MenuDropdown
@@ -155,16 +156,16 @@
       <transition name="slide-right">
         <div
           v-if="isMobileMenuOpen"
-          class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-[9999] md:hidden overflow-y-auto shadow-2xl"
+          class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-[9999] md:hidden overflow-y-auto shadow-2xl"
         >
         <!-- 移动端菜单头部 -->
-        <div class="flex items-center justify-between p-6 border-b border-white/20 bg-slate-900/50">
-          <div class="text-white font-elegant text-xl font-semibold">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200 bg-white">
+          <div class="text-gray-800 font-elegant text-xl font-semibold">
             {{ dataSource?.home?.brand?.name }}
           </div>
           <button
             @click="closeMobileMenu"
-            class="text-white p-2 hover:text-gray-300 transition-colors rounded-full hover:bg-white/10"
+            class="text-gray-800 p-2 hover:text-gray-600 transition-colors rounded-full hover:bg-gray-100"
             aria-label="关闭菜单"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,15 +183,15 @@
         <div class="py-2">
           <template v-for="item in dataSource.navItems" :key="item.id">
             <!-- 有下拉菜单的项 -->
-            <div v-if="item.hasDropdown" class="border-b border-white/10">
+            <div v-if="item.hasDropdown" class="border-b border-gray-200">
               <div
                 @click="toggleMobileDropdown(item.id)"
-                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-white font-elegant text-base cursor-pointer hover:bg-white/10 transition-colors active:bg-white/15"
-                :class="{ 'bg-white/15': mobileDropdownId === item.id }"
+                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-gray-800 font-elegant text-base cursor-pointer hover:bg-gray-100 transition-colors active:bg-gray-200"
+                :class="{ 'bg-gray-100': mobileDropdownId === item.id }"
               >
                 <span class="font-medium">{{ item.name }}</span>
                 <svg
-                  class="w-5 h-5 transition-transform duration-300 text-white/80"
+                  class="w-5 h-5 transition-transform duration-300 text-gray-600"
                   :class="{ 'rotate-180': mobileDropdownId === item.id }"
                   fill="none"
                   stroke="currentColor"
@@ -208,13 +209,13 @@
               <transition name="mobile-dropdown">
                 <div
                   v-if="mobileDropdownId === item.id"
-                  class="bg-slate-800/70 border-l-2 border-white/20"
+                  class="bg-gray-50 border-l-2 border-gray-300"
                 >
                   <div
                     v-for="subItem in item.dropdownItems"
                     :key="subItem.id || subItem.slug"
                     @click="handleMobileSubItemClick(item.id, subItem)"
-                    class="mobile-sub-item px-10 py-3.5 text-gray-200 text-sm cursor-pointer hover:bg-white/15 hover:text-white transition-colors active:bg-white/20 font-medium"
+                    class="mobile-sub-item px-10 py-3.5 text-gray-700 text-sm cursor-pointer hover:bg-gray-100 hover:text-gray-900 transition-colors active:bg-gray-200 font-medium"
                   >
                     {{ subItem.title || subItem.name }}
                   </div>
@@ -226,7 +227,7 @@
               v-else
               :to="item.slug ? `/${item.slug}` : '/'"
               @click="closeMobileMenu"
-              class="mobile-nav-item block px-6 py-4 text-white font-elegant text-base border-b border-white/10 hover:bg-white/10 transition-colors active:bg-white/15 font-medium"
+              class="mobile-nav-item block px-6 py-4 text-gray-800 font-elegant text-base border-b border-gray-200 hover:bg-gray-100 transition-colors active:bg-gray-200 font-medium"
             >
               {{ item.name }}
             </router-link>
@@ -243,6 +244,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import MenuDropdown from './MenuDropdown.vue'
 import { useI18nData } from '../composables/useI18nData'
+import logoImage from '../assets/logo.png'
 
 const { dataSource } = useI18nData()
 
@@ -437,17 +439,13 @@ const scrollToTop = () => {
 </script>
 
 <style scoped>
-/* 导航栏样式 - 深色渐变背景 */
+/* 导航栏样式 */
 .navbar {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.95) 0%,
-    rgba(30, 41, 59, 0.98) 100%
-  );
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s ease,
     box-shadow 0.5s ease;
@@ -463,19 +461,15 @@ const scrollToTop = () => {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.1),
     transparent
   );
 }
 
 /* 滚动时的阴影效果 */
 .navbar.scrolled {
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.98) 0%,
-    rgba(30, 41, 59, 0.99) 100%
-  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 1);
 }
 
 /* 优雅字体 */
@@ -495,16 +489,16 @@ const scrollToTop = () => {
 
 .nav-link:hover {
   transform: translateY(-2px);
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link.active {
-  color: #fbbf24;
+  color: #d97706;
 }
 
 /* 下划线动画 */
 .nav-underline {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 下拉展开动画 */
@@ -594,7 +588,7 @@ const scrollToTop = () => {
   content: '→';
   position: absolute;
   left: 1.5rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.4);
   font-size: 0.875rem;
 }
 
