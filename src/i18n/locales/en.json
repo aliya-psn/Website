@@ -260,7 +260,8 @@
         {
           "name": "Key Ingredients",
           "image": "menu.brandHeritage.key",
-          "slug": "key-ingredients"
+          "slug": "key-ingredients",
+          "objectPosition": "object-[50%_80%]"
         },
         {
           "name": "Technology",

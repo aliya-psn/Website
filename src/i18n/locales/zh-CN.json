@@ -260,7 +260,8 @@
         {
           "name": "核心成分",
           "image": "menu.brandHeritage.key",
-          "slug": "key-ingredients"
+          "slug": "key-ingredients",
+          "objectPosition": "object-[50%_80%]"
         },
         {
           "name": "技术与专利",
