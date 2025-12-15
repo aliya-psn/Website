@@ -13,7 +13,7 @@
 
     <!-- 邮箱订阅区域 -->
     <div class="container mx-auto px-4 md:px-8 max-w-xl mt-6 md:mt-8 lg:mt-10">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-3 md:mb-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-3 md:mb-4 text-center">
           {{ sectionData.title }}
         </h2>
         <p class="text-lg md:text-xl text-gray-700 text-center mb-3 md:mb-4 font-normal">

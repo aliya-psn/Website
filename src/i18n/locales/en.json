@@ -410,36 +410,36 @@
             "slug": "basic-revitalization-collection-1",
             "image": "product.1",
             "tags": ["New"],
-            "productName": "Fantasycare Kacip Fatimah& Papaya Drink",
+            "productName": "Kacip Fatimah& Papaya Drink",
             "price": 49,
-            "description": "",
+            "description": "NET:375mL(25mL*15)",
             "benefitDetails": []
           },
           {
             "id": 2,
             "slug": "basic-revitalization-collection-2",
             "image": "product.2",
-            "productName": "Fantasycare Skin Whitening Tablet",
+            "productName": "Skin Whitening Tablet",
             "price": 79,
-            "description": "",
+            "description": "NET:2 Tablets *30 Packets",
             "benefitDetails": []
           },
           {
             "id": 3,
             "slug": "basic-revitalization-collection-3",
             "image": "product.3",
-            "productName": "FANTASYCARE Cinnamon &llibiscus Sabdariffawith Multi-Vitamins",
+            "productName": "Cinnamon &llibiscus Sabdariffawith Multi-Vitamins",
             "price": 19,
-            "description": "",
+            "description": "NET:30 Tablets",
             "benefitDetails": []
           },
           {
             "id": 4,
             "slug": "basic-revitalization-collection-4",
             "image": "product.4",
-            "productName": "FANTASYCARE AMPK Fat-BurningLeg Slimming Pills",
+            "productName": "AMPK Fat-BurningLeg Slimming Pills",
             "price": 39,
-            "description": "",
+            "description": "NET:60 Tablets",
             "benefitDetails": []
           }
         ]
@@ -452,36 +452,36 @@
             "id": 1,
             "slug": "advanced-repair-collection-1",
             "image": "product.1",
-            "productName": "Fantasycare Hera Golden Apple Capsules",
+            "productName": "Hera Golden Apple Capsules",
             "price": 129,
-            "description": "",
+            "description": "Get a S75 gift card*",
             "benefitDetails": []
           },
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
             "image": "product.2",
-            "productName": "Fantasycare Lilith Red Diamond Vial Capsules",
+            "productName": "Lilith Red Diamond Vial Capsules",
             "price": 129,
-            "description": "",
+            "description": "Get a S75 gift card*",
             "benefitDetails": []
           },
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
             "image": "product.3",
-            "productName": "Fantasycare Rhea Purple Amber Vial Capsules",
+            "productName": "Rhea Purple Amber Vial Capsules",
             "price": 129,
-            "description": "",
+            "description": "Get a S75 gift card*",
             "benefitDetails": []
           },
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
             "image": "product.4",
-            "productName": "Fantasycare Freya Black Diamond Vial Capsules",
+            "productName": "Freya Black Diamond Vial Capsules",
             "price": 99,
-            "description": "",
+            "description": "Get a S75 gift card*",
             "benefitDetails": []
           }
         ]
@@ -514,7 +514,7 @@
     "noProducts": "No Products",
     "productName": "Product Name",
     "price": "Price",
-    "contactUs": "Contact Us"
+    "currency": "From $"
   }
 }
 
