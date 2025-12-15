@@ -237,7 +237,8 @@
         {
           "name": "起源",
           "image": "menu.scienceAnalysis.origin",
-          "slug": "origin"
+          "slug": "origin",
+          "objectPosition": "object-right"
         },
         {
           "name": "发展历程",

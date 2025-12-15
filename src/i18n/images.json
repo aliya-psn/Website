@@ -4,89 +4,89 @@
     "backgroundImage": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
 
     "experience": {
-      "productImage": "https://picturebed.pixelarrayai.com/310/product_3.png"
+      "productImage": "https://i.111666.best/image/20Ze2s4RaSvSZ3Orq3TDEV.png"
     },
     "scientificExploration": {
-      "collageImage": "https://picturebed.pixelarrayai.com/310/home_4.png"
+      "collageImage": "https://i.111666.best/image/7kzMDMAzEsn7TPtKA82FvX.png"
     },
     "luxuryCare": {
-      "image": "https://picturebed.pixelarrayai.com/310/home_5.png"
+      "image": "https://i.111666.best/image/G75V9qWhgeaQmn5lFgJH7L.png"
     }
   },
   "menu": {
     "scienceAnalysis": {
       "origin": "https://i.111666.best/image/KfFPXfPwF3M1MF34I5Ny4B.png",
-      "developmentHistory": "https://picturebed.pixelarrayai.com/310/science_menu_2.png",
-      "honorsAwards": "https://picturebed.pixelarrayai.com/310/science_menu_3.png"
+      "developmentHistory": "https://i.111666.best/image/2xKTuWZku5zC24HoangMoM.png",
+      "honorsAwards": "https://i.111666.best/image/fLBHOpeHyE5X6ztNOSrsoO.png"
     },
     "brandHeritage": {
       "key": "https://i.111666.best/image/oLDMm0yKIFpQinoqmImBMa.png",
-      "technology": "https://picturebed.pixelarrayai.com/310/house_menu_2.png"
+      "technology": "https://i.111666.best/image/lFCDPpu04fPI7JdWW2Cx70.png"
     },
     "membership": {
-      "services": "https://picturebed.pixelarrayai.com/310/member_menu_1.png",
-      "system": "https://picturebed.pixelarrayai.com/310/member_menu_2.png"
+      "services": "https://i.111666.best/image/sjKwf9xnjlCzgR3Ff060d6.png",
+      "system": "https://i.111666.best/image/deokyuZ2EleJjnAUUD6Vhq.png"
     }
   },
   "product": {
-    "1": "https://picturebed.pixelarrayai.com/310/product_1.png",
-    "2": "https://picturebed.pixelarrayai.com/310/product_2.png",
-    "3": "https://picturebed.pixelarrayai.com/310/product_3.png",
-    "4": "https://picturebed.pixelarrayai.com/310/product_4.png",
+    "1": "https://i.111666.best/image/EfuLnwAj1RjE2s11K0bKpX.png",
+    "2": "https://i.111666.best/image/lcZUlhv0v4n7rX4Jli3Cqt.png",
+    "3": "https://i.111666.best/image/20Ze2s4RaSvSZ3Orq3TDEV.png",
+    "4": "https://i.111666.best/image/iNtTmJ8qiVEYPlkNdXetHM.png",
     "5": "/src/assets/product/5.png",
-    "6": "https://picturebed.pixelarrayai.com/310/origin_5.png",
+    "6": "https://i.111666.best/image/rNnCfB27sTpnw2ASDTifrs.png",
     "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
   },
   "science": {
     "originHistory": {
-      "1": "https://picturebed.pixelarrayai.com/310/origin_1.png",
-      "2": "https://picturebed.pixelarrayai.com/310/origin_2.png",
-      "3": "https://picturebed.pixelarrayai.com/310/origin_3.png",
-      "4": "https://picturebed.pixelarrayai.com/310/origin_4.png",
-      "5": "https://picturebed.pixelarrayai.com/310/origin_5.png"
+      "1": "https://i.111666.best/image/sbBzhkj2GagK9usq0uMm8W.png",
+      "2": "https://i.111666.best/image/v8lv4H6WOlDM1YRlnQ9TU5.png",
+      "3": "https://i.111666.best/image/iw8ZXLpz5t2NUmEJJZOxgR.png",
+      "4": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png",
+      "5": "https://i.111666.best/image/rNnCfB27sTpnw2ASDTifrs.png"
     },
     "developmentHistory": {
-      "1": "https://picturebed.pixelarrayai.com/310/development_1.png",
-      "2": "https://picturebed.pixelarrayai.com/310/development_2.png",
+      "1": "https://i.111666.best/image/Vdwnda7eyao0lJF5SgyVXm.png",
+      "2": "https://i.111666.best/image/bFzGUeabHwaFRpC7tXfGT1.png",
       "3": "https://i.111666.best/image/oXfU1sc0Pf8pM3u2jWDC78.png",
-      "4": "https://picturebed.pixelarrayai.com/310/development_4.png",
+      "4": "https://i.111666.best/image/3CCt414WRDyRLN0yGq3nCp.png",
       "5": "https://i.111666.best/image/3s2xYAyJYNHKaTDqYX0Tkk.png"
     },
     "awardsHistory": {
-      "1": "https://picturebed.pixelarrayai.com/310/origin_5.png",
-      "2": "https://picturebed.pixelarrayai.com/310/origin_5.png",
-      "3": "https://picturebed.pixelarrayai.com/310/origin_4.png",
-      "4": "https://picturebed.pixelarrayai.com/310/origin_4.png",
-      "5": "https://picturebed.pixelarrayai.com/310/origin_4.png",
-      "6": "https://picturebed.pixelarrayai.com/310/origin_4.png",
-      "7": "https://picturebed.pixelarrayai.com/310/origin_4.png",
-      "8": "https://picturebed.pixelarrayai.com/310/origin_4.png"
+      "1": "https://i.111666.best/image/rNnCfB27sTpnw2ASDTifrs.png",
+      "2": "https://i.111666.best/image/rNnCfB27sTpnw2ASDTifrs.png",
+      "3": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png",
+      "4": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png",
+      "5": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png",
+      "6": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png",
+      "7": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png",
+      "8": "https://i.111666.best/image/Y8JOhveBcNAsLJSVXwwkgy.png"
     }
   },
   "keyIngredients": {
-    "drShona": "https://picturebed.pixelarrayai.com/310/key_1.png",
+    "drShona": "https://i.111666.best/image/S7gDteXdSgtcmlqRSfcJee.png",
     "teamImage": "https://i.111666.best/image/QQkpwPUrhL22VFSLten1Hk.jpeg"
   },
   "technology": {
     "certificateImage": "https://i.111666.best/image/HgbI0NDKuUmD7QoQXcb2K0.png",
-    "patentImage": "https://picturebed.pixelarrayai.com/310/tech_2.png"
+    "patentImage": "https://i.111666.best/image/CMqxCXU6oYkKeWWl8GLSfc.png"
   },
   "member": {
     "service": {
       "1": "https://youke2.picui.cn/s1/2025/12/11/693a4dfed702f.png",
-      "2": "https://picturebed.pixelarrayai.com/310/service_2.png",
+      "2": "https://i.111666.best/image/WSDDRBrxWPK25Exm05Akbd.png",
       "3": "https://youke2.picui.cn/s1/2025/12/11/693a4dfc43525.png"
     },
     "membership": {
-      "1": "https://picturebed.pixelarrayai.com/310/membership_1.png",
-      "2": "https://picturebed.pixelarrayai.com/310/membership_2.png",
-      "3": "https://picturebed.pixelarrayai.com/310/membership_3.png",
-      "4": "https://picturebed.pixelarrayai.com/310/membership_4.png",
+      "1": "https://i.111666.best/image/MX0FrEb5n3zT5m1SXynHiR.png",
+      "2": "https://i.111666.best/image/MX0FrEb5n3zT5m1SXynHiR.png",
+      "3": "https://i.111666.best/image/klSCLroySedFm4jBVK71I9.png",
+      "4": "https://i.111666.best/image/q1gdUjTrUtftJZ3oS1kI6B.png",
       "5": "https://youke2.picui.cn/s1/2025/12/11/693a4d5aec9c8.png",
       "6": "https://youke2.picui.cn/s1/2025/12/11/693a4d58e751d.png",
       "7": "https://youke2.picui.cn/s1/2025/12/11/693a4d5e29f90.png",
-      "8": "https://picturebed.pixelarrayai.com/310/membership_8.png",
-      "9": "https://picturebed.pixelarrayai.com/310/membership_9.png"
+      "8": "https://i.111666.best/image/loEyEy3oMnS9gew5NIH1GD.png",
+      "9": "https://i.111666.best/image/loEyEy3oMnS9gew5NIH1GD.png"
     }
   },
   "video": {

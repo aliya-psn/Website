@@ -36,7 +36,7 @@
             :src="item.image"
             :alt="item.title || item.name"
             container-class="w-full h-full"
-            image-class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500 ease-out"
+            :image-class="`w-full h-full object-cover ${item.objectPosition || 'object-center'} group-hover:scale-110 transition-transform duration-500 ease-out`"
           />
           <!-- 渐变遮罩效果 -->
           <div class="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
