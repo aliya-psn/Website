@@ -79,7 +79,7 @@
               >
                 <LazyImage
                   :src="productDataSource.descImage"
-                  container-class="w-full max-w-[240px] h-auto"
+                  container-class="w-full max-w-[200px] h-auto"
                   image-class="w-full h-full object-contain"
                 />
               </div>
@@ -147,13 +147,13 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full h-50 md:h-72 lg:h-84 overflow-hidden flex items-center justify-center mx-auto"
+                class="relative w-full h-54 md:h-72 lg:h-88 overflow-hidden flex items-center justify-center mx-auto"
               >
                 <LazyImage
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  image-class="w-full h-full max-w-[50%] object-contain p-10 md:p-12 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
+                  image-class="w-full h-full max-w-[50%] object-contain p-12 md:p-16 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 

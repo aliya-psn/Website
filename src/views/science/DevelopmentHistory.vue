@@ -45,11 +45,11 @@
             </div>
             
             <!-- 正文 -->
-            <div class="space-y-3 sm:space-y-4">
+            <div class="space-y-2 sm:space-y-3">
               <p
                 v-for="(paragraph, index) in currentData.description"
                 :key="index"
-                class="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed font-light"
+                class="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-light"
               >
                 {{ paragraph }}
               </p>

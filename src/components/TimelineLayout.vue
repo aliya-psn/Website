@@ -4,7 +4,7 @@
     <!-- 背景装饰：粒子效果 -->
     <ParticleBackground />
     
-    <div class="max-w-[90rem] mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8 md:py-12 lg:py-16 relative z-10">
+    <div class="max-w-[90rem] mx-auto px-2 sm:px-3 md:px-4 py-6 sm:py-8 md:py-12 lg:py-16 relative z-10">
       <!-- 小屏幕：顶部横向时间轴 -->
       <div class="lg:hidden mb-6 sm:mb-8">
         <div class="overflow-x-auto scrollbar-hide -mx-3 sm:-mx-4 px-3 sm:px-4">
@@ -53,13 +53,13 @@
                 <div
                   class="h-0.5 transition-all duration-300 origin-left"
                   :class="currentIndex === index
-                    ? 'bg-white w-16'
-                    : 'bg-gray-500 w-8 group-hover:w-12'"
+                    ? 'bg-white w-8'
+                    : 'bg-gray-500 w-6 group-hover:w-8'"
                 ></div>
                 
                 <!-- 标签文字 -->
                 <span
-                  class="ml-4 text-base font-medium text-white transition-all duration-300 whitespace-nowrap"
+                  class="ml-3 text-base font-light text-white transition-all duration-300 whitespace-nowrap"
                   :class="currentIndex === index
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 -translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0'"

@@ -11,7 +11,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20 items-center w-full">
         <!-- 左侧：肖像照片 -->
         <div class="flex justify-center lg:justify-start items-center">
-          <div class="relative w-72 h-88 md:w-96 md:h-[28rem]">
+          <div class="relative w-72 h-88 md:w-96 md:h-[28rem] lg:-ml-4">
             <LazyImage
               :src="keyIngredientsData.drShona.image"
               :alt="keyIngredientsData.drShona.name"
