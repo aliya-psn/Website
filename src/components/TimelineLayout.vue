@@ -4,7 +4,7 @@
     <!-- 背景装饰：粒子效果 -->
     <ParticleBackground />
     
-    <div class="max-w-[90rem] mx-auto px-2 sm:px-3 md:px-4 flex-1 flex flex-col relative z-10">
+    <div class="w-full max-w-[calc(100%-min(12vw,8rem))] mx-auto px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-12 flex-1 flex flex-col relative z-10">
       <!-- 小屏幕：顶部横向时间轴 -->
       <div class="lg:hidden mb-4 sm:mb-6 flex-shrink-0">
         <div class="overflow-x-auto scrollbar-hide -mx-3 sm:-mx-4 px-3 sm:px-4">
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 flex-1 min-h-0">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-6 xl:gap-8 2xl:gap-10 flex-1 min-h-0">
         <!-- 大屏幕：左侧时间轴 -->
         <div class="hidden lg:flex lg:col-span-2 flex-col items-start justify-center h-full">
           <div class="relative flex flex-col items-start w-full">
