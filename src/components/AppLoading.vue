@@ -27,7 +27,7 @@
           <div class="absolute inset-4 sm:inset-6 md:inset-8 flex items-center justify-center">
             <div class="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-white/20 to-transparent blur-xl animate-pulse-slow"></div>
             <div class="relative w-full h-full rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center px-2">
-              <div class="text-white text-xs sm:text-sm md:text-base font-bold font-elegant text-center leading-tight">
+              <div class="text-white text-xs sm:text-sm md:text-base font-bold text-center leading-tight">
                 {{ brandText }}
               </div>
             </div>

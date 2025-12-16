@@ -6,7 +6,7 @@
         <!-- 左侧筛选栏 -->
         <aside class="w-full lg:w-64 shrink-0">
           <div class="bg-white border border-gray-200 rounded-lg p-6 sticky top-24">
-            <h2 class="text-lg font-semibold text-gray-900 mb-6 font-elegant">{{ t('common.filter') }}</h2>
+            <h2 class="text-lg font-semibold text-gray-900 mb-6">{{ t('common.filter') }}</h2>
             
             <!-- 分类筛选 -->
             <div class="mb-6">
@@ -14,7 +14,7 @@
                 @click="toggleCategoryFilter"
                 class="w-full flex items-center justify-between text-base font-medium text-gray-900 mb-4 hover:text-gray-700 transition-colors"
               >
-                <span class="font-elegant">{{ t('common.category') }}</span>
+                <span>{{ t('common.category') }}</span>
                 <svg
                   :class="['w-5 h-5 transition-transform', categoryFilterOpen ? 'rotate-180' : '']"
                   fill="none"
@@ -62,7 +62,7 @@
           <!-- 排序栏 -->
           <div class="flex items-center justify-between mb-8">
             <div class="flex items-center gap-4">
-              <label class="text-sm text-gray-700 font-light font-elegant">{{ t('common.sortBy') }}</label>
+              <label class="text-sm text-gray-700 font-light">{{ t('common.sortBy') }}</label>
               <div class="relative">
                 <select
                   v-model="sortBy"
@@ -115,13 +115,13 @@
               <!-- 产品信息 -->
               <div class="p-4">
                 <!-- 产品名称 -->
-                <h3 class="text-sm md:text-base font-medium text-gray-900 mb-3 font-elegant line-clamp-2 min-h-12">
+                <h3 class="text-sm md:text-base font-medium text-gray-900 mb-3 line-clamp-2 min-h-12">
                   {{ product.productName }}
                 </h3>
                 
                 <!-- 价格 -->
                 <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span class="text-lg md:text-xl font-bold text-gray-900 font-elegant">
+                  <span class="text-lg md:text-xl font-bold text-gray-900">
                     ${{ product.price?.toLocaleString() }}
                   </span>
                   <button
@@ -246,9 +246,6 @@ const goToProductDetail = (product) => {
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-}
 
 .product-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

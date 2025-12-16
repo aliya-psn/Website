@@ -7,7 +7,7 @@
       <div class="bg-white py-8">
         <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 tracking-tight"
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight"
           >
             {{ productData.title }}
           </h1>
@@ -245,9 +245,6 @@ const goToProductDetail = (product) => {
 </script>
 
 <style scoped>
-.font-sans {
-  font-family: 'Arial', 'Helvetica', 'sans-serif';
-}
 
 .product-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

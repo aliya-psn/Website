@@ -7,29 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['Georgia', 'serif'],
-        'sans': ['Arial', 'Helvetica', 'sans-serif'],
-        'system': [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'SF Pro Display',
-          'SF Pro Text',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'sans-serif',
-        ],
-        'elegant': [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'SF Pro Display',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'sans-serif',
-        ],
+        'sans': ['OPPO Sans', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        'song': ['SimSun', 'STSong', '宋体', 'serif'],
       },
     },
   },

@@ -8,7 +8,7 @@
       <!-- 标题区域 -->
       <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
         <h2
-          class="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-gray-900 mb-4 tracking-tight"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
         >
           {{ sectionData.title }}
         </h2>
@@ -61,7 +61,7 @@
           <div class="p-3 md:p-4">
             <!-- 产品名称 -->
             <h3
-              class="text-xs md:text-sm font-medium text-gray-900 mb-2 font-elegant line-clamp-2 min-h-10"
+              class="text-xs md:text-sm font-medium text-gray-900 mb-2 line-clamp-2 min-h-10"
             >
               {{ product.productName }}
             </h3>
@@ -69,7 +69,7 @@
             <!-- 价格 -->
             <div class="flex items-center justify-between pt-2 border-t border-gray-100">
               <span
-                class="text-base md:text-lg font-bold text-gray-900 font-elegant"
+                class="text-base md:text-lg font-bold text-gray-900"
               >
                 ${{ product.price?.toLocaleString() }}
               </span>
@@ -87,7 +87,7 @@
       <div class="text-center animate-fade-in-up-delay">
         <button
           @click="goToAllProducts"
-          class="px-8 py-3 rounded-lg bg-gray-900 text-white flex items-center justify-center mx-auto hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-elegant font-medium text-base"
+          class="px-8 py-3 rounded-lg bg-gray-900 text-white flex items-center justify-center mx-auto hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-medium text-base"
         >
           <span>{{ t('common.viewAllProducts') }}</span>
           <svg
@@ -211,10 +211,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia',
-    'Times New Roman', serif;
-}
 
 .product-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

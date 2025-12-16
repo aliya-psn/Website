@@ -21,7 +21,7 @@
       class="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-4 animate-fade-in-up"
     >
       <h2
-        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl font-system text-center leading-tight mb-4 md:mb-6 hero-title font-bold"
+        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-center leading-tight mb-4 md:mb-6 hero-title font-bold"
       >
         {{ pageData.home.hero.title }}<br />
         <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3">{{

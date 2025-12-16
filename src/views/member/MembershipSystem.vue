@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
       <!-- 第一部分：Membership Program / Skin Condition Predictive Modeling -->
       <div class="mb-20">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 text-center mb-4 tracking-tight">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-4 tracking-tight">
           {{ membershipData.title }}
         </h1>
         <div class="text-center mb-8 space-y-1">
@@ -19,7 +19,7 @@
           </p>
         </div>
         
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
           {{ membershipData.predictiveModeling.title }}
         </h2>
         
@@ -51,7 +51,7 @@
 
       <!-- 第二部分：Allergen Sensitivity Alert System -->
       <div class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
           {{ membershipData.allergenAlert.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
@@ -69,7 +69,7 @@
 
       <!-- 第三部分：Personalized dosage optimization algorithms -->
       <div class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
           {{ membershipData.dosageOptimization.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
@@ -87,7 +87,7 @@
 
       <!-- 第四部分：User Experience Ecosystem -->
       <div class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
           {{ membershipData.userExperience.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
@@ -105,7 +105,7 @@
 
       <!-- 第五部分：User Feedback -->
       <div class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
           {{ membershipData.userFeedback.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
@@ -123,7 +123,7 @@
 
       <!-- 第六部分：Skin Renewal Journals -->
       <div class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
           {{ membershipData.skinRenewal.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
@@ -150,7 +150,7 @@
 
       <!-- 第七部分：Expert Q&A Sessions -->
       <div class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
           {{ membershipData.expertQA.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
@@ -169,7 +169,7 @@
       <!-- 第八部分：Skin Renewal Milestone Badges -->
       <div>
         <div class="w-full max-w-5xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">
             {{ membershipData.milestoneBadges.title }}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
@@ -249,9 +249,6 @@ const membershipData = computed(() => {
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-}
 
 .model-card,
 .badge-card {

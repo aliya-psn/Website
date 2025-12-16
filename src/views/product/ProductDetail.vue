@@ -14,12 +14,12 @@
             </div>
 
             <!-- 产品名称 -->
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 leading-tight tracking-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
               {{ productDetail.productName }}
             </h1>
 
             <!-- 价格 -->
-            <div class="text-5xl md:text-6xl font-bold text-gray-900 font-elegant">
+            <div class="text-5xl md:text-6xl font-bold text-gray-900">
               ${{ productDetail.price?.toLocaleString() }}
             </div>
 
@@ -132,7 +132,7 @@
 
           <!-- 弹窗内容 -->
           <div class="text-center">
-            <h3 class="text-2xl md:text-3xl font-elegant font-bold text-gray-900 mb-4">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               {{ productConfig.qrCodeModal.title }}
             </h3>
             <p class="text-gray-600 mb-6">
@@ -224,9 +224,6 @@ const nextImage = () => {
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-}
 
 /* 弹窗动画 */
 .modal-enter-active,

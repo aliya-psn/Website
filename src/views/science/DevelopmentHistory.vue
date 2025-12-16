@@ -36,10 +36,10 @@
           <div class="relative z-10">
             <!-- 年份和标题 -->
             <div class="mb-4 sm:mb-6">
-              <span class="text-lg sm:text-xl md:text-2xl font-elegant font-medium text-white/80">
+              <span class="text-lg sm:text-xl md:text-2xl font-medium text-white/80">
                 {{ currentData.year }}
               </span>
-              <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-white mt-1 sm:mt-2 inline-block border-b-2 border-white/30 pb-1 sm:pb-2">
+              <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-1 sm:mt-2 inline-block border-b-2 border-white/30 pb-1 sm:pb-2">
                 {{ currentData.title }}
               </h1>
             </div>

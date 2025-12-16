@@ -1,10 +1,5 @@
 /* 时间轴页面共同样式 */
 
-/* 优雅字体 */
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-}
-
 /* 缓慢脉冲动画 */
 @keyframes pulse-slow {
   0%, 100% {

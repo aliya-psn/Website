@@ -28,7 +28,7 @@
           <div v-if="item.hasDropdown" class="relative">
             <div
               @click.stop="toggleDropdown(item.id)"
-              class="nav-link text-gray-800 text-sm md:text-base font-elegant tracking-wider cursor-pointer relative group"
+              class="nav-link text-gray-800 text-sm md:text-base tracking-wider cursor-pointer relative group"
               :class="{ active: showDropdown && currentDropdownId === item.id }"
             >
               {{ item.name }}
@@ -41,7 +41,7 @@
           <router-link
             v-else
             :to="item.slug ? `/${item.slug}` : '/'"
-            class="nav-link text-gray-800 text-sm md:text-base font-elegant tracking-wider relative group"
+            class="nav-link text-gray-800 text-sm md:text-base tracking-wider relative group"
           >
             {{ item.name }}
             <span
@@ -160,7 +160,7 @@
         >
         <!-- 移动端菜单头部 -->
         <div class="flex items-center justify-between p-6 border-b border-gray-200 bg-gray-50">
-          <div class="text-gray-600 font-elegant text-xl font-semibold">
+          <div class="text-gray-600 text-xl font-semibold">
             {{ dataSource?.home?.brand?.name }}
           </div>
           <button
@@ -186,7 +186,7 @@
             <div v-if="item.hasDropdown" class="border-b border-gray-200">
               <div
                 @click="toggleMobileDropdown(item.id)"
-                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-gray-600 font-elegant text-base cursor-pointer hover:bg-gray-100 transition-colors active:bg-gray-200"
+                class="mobile-nav-item flex items-center justify-between px-6 py-4 text-gray-600 text-base cursor-pointer hover:bg-gray-100 transition-colors active:bg-gray-200"
                 :class="{ 'bg-gray-100': mobileDropdownId === item.id }"
               >
                 <span class="font-medium">{{ item.name }}</span>
@@ -227,7 +227,7 @@
               v-else
               :to="item.slug ? `/${item.slug}` : '/'"
               @click="closeMobileMenu"
-              class="mobile-nav-item block px-6 py-4 text-gray-600 font-elegant text-base border-b border-gray-200 hover:bg-gray-100 transition-colors active:bg-gray-200 font-medium"
+              class="mobile-nav-item block px-6 py-4 text-gray-600 text-base border-b border-gray-200 hover:bg-gray-100 transition-colors active:bg-gray-200 font-medium"
             >
               {{ item.name }}
             </router-link>
@@ -472,13 +472,6 @@ const scrollToTop = () => {
   background: rgba(255, 255, 255, 1);
 }
 
-/* 优雅字体 */
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia',
-    'Times New Roman', serif;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
 
 /* 导航链接动画 */
 .nav-link {

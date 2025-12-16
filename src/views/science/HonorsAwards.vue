@@ -3,7 +3,7 @@
   <div class="min-h-screen bg-white pt-16 md:pt-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
       <!-- 标题 -->
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 text-center mb-16 tracking-tight">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-16 tracking-tight">
         {{ honorsAwardsData.title }}
       </h1>
 
@@ -101,9 +101,6 @@ const bottomRow = computed(() => honorsAwardsData.value.awards?.slice(5, 8) || [
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-}
 
 .award-item {
   transition: transform 0.3s ease;

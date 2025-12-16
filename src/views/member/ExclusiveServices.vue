@@ -4,10 +4,10 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
       <!-- 标题和描述 -->
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-gray-900 mb-6 tracking-tight">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
           {{ exclusiveServicesData.title }}
         </h1>
-        <h2 class="text-lg md:text-xl font-elegant font-medium text-gray-700 mb-3">
+        <h2 class="text-lg md:text-xl font-medium text-gray-700 mb-3">
           {{ exclusiveServicesData.subtitle }}
         </h2>
         <p class="text-base md:text-lg text-gray-700 leading-relaxed font-light max-w-3xl mx-auto">
@@ -33,7 +33,7 @@
           </div>
           
           <!-- 标题和描述 -->
-          <h3 class="text-xl md:text-2xl font-elegant font-bold text-gray-900 mb-3 text-center">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-center">
             {{ service.title }}
           </h3>
           <p class="text-base text-gray-700 leading-relaxed font-light text-center">
@@ -91,9 +91,6 @@ const exclusiveServicesData = computed(() => {
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-}
 
 .service-card {
   transition: transform 0.3s ease;
