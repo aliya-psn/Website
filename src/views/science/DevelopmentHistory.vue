@@ -43,13 +43,13 @@
                 {{ currentData.title }}
               </h1>
             </div>
-            
+
             <!-- 正文 -->
-            <div class="space-y-2 sm:space-y-3">
+            <div class="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
               <p
                 v-for="(paragraph, index) in currentData.description"
                 :key="index"
-                class="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-light"
+                class="text-xs sm:text-sm md:text-base text-white/80 leading-normal font-light"
               >
                 {{ paragraph }}
               </p>
