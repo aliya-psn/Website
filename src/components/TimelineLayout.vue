@@ -1,12 +1,12 @@
 <!-- 时间轴布局组件 -->
 <template>
-  <div class="min-h-screen pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 relative overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
+  <div class="h-screen pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6 relative overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col">
     <!-- 背景装饰：粒子效果 -->
     <ParticleBackground />
     
-    <div class="max-w-[90rem] mx-auto px-2 sm:px-3 md:px-4 py-6 sm:py-8 md:py-12 lg:py-16 relative z-10">
+    <div class="max-w-[90rem] mx-auto px-2 sm:px-3 md:px-4 flex-1 flex flex-col relative z-10">
       <!-- 小屏幕：顶部横向时间轴 -->
-      <div class="lg:hidden mb-6 sm:mb-8">
+      <div class="lg:hidden mb-4 sm:mb-6 flex-shrink-0">
         <div class="overflow-x-auto scrollbar-hide -mx-3 sm:-mx-4 px-3 sm:px-4">
           <div class="flex items-center gap-4 sm:gap-6 min-w-max">
             <div
@@ -38,14 +38,14 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 flex-1 min-h-0">
         <!-- 大屏幕：左侧时间轴 -->
-        <div class="hidden lg:flex lg:col-span-2 flex-col items-start lg:justify-center lg:h-[700px]">
+        <div class="hidden lg:flex lg:col-span-2 flex-col items-start justify-center h-full">
           <div class="relative flex flex-col items-start w-full">
             <div
               v-for="(item, index) in items"
               :key="index"
-              class="relative z-10 mb-8 lg:mb-12 cursor-pointer group w-full"
+              class="relative z-10 mb-6 lg:mb-8 cursor-pointer group w-full"
               @click="$emit('switch', index)"
             >
               <div class="flex items-center relative">
@@ -72,8 +72,8 @@
         </div>
 
         <!-- 内容区域 -->
-        <div class="lg:col-span-10 relative">
-          <div class="relative min-h-[400px] sm:min-h-[500px] md:h-[600px] lg:h-[700px]">
+        <div class="lg:col-span-10 relative h-full min-h-0">
+          <div class="relative h-full">
             <Transition
               :name="animationDirection"
               mode="out-in"

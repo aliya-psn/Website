@@ -1,7 +1,7 @@
 <!-- 技术与专利 -->
 <template>
-  <div class="min-h-screen bg-white pt-16 md:pt-20">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+  <div class="min-h-screen bg-white pt-24 md:pt-28">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-8">
       <!-- 第一部分：Ingredients & Technology Qualification process -->
       <div class="mb-20">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">

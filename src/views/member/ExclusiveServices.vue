@@ -1,7 +1,7 @@
 <!-- 专属服务 -->
 <template>
-  <div class="min-h-screen bg-white pt-16 md:pt-20">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+  <div class="min-h-screen bg-white pt-24 md:pt-28">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-8">
       <!-- 标题和描述 -->
       <div class="text-center mb-16">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">

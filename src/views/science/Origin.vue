@@ -11,7 +11,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center h-full">
         <!-- 左侧：圆形图片 -->
         <div class="flex justify-center lg:justify-start order-2 lg:order-1">
-          <div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]">
+          <div class="relative w-48 sm:w-64 md:w-80 lg:w-[28rem] aspect-square flex-shrink-0">
             <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
             <div class="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>
             <LazyImage

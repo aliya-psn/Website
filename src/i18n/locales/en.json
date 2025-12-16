@@ -381,12 +381,12 @@
         {
           "period": "90-Day",
           "description": "Transformation Badge (visible results confirmation)",
-          "image": "member.membership.2"
+          "image": "member.membership.7"
         },
         {
           "period": "180-Day",
           "description": "Mastery Badge (sustained skin health optimization)",
-          "image": "member.membership.1"
+          "image": "member.membership.7"
         }
       ]
     }
