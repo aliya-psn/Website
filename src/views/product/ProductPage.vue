@@ -4,19 +4,13 @@
     <!-- 主内容区域 -->
     <div class="pt-24 md:pt-28">
       <!-- 标题区域 -->
-      <div class="bg-white py-8">
-        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+      <div class="bg-white pt-8 pb-4">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight"
+            class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-tight"
           >
             {{ productData.title }}
           </h1>
-          <p
-            v-if="productData.shortDescription"
-            class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto font-light"
-          >
-            {{ productData.shortDescription }}
-          </p>
         </div>
       </div>
 
@@ -25,6 +19,12 @@
       <template
         v-if="productData.productList && productData.productList.length > 0"
       >
+        <p
+          v-if="productData.shortDescription"
+          class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto font-light text-center"
+        >
+          {{ productData.shortDescription }}
+        </p>
         <div
           v-if="productData.description || productData.productImage"
           class="bg-white pt-8 md:pt-12"
@@ -35,7 +35,7 @@
             >
               <!-- 左侧：Logo 和描述 -->
               <div
-                class="flex-1 flex flex-col justify-center lg:justify-start pl-6 lg:pl-12"
+                class="flex-1 flex flex-col justify-center lg:justify-start pl-12 lg:pl-24"
               >
                 <!-- Logo -->
                 <div class="mb-2">
@@ -98,20 +98,24 @@
           class="bg-white py-2"
         >
           <div class="max-w-3xl mx-auto px-6 md:px-12">
-            <div class="space-y-2 text-center">
+            <div class="space-y-0.5 text-center">
+              <p
+                v-if="productData.shortDescription"
+                class="text-sm md:text-base text-gray-600 leading-tight font-light tracking-wide"
+              >
+                {{ productData.shortDescription }}
+              </p>
               <p
                 v-for="(desc, index) in productData.description"
                 :key="index"
-                class="text-sm md:text-base text-gray-600 leading-relaxed font-light tracking-wide"
+                class="text-sm md:text-base text-gray-600 leading-tight font-light tracking-wide"
               >
                 {{ desc }}
               </p>
             </div>
           </div>
         </div>
-
-        <!-- 产品展示区域 -->
-        <div class="py-2 md:py-4 relative overflow-hidden">
+        <div class="pt-8 md:pt-12 pb-2 md:pb-4 relative overflow-hidden">
           <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
             <div
               class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6"
@@ -130,14 +134,16 @@
         </div>
       </template>
 
-      <!-- 产品列表区域 -->
+      <!-- 系列1和系列2  产品列表区域 -->
       <div
         v-if="productData.productList && productData.productList.length > 0"
         class="bg-white pb-12 md:pb-20"
       >
         <div class="max-w-7xl mx-auto px-6 md:px-12 text-white">
           <!-- 产品网格 - 每行两个 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4"
+          >
             <div
               v-for="product in productData.productList"
               :key="product.id"
@@ -167,17 +173,13 @@
                 </p>
 
                 <!-- 产品名称 -->
-                <h3
-                  class="text-base md:text-lg font-medium text-white"
-                >
+                <h3 class="text-base md:text-lg font-medium text-white">
                   {{ product.productName }}
                 </h3>
 
                 <!-- 价格 -->
                 <div class="flex items-center justify-center pt-4 md:pt-6">
-                  <span
-                    class="text-xs md:text-sm font-normal text-white"
-                  >
+                  <span class="text-xs md:text-sm font-normal text-white">
                     {{ t('common.currency') }}
                     {{ product.price.toLocaleString() }}
                   </span>
@@ -245,7 +247,6 @@ const goToProductDetail = (product) => {
 </script>
 
 <style scoped>
-
 .product-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

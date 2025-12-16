@@ -22,7 +22,7 @@
       <div class="luxury-text-container absolute top-4 md:top-6 lg:top-8 xl:top-10 left-12 md:left-16 lg:left-20 xl:left-24 z-10 max-w-lg md:max-w-xl lg:max-w-2xl">
         <div class="luxury-text-row flex flex-wrap items-center gap-1 md:gap-2">
           <p
-            class="luxury-primary-text text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-0 whitespace-nowrap"
+            class="luxury-primary-text text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-0 whitespace-nowrap"
           >
             {{ sectionData.primaryText }}
           </p>

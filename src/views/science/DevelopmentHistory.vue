@@ -29,23 +29,24 @@
         <!-- 右侧：文本内容 -->
         <div class="flex flex-col justify-center space-y-4 sm:space-y-6 relative order-1 lg:order-2">
           <!-- 背景年份 -->
-          <div class="absolute -top-4 -right-4 sm:-top-10 sm:-right-10 text-white/10 text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] font-bold select-none pointer-events-none z-0">
-            {{ currentData.year }}
+          <div class="absolute -top-8 left-0 sm:-top-16 sm:left-0 text-white/10 text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-medium select-none pointer-events-none z-0">
+            {{ currentData.shortYear || currentData.year }}
           </div>
           
           <div class="relative z-10">
             <!-- 年份和标题 -->
-            <div class="mb-4 sm:mb-6">
+            <div class="mb-4 sm:mb-6 flex flex-col">
               <span class="text-lg sm:text-xl md:text-2xl font-medium text-white/80">
                 {{ currentData.year }}
               </span>
-              <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-1 sm:mt-2 inline-block border-b-2 border-white/30 pb-1 sm:pb-2">
+              <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-white mt-1 sm:mt-2">
                 {{ currentData.title }}
               </h1>
+              <div class="w-10 sm:w-12 h-0.5 bg-white/30 mt-4 sm:mt-5"></div>
             </div>
 
             <!-- 正文 -->
-            <div class="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
+            <div class="space-y-2 sm:space-y-3 mt-4 sm:mt-6 max-w-sm">
               <p
                 v-for="(paragraph, index) in currentData.description"
                 :key="index"

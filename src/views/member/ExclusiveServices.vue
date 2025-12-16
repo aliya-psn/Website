@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-8">
       <!-- 标题和描述 -->
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 tracking-tight">
           {{ exclusiveServicesData.title }}
         </h1>
         <h2 class="text-lg md:text-xl font-medium text-gray-700 mb-3">
@@ -33,7 +33,7 @@
           </div>
           
           <!-- 标题和描述 -->
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-center">
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-3 text-center">
             {{ service.title }}
           </h3>
           <p class="text-base text-gray-700 leading-relaxed font-light text-center">

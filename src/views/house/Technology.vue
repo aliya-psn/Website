@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-8">
       <!-- 第一部分：Ingredients & Technology Qualification process -->
       <div class="mb-20">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">
           {{ technologyData.qualification.title }}
         </h2>
         
@@ -23,7 +23,7 @@
 
       <!-- 第二部分：Ingredient patent -->
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">
           {{ technologyData.patents.title }}
         </h2>
         

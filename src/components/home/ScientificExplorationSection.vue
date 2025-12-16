@@ -10,7 +10,7 @@
       <div class="text-center mb-2 md:mb-4">
         <!-- 标题 -->
         <h2
-          class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 md:mb-4"
+          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-3 md:mb-4"
         >
           {{ sectionData.title }}
         </h2>

@@ -10,7 +10,7 @@
       <div class="flex-1 flex flex-col items-center justify-center text-center mb-6 md:mb-8">
         <!-- 标题 -->
         <div class="mb-3 md:mb-4">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-normal leading-tight">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-normal leading-tight">
             {{ experienceData.heading }}
           </h2>
         </div>

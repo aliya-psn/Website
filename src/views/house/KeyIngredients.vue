@@ -3,7 +3,7 @@
   <div class="min-h-screen bg-white pt-24 md:pt-28">
     <div class="max-w-7xl mx-auto px-12 md:px-20 py-8">
       <!-- 主标题 -->
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-16 tracking-tight">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 text-center mb-16 tracking-tight">
         {{ keyIngredientsData.title }}
       </h1>
 
@@ -23,7 +23,7 @@
 
         <!-- 右侧：名字和背景信息 -->
         <div class="flex flex-col justify-center space-y-6">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-song font-bold text-gray-900">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-song font-semibold text-gray-900">
             {{ keyIngredientsData.drShona.name }}
           </h2>
           
@@ -44,7 +44,7 @@
 
       <!-- Medical Aesthetic Clinical Cooperation 部分 -->
       <div class="mt-20 w-full">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-8">
           {{ keyIngredientsData.clinicalCooperation.title }}
         </h2>
         

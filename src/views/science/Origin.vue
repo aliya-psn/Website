@@ -58,7 +58,7 @@
               >
                 {{ currentSlide.title }}
               </h1>
-              <div class="w-16 sm:w-20 h-0.5 bg-white/30 mt-4 sm:mt-5"></div>
+              <div class="w-10 sm:w-12 h-0.5 bg-white/30 mt-4 sm:mt-5"></div>
             </div>
 
             <span

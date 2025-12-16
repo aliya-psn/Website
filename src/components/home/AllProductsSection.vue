@@ -8,7 +8,7 @@
       <!-- 标题区域 -->
       <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
         <h2
-          class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
+          class="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 tracking-tight"
         >
           {{ sectionData.title }}
         </h2>

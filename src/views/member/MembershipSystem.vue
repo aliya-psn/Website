@@ -5,7 +5,7 @@
       <!-- 第一部分：Membership Program / Skin Condition Predictive Modeling -->
       <div class="mb-20">
         <h1
-          class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-4 tracking-tight"
+          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 text-center mb-4 tracking-tight"
         >
           {{ membershipData.title }}
         </h1>
@@ -24,7 +24,7 @@
         <!-- 预测模型 -->
         <div class="w-full max-w-5xl mx-auto">
           <h2
-            class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+            class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
           >
             {{ membershipData.predictiveModeling.title }}
           </h2>
@@ -59,7 +59,7 @@
       <!-- 第二部分：Allergen Sensitivity Alert System -->
       <div class="mb-20">
         <h2
-          class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
         >
           {{ membershipData.allergenAlert.title }}
         </h2>
@@ -77,7 +77,7 @@
       <!-- 第三部分：Personalized dosage optimization algorithms -->
       <div class="mb-20">
         <h2
-          class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
         >
           {{ membershipData.dosageOptimization.title }}
         </h2>
@@ -97,7 +97,7 @@
       <!-- 第四部分：User Experience Ecosystem -->
       <div class="mb-20">
         <h2
-          class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
         >
           {{ membershipData.userExperience.title }}
         </h2>
@@ -117,7 +117,7 @@
       <!-- 第五部分：User Feedback -->
       <div class="mb-20">
         <h2
-          class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
         >
           {{ membershipData.userFeedback.title }}
         </h2>
@@ -137,7 +137,7 @@
       <!-- 第六部分：Skin Renewal Journals -->
       <div class="mb-20">
         <h2
-          class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
         >
           {{ membershipData.skinRenewal.title }}
         </h2>
@@ -173,7 +173,7 @@
       <!-- 第七部分：Expert Q&A Sessions -->
       <div class="mb-20">
         <h2
-          class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
         >
           {{ membershipData.expertQA.title }}
         </h2>
@@ -194,7 +194,7 @@
       <div>
         <div class="w-full max-w-5xl mx-auto">
           <h2
-            class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+            class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
           >
             {{ membershipData.milestoneBadges.title }}
           </h2>

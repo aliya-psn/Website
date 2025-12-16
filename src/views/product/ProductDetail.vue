@@ -14,7 +14,7 @@
             </div>
 
             <!-- 产品名称 -->
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight tracking-tight">
               {{ productDetail.productName }}
             </h1>
 
@@ -132,7 +132,7 @@
 
           <!-- 弹窗内容 -->
           <div class="text-center">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
               {{ productConfig.qrCodeModal.title }}
             </h3>
             <p class="text-gray-600 mb-6">

@@ -21,7 +21,7 @@
       class="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-4 animate-fade-in-up"
     >
       <h2
-        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-center leading-tight mb-4 md:mb-6 hero-title font-bold"
+        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-center leading-tight mb-4 md:mb-6 hero-title font-semibold"
       >
         {{ pageData.home.hero.title }}<br />
         <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3">{{
@@ -153,7 +153,7 @@ const scrollDown = () => {
 /* 主标题特效 */
 .hero-title {
   letter-spacing: 0.02em;
-  font-weight: 700;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

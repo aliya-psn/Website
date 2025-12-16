@@ -16,7 +16,7 @@
       <div class="w-full">
         <!-- 标题 -->
         <h2
-          class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3 md:mb-4 text-gray-900"
+          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-3 md:mb-4 text-gray-900 -mt-12 md:-mt-20 lg:-mt-24"
         >
         <span class="origin-title-text">{{ originData.title }}</span>
         <span class="origin-title-glow"></span>

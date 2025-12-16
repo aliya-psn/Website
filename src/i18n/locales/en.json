@@ -113,6 +113,7 @@
     },
     {
       "year": "The Future",
+      "shortYear": "Future",
       "title": "Endless Exploration",
       "description": [
         "We continue to delve into the forefront of skin science and nutrition, reshaping the future boundaries of beauty through relentless scientific research."
@@ -289,108 +290,6 @@
       ]
     }
   ],
-  "exclusiveServices": {
-    "title": "Exclusive Services",
-    "subtitle": "AI-Powered Precision Skincare Solutions",
-    "description": "Our intelligent skin analysis system combines your unique skin profile and personal needs to generate tailored skincare regimens.",
-    "services": [
-      {
-        "title": "Multidimensional Data Collection",
-        "description": "20+ parameters including skin brightness, texture density, and microcirculation status.",
-        "image": "member.service.1"
-      },
-      {
-        "title": "Dynamic Plan Optimization",
-        "description": "Quarterly updates based on skin condition changes.",
-        "image": "member.service.2"
-      },
-      {
-        "title": "Exclusive Custom Packaging",
-        "description": "Personalized gift boxes engraved with your unique ID.",
-        "image": "member.service.3"
-      }
-    ],
-    "globalConsultation": {
-      "image": "member.service.3",
-      "features": [
-        "Global Aesthetic Consultation",
-        "Internationally Certified Physician Support System",
-        "Collaborates with 10+ countries' oral aesthetic experts.",
-        "24/7 online skin health consultation services.",
-        "Post-treatment care plans (coordinated with clinical procedures)."
-      ]
-    }
-  },
-  "membershipSystem": {
-    "title": "Membership Program",
-    "professionalSupport": "Professional Support",
-    "certificationProgram": "Global Oral Medical Aesthetics Physician Certification Program",
-    "aiDevelopment": "Development of AI decision making systems",
-    "predictiveModeling": {
-      "title": "Skin Condition Predictive Modeling",
-      "models": [
-        {
-          "period": "SHORT",
-          "description": "7-day skin barrier improvement forecast",
-          "image": "member.membership.1"
-        },
-        {
-          "period": "MEDIUM",
-          "description": "30-day collagen regeneration trajectory analysis",
-          "image": "member.membership.2"
-        },
-        {
-          "period": "LONG-TERM",
-          "description": "90-day comprehensive rejuvenation progress prediction",
-          "image": "member.membership.3"
-        }
-      ]
-    },
-    "allergenAlert": {
-      "title": "Allergen Sensitivity Alert System Real-time ingredient compatibility analysis",
-      "image": "member.membership.5"
-    },
-    "dosageOptimization": {
-      "title": "Personalized dosage optimization algorithms",
-      "image": "member.membership.5"
-    },
-    "userExperience": {
-      "title": "User Experience Ecosystem",
-      "image": "member.membership.6"
-    },
-    "userFeedback": {
-      "title": "User Feedback",
-      "image": "member.membership.7"
-    },
-    "skinRenewal": {
-      "title": "Skin Renewal Journals",
-      "videoUrl": "video.sample"
-    },
-    "expertQA": {
-      "title": "Expert Q&A Sessions",
-      "image": "member.membership.9"
-    },
-    "milestoneBadges": {
-      "title": "Skin Renewal Milestone Badges",
-      "badges": [
-        {
-          "period": "28-Day",
-          "description": "Consistency Badge (daily usage verification)",
-          "image": "member.membership.7"
-        },
-        {
-          "period": "90-Day",
-          "description": "Transformation Badge (visible results confirmation)",
-          "image": "member.membership.7"
-        },
-        {
-          "period": "180-Day",
-          "description": "Mastery Badge (sustained skin health optimization)",
-          "image": "member.membership.7"
-        }
-      ]
-    }
-  },
   "product": {
     "qrCodeModal": {
       "title": "Scan to Purchase",
@@ -498,6 +397,108 @@
         ]
       }
     ]
+  },
+  "exclusiveServices": {
+    "title": "Exclusive Services",
+    "subtitle": "AI-Powered Precision Skincare Solutions",
+    "description": "Our intelligent skin analysis system combines your unique skin profile and personal needs to generate tailored skincare regimens.",
+    "services": [
+      {
+        "title": "Multidimensional Data Collection",
+        "description": "20+ parameters including skin brightness, texture density, and microcirculation status.",
+        "image": "member.service.1"
+      },
+      {
+        "title": "Dynamic Plan Optimization",
+        "description": "Quarterly updates based on skin condition changes.",
+        "image": "member.service.2"
+      },
+      {
+        "title": "Exclusive Custom Packaging",
+        "description": "Personalized gift boxes engraved with your unique ID.",
+        "image": "member.service.3"
+      }
+    ],
+    "globalConsultation": {
+      "image": "member.service.3",
+      "features": [
+        "Global Aesthetic Consultation",
+        "Internationally Certified Physician Support System",
+        "Collaborates with 10+ countries' oral aesthetic experts.",
+        "24/7 online skin health consultation services.",
+        "Post-treatment care plans (coordinated with clinical procedures)."
+      ]
+    }
+  },
+  "membershipSystem": {
+    "title": "Membership Program",
+    "professionalSupport": "Professional Support",
+    "certificationProgram": "Global Oral Medical Aesthetics Physician Certification Program",
+    "aiDevelopment": "Development of AI decision making systems",
+    "predictiveModeling": {
+      "title": "Skin Condition Predictive Modeling",
+      "models": [
+        {
+          "period": "SHORT",
+          "description": "7-day skin barrier improvement forecast",
+          "image": "member.membership.1"
+        },
+        {
+          "period": "MEDIUM",
+          "description": "30-day collagen regeneration trajectory analysis",
+          "image": "member.membership.2"
+        },
+        {
+          "period": "LONG-TERM",
+          "description": "90-day comprehensive rejuvenation progress prediction",
+          "image": "member.membership.3"
+        }
+      ]
+    },
+    "allergenAlert": {
+      "title": "Allergen Sensitivity Alert System Real-time ingredient compatibility analysis",
+      "image": "member.membership.5"
+    },
+    "dosageOptimization": {
+      "title": "Personalized dosage optimization algorithms",
+      "image": "member.membership.5"
+    },
+    "userExperience": {
+      "title": "User Experience Ecosystem",
+      "image": "member.membership.6"
+    },
+    "userFeedback": {
+      "title": "User Feedback",
+      "image": "member.membership.7"
+    },
+    "skinRenewal": {
+      "title": "Skin Renewal Journals",
+      "videoUrl": "video.sample"
+    },
+    "expertQA": {
+      "title": "Expert Q&A Sessions",
+      "image": "member.membership.9"
+    },
+    "milestoneBadges": {
+      "title": "Skin Renewal Milestone Badges",
+      "badges": [
+        {
+          "period": "28-Day",
+          "description": "Consistency Badge (daily usage verification)",
+          "image": "member.membership.7"
+        },
+        {
+          "period": "90-Day",
+          "description": "Transformation Badge (visible results confirmation)",
+          "image": "member.membership.7"
+        },
+        {
+          "period": "180-Day",
+          "description": "Mastery Badge (sustained skin health optimization)",
+          "image": "member.membership.7"
+        }
+      ]
+    }
   },
   "common": {
     "viewDetails": "View Details",
