@@ -408,7 +408,7 @@
           {
             "id": 1,
             "slug": "basic-revitalization-collection-1",
-            "image": "product.1",
+            "image": "product.7",
             "tags": ["New"],
             "productName": "Kacip Fatimah& Papaya Drink",
             "price": 49,
@@ -418,7 +418,7 @@
           {
             "id": 2,
             "slug": "basic-revitalization-collection-2",
-            "image": "product.2",
+            "image": "product.7",
             "productName": "Skin Whitening Tablet",
             "price": 79,
             "description": "NET:2 Tablets *30 Packets",
@@ -427,7 +427,7 @@
           {
             "id": 3,
             "slug": "basic-revitalization-collection-3",
-            "image": "product.3",
+            "image": "product.7",
             "productName": "Cinnamon &llibiscus Sabdariffawith Multi-Vitamins",
             "price": 19,
             "description": "NET:30 Tablets",
@@ -436,7 +436,7 @@
           {
             "id": 4,
             "slug": "basic-revitalization-collection-4",
-            "image": "product.4",
+            "image": "product.7",
             "productName": "AMPK Fat-BurningLeg Slimming Pills",
             "price": 39,
             "description": "NET:60 Tablets",
@@ -451,7 +451,7 @@
           {
             "id": 1,
             "slug": "advanced-repair-collection-1",
-            "image": "product.1",
+            "image": "product.7",
             "productName": "Hera Golden Apple Capsules",
             "price": 129,
             "description": "Get a S75 gift card*",
@@ -460,7 +460,7 @@
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
-            "image": "product.2",
+            "image": "product.7",
             "productName": "Lilith Red Diamond Vial Capsules",
             "price": 129,
             "description": "Get a S75 gift card*",
@@ -469,7 +469,7 @@
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
-            "image": "product.3",
+            "image": "product.7",
             "productName": "Rhea Purple Amber Vial Capsules",
             "price": 129,
             "description": "Get a S75 gift card*",
@@ -478,7 +478,7 @@
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
-            "image": "product.4",
+            "image": "product.7",
             "productName": "Freya Black Diamond Vial Capsules",
             "price": 99,
             "description": "Get a S75 gift card*",

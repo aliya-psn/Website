@@ -137,7 +137,7 @@
       >
         <div class="max-w-7xl mx-auto px-6 md:px-12 text-white">
           <!-- 产品网格 - 每行两个 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4">
             <div
               v-for="product in productData.productList"
               :key="product.id"
@@ -147,36 +147,36 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full h-72 md:h-88 lg:h-120 overflow-hidden flex items-center justify-center mx-auto"
+                class="relative w-full h-50 md:h-72 lg:h-84 overflow-hidden flex items-center justify-center mx-auto"
               >
                 <LazyImage
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  image-class="w-full h-full max-w-[55%] object-contain p-10 md:p-12 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
+                  image-class="w-full h-full max-w-[50%] object-contain p-10 md:p-12 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
               <!-- 产品信息 -->
-              <div class="p-6 md:p-8 text-center space-y-3">
+              <div class="pb-10 md:pb-12 text-center space-y-2">
                 <!-- 产品规格 -->
                 <p
-                  class="text-sm md:text-base text-white font-light leading-relaxed"
+                  class="text-xs md:text-sm text-white font-light leading-tight"
                 >
                   {{ product.description }}
                 </p>
 
                 <!-- 产品名称 -->
                 <h3
-                  class="text-base md:text-lg font-semibold text-white font-elegant"
+                  class="text-base md:text-lg font-medium text-white"
                 >
                   {{ product.productName }}
                 </h3>
 
                 <!-- 价格 -->
-                <div class="flex items-center justify-center pt-4">
+                <div class="flex items-center justify-center pt-4 md:pt-6">
                   <span
-                    class="text-lg md:text-xl font-bold text-white font-sans"
+                    class="text-xs md:text-sm font-normal text-white"
                   >
                     {{ t('common.currency') }}
                     {{ product.price.toLocaleString() }}
@@ -245,11 +245,6 @@ const goToProductDetail = (product) => {
 </script>
 
 <style scoped>
-.font-elegant {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia',
-    'Times New Roman', serif;
-}
-
 .font-sans {
   font-family: 'Arial', 'Helvetica', 'sans-serif';
 }
