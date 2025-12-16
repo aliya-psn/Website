@@ -13,6 +13,42 @@
 
   <!-- 底部备案说明 - 根据路由 meta 判断是否显示 -->
   <Footer v-if="showFooter" :footerData="dataSource.footer" />
+
+  <!-- 屏幕尺寸调试工具 - 仅在开发环境显示 -->
+  <div
+    v-if="showBreakpointDebug"
+    class="fixed bottom-4 right-4 z-[9999] bg-black/80 backdrop-blur-sm text-white text-xs font-mono p-3 rounded-lg shadow-lg border border-white/20"
+  >
+    <div class="space-y-1">
+      <div class="flex items-center gap-2">
+        <span class="text-white/60">屏幕尺寸:</span>
+        <span class="font-bold">{{ screenWidth }} × {{ screenHeight }}px</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-white/60">当前断点:</span>
+        <span
+          class="font-bold px-2 py-0.5 rounded"
+          :class="currentBreakpointClass"
+        >
+          {{ currentBreakpoint }}
+        </span>
+      </div>
+      <div class="mt-2 pt-2 border-t border-white/20 text-[10px] text-white/50">
+        <div>sm: ≥640px</div>
+        <div>md: ≥768px</div>
+        <div>lg: ≥1024px</div>
+        <div>xl: ≥1280px</div>
+        <div>2xl: ≥1536px</div>
+      </div>
+    </div>
+    <button
+      @click="showBreakpointDebug = false"
+      class="absolute top-1 right-1 text-white/60 hover:text-white text-lg leading-none"
+      title="关闭"
+    >
+      ×
+    </button>
+  </div>
 </template>
 
 <script setup>
@@ -50,6 +86,51 @@ let isProgrammaticScroll = false // 标志：是否正在执行程序化滚动
 let isScrollDisabled = false // 标志：是否禁用滚动监听（用于特殊页面）
 const SCROLL_THRESHOLD = 5 // 滚动阈值，避免微小滚动触发切换
 const HIDE_NAVBAR_THRESHOLD = 80 // 距离顶部超过xpx才隐藏导航栏
+
+// 屏幕尺寸调试工具
+const showBreakpointDebug = ref(import.meta.env.DEV) // 开发环境默认显示
+const screenWidth = ref(window.innerWidth)
+const screenHeight = ref(window.innerHeight)
+
+// Tailwind 默认断点
+const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  '2xl': 1536
+}
+
+// 计算当前激活的断点
+const currentBreakpoint = computed(() => {
+  const width = screenWidth.value
+  if (width >= breakpoints['2xl']) return '2xl'
+  if (width >= breakpoints.xl) return 'xl'
+  if (width >= breakpoints.lg) return 'lg'
+  if (width >= breakpoints.md) return 'md'
+  if (width >= breakpoints.sm) return 'sm'
+  return 'base'
+})
+
+// 当前断点的样式类
+const currentBreakpointClass = computed(() => {
+  const bp = currentBreakpoint.value
+  const classes = {
+    base: 'bg-gray-600',
+    sm: 'bg-blue-600',
+    md: 'bg-green-600',
+    lg: 'bg-yellow-600',
+    xl: 'bg-orange-600',
+    '2xl': 'bg-red-600'
+  }
+  return classes[bp] || 'bg-gray-600'
+})
+
+// 监听窗口大小变化
+const handleResize = () => {
+  screenWidth.value = window.innerWidth
+  screenHeight.value = window.innerHeight
+}
 
 // 根据路由 meta 判断是否显示 Footer
 const showFooter = computed(() => {
@@ -130,10 +211,28 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
+  window.addEventListener('resize', handleResize, { passive: true })
+  // 初始化屏幕尺寸
+  handleResize()
+  
+  // 开发环境下，按 Ctrl+Shift+B 切换调试面板显示
+  if (import.meta.env.DEV) {
+    const toggleDebug = (e) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'B') {
+        e.preventDefault()
+        showBreakpointDebug.value = !showBreakpointDebug.value
+      }
+    }
+    window.addEventListener('keydown', toggleDebug)
+    onUnmounted(() => {
+      window.removeEventListener('keydown', toggleDebug)
+    })
+  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', handleResize)
   if (scrollTimeout) {
     clearTimeout(scrollTimeout)
   }
