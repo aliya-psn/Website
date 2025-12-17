@@ -29,9 +29,9 @@
         <!-- 右侧：文本内容 -->
         <div class="flex flex-col justify-center space-y-4 sm:space-y-6 relative order-1 lg:order-2">
           <!-- 背景年份 -->
-          <div class="absolute -top-8 left-0 sm:-top-16 sm:left-0 text-white/10 text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-medium select-none pointer-events-none z-0">
+          <!-- <div class="absolute -top-8 left-0 sm:-top-16 sm:left-0 text-white/10 text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-medium select-none pointer-events-none z-0">
             {{ currentData.shortYear || currentData.year }}
-          </div>
+          </div> -->
           
           <div class="relative z-10">
             <!-- 年份和标题 -->

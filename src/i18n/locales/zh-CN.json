@@ -455,19 +455,19 @@
       ]
     },
     "allergenAlert": {
-      "title": "成分敏感度预警系统（细胞免疫）",
+      "title": "成分敏感度预警系统",
       "image": "member.membership.4"
     },
     "dosageOptimization": {
-      "title": "个性化营养配比建议（营养师）",
+      "title": "个性化营养配比建议",
       "image": "member.membership.5"
     },
     "userExperience": {
-      "title": "用户反馈（品牌手册反馈）",
+      "title": "用户反馈",
       "image": "member.membership.6"
     },
     "userFeedback": {
-      "title": "真实体验生态圈（用户数据图）",
+      "title": "真实体验生态圈",
       "image": "member.membership.7"
     },
     "skinRenewal": {

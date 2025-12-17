@@ -40,11 +40,11 @@
         <div
           class="flex flex-col justify-center space-y-4 sm:space-y-6 relative order-1 lg:order-2"
         >
-          <div
+          <!-- <div
             class="absolute -top-4 -right-4 sm:-top-10 sm:-right-10 text-white/10 text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold select-none pointer-events-none z-0 overflow-hidden"
           >
             {{ currentSlide.title }}
-          </div>
+          </div> -->
 
           <div class="relative z-10">
             <div class="mb-4 sm:mb-6">

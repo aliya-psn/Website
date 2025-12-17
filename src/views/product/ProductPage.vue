@@ -7,7 +7,7 @@
       <div class="bg-white pt-8 pb-4">
         <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-tight"
+            class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-tight mb-3"
           >
             {{ productData.title }}
           </h1>
@@ -21,7 +21,7 @@
       >
         <p
           v-if="productData.shortDescription"
-          class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto font-light text-center"
+          class="text-base md:text-lg text-gray-700 leading-relaxed max-w-xl mx-auto font-light text-center mb-6 md:mb-8"
         >
           {{ productData.shortDescription }}
         </p>
@@ -31,12 +31,10 @@
         >
           <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div
-              class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12"
+              class="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 max-w-4xl mx-auto"
             >
               <!-- 左侧：Logo 和描述 -->
-              <div
-                class="flex-1 flex flex-col justify-center lg:justify-start pl-12 lg:pl-24"
-              >
+              <div class="flex-1 flex flex-col justify-center">
                 <!-- Logo -->
                 <div class="mb-2">
                   <img
@@ -66,7 +64,7 @@
                 </div>
                 <p
                   v-else-if="productData.shortDescription"
-                  class="text-sm md:text-base text-gray-600 leading-relaxed font-light"
+                  class="text-xs md:text-sm text-gray-600 leading-tight font-light max-w-2xl"
                 >
                   {{ productData.shortDescription }}
                 </p>
@@ -79,7 +77,7 @@
               >
                 <LazyImage
                   :src="productDataSource.descImage"
-                  container-class="w-full max-w-[200px] h-auto"
+                  container-class="w-full max-w-[160px] h-auto"
                   image-class="w-full h-full object-contain"
                 />
               </div>
@@ -142,7 +140,7 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12 text-white">
           <!-- 产品网格 - 每行两个 -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4"
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4 max-w-4xl mx-auto"
           >
             <div
               v-for="product in productData.productList"
@@ -153,13 +151,13 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full h-54 md:h-72 lg:h-88 overflow-hidden flex items-center justify-center mx-auto"
+                class="relative w-full h-54 md:h-68 lg:h-76 overflow-hidden flex items-center justify-center mx-auto"
               >
                 <LazyImage
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  image-class="w-full h-full max-w-[50%] object-contain p-12 md:p-16 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
+                  image-class="w-full h-full max-w-[60%] object-contain px-12 md:px-16 pt-2 md:pt-4 pb-8 md:pb-12 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
