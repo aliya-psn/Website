@@ -3,7 +3,7 @@
   <nav
     ref="navElement"
     :class="[
-      'navbar fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-2 md:py-4',
+      'navbar fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-3 md:py-4',
       { scrolled: isScrolled, 'navbar-hidden': !props.isVisible },
     ]"
   >
