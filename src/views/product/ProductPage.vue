@@ -151,7 +151,7 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full h-54 md:h-68 lg:h-76 overflow-hidden flex items-center justify-center mx-auto"
+                class="relative w-full h-54 md:h-66 lg:h-72 overflow-hidden flex items-center justify-center mx-auto"
               >
                 <LazyImage
                   :src="product.image"
@@ -162,7 +162,7 @@
               </div>
 
               <!-- 产品信息 -->
-              <div class="pb-10 md:pb-12 text-center space-y-2">
+              <div class="pb-8 md:pb-10 text-center space-y-2">
                 <!-- 产品规格 -->
                 <p
                   class="text-xs md:text-sm text-white font-light leading-tight"
@@ -171,16 +171,20 @@
                 </p>
 
                 <!-- 产品名称 -->
-                <h3 class="text-base md:text-lg font-medium text-white">
+                <h3 class="text-sm md:text-base font-normal text-white">
                   {{ product.productName }}
                 </h3>
 
                 <!-- 价格 -->
-                <div class="flex items-center justify-center pt-4 md:pt-6">
-                  <span class="text-xs md:text-sm font-normal text-white">
+                <div
+                  class="flex items-center justify-center pt-4 md:pt-6 text-white text-xs md:text-sm"
+                >
+                  <span class="mr-1">
                     {{ t('common.currency') }}
-                    {{ product.price.toLocaleString() }}
                   </span>
+                  <span class="font-price">{{
+                    product.price.toLocaleString()
+                  }}</span>
                 </div>
               </div>
             </div>
@@ -245,6 +249,10 @@ const goToProductDetail = (product) => {
 </script>
 
 <style scoped>
+.font-price {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono',
+    'Courier New', 'Courier', 'monospace';
+}
 .product-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
