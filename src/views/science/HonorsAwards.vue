@@ -7,72 +7,94 @@
         {{ honorsAwardsData.title }}
       </h1>
 
-      <!-- 上排：2 张 -->
-      <div v-if="topRow.length" class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
+      <!-- 小屏幕：统一列表展示 -->
+      <div class="block md:hidden space-y-8">
         <div
-          v-for="(award, index) in topRow"
-          :key="'top-' + index"
+          v-for="(award, index) in honorsAwardsData.awards"
+          :key="'mobile-' + index"
           class="award-item flex flex-col"
         >
-          <div class="w-full bg-gray-900 mb-4 overflow-hidden rounded-lg">
+          <div class="w-full aspect-square bg-gray-900 mb-4 overflow-hidden rounded-lg">
             <LazyImage
               v-if="award.image"
               :src="award.image"
               :alt="award.name"
-              container-class="w-full"
-              image-class="w-full h-auto object-contain"
-              skeleton-class="bg-gray-800"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-contain scale-110"
             />
           </div>
-          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed text-center">
+          <p class="text-sm text-gray-900 font-light leading-relaxed text-center">
             {{ award.name }}
           </p>
         </div>
       </div>
 
-      <!-- 中排：3 张 -->
-      <div v-if="middleRow.length" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
-        <div
-          v-for="(award, index) in middleRow"
-          :key="'mid-' + index"
-          class="award-item flex flex-col"
-        >
-          <div class="w-full max-w-sm mx-auto bg-gray-900 mb-4 overflow-hidden rounded-lg">
-            <LazyImage
-              v-if="award.image"
-              :src="award.image"
-              :alt="award.name"
-              container-class="w-full"
-              image-class="w-full h-auto object-contain"
-              skeleton-class="bg-gray-800"
-            />
+      <!-- 大屏幕：2/3/3 分排布局 -->
+      <div class="hidden md:block">
+        <!-- 上排：2 张 -->
+        <div v-if="topRow.length" class="grid grid-cols-2 gap-4 mb-12">
+          <div
+            v-for="(award, index) in topRow"
+            :key="'top-' + index"
+            class="award-item flex flex-col"
+          >
+            <div class="w-full aspect-square bg-gray-900 mb-6 overflow-hidden rounded-lg">
+              <LazyImage
+                v-if="award.image"
+                :src="award.image"
+                :alt="award.name"
+                container-class="w-full h-full"
+                image-class="w-full h-full object-contain"
+              />
+            </div>
+            <p class="text-sm md:text-base text-gray-900 font-light leading-relaxed text-center">
+              {{ award.name }}
+            </p>
           </div>
-          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed text-center">
-            {{ award.name }}
-          </p>
         </div>
-      </div>
 
-      <!-- 下排：3 张 -->
-      <div v-if="bottomRow.length" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-        <div
-          v-for="(award, index) in bottomRow"
-          :key="'bot-' + index"
-          class="award-item flex flex-col"
-        >
-          <div class="w-full max-w-sm mx-auto bg-gray-900 mb-4 overflow-hidden rounded-lg">
-            <LazyImage
-              v-if="award.image"
-              :src="award.image"
-              :alt="award.name"
-              container-class="w-full"
-              image-class="w-full h-auto object-contain"
-              skeleton-class="bg-gray-800"
-            />
+        <!-- 中排：3 张 -->
+        <div v-if="middleRow.length" class="grid grid-cols-3 gap-4 mb-12">
+          <div
+            v-for="(award, index) in middleRow"
+            :key="'mid-' + index"
+            class="award-item flex flex-col"
+          >
+            <div class="w-full aspect-square bg-gray-900 mb-6 overflow-hidden rounded-lg">
+              <LazyImage
+                v-if="award.image"
+                :src="award.image"
+                :alt="award.name"
+                container-class="w-full h-full"
+                image-class="w-full h-full object-contain"
+              />
+            </div>
+            <p class="text-sm md:text-base text-gray-900 font-light leading-relaxed text-center">
+              {{ award.name }}
+            </p>
           </div>
-          <p class="text-base md:text-lg text-gray-900 font-light leading-relaxed text-center">
-            {{ award.name }}
-          </p>
+        </div>
+
+        <!-- 下排：3 张 -->
+        <div v-if="bottomRow.length" class="grid grid-cols-3 gap-4">
+          <div
+            v-for="(award, index) in bottomRow"
+            :key="'bot-' + index"
+            class="award-item flex flex-col"
+          >
+            <div class="w-full aspect-square bg-gray-900 mb-6 overflow-hidden rounded-lg">
+              <LazyImage
+                v-if="award.image"
+                :src="award.image"
+                :alt="award.name"
+                container-class="w-full h-full"
+                image-class="w-full h-full object-contain"
+              />
+            </div>
+            <p class="text-sm md:text-base text-gray-900 font-light leading-relaxed text-center">
+              {{ award.name }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -106,8 +128,5 @@ const bottomRow = computed(() => honorsAwardsData.value.awards?.slice(5, 8) || [
   transition: transform 0.3s ease;
 }
 
-.award-item:hover {
-  transform: translateY(-4px);
-}
 </style>
 
