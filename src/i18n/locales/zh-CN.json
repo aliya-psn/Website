@@ -476,7 +476,7 @@
     },
     "expertQA": {
       "title": "专家问答环节",
-      "image": "member.membership.9"
+      "image": "member.membership.8"
     },
     "milestoneBadges": {
       "title": "皮肤更新里程碑徽章",
@@ -484,17 +484,17 @@
         {
           "period": "28-天",
           "description": "坚持徽章（每日使用验证）",
-          "image": "member.membership.7"
+          "image": "member.membership.9"
         },
         {
           "period": "90-天",
           "description": "蜕变徽章（可见效果确认）",
-          "image": "member.membership.7"
+          "image": "member.membership.10"
         },
         {
           "period": "180-天",
           "description": "精通徽章（持续皮肤健康优化）",
-          "image": "member.membership.7"
+          "image": "member.membership.11"
         }
       ]
     }

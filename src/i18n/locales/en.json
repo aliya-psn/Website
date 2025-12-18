@@ -477,7 +477,7 @@
     },
     "expertQA": {
       "title": "Expert Q&A Sessions",
-      "image": "member.membership.9"
+      "image": "member.membership.8"
     },
     "milestoneBadges": {
       "title": "Skin Renewal Milestone Badges",
@@ -485,17 +485,17 @@
         {
           "period": "28-Day",
           "description": "Consistency Badge (daily usage verification)",
-          "image": "member.membership.7"
+          "image": "member.membership.9"
         },
         {
           "period": "90-Day",
           "description": "Transformation Badge (visible results confirmation)",
-          "image": "member.membership.7"
+          "image": "member.membership.10"
         },
         {
           "period": "180-Day",
           "description": "Mastery Badge (sustained skin health optimization)",
-          "image": "member.membership.7"
+          "image": "member.membership.11"
         }
       ]
     }

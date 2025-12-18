@@ -34,12 +34,12 @@
               :key="index"
               class="model-card flex flex-col"
             >
-              <div class="w-full aspect-4/3 mb-4 overflow-hidden">
+              <div class="w-full max-w-5xl mx-auto">
                 <LazyImage
                   :src="model.image"
                   :alt="model.period"
                   container-class="w-full h-full"
-                  image-class="w-full h-full object-cover"
+                  image-class="w-full h-full object-contain"
                   skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
                 />
               </div>
@@ -198,7 +198,7 @@
           >
             {{ membershipData.milestoneBadges.title }}
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
             <div
               v-for="(badge, index) in membershipData.milestoneBadges.badges"
               :key="index"
