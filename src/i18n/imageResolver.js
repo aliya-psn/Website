@@ -65,7 +65,7 @@ function resolveAssetPath(path) {
  * 
  * @example
  * getImagePath('home.backgroundImage1') // => Promise<string> 或 string
- * getImagePath('product.1') // => Promise<string> 或 string
+ * getImagePath('product.x') // => Promise<string> 或 string
  */
 export function getImagePath(key) {
   if (!key) return ''

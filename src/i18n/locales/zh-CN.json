@@ -210,21 +210,21 @@
           "id": 1,
           "title": "基础焕活系列",
           "description": "聚焦于日夜间基础维护，巩固肌肤屏障，提供核心营养。",
-          "image": "product.1",
+          "image": "product.series1",
           "slug": "basic-revitalization-collection"
         },
         {
           "id": 2,
           "title": "进阶修护系列",
           "description": "针对暗沉、皱纹、松弛等专项问题，提供高浓度靶向修护。",
-          "image": "product.2",
+          "image": "product.series2",
           "slug": "advanced-repair-collection"
         },
         {
           "id": 3,
           "title": "限量尊享系列",
           "description": "融汇年度前沿科研成果，为追求极致的客户提供先锋护理体验。",
-          "image": "product.3",
+          "image": "product.series3",
           "slug": "limited-exclusive-collection"
         }
       ]
@@ -297,7 +297,7 @@
       "qrCodeAlt": "小程序二维码",
       "footerText": "FANTASYCARE官方小程序"
     },
-    "descImage": "product.6",
+    "descImage": "product.desc",
     "products": [
       {
         "title": "基础焕活系列",
@@ -349,7 +349,7 @@
           {
             "id": 1,
             "slug": "advanced-repair-collection-1",
-            "image": "product.1",
+            "image": "product.5",
             "productName": "抗衰",
             "price": 129,
             "description": "赠送 S75 礼品卡*",
@@ -358,7 +358,7 @@
           {
             "id": 2,
             "slug": "advanced-repair-collection-1",
-            "image": "product.2",
+            "image": "product.6",
             "productName": "美白",
             "price": 129,
             "description": "赠送 S75 礼品卡*",
@@ -367,7 +367,7 @@
           {
             "id": 3,
             "slug": "advanced-repair-collection-1",
-            "image": "product.3",
+            "image": "product.7",
             "productName": "卵巢",
             "price": 129,
             "description": "赠送 S75 礼品卡*",
@@ -376,7 +376,7 @@
           {
             "id": 4,
             "slug": "advanced-repair-collection-1",
-            "image": "product.4",
+            "image": "product.8",
             "productName": "生发",
             "price": 99,
             "description": "赠送 S75 礼品卡*",

@@ -191,7 +191,7 @@
       </div>
 
       <!-- 第八部分：Skin Renewal Milestone Badges -->
-      <div>
+      <!-- <div>
         <div class="w-full max-w-5xl mx-auto">
           <h2
             class="text-2xl md:text-3xl font-semibold text-gray-900 text-center mb-8"
@@ -222,7 +222,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
