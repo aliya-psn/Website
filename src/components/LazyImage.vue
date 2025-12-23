@@ -47,7 +47,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 
 const props = defineProps({
   src: {
@@ -118,12 +118,17 @@ const resolveImageSrc = async (src) => {
 const checkIntersection = () => {
   if (!containerRef.value) return
   
+  // 如果已经有 observer，先断开
+  if (observer) {
+    observer.disconnect()
+  }
+  
   observer = new IntersectionObserver(
     async (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           shouldLoad.value = true
-          // 解析图片路径（可能是 Promise）
+          // 解析图片路径（可能是 Promise），使用最新的 props.src
           resolvedSrc.value = await resolveImageSrc(props.src)
           observer?.unobserve(entry.target)
         }
@@ -148,11 +153,45 @@ const handleError = () => {
   isLoaded.value = false
 }
 
+// 加载图片
+const loadImage = async () => {
+  if (!props.src) return
+  
+  // 重置状态
+  isLoaded.value = false
+  hasError.value = false
+  
+  // 如果已经在视口中或已经应该加载，立即解析并加载
+  if (shouldLoad.value || !window.IntersectionObserver) {
+    shouldLoad.value = true
+    resolvedSrc.value = await resolveImageSrc(props.src)
+  }
+}
+
+// 监听 src 变化
+watch(() => props.src, async (newSrc, oldSrc) => {
+  if (newSrc !== oldSrc && newSrc) {
+    // 重置状态
+    isLoaded.value = false
+    hasError.value = false
+    
+    // 如果已经在视口中，立即更新
+    if (shouldLoad.value) {
+      resolvedSrc.value = await resolveImageSrc(newSrc)
+    } else {
+      // 如果还没开始加载，重新检查交集
+      if (observer) {
+        observer.disconnect()
+      }
+      checkIntersection()
+    }
+  }
+}, { immediate: false })
+
 onMounted(async () => {
   // 如果浏览器不支持 IntersectionObserver，直接加载
   if (!window.IntersectionObserver) {
-    shouldLoad.value = true
-    resolvedSrc.value = await resolveImageSrc(props.src)
+    await loadImage()
     return
   }
   

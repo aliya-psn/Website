@@ -212,14 +212,16 @@
           "title": "Essential Revitalization Collection",
           "description": "Focuses on day-night foundational care, strengthens the skin barrier, and delivers core nutrition.",
           "image": "product.series1",
-          "slug": "basic-revitalization-collection"
+          "slug": "basic-revitalization-collection",
+          "objectFit": "object-contain"
         },
         {
           "id": 2,
           "title": "Elevated Restoration Collection",
           "description": "Targets specific concerns such as dullness, wrinkles, and sagging, delivering high-potency targeted restoration.",
           "image": "product.series2",
-          "slug": "advanced-repair-collection"
+          "slug": "advanced-repair-collection",
+          "objectFit": "object-contain"
         },
         {
           "id": 3,

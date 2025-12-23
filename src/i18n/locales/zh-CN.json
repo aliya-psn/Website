@@ -211,14 +211,16 @@
           "title": "基础焕活系列",
           "description": "聚焦于日夜间基础维护，巩固肌肤屏障，提供核心营养。",
           "image": "product.series1",
-          "slug": "basic-revitalization-collection"
+          "slug": "basic-revitalization-collection",
+          "objectFit": "object-contain"
         },
         {
           "id": 2,
           "title": "进阶修护系列",
           "description": "针对暗沉、皱纹、松弛等专项问题，提供高浓度靶向修护。",
           "image": "product.series2",
-          "slug": "advanced-repair-collection"
+          "slug": "advanced-repair-collection",
+          "objectFit": "object-contain"
         },
         {
           "id": 3,

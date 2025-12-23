@@ -1,7 +1,8 @@
 {
   "home": {
     "backgroundImage1": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "backgroundImage": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage2": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage": "https://i.111666.best/image/p45xoqBsDSj34MHi0P8c8I.png",
 
     "experience": {
       "productImage": "https://i.111666.best/image/20Ze2s4RaSvSZ3Orq3TDEV.png"
@@ -10,7 +11,7 @@
       "collageImage": "https://i.111666.best/image/7kzMDMAzEsn7TPtKA82FvX.png"
     },
     "luxuryCare": {
-      "image": "https://i.111666.best/image/G75V9qWhgeaQmn5lFgJH7L.png"
+      "image": "https://i.111666.best/image/lyg6K79QL4yc4f9NSRT4OZ.png"
     }
   },
   "menu": {
@@ -29,18 +30,18 @@
     }
   },
   "product": {
-    "series1": "https://i.111666.best/image/lcZUlhv0v4n7rX4Jli3Cqt.png",
-    "series2": "https://i.111666.best/image/lcZUlhv0v4n7rX4Jli3Cqt.png",
+    "series1": "https://i.111666.best/image/21wqgah4lcU0IdENXqAX9D.jpeg",
+    "series2": "https://i.111666.best/image/Iom5dYnhvMZ8nMNVBUqQmb.jpeg",
     "series3": "https://i.111666.best/image/20Ze2s4RaSvSZ3Orq3TDEV.png",
     "1": "https://i.111666.best/image/ZtHUPb90CDImKpDDsmgjm1.png",
     "2": "https://i.111666.best/image/sutAYIQU5dEi26Tcc9U2Kg.png",
     "3": "https://i.111666.best/image/oWiZRnOALHoHeatcvNIiXc.png",
     "4": "https://i.111666.best/image/cgPo1Jf3sJnDzhCHESh0P7.png",
     "desc": "https://i.111666.best/image/grSLTbZL1tLgNiaiQa873f.png",
-    "5": "blob:https://111666.best/509c93b4-fc6f-425f-a764-0bc931fe8efa",
-    "6": "https://i.111666.best/image/ElZ4kzw8FeWC1rLgEf0FQy.png",
-    "7": "https://i.111666.best/image/ElZ4kzw8FeWC1rLgEf0FQy.png",
-    "8": "https://i.111666.best/image/ElZ4kzw8FeWC1rLgEf0FQy.png",
+    "5": "https://i.111666.best/image/uBO652rMAddn8qA05eVAnU.png",
+    "6": "https://i.111666.best/image/2tDzAYcBvcoBQwJj3oza2T.png",
+    "7": "https://i.111666.best/image/62W4KckNbeTnmLpWRYsCns.png",
+    "8": "https://i.111666.best/image/tAfEOHHccq70ZI1acFqhq2.png",
     "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
   },
   "science": {

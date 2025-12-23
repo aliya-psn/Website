@@ -76,6 +76,7 @@
                 class="flex-shrink-0 w-full lg:w-1/2 flex justify-center"
               >
                 <LazyImage
+                  :key="productDataSource.descImage"
                   :src="productDataSource.descImage"
                   container-class="w-full max-w-[160px] h-auto"
                   image-class="w-full h-full object-contain"
@@ -121,6 +122,7 @@
               <!-- 产品图片 -->
               <div class="shrink-0">
                 <LazyImage
+                  :key="productData.productImage"
                   :src="productData.productImage"
                   :alt="productData.title"
                   container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] min-w-96 md:min-w-[28rem] lg:min-w-[40rem] h-auto"
@@ -154,6 +156,7 @@
                 class="relative w-full h-54 md:h-66 lg:h-72 overflow-hidden flex items-center justify-center mx-auto"
               >
                 <LazyImage
+                  :key="product.image"
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
@@ -219,7 +222,6 @@ const productData = computed(() => {
   const product = productDataSource.value.products?.find(
     (p) => p.slug === props.slug
   )
-  console.log(product)
 
   // 从 dropdownItems 中获取 title、description 和 image
   const dropdownItem = dataSource.value.navItems
@@ -234,7 +236,6 @@ const productData = computed(() => {
       productImage: dropdownItem.image,
     }
   }
-
   return product
 })
 
