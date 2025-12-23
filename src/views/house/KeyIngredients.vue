@@ -23,7 +23,7 @@
 
         <!-- 右侧：名字和背景信息 -->
         <div class="flex flex-col justify-center space-y-6">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-song font-semibold text-gray-900">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-name font-semibold text-gray-900">
             {{ keyIngredientsData.drShona.name }}
           </h2>
           
@@ -93,8 +93,16 @@ const keyIngredientsData = computed(() => {
 </script>
 
 <style scoped>
-.font-song {
-  font-family: 'SimSun', 'STSong', '宋体', serif;
+@font-face {
+  font-family: 'Monbaiti';
+  src: url('../../assets/monbaiti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-name {
+  font-family: 'Monbaiti', 'SimSun', 'STSong', '宋体', serif;
 }
 </style>
 

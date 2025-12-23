@@ -6,49 +6,24 @@
       class="fixed inset-0 bg-cover bg-center bg-no-repeat z-0 transition-transform duration-700"
       :style="{
         backgroundImage: 'url(' + pageData.home.backgroundImage + ')',
-        filter: 'blur(3px)',
       }"
     >
-      <div
-        class="absolute inset-0 bg-linear-to-b from-white/60 via-white/50 to-white/70"
-      ></div>
     </div>
 
     <div class="h-[80px]"></div>
 
     <!-- 主标题 -->
     <div
-      class="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-4 animate-fade-in-up"
+      class="relative z-10 flex flex-col items-start justify-start pt-10 md:pt-14 lg:pt-18 pl-10 md:pl-18 lg:pl-26 pr-4 animate-fade-in-up"
     >
       <h2
-        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-center leading-tight mb-4 md:mb-6 hero-title font-semibold"
+        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-left leading-tight mb-4 md:mb-6 hero-title font-semibold"
       >
         {{ pageData.home.hero.title }}<br />
         <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3">{{
           pageData.home.hero.subtitle
         }}</span>
       </h2>
-
-      <!-- 向下箭头 -->
-      <!-- <div
-        class="w-12 h-12 rounded-full border-2 border-gray-800 flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-all animate-bounce-slow hover:scale-110"
-        :style="{ marginTop: '60px' }"
-        @click="scrollDown"
-      >
-        <svg
-          class="w-6 h-6 text-gray-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </div> -->
     </div>
   </div>
 </template>

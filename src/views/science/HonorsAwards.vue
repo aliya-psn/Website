@@ -32,19 +32,19 @@
       <!-- 大屏幕：2/3/3 分排布局 -->
       <div class="hidden md:block">
         <!-- 上排：2 张 -->
-        <div v-if="topRow.length" class="grid grid-cols-6 gap-4 mb-12">
+        <div v-if="topRow.length" class="grid grid-cols-12 gap-4 mb-12">
           <div
             v-for="(award, index) in topRow"
             :key="'top-' + index"
-            class="award-item flex flex-col col-span-3"
+            class="award-item flex flex-col col-span-6"
           >
-            <div class="w-full h-110 mb-6 overflow-hidden rounded-lg">
+            <div class="w-full h-[40rem] mb-6 overflow-hidden rounded-lg">
               <LazyImage
                 v-if="award.image"
                 :src="award.image"
                 :alt="award.name"
                 container-class="w-full h-full"
-                image-class="w-full h-full object-contain scale-150"
+                image-class="w-full h-full object-contain"
               />
             </div>
             <p class="text-sm md:text-base text-gray-900 font-light leading-tight text-center">
@@ -54,11 +54,11 @@
         </div>
 
         <!-- 中排：3 张 -->
-        <div v-if="middleRow.length" class="grid grid-cols-3 gap-4 mb-12">
+        <div v-if="middleRow.length" class="grid grid-cols-12 gap-4 mb-12">
           <div
             v-for="(award, index) in middleRow"
             :key="'mid-' + index"
-            class="award-item flex flex-col"
+            class="award-item flex flex-col col-span-4"
           >
             <div class="w-full h-110  mb-6 overflow-hidden rounded-lg">
               <LazyImage
@@ -76,11 +76,11 @@
         </div>
 
         <!-- 下排：3 张 -->
-        <div v-if="bottomRow.length" class="grid grid-cols-6 gap-4">
+        <div v-if="bottomRow.length" class="grid grid-cols-12 gap-4">
           <div
             v-for="(award, index) in bottomRow"
             :key="'bot-' + index"
-            class="award-item flex flex-col col-span-2"
+            class="award-item flex flex-col col-span-4"
           >
             <div class="w-full h-110  mb-6 overflow-hidden rounded-lg">
               <LazyImage
