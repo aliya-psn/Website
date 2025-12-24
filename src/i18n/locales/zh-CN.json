@@ -300,11 +300,11 @@
       "qrCodeAlt": "小程序二维码",
       "footerText": "FANTASYCARE官方小程序"
     },
-    "descImage": "product.desc",
     "products": [
       {
         "title": "基础焕活系列",
         "slug": "basic-revitalization-collection",
+        "descImage": "product.desc",
         "productList": [
           {
             "id": 1,
@@ -348,6 +348,7 @@
       {
         "title": "进阶修护系列",
         "slug": "advanced-repair-collection",
+        "descImage": "product.desc2",
         "productList": [
           {
             "id": 1,

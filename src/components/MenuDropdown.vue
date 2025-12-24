@@ -1,7 +1,7 @@
 <template>
   <!-- 产品系列展示区域 -->
   <div 
-    class="fixed left-0 right-0 w-screen bg-gray-200 shadow-lg z-50"
+    class="fixed left-0 right-0 w-screen bg-white shadow-lg z-50"
     :style="{ top: navHeight + 'px' }"
   >
     <!-- 关闭按钮 -->
@@ -24,7 +24,7 @@
         @click="handleCategoryClick(item)"
       >
         <!-- 文字区域 -->
-        <div class="px-4 py-4 text-center border-b border-gray-200">
+        <div class="px-4 py-4 text-center">
           <h3 class="text-gray-800 text-sm md:text-base font-medium mb-1">
             {{ item.title || item.name }}
           </h3>

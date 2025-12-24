@@ -301,11 +301,11 @@
       "qrCodeAlt": "Mini-program QR Code",
       "footerText": "FANTASYCARE Official Mini-program"
     },
-    "descImage": "product.desc",
     "products": [
       {
         "title": "Basic Revitalization Collection",
         "slug": "basic-revitalization-collection",
+        "descImage": "product.desc",
         "productList": [
           {
             "id": 1,
@@ -349,6 +349,7 @@
       {
         "title": "Advanced Repair Collection",
         "slug": "advanced-repair-collection",
+        "descImage": "product.desc2",
         "productList": [
           {
             "id": 1,

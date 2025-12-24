@@ -3,11 +3,11 @@
   <nav
     ref="navElement"
     :class="[
-      'navbar fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-3 md:py-4',
+      'navbar fixed top-0 left-0 right-0 z-50 py-3 md:py-4',
       { scrolled: isScrolled, 'navbar-hidden': !props.isVisible },
     ]"
   >
-    <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
       <!-- Logo -->
       <div
         @click="scrollToTop"
@@ -22,7 +22,7 @@
       </div>
 
       <!-- 桌面端导航菜单 -->
-      <div class="hidden md:flex items-center gap-8 lg:gap-10 ml-8 lg:ml-12">
+      <div class="hidden md:flex items-center gap-8 lg:gap-10 ml-4 md:ml-6 lg:ml-8">
         <template v-for="item in dataSource.navItems" :key="item.id">
           <!-- 有下拉菜单的项 -->
           <div v-if="item.hasDropdown" class="relative">

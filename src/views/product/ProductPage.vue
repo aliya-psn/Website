@@ -21,20 +21,19 @@
       >
         <p
           v-if="productData.shortDescription"
-          class="text-base md:text-lg text-gray-700 leading-relaxed max-w-xl mx-auto font-light text-center mb-6 md:mb-8"
+          class="text-base md:text-lg text-gray-700 leading-relaxed max-w-xl mx-auto font-light text-center mb-2 md:mb-4"
         >
           {{ productData.shortDescription }}
         </p>
         <div
           v-if="productData.description || productData.productImage"
-          class="bg-white pt-8 md:pt-12"
         >
           <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div
               class="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 max-w-4xl mx-auto"
             >
               <!-- 左侧：Logo 和描述 -->
-              <div class="flex-1 flex flex-col justify-center">
+              <div class="flex-1 flex flex-col justify-center mt-2 md:mt-4 lg:mt-6 ml-2 md:ml-4 lg:ml-6">
                 <!-- Logo -->
                 <div class="mb-2">
                   <img
@@ -72,14 +71,14 @@
 
               <!-- 右侧：产品图片 -->
               <div
-                v-if="productDataSource.descImage"
+                v-if="productData.descImage"
                 class="flex-shrink-0 w-full lg:w-1/2 flex justify-center"
               >
                 <LazyImage
-                  :key="productDataSource.descImage"
-                  :src="productDataSource.descImage"
-                  container-class="w-full max-w-[160px] h-auto"
-                  image-class="w-full h-full object-contain"
+                  :key="productData.descImage"
+                  :src="productData.descImage"
+                  container-class="w-full max-w-[160px] md:max-w-[180px] lg:max-w-[200px] h-auto"
+                  image-class="w-full object-contain"
                 />
               </div>
             </div>
@@ -125,7 +124,7 @@
                   :key="productData.productImage"
                   :src="productData.productImage"
                   :alt="productData.title"
-                  container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] min-w-96 md:min-w-[28rem] lg:min-w-[40rem] h-auto"
+                  container-class="w-80 md:w-[24rem] lg:w-[36rem] xl:w-[40rem] min-w-80 md:min-w-[24rem] lg:min-w-[36rem] h-auto"
                   image-class="w-full h-full object-contain"
                 />
               </div>
@@ -137,7 +136,7 @@
       <!-- 系列1和系列2  产品列表区域 -->
       <div
         v-if="productData.productList && productData.productList.length > 0"
-        class="bg-white pb-12 md:pb-20"
+        class="bg-white pb-12 md:pb-20 -mt-[60px]"
       >
         <div class="max-w-7xl mx-auto px-6 md:px-12">
           <!-- 产品网格 - 每行两个 -->
@@ -148,7 +147,7 @@
               v-for="product in productData.productList"
               :key="product.id"
               @click="goToProductDetail(product)"
-              class="product-card group bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+              class="product-card group bg-white rounded-xl overflow-hidden transition-all duration-300"
             >
               <!-- 产品图片区域 -->
               <div
@@ -164,7 +163,7 @@
               </div>
 
               <!-- 产品信息 -->
-              <div class="pb-8 md:pb-10 text-center space-y-2">
+              <div class="pb-8 md:pb-10 text-center space-y-2 px-2 md:px-4 lg:px-6">
                 <!-- 产品名称 -->
                 <h3 class="text-[28px] font-medium text-gray-900">
                   {{ product.productName }}
@@ -253,10 +252,12 @@ const goToProductDetail = (product) => {
 }
 .product-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 }
 
 .product-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-card::before {
