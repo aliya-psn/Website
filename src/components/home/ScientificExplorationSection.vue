@@ -11,6 +11,7 @@
         <!-- 标题 -->
         <h2
           class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-3 md:mb-4"
+          style="line-height: 56px;"
         >
           {{ sectionData.title }}
         </h2>
@@ -18,6 +19,7 @@
         <!-- 副标题 -->
         <p
           class="text-lg md:text-xl lg:text-xl text-gray-700 mb-3 md:mb-4 font-normal"
+          style="line-height: 28px;"
         >
           {{ sectionData.subtitle }}
         </p>

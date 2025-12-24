@@ -9,6 +9,7 @@
       <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
         <h2
           class="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 tracking-tight"
+          style="line-height: 56px;"
         >
           {{ sectionData.title }}
         </h2>
@@ -17,6 +18,7 @@
         ></div>
         <p
           class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-light leading-relaxed"
+          style="line-height: 28px;"
         >
           {{ sectionData.description }}
         </p>

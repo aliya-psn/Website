@@ -17,6 +17,7 @@
         <!-- 标题 -->
         <h2
           class="text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-3 md:mb-4 text-gray-900"
+          style="line-height: 56px;"
         >
         <span class="origin-title-text">{{ originData.title }}</span>
         <span class="origin-title-glow"></span>
@@ -26,6 +27,7 @@
         <p
           v-if="originData.subtitle"
           class="origin-subtitle text-lg md:text-xl text-center mt-2 md:mt-3 mb-8 md:mb-10 lg:mb-12 font-normal origin-fade-in"
+          style="line-height: 28px;"
         >
           {{ originData.subtitle }}
         </p>

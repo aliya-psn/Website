@@ -23,11 +23,13 @@
         <div class="luxury-text-row flex flex-wrap items-center gap-1 md:gap-2">
           <p
             class="luxury-primary-text text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-0 whitespace-nowrap"
+            style="line-height: 56px;"
           >
             {{ sectionData.primaryText }}
           </p>
           <p
             class="luxury-secondary-text text-lg md:text-xl lg:text-xl text-gray-700 font-normal leading-relaxed mb-0 whitespace-nowrap"
+            style="line-height: 28px;"
           >
             {{ sectionData.secondaryText }}
           </p>

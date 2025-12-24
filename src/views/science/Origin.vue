@@ -5,34 +5,19 @@
     :current-index="currentIndex"
     :animation-direction="animationDirection"
     label-key="title"
+    :background-image="backgroundImage"
+    :has-circle-cutout="true"
     @switch="switchToIndex"
   >
     <template #default="{ item: currentSlide }">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center h-full"
       >
-        <!-- 左侧：圆形图片 -->
-        <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+        <!-- 左侧：占位区域，圆形区域由 TimelineLayout 的遮罩层处理 -->
+        <div class="flex justify-center lg:justify-start order-2 lg:order-1 relative w-full lg:w-auto">
           <div
-            class="relative w-48 sm:w-64 md:w-80 lg:w-[28rem] aspect-square flex-shrink-0"
+            class="absolute inset-0 lg:relative w-full h-full min-h-[24rem] sm:min-h-[28rem] md:min-h-[32rem] lg:min-h-0 lg:w-48 lg:h-48 sm:lg:w-64 sm:lg:h-64 md:lg:w-80 md:lg:h-80 lg:w-[28rem] lg:h-[28rem]"
           >
-            <div
-              class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"
-            ></div>
-            <div
-              class="absolute inset-0 rounded-full bg-white/10 blur-2xl"
-            ></div>
-            <LazyImage
-              :src="currentSlide.image || originData.image || ''"
-              :alt="currentSlide.title"
-              container-class="relative w-full h-full rounded-full overflow-hidden"
-              :image-class="`w-full h-full object-cover ${
-                currentSlide.objectPosition || 'object-center'
-              } rounded-full shadow-2xl ring-2 sm:ring-4 ring-white/20`"
-            />
-            <div
-              class="absolute -inset-2 sm:-inset-4 rounded-full bg-white/5 blur-xl"
-            ></div>
           </div>
         </div>
 
@@ -86,12 +71,13 @@
 <script setup>
 import { ref, computed, onMounted, inject } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import { useImageResolver } from '../../composables/useImageResolver'
 import { useTimelineScroll } from '../../composables/useTimelineScroll'
 import TimelineLayout from '../../components/TimelineLayout.vue'
-import LazyImage from '../../components/LazyImage.vue'
 import '../../styles/timelineStyles.css'
 
 const { dataSource } = useI18nData()
+const { resolveImage } = useImageResolver()
 
 // 导航栏控制，保持与发展历程页一致
 const navBarControl = inject('navBarControl', null)
@@ -113,6 +99,16 @@ const originList = computed(() => {
   const list = dataSource.value.originHistory
   if (Array.isArray(list)) return list
   return list ? [list] : []
+})
+
+// 获取背景图片 - 使用当前项的 image
+const backgroundImage = computed(() => {
+  const currentItem = originList.value[currentIndex.value]
+  if (currentItem?.image) {
+    return resolveImage(currentItem.image)
+  }
+  // 如果没有 image，使用默认的
+  return resolveImage('menu.scienceAnalysis.origin')
 })
 
 const currentIndex = ref(0)
@@ -156,3 +152,4 @@ onMounted(() => {
   }
 })
 </script>
+

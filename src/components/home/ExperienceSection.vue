@@ -10,13 +10,13 @@
       <div class="flex-1 flex flex-col items-center justify-center text-center mb-6 md:mb-8">
         <!-- 标题 -->
         <div class="mb-3 md:mb-4">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-normal leading-tight">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-normal leading-tight" style="line-height: 56px;">
             {{ experienceData.heading }}
           </h2>
         </div>
 
         <!-- 描述文字 -->
-        <p class="hero-description text-lg md:text-xl lg:text-xl text-gray-900 mb-3 md:mb-4 max-w-2xl leading-relaxed animate-fade-in-up-delay font-normal">
+        <p class="hero-description text-lg md:text-xl lg:text-xl text-gray-900 mb-3 md:mb-4 max-w-2xl leading-relaxed animate-fade-in-up-delay font-normal" style="line-height: 28px;">
           {{ experienceData.description }}
         </p>
 

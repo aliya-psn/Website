@@ -5,24 +5,17 @@
     :current-index="currentIndex"
     :animation-direction="animationDirection"
     label-key="year"
+    :background-image="backgroundImage"
+    :has-circle-cutout="true"
     @switch="switchToYear"
   >
     <template #default="{ item: currentData }">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center h-full">
-        <!-- 左侧：圆形图片 - 带发光效果 -->
-        <div class="flex justify-center lg:justify-start order-2 lg:order-1">
-          <div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]">
-            <!-- 发光效果 -->
-            <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
-            <div class="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>
-            <LazyImage
-              :src="currentData.image"
-              :alt="currentData.title"
-              container-class="relative w-full h-full rounded-full overflow-hidden"
-              :image-class="`w-full h-full object-cover ${currentData.objectPosition || 'object-center'} rounded-full shadow-2xl ring-2 sm:ring-4 ring-white/20`"
-            />
-            <!-- 外圈光晕 -->
-            <div class="absolute -inset-2 sm:-inset-4 rounded-full bg-white/5 blur-xl"></div>
+        <!-- 左侧：占位区域，圆形区域由 TimelineLayout 的遮罩层处理 -->
+        <div class="flex justify-center lg:justify-start order-2 lg:order-1 relative w-full lg:w-auto">
+          <div
+            class="absolute inset-0 lg:relative w-full h-full min-h-[24rem] sm:min-h-[28rem] md:min-h-[32rem] lg:min-h-0 lg:w-48 lg:h-48 sm:lg:w-64 sm:lg:h-64 md:lg:w-80 md:lg:h-80 lg:w-[28rem] lg:h-[28rem]"
+          >
           </div>
         </div>
 
@@ -65,12 +58,13 @@
 <script setup>
 import { ref, computed, onMounted, inject } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
+import { useImageResolver } from '../../composables/useImageResolver'
 import { useTimelineScroll } from '../../composables/useTimelineScroll'
 import TimelineLayout from '../../components/TimelineLayout.vue'
-import LazyImage from '../../components/LazyImage.vue'
 import '../../styles/timelineStyles.css'
 
 const { dataSource } = useI18nData()
+const { resolveImage } = useImageResolver()
 
 // 获取导航栏控制方法，确保导航栏始终显示
 const navBarControl = inject('navBarControl', null)
@@ -82,6 +76,11 @@ const historyList = computed(() => {
     return history
   }
   return history ? [history] : []
+})
+
+// 获取背景图片
+const backgroundImage = computed(() => {
+  return resolveImage('menu.scienceAnalysis.developmentHistory')
 })
 
 // 当前索引
@@ -125,5 +124,6 @@ onMounted(() => {
   }
 })
 </script>
+
 
 

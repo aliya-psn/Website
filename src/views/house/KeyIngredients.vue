@@ -29,12 +29,12 @@
           
           <div class="space-y-4">
             <div class="space-y-2">
-              <p v-for="(info, index) in keyIngredientsData.drShona.background1" :key="`bg1-${index}`" class="text-xs md:text-sm text-gray-900 leading-snug font-light tracking-normal">
+              <p v-for="(info, index) in keyIngredientsData.drShona.background1" :key="`bg1-${index}`" class="text-sm md:text-base text-gray-900 leading-snug font-light tracking-normal">
                 {{ info }}
               </p>
             </div>
             <div class="space-y-2 mt-6 md:mt-8">
-              <p v-for="(info, index) in keyIngredientsData.drShona.background2" :key="`bg2-${index}`" class="text-xs md:text-sm text-gray-900 leading-snug font-light tracking-normal">
+              <p v-for="(info, index) in keyIngredientsData.drShona.background2" :key="`bg2-${index}`" class="text-sm md:text-base text-gray-900 leading-snug font-light tracking-normal">
                 {{ info }}
               </p>
             </div>
@@ -48,7 +48,7 @@
           {{ keyIngredientsData.clinicalCooperation.title }}
         </h2>
         
-        <p class="text-xs md:text-sm text-gray-900 leading-relaxed font-light text-center max-w-4xl mx-auto mb-12">
+        <p class="text-sm md:text-base text-gray-900 leading-relaxed font-light text-center max-w-4xl mx-auto mb-12">
           {{ keyIngredientsData.clinicalCooperation.description }}
         </p>
 

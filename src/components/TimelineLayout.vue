@@ -1,8 +1,28 @@
 <!-- 时间轴布局组件 -->
 <template>
-  <div class="h-screen pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6 relative overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col">
-    <!-- 背景装饰：粒子效果 -->
-    <ParticleBackground />
+  <div 
+    class="h-screen pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6 relative overflow-hidden flex flex-col"
+    :style="{
+      background: 'linear-gradient(to bottom right, #111827, #1f2937, #111827)'
+    }"
+  >
+    <!-- 背景图片层，带过渡效果 -->
+    <Transition name="background-fade" mode="out-in">
+      <div
+        v-if="backgroundImage"
+        :key="backgroundImage"
+        class="absolute inset-0 z-0 background-image-layer"
+        :style="{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }"
+      ></div>
+    </Transition>
+    
+    <!-- 背景遮罩层，确保文字可读性 -->
+    <div class="absolute inset-0 bg-black/40 z-0 timeline-overlay" :class="hasCircleCutout ? 'timeline-overlay-with-cutout' : ''"></div>
     
     <div class="w-full max-w-[calc(100%-min(12vw,8rem))] mx-auto px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-12 flex-1 flex flex-col relative z-10">
       <!-- 小屏幕：顶部横向时间轴 -->
@@ -123,7 +143,6 @@
 
 <script setup>
 import { computed } from 'vue'
-import ParticleBackground from './ParticleBackground.vue'
 
 const props = defineProps({
   items: {
@@ -141,6 +160,14 @@ const props = defineProps({
   labelKey: {
     type: String,
     default: 'year' // 默认使用 year，也可以是 'title' 等
+  },
+  backgroundImage: {
+    type: String,
+    default: ''
+  },
+  hasCircleCutout: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -213,6 +240,46 @@ const showScrollHint = computed(() => {
   50% {
     transform: translateY(4px);
     opacity: 1;
+  }
+}
+
+/* 背景图片过渡动画 */
+.background-image-layer {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.background-fade-enter-active,
+.background-fade-leave-active {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.background-fade-enter-from {
+  opacity: 0;
+}
+
+.background-fade-enter-to {
+  opacity: 1;
+}
+
+.background-fade-leave-from {
+  opacity: 1;
+}
+
+.background-fade-leave-to {
+  opacity: 0;
+}
+
+/* 圆形裁剪遮罩 */
+.timeline-overlay-with-cutout {
+  /* 在左侧中心位置挖一个圆形洞，靠右一点，小一点 */
+  mask: radial-gradient(circle at 35% 50%, transparent 0%, transparent 15%, black 15%, black 100%);
+  -webkit-mask: radial-gradient(circle at 35% 50%, transparent 0%, transparent 15%, black 15%, black 100%);
+}
+
+@media (min-width: 1024px) {
+  .timeline-overlay-with-cutout {
+    mask: radial-gradient(circle at 30% 50%, transparent 0%, transparent 13%, black 13%, black 100%);
+    -webkit-mask: radial-gradient(circle at 30% 50%, transparent 0%, transparent 13%, black 13%, black 100%);
   }
 }
 </style>

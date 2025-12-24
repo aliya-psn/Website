@@ -18,9 +18,10 @@
     >
       <h2
         class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-left leading-tight mb-4 md:mb-6 hero-title font-semibold"
+        style="line-height: 56px;"
       >
         {{ pageData.home.hero.title }}<br />
-        <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3">{{
+        <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3" style="line-height: 28px;">{{
           pageData.home.hero.subtitle
         }}</span>
       </h2>
