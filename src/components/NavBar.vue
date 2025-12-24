@@ -408,7 +408,7 @@ const handleScienceItemClick = (item) => {
 
 const handleBrandHeritageItemClick = (item) => {
   if (typeof item === 'object' && item.slug) {
-    // 核心成分页面
+    // 研发团队页面
     if (item.slug === 'key-ingredients') {
       router.push('/key-ingredients')
     } else if (item.slug === 'Technology') {

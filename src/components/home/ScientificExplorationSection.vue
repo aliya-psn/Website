@@ -25,7 +25,7 @@
         <!-- 按钮 -->
         <button
           @click="handleButtonClick"
-          class="bg-gray-900 text-white px-5 py-1 md:px-6 md:py-1.5 lg:px-8 lg:py-2 rounded-full text-xs md:text-sm lg:text-base font-medium hover:bg-gray-800 transition-colors duration-300"
+          class="bg-gray-900 text-white px-4 py-0.5 md:px-5 md:py-1 lg:px-6 lg:py-1.5 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors duration-300"
         >
           {{ sectionData.buttonText }}
         </button>

@@ -1,4 +1,4 @@
-<!-- 核心成分 -->
+<!-- 研发团队 -->
 <template>
   <div class="min-h-screen bg-white pt-24 md:pt-28">
     <div class="max-w-7xl mx-auto px-12 md:px-20 py-8">
@@ -73,22 +73,9 @@ import LazyImage from '../../components/LazyImage.vue'
 
 const { dataSource } = useI18nData()
 
-// 获取核心成分数据
+// 获取研发团队数据
 const keyIngredientsData = computed(() => {
-  return dataSource.value.keyIngredients || {
-    title: 'R&D Team & Key Ingredients',
-    drShona: {
-      name: '',
-      image: '',
-      background1: [],
-      background2: []
-    },
-    clinicalCooperation: {
-      title: '',
-      description: '',
-      teamMembers: []
-    }
-  }
+  return dataSource.value.keyIngredients || {};
 })
 </script>
 

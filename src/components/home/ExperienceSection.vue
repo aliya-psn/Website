@@ -24,7 +24,7 @@
         <div class="animate-fade-in-up-delay-2">
           <button 
             @click="goToAllProducts"
-            class="hero-button px-5 py-1 md:px-6 md:py-1.5 lg:px-8 lg:py-2 rounded-full bg-gray-900 text-white flex items-center justify-center hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-medium text-xs md:text-sm lg:text-base relative overflow-hidden"
+            class="hero-button px-4 py-0.5 md:px-5 md:py-1 lg:px-6 lg:py-1.5 rounded-full bg-gray-900 text-white flex items-center justify-center hover:bg-gray-800 transition-all duration-300 group shadow-lg hover:shadow-xl font-medium text-sm md:text-base lg:text-lg relative overflow-hidden"
           >
             <span class="relative z-10">{{ experienceData.buttonText }}</span>
           </button>

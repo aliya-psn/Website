@@ -22,7 +22,8 @@
         "当医学遇见美学，一个颠覆性的构想诞生：",
         "将医美诊所的精准效能，转化为可口服的细胞级营养指令。",
         "历经七年研发，Fantasy Care以“内蕴奢护”为起点，开启口服医美的新时代。"
-      ]
+      ],
+      "image": "home.origin.image"
     },
     "scientificExploration": {
       "title": "源于医学，成于科学",
@@ -122,7 +123,7 @@
     }
   ],
   "keyIngredients": {
-    "title": "科研团队 & 核心成分",
+    "title": "研发团队",
     "drShona": {
       "name": "Dr Shona Dalzell",
       "image": "keyIngredients.drShona",
@@ -260,7 +261,7 @@
       "hasDropdown": true,
       "dropdownItems": [
         {
-          "name": "核心成分",
+          "name": "研发团队",
           "image": "menu.brandHeritage.key",
           "slug": "key-ingredients",
           "objectPosition": "object-[50%_80%]"

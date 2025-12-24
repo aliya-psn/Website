@@ -139,7 +139,7 @@
         v-if="productData.productList && productData.productList.length > 0"
         class="bg-white pb-12 md:pb-20"
       >
-        <div class="max-w-7xl mx-auto px-6 md:px-12 text-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
           <!-- 产品网格 - 每行两个 -->
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4 max-w-4xl mx-auto"
@@ -148,39 +148,36 @@
               v-for="product in productData.productList"
               :key="product.id"
               @click="goToProductDetail(product)"
-              class="product-card group text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-              style="background-color: rgb(87, 87, 91)"
+              class="product-card group bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full h-54 md:h-66 lg:h-72 overflow-hidden flex items-center justify-center mx-auto"
+                class="relative w-full h-54 md:h-66 lg:h-72 overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6"
               >
                 <LazyImage
                   :key="product.image"
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  image-class="w-full h-full max-w-[60%] object-contain px-12 md:px-16 pt-2 md:pt-4 pb-8 md:pb-12 mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
+                  image-class="w-full h-full max-w-[60%] object-contain mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
               <!-- 产品信息 -->
               <div class="pb-8 md:pb-10 text-center space-y-2">
+                <!-- 产品名称 -->
+                <h3 class="text-[28px] font-medium text-gray-900">
+                  {{ product.productName }}
+                </h3>
                 <!-- 产品规格 -->
                 <p
-                  class="text-xs md:text-sm text-white font-light leading-tight"
+                  class="text-[17px] text-gray-900 font-light leading-tight"
                 >
                   {{ product.description }}
                 </p>
-
-                <!-- 产品名称 -->
-                <h3 class="text-sm md:text-base font-normal text-white">
-                  {{ product.productName }}
-                </h3>
-
                 <!-- 价格 -->
                 <div
-                  class="flex items-center justify-center pt-4 md:pt-6 text-white text-xs md:text-sm"
+                  class="flex items-center justify-center pt-4 md:pt-6 text-gray-900 text-[17px] font-medium"
                 >
                   <span class="mr-1">
                     {{ t('common.currency') }}

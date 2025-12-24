@@ -22,7 +22,8 @@
         "When medicine meets aesthetics, a revolutionary vision was born:",
         "Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.",
         "After seven years of R&D, Fantasy Care embarked on the concept of \"Luxurious Nourishment from Within,\" pioneering a new era of oral medical aesthetics."
-      ]
+      ],
+      "image": "home.origin.image"
     },
     "scientificExploration": {
       "title": "Rooted in Medicine, Refined by Science",
@@ -123,7 +124,7 @@
     }
   ],
   "keyIngredients": {
-    "title": "R&D Team & Key Ingredients",
+    "title": "R&D Team",
     "drShona": {
       "name": "Dr Shona Dalzell",
       "image": "keyIngredients.drShona",
@@ -261,7 +262,7 @@
       "hasDropdown": true,
       "dropdownItems": [
         {
-          "name": "Key Ingredients",
+          "name": "R&D Team",
           "image": "menu.brandHeritage.key",
           "slug": "key-ingredients",
           "objectPosition": "object-[50%_80%]"

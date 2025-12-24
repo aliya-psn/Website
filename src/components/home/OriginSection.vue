@@ -12,11 +12,11 @@
     </div>
 
     <!-- 内容区域 -->
-    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen py-12 md:py-16 lg:py-20">
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen pt-20 md:pt-24 lg:pt-28 pb-12 md:pb-16 lg:pb-20">
       <div class="w-full">
         <!-- 标题 -->
         <h2
-          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-3 md:mb-4 text-gray-900 -mt-12 md:-mt-20 lg:-mt-24"
+          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-3 md:mb-4 text-gray-900"
         >
         <span class="origin-title-text">{{ originData.title }}</span>
         <span class="origin-title-glow"></span>
@@ -41,11 +41,25 @@
           </p>
         </div>
       </div>
+
+      <!-- 手图 -->
+      <div class="relative w-full flex items-center justify-center flex-1 mt-4 md:mt-6 lg:mt-8">
+        <div class="w-full max-w-5xl">
+          <LazyImage
+            :src="originData.image"
+            :alt="originData.title"
+            container-class="w-full"
+            image-class="w-full h-auto object-contain max-h-[70vh]"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import LazyImage from '../LazyImage.vue'
+
 defineProps({
   originData: {
     type: Object,

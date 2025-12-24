@@ -1,9 +1,9 @@
 <template>
   <!-- 首页 -->
   <div class="relative min-h-screen">
-    <!-- 背景图片，带浅色遮罩 -->
+    <!-- 背景图片 -->
     <div
-      class="fixed inset-0 bg-cover bg-center bg-no-repeat z-0 transition-transform duration-700"
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 transition-transform duration-700"
       :style="{
         backgroundImage: 'url(' + pageData.home.backgroundImage + ')',
       }"
