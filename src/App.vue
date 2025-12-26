@@ -39,6 +39,7 @@
         <div>lg: ≥1024px</div>
         <div>xl: ≥1280px</div>
         <div>2xl: ≥1536px</div>
+        <div>3xl: ≥1920px</div>
       </div>
     </div>
     <button
@@ -98,12 +99,14 @@ const breakpoints = {
   md: 768,
   lg: 1024,
   xl: 1280,
-  '2xl': 1536
+  '2xl': 1536,
+  '3xl': 1920
 }
 
 // 计算当前激活的断点
 const currentBreakpoint = computed(() => {
   const width = screenWidth.value
+  if (width >= breakpoints['3xl']) return '3xl'
   if (width >= breakpoints['2xl']) return '2xl'
   if (width >= breakpoints.xl) return 'xl'
   if (width >= breakpoints.lg) return 'lg'
@@ -121,7 +124,8 @@ const currentBreakpointClass = computed(() => {
     md: 'bg-green-600',
     lg: 'bg-yellow-600',
     xl: 'bg-orange-600',
-    '2xl': 'bg-red-600'
+    '2xl': 'bg-red-600',
+    '3xl': 'bg-purple-600'
   }
   return classes[bp] || 'bg-gray-600'
 })

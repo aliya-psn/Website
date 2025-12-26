@@ -32,7 +32,7 @@
       </div>
 
       <!-- 下半部分：产品图片 -->
-      <div class="flex-1 flex items-center justify-center animate-fade-in-up-delay-3">
+      <div class="flex-1 flex items-center justify-center animate-fade-in-up-delay-3 w-full min-h-0">
         <div class="relative product-image-container">
           <LazyImage 
             :src="experienceData.productImage" 

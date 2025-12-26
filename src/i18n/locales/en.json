@@ -50,7 +50,8 @@
       "title": "Origin",
       "subtitle": "Metamorphosis from Aesthetic Clinic to Cellular Laboratory.",
       "description": "It all began with a dialogue between two spaces. At The Cosmetic Clinic founded by Dr. Shona Dalzell, cutting-edge equipment delivered immediate transformations—yet failed to satisfy aesthetic seekers’ longing for \"long-lasting radiance.\"In the skin research laboratory: as a PhD in Dermatology from the University of Auckland, she discerned the core of the problem—all external manifestations stem from imbalances in cellular states.When medicine meets aesthetics, a revolutionary vision was born:Translating the precision efficacy of aesthetic clinics into oral cellular-level nutritional directives.After seven years of R&D, Fantasy Care embarked on the concept of \"Luxurious Nourishment from Within,\" pioneering a new era of oral medical aesthetics.",
-      "image": "science.originHistory.1"
+      "image": "science.originHistory.1",
+      "objectPosition": "object-right"
     },
     {
       "title": "Brand Vision",
@@ -68,7 +69,8 @@
       "title": "Luxurious Care",
       "subtitle": "A Commitment to Pharmaceutical-Grade Quality",
       "description": "The cornerstone of luxury lies in impeccable rigor.From globally sourcing clinically validated active ingredients to adhering to pharmaceutical-grade GMP production standards, we strictly oversee every step—from raw materials to finished products—with scientific precision.This near-obsessive commitment ensures that every dose delivers a safe, pure, and high-efficacy luxurious experience.",
-      "image": "science.originHistory.4"
+      "image": "science.originHistory.4",
+      "objectPosition": "object-left-bottom"
     },
     {
       "title": "Regeneration",

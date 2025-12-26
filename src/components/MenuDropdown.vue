@@ -38,8 +38,12 @@
             container-class="w-full h-full"
             :image-class="`min-w-full min-h-full w-full h-full ${item.objectFit || 'object-cover'} ${item.objectPosition || 'object-center'} group-hover:scale-110 transition-transform duration-500 ease-out`"
           />
-          <!-- 渐变遮罩效果 -->
-          <div class="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <!-- 会员体系菜单：图片下方悬浮显示描述（仅会员体系，不包括专属服务） -->
+          <div v-if="isMembership && (item.slug === 'membership-system' || item.id === 'membership-system')" class="absolute bottom-[28%] left-0 right-0 px-3 py-2 pointer-events-none">
+            <p class="text-gray-700 text-xs md:text-sm text-center font-medium">
+              {{ item.title || item.name }}
+            </p>
+          </div>
         </div>
         <!-- 如果没有图片，显示占位符 -->
         <div v-else class="relative overflow-hidden bg-gray-100 w-[250px] h-[250px] mx-auto flex items-center justify-center">
@@ -59,6 +63,10 @@ const props = defineProps({
     type: Array,
     required: true,
     default: () => []
+  },
+  isMembership: {
+    type: Boolean,
+    default: false
   }
 })
 

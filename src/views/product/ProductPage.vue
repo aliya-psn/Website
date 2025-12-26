@@ -72,14 +72,26 @@
               <!-- 右侧：产品图片 -->
               <div
                 v-if="productData.descImage"
-                class="flex-shrink-0 w-full lg:w-1/2 flex justify-center"
+                :class="[
+                  'shrink-0 w-full lg:w-1/2 flex justify-center',
+                  isSeries2 
+                    ? 'mt-2 md:mt-4 lg:mt-6 xl:mt-8'
+                    : '-mt-2 md:-mt-4 lg:-mt-6 xl:-mt-8'
+                ]"
               >
-                <LazyImage
-                  :key="productData.descImage"
-                  :src="productData.descImage"
-                  container-class="w-full max-w-[160px] md:max-w-[180px] lg:max-w-[200px] h-auto"
-                  image-class="w-full object-contain"
-                />
+                <div :class="[
+                  'w-full flex items-center justify-center',
+                  isSeries2 
+                    ? 'max-w-[160px] md:max-w-[180px] lg:max-w-[200px] h-[200px] md:h-[220px] lg:h-[280px]'
+                    : 'max-w-[200px] md:max-w-[240px] lg:max-w-[280px] h-[260px] md:h-[300px] lg:h-[340px]'
+                ]">
+                  <LazyImage
+                    :key="productData.descImage"
+                    :src="productData.descImage"
+                    container-class="w-full h-full flex items-center justify-center"
+                    image-class="w-full h-full object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -141,7 +153,7 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12">
           <!-- 产品网格 - 每行两个 -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-3 md:gap-y-4 max-w-4xl mx-auto"
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-3 md:gap-x-4 gap-y-3 md:gap-y-4 max-w-4xl mx-auto"
           >
             <div
               v-for="product in productData.productList"
@@ -151,7 +163,12 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full h-54 md:h-66 lg:h-72 overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6"
+                :class="[
+                  'relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6',
+                  isSeries2 
+                    ? 'h-46 md:h-54 lg:h-64 xl:h-60'
+                    : 'h-54 md:h-66 lg:h-72 xl:h-80'
+                ]"
               >
                 <LazyImage
                   :key="product.image"
@@ -165,7 +182,7 @@
               <!-- 产品信息 -->
               <div class="pb-8 md:pb-10 text-center space-y-2 px-2 md:px-4 lg:px-6">
                 <!-- 产品名称 -->
-                <h3 class="text-[28px] font-medium text-gray-900">
+                <h3 class="text-[28px] font-medium text-gray-900 leading-[1.1]">
                   {{ product.productName }}
                 </h3>
                 <!-- 产品规格 -->
@@ -211,6 +228,11 @@ const props = defineProps({
     type: String,
     required: true,
   },
+})
+
+// 判断是否是系列2（advanced-repair-collection）
+const isSeries2 = computed(() => {
+  return props.slug === 'advanced-repair-collection'
 })
 
 // 根据 slug 获取产品数据

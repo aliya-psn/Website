@@ -7,7 +7,7 @@
       { scrolled: isScrolled, 'navbar-hidden': !props.isVisible },
     ]"
   >
-    <div class="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
+    <div class="flex items-center justify-center gap-6 md:gap-12 lg:gap-20 xl:gap-50 2xl:gap-70 3xl:gap-120">
       <!-- Logo -->
       <div
         @click="scrollToTop"
@@ -138,6 +138,7 @@
             currentDropdownItems.length > 0
           "
           :data="currentDropdownItems"
+          :is-membership="true"
           @item-click="handleItemClick"
           @close="closeDropdown"
         />

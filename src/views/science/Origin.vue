@@ -16,7 +16,8 @@
         <!-- 左侧：占位区域，圆形区域由 TimelineLayout 的遮罩层处理 -->
         <div class="flex justify-center lg:justify-start order-2 lg:order-1 relative w-full lg:w-auto">
           <div
-            class="absolute inset-0 lg:relative w-full h-full min-h-[24rem] sm:min-h-[28rem] md:min-h-[32rem] lg:min-h-0 lg:w-48 lg:h-48 sm:lg:w-64 sm:lg:h-64 md:lg:w-80 md:lg:h-80 lg:w-[28rem] lg:h-[28rem]"
+            class="absolute inset-0 lg:relative w-full h-full min-h-[20rem] sm:min-h-[24rem] md:min-h-[28rem] lg:min-h-0 lg:w-[20rem] lg:h-[20rem] xl:w-[24rem] xl:h-[24rem] 2xl:w-[28rem] 2xl:h-[28rem] bg-cover bg-no-repeat rounded-full"
+            :style="getImageStyle(currentSlide)"
           >
           </div>
         </div>
@@ -25,12 +26,6 @@
         <div
           class="flex flex-col justify-center space-y-4 sm:space-y-6 relative order-1 lg:order-2"
         >
-          <!-- <div
-            class="absolute -top-4 -right-4 sm:-top-10 sm:-right-10 text-white/10 text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold select-none pointer-events-none z-0 overflow-hidden"
-          >
-            {{ currentSlide.title }}
-          </div> -->
-
           <div class="relative z-10">
             <div class="mb-4 sm:mb-6">
               <span
@@ -131,6 +126,49 @@ const formattedDescription = (slide) => {
         .map((s) => s.trim())
         .filter(Boolean)
     : []
+}
+
+// 获取图片样式，包括背景图片和位置
+const getImageStyle = (slide) => {
+  if (!slide?.image) return {}
+  
+  const style = {
+    backgroundImage: `url(${resolveImage(slide.image)})`
+  }
+  
+  // 如果有 objectPosition，转换为 backgroundPosition
+  if (slide.objectPosition) {
+    let position = slide.objectPosition
+    
+    // 移除 object- 前缀
+    position = position.replace(/^object-/, '')
+    
+    // 处理自定义值格式：[50%_20%] -> 50% 20%
+    if (position.startsWith('[') && position.endsWith(']')) {
+      position = position.slice(1, -1).replace(/_/g, ' ')
+    } else {
+      // 处理 Tailwind 预设值映射
+      const positionMap = {
+        'left': 'left center',
+        'right': 'right center',
+        'top': 'center top',
+        'bottom': 'center bottom',
+        'center': 'center center',
+        'left-top': 'left top',
+        'left-bottom': 'left bottom',
+        'right-top': 'right top',
+        'right-bottom': 'right bottom'
+      }
+      position = positionMap[position] || position
+    }
+    
+    style.backgroundPosition = position
+  } else {
+    // 默认居中
+    style.backgroundPosition = 'center'
+  }
+  
+  return style
 }
 
 // 使用滚动处理 composable

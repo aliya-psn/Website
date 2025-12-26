@@ -22,7 +22,7 @@
     </Transition>
     
     <!-- 背景遮罩层，确保文字可读性 -->
-    <div class="absolute inset-0 bg-black/40 z-0 timeline-overlay" :class="hasCircleCutout ? 'timeline-overlay-with-cutout' : ''"></div>
+    <div class="absolute inset-0 bg-black/80 z-0 timeline-overlay"></div>
     
     <div class="w-full max-w-[calc(100%-min(12vw,8rem))] mx-auto px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-12 flex-1 flex flex-col relative z-10">
       <!-- 小屏幕：顶部横向时间轴 -->
@@ -267,19 +267,5 @@ const showScrollHint = computed(() => {
 
 .background-fade-leave-to {
   opacity: 0;
-}
-
-/* 圆形裁剪遮罩 */
-.timeline-overlay-with-cutout {
-  /* 在左侧中心位置挖一个圆形洞，靠右一点，小一点 */
-  mask: radial-gradient(circle at 35% 50%, transparent 0%, transparent 15%, black 15%, black 100%);
-  -webkit-mask: radial-gradient(circle at 35% 50%, transparent 0%, transparent 15%, black 15%, black 100%);
-}
-
-@media (min-width: 1024px) {
-  .timeline-overlay-with-cutout {
-    mask: radial-gradient(circle at 30% 50%, transparent 0%, transparent 13%, black 13%, black 100%);
-    -webkit-mask: radial-gradient(circle at 30% 50%, transparent 0%, transparent 13%, black 13%, black 100%);
-  }
 }
 </style>
