@@ -265,7 +265,7 @@
           "name": "R&D Team",
           "image": "menu.brandHeritage.key",
           "slug": "key-ingredients",
-          "objectPosition": "object-[50%_80%]"
+          "objectPosition": "object-[50%_0%]"
         },
         {
           "name": "Technology",
@@ -450,7 +450,8 @@
         {
           "period": "MEDIUM",
           "description": "30-day collagen regeneration trajectory analysis",
-          "image": "member.membership.2"
+          "image": "member.membership.2",
+          "objectPosition": "object-[50%_75%]"
         },
         {
           "period": "LONG-TERM",

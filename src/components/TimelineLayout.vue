@@ -22,7 +22,7 @@
     </Transition>
     
     <!-- 背景遮罩层，确保文字可读性 -->
-    <div class="absolute inset-0 bg-black/80 z-0 timeline-overlay"></div>
+    <div class="absolute inset-0 bg-black/66 z-0 timeline-overlay"></div>
     
     <div class="w-full max-w-[calc(100%-min(12vw,8rem))] mx-auto px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-12 flex-1 flex flex-col relative z-10">
       <!-- 小屏幕：顶部横向时间轴 -->

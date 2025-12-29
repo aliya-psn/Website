@@ -1,7 +1,7 @@
 <template>
   <!-- 产品系列展示区域 -->
   <div 
-    class="fixed left-0 right-0 w-screen bg-white shadow-lg z-50"
+    class="fixed left-0 right-0 w-screen bg-gray-50 shadow-lg z-50"
     :style="{ top: navHeight + 'px' }"
   >
     <!-- 关闭按钮 -->

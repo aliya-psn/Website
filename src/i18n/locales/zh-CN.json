@@ -264,7 +264,7 @@
           "name": "研发团队",
           "image": "menu.brandHeritage.key",
           "slug": "key-ingredients",
-          "objectPosition": "object-[50%_80%]"
+          "objectPosition": "object-[50%_0%]"
         },
         {
           "name": "技术与专利",
@@ -449,7 +449,8 @@
         {
           "period": "中期",
           "description": "30天胶原蛋白再生轨迹分析",
-          "image": "member.membership.2"
+          "image": "member.membership.2",
+          "objectPosition": "object-[50%_75%]"
         },
         {
           "period": "长期",

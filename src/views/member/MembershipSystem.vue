@@ -35,13 +35,15 @@
               class="model-card flex flex-col"
             >
               <div class="w-full max-w-5xl mx-auto">
-                <LazyImage
-                  :src="model.image"
-                  :alt="model.period"
-                  container-class="w-full h-full"
-                  image-class="w-full h-full object-contain"
-                  skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
-                />
+                <div class="w-full aspect-square overflow-hidden">
+                  <LazyImage
+                    :src="model.image"
+                    :alt="model.period"
+                    container-class="w-full h-full"
+                    :image-class="`w-full h-full object-cover ${model.objectPosition || 'object-center'}`"
+                    skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
+                  />
+                </div>
               </div>
               <div class="text-center">
                 <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">
@@ -178,12 +180,12 @@
           {{ membershipData.expertQA.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full aspect-video overflow-hidden">
+          <div class="w-full aspect-[2/1] overflow-hidden">
             <LazyImage
               :src="membershipData.expertQA.image"
               :alt="membershipData.expertQA.title"
               container-class="w-full h-full"
-              image-class="w-full h-full object-cover"
+              image-class="w-full h-full object-cover object-[70%_75%]"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
@@ -237,45 +239,7 @@ const { dataSource } = useI18nData()
 // 获取会员体系数据
 const membershipData = computed(() => {
   return (
-    dataSource.value.membershipSystem || {
-      title: 'Membership Program',
-      professionalSupport: '',
-      certificationProgram: '',
-      aiDevelopment: '',
-      predictiveModeling: {
-        title: '',
-        models: [],
-      },
-      allergenAlert: {
-        title: '',
-        image: '',
-      },
-      dosageOptimization: {
-        title: '',
-        people: [],
-      },
-      userExperience: {
-        title: '',
-        image: '',
-      },
-      userFeedback: {
-        title: '',
-        image: '',
-      },
-      skinRenewal: {
-        title: '',
-        subtitle: '',
-        videoUrl: '',
-      },
-      expertQA: {
-        title: '',
-        image: '',
-      },
-      milestoneBadges: {
-        title: '',
-        badges: [],
-      },
-    }
+    dataSource.value.membershipSystem
   )
 })
 </script>
