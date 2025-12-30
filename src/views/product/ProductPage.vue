@@ -133,10 +133,10 @@
               <!-- 产品图片 -->
               <div class="shrink-0">
                 <LazyImage
-                  :key="productData.productImage"
-                  :src="productData.productImage"
+                  :key="productData.descImage"
+                  :src="productData.descImage"
                   :alt="productData.title"
-                  container-class="w-80 md:w-[24rem] lg:w-[36rem] xl:w-[40rem] min-w-80 md:min-w-[24rem] lg:min-w-[36rem] h-auto"
+                  container-class="w-[30rem] md:w-[36rem] lg:w-[56rem] xl:w-[60rem] min-w-[30rem] md:min-w-[36rem] lg:min-w-[56rem] h-auto"
                   image-class="w-full h-full object-contain"
                 />
               </div>
@@ -252,6 +252,7 @@ const productData = computed(() => {
       title: dropdownItem.title,
       shortDescription: dropdownItem.description, // 简短描述（用于标题下方）
       productImage: dropdownItem.image,
+      descImage: dropdownItem.descImage,
     }
   }
   return product

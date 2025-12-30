@@ -228,7 +228,9 @@
           "title": "限量尊享系列",
           "description": "融汇年度前沿科研成果，为追求极致的客户提供先锋护理体验。",
           "image": "product.series3",
-          "slug": "limited-exclusive-collection"
+          "descImage": "product.series3Image",
+          "slug": "limited-exclusive-collection",
+          "objectPosition": "object-[20%_50%]"
         }
       ]
     },
@@ -356,7 +358,7 @@
             "image": "product.5",
             "productName": "抗衰",
             "price": 129,
-            "description": "赠送 S75 礼品卡*",
+            "description": "400毫克/60粒植物胶囊",
             "benefitDetails": []
           },
           {
@@ -365,7 +367,7 @@
             "image": "product.6",
             "productName": "美白",
             "price": 129,
-            "description": "赠送 S75 礼品卡*",
+            "description": "400毫克/60粒植物胶囊",
             "benefitDetails": []
           },
           {
@@ -374,7 +376,7 @@
             "image": "product.7",
             "productName": "卵巢",
             "price": 129,
-            "description": "赠送 S75 礼品卡*",
+            "description": "400毫克/60粒植物胶囊",
             "benefitDetails": []
           },
           {
@@ -383,7 +385,7 @@
             "image": "product.8",
             "productName": "生发",
             "price": 99,
-            "description": "赠送 S75 礼品卡*",
+            "description": "400毫克/60粒植物胶囊",
             "benefitDetails": []
           }
         ]

@@ -45,7 +45,7 @@
                   />
                 </div>
               </div>
-              <div class="text-center">
+              <div class="text-center mt-4 md:mt-6">
                 <p class="text-lg md:text-xl font-bold text-gray-900 mb-2">
                   {{ model.period }}
                 </p>

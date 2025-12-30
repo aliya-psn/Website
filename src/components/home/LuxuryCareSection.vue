@@ -2,7 +2,7 @@
   <!-- 奢华护理区域 - 首页第五个页面 -->
   <section
     id="luxury-care-section"
-    class="relative overflow-hidden"
+    class="relative overflow-hidden pt-16 md:pt-20"
     style="background-color: #F5F5F7;"
   >
     <div class="relative w-full h-[55vh] md:h-[60vh] lg:h-[65vh]">

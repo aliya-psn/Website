@@ -5,9 +5,9 @@
     class="relative min-h-screen bg-[#F5F5F7] overflow-hidden"
   >
     <!-- 内容区域 -->
-    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-20">
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20">
       <!-- 上半部分：标题、描述、按钮 -->
-      <div class="flex-1 flex flex-col items-center justify-center text-center mb-6 md:mb-8">
+      <div class="flex-1 flex flex-col items-center justify-center text-center mb-0">
         <!-- 标题 -->
         <div class="mb-3 md:mb-4">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-normal leading-tight" style="line-height: 56px;">
@@ -32,7 +32,7 @@
       </div>
 
       <!-- 下半部分：产品图片 -->
-      <div class="flex-1 flex items-center justify-center animate-fade-in-up-delay-3 w-full min-h-0">
+      <div class="flex-1 flex items-center justify-center w-full min-h-0">
         <div class="relative product-image-container">
           <LazyImage 
             :src="experienceData.productImage" 
@@ -41,7 +41,6 @@
             image-class="product-image w-full h-auto object-contain"
             root-margin="200px"
           />
-          <div class="product-glow"></div>
         </div>
       </div>
     </div>
@@ -135,56 +134,13 @@ onMounted(() => {
 }
 
 
-/* 产品图片特效 */
+/* 产品图片 */
 .product-image-container {
   position: relative;
 }
 
 .product-image {
   position: relative;
-  z-index: 2;
-  animation: floatImage 6s ease-in-out infinite;
-  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease;
-}
-
-.product-image:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.15));
-}
-
-.product-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: 1;
-  animation: pulseGlow 4s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes floatImage {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.02);
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
 }
 
 </style>

@@ -229,7 +229,9 @@
           "title": "Limited Edition Privilege Collection",
           "description": "Integrates cutting-edge annual scientific research findings, offering pioneering care experiences for clients pursuing excellence.",
           "image": "product.series3",
-          "slug": "limited-exclusive-collection"
+          "descImage": "product.series3Image",
+          "slug": "limited-exclusive-collection",
+          "objectPosition": "object-[20%_50%]"
         }
       ]
     },
@@ -357,7 +359,7 @@
             "image": "product.5",
             "productName": "Hera Golden Apple Capsules",
             "price": 129,
-            "description": "Get a S75 gift card*",
+            "description": "400mg/60 capsules",
             "benefitDetails": []
           },
           {
@@ -366,7 +368,7 @@
             "image": "product.6",
             "productName": "Lilith Red Diamond Vial Capsules",
             "price": 129,
-            "description": "Get a S75 gift card*",
+            "description": "400mg/60 capsules",
             "benefitDetails": []
           },
           {
@@ -375,7 +377,7 @@
             "image": "product.7",
             "productName": "Rhea Purple Amber Vial Capsules",
             "price": 129,
-            "description": "Get a S75 gift card*",
+            "description": "400mg/60 capsules",
             "benefitDetails": []
           },
           {
@@ -384,7 +386,7 @@
             "image": "product.8",
             "productName": "Freya Black Diamond Vial Capsules",
             "price": 99,
-            "description": "Get a S75 gift card*",
+            "description": "400mg/60 capsules",
             "benefitDetails": []
           }
         ]

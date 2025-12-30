@@ -2,7 +2,7 @@
   <!-- 地图和邮箱订阅区域 - 首页底部 -->
   <section
     id="map-newsletter-section"
-    class="relative bg-[#F5F5F7] overflow-hidden py-8 md:py-10 lg:py-12"
+    class="relative bg-[#F5F5F7] overflow-hidden pt-10 md:pt-14"
   >
     <!-- 地图区域 - 独立容器，只保留左右边距 -->
     <div class="mb-12 md:mb-16 pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-6 md:pr-8 lg:pr-12 xl:pr-16">

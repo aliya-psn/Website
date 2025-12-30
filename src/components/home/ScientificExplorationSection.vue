@@ -5,7 +5,7 @@
     class="relative overflow-hidden min-h-screen"
     style="background-color: #F5F5F7;"
   >
-    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16 min-h-screen flex flex-col items-center justify-center py-8 md:py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16 min-h-screen flex flex-col items-center justify-center pt-16 md:pt-20">
       <!-- 顶部文字和按钮区域 - 占据约1/3空间 -->
       <div class="text-center mb-2 md:mb-4">
         <!-- 标题 -->
@@ -34,13 +34,13 @@
       </div>
 
       <!-- 文档拼贴图区域 - 占据约2/3空间 -->
-      <div class="relative w-full flex items-center justify-center flex-1">
+      <div class="relative w-full flex items-end justify-center flex-1 min-h-0">
         <div class="w-full max-w-5xl">
           <LazyImage
             :src="sectionData.collageImage"
             :alt="sectionData.title"
-            container-class="w-full"
-            image-class="w-full h-auto object-contain max-h-[70vh]"
+            container-class="w-full h-full"
+            image-class="w-full h-full object-contain object-bottom"
           />
         </div>
       </div>
