@@ -221,14 +221,15 @@
           "description": "针对暗沉、皱纹、松弛等专项问题，提供高浓度靶向修护。",
           "image": "product.series2",
           "slug": "advanced-repair-collection",
-          "objectFit": "object-contain"
+          "objectFit": "object-contain",
+          "paddingX": 20
         },
         {
           "id": 3,
           "title": "限量尊享系列",
           "description": "融汇年度前沿科研成果，为追求极致的客户提供先锋护理体验。",
           "image": "product.series3",
-          "descImage": "product.series3Image",
+          "seriesImage": "product.series3Image",
           "slug": "limited-exclusive-collection",
           "objectPosition": "object-[20%_50%]"
         }

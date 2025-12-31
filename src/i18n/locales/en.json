@@ -222,14 +222,15 @@
           "description": "Targets specific concerns such as dullness, wrinkles, and sagging, delivering high-potency targeted restoration.",
           "image": "product.series2",
           "slug": "advanced-repair-collection",
-          "objectFit": "object-contain"
+          "objectFit": "object-contain",
+          "paddingX": 20
         },
         {
           "id": 3,
           "title": "Limited Edition Privilege Collection",
           "description": "Integrates cutting-edge annual scientific research findings, offering pioneering care experiences for clients pursuing excellence.",
           "image": "product.series3",
-          "descImage": "product.series3Image",
+          "seriesImage": "product.series3Image",
           "slug": "limited-exclusive-collection",
           "objectPosition": "object-[20%_50%]"
         }

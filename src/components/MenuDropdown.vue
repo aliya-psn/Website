@@ -31,19 +31,17 @@
         </div>
 
         <!-- 图片区域 -->
-        <div v-if="item.image" class="relative overflow-hidden bg-white w-[250px] h-[250px] mx-auto">
+        <div 
+          v-if="item.image" 
+          class="relative overflow-hidden bg-white w-[250px] h-[250px] mx-auto"
+          :style="item.paddingX ? { paddingLeft: `${item.paddingX}px`, paddingRight: `${item.paddingX}px` } : {}"
+        >
           <LazyImage
             :src="item.image"
             :alt="item.title || item.name"
             container-class="w-full h-full"
             :image-class="`min-w-full min-h-full w-full h-full ${item.objectFit || 'object-cover'} ${item.objectPosition || 'object-center'} group-hover:scale-110 transition-transform duration-500 ease-out`"
           />
-          <!-- 会员体系菜单：图片下方悬浮显示描述（仅会员体系，不包括专属服务） -->
-          <div v-if="isMembership && (item.slug === 'membership-system' || item.id === 'membership-system')" class="absolute bottom-[28%] left-0 right-0 px-3 py-2 pointer-events-none">
-            <p class="text-gray-700 text-xs md:text-sm text-center font-medium">
-              {{ item.title || item.name }}
-            </p>
-          </div>
         </div>
         <!-- 如果没有图片，显示占位符 -->
         <div v-else class="relative overflow-hidden bg-gray-100 w-[250px] h-[250px] mx-auto flex items-center justify-center">

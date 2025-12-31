@@ -38,7 +38,7 @@
             :key="'top-' + index"
             class="award-item flex flex-col col-span-6"
           >
-            <div class="w-full h-[40rem] mb-6 overflow-hidden rounded-lg">
+            <div class="w-full h-[44rem] mb-6 overflow-hidden rounded-lg">
               <LazyImage
                 v-if="award.image"
                 :src="award.image"

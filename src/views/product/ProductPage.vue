@@ -25,73 +25,75 @@
         >
           {{ productData.shortDescription }}
         </p>
-        <div
-          v-if="productData.description || productData.productImage"
-        >
-          <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+          <div
+            class="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 max-w-4xl mx-auto"
+          >
+            <!-- 左侧：Logo 和描述 -->
             <div
-              class="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 max-w-4xl mx-auto"
+              :class="[
+                'flex-1 flex flex-col justify-center ml-2 md:ml-4 lg:ml-6',
+                isSeries2 ? '' : '-mt-10 md:-mt-12 lg:-mt-14 xl:-mt-18'
+              ]"
             >
-              <!-- 左侧：Logo 和描述 -->
-              <div class="flex-1 flex flex-col justify-center mt-2 md:mt-4 lg:mt-6 ml-2 md:ml-4 lg:ml-6">
-                <!-- Logo -->
-                <div class="mb-2">
-                  <img
-                    :src="logoImage"
-                    alt="Logo"
-                    class="h-8 md:h-10 lg:h-12 object-contain"
-                    style="max-height: 100%"
-                  />
-                </div>
-
-                <!-- 描述 -->
-                <div
-                  v-if="
-                    productData.description &&
-                    Array.isArray(productData.description) &&
-                    productData.description.length > 0
-                  "
-                  class="space-y-3"
-                >
-                  <p
-                    v-for="(desc, index) in productData.description"
-                    :key="index"
-                    class="text-sm md:text-base text-gray-600 leading-relaxed font-light"
-                  >
-                    {{ desc }}
-                  </p>
-                </div>
+              <!-- Logo -->
+              <div class="mb-2">
+                <img
+                  :src="logoImage"
+                  alt="Logo"
+                  class="h-8 md:h-10 lg:h-12 object-contain"
+                  style="max-height: 100%"
+                />
+              </div>
+              <!-- 描述 -->
+              <div
+                v-if="
+                  productData.description &&
+                  Array.isArray(productData.description) &&
+                  productData.description.length > 0
+                "
+                class="space-y-3"
+              >
                 <p
-                  v-else-if="productData.shortDescription"
-                  class="text-xs md:text-sm text-gray-600 leading-tight font-light max-w-2xl"
+                  v-for="(desc, index) in productData.description"
+                  :key="index"
+                  class="text-sm md:text-base text-gray-600 leading-relaxed font-light"
                 >
-                  {{ productData.shortDescription }}
+                  {{ desc }}
                 </p>
               </div>
+              <p
+                v-else-if="productData.shortDescription"
+                class="text-xs md:text-sm text-gray-600 leading-tight font-light max-w-2xl"
+              >
+                {{ productData.shortDescription }}
+              </p>
+            </div>
 
-              <!-- 右侧：产品图片 -->
+            <!-- 右侧：产品图片 -->
+            <div
+              v-if="productData.descImage || productData.navItemImage"
+              :class="[
+                'shrink-0 w-full lg:w-1/2 flex justify-center',
+                isSeries2
+                  ? 'mt-4 md:mt-6 lg:mt-8 xl:mt-10'
+                  : '-mt-8 md:-mt-16 lg:-mt-24',
+              ]"
+            >
               <div
-                v-if="productData.descImage"
                 :class="[
-                  'shrink-0 w-full lg:w-1/2 flex justify-center',
-                  isSeries2 
-                    ? 'mt-2 md:mt-4 lg:mt-6 xl:mt-8'
-                    : '-mt-2 md:-mt-4 lg:-mt-6 xl:-mt-8'
+                  'w-full flex items-center justify-center',
+                  isSeries2
+                    ? 'max-w-[160px] md:max-w-[180px] lg:max-w-[200px] h-[200px] md:h-[220px] lg:h-[280px]'
+                    : 'max-w-[260px] md:max-w-[340px] lg:max-w-[420px] h-[300px] md:h-[380px] lg:h-[460px]',
                 ]"
               >
-                <div :class="[
-                  'w-full flex items-center justify-center',
-                  isSeries2 
-                    ? 'max-w-[160px] md:max-w-[180px] lg:max-w-[200px] h-[200px] md:h-[220px] lg:h-[280px]'
-                    : 'max-w-[200px] md:max-w-[240px] lg:max-w-[280px] h-[260px] md:h-[300px] lg:h-[340px]'
-                ]">
-                  <LazyImage
-                    :key="productData.descImage"
-                    :src="productData.descImage"
-                    container-class="w-full h-full flex items-center justify-center"
-                    image-class="w-full h-full object-contain"
-                  />
-                </div>
+                <LazyImage
+                  :key="productData.descImage || productData.navItemImage"
+                  :src="productData.descImage || productData.navItemImage"
+                  container-class="w-full h-full flex items-center justify-center"
+                  image-class="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
@@ -148,7 +150,10 @@
       <!-- 系列1和系列2  产品列表区域 -->
       <div
         v-if="productData.productList && productData.productList.length > 0"
-        class="bg-white pb-12 md:pb-20 -mt-[60px]"
+        :class="[
+          'bg-white pb-12 md:pb-20',
+          isSeries2 ? '-mt-[60px]' : '-mt-[120px]'
+        ]"
       >
         <div class="max-w-7xl mx-auto px-6 md:px-12">
           <!-- 产品网格 - 每行两个 -->
@@ -165,9 +170,9 @@
               <div
                 :class="[
                   'relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6',
-                  isSeries2 
+                  isSeries2
                     ? 'h-46 md:h-54 lg:h-64 xl:h-60'
-                    : 'h-54 md:h-66 lg:h-72 xl:h-80'
+                    : 'h-54 md:h-66 lg:h-72 xl:h-80',
                 ]"
               >
                 <LazyImage
@@ -180,15 +185,15 @@
               </div>
 
               <!-- 产品信息 -->
-              <div class="pb-8 md:pb-10 text-center space-y-2 px-2 md:px-4 lg:px-6">
+              <div
+                class="pb-8 md:pb-10 text-center space-y-2 px-2 md:px-4 lg:px-6"
+              >
                 <!-- 产品名称 -->
                 <h3 class="text-[28px] font-medium text-gray-900 leading-[1.1]">
                   {{ product.productName }}
                 </h3>
                 <!-- 产品规格 -->
-                <p
-                  class="text-[17px] text-gray-900 font-light leading-tight"
-                >
+                <p class="text-[17px] text-gray-900 font-light leading-tight">
                   {{ product.description }}
                 </p>
                 <!-- 价格 -->
@@ -240,20 +245,24 @@ const productData = computed(() => {
   const product = productDataSource.value.products?.find(
     (p) => p.slug === props.slug
   )
-
   // 从 dropdownItems 中获取 title、description 和 image
   const dropdownItem = dataSource.value.navItems
     ?.find((item) => item.id === 'products')
     ?.dropdownItems?.find((item) => item.slug === props.slug)
 
   if (product && dropdownItem) {
-    return {
+    const result = {
       ...product,
       title: dropdownItem.title,
       shortDescription: dropdownItem.description, // 简短描述（用于标题下方）
-      productImage: dropdownItem.image,
-      descImage: dropdownItem.descImage,
+      descImage: dropdownItem.seriesImage,
     }
+    // 如果产品列表不为空，才添加 navItemImage
+    if (product.productList && product.productList.length > 0) {
+      result.navItemImage = product.descImage
+    }
+
+    return result
   }
   return product
 })
