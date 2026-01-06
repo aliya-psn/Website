@@ -3,34 +3,39 @@
   <section
     id="origin-section"
     class="relative overflow-hidden min-h-screen"
-    style="background-color: #F5F5F7;"
+    style="background-color: #f5f5f7"
   >
     <!-- 装饰性背景元素 -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-linear-to-br from-gray-100/20 to-transparent rounded-full blur-3xl"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-tl from-gray-100/20 to-transparent rounded-full blur-3xl"></div>
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-linear-to-br from-gray-100/20 to-transparent rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-tl from-gray-100/20 to-transparent rounded-full blur-3xl"
+      ></div>
     </div>
 
     <!-- 内容区域 -->
-    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20">
+    <div
+      class="relative z-10 flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20"
+    >
       <div class="w-full mb-1">
-        <!-- 标题 -->
-        <h2
-          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-3 md:mb-4 text-gray-900"
-          style="line-height: 56px;"
-        >
-        <span class="origin-title-text">{{ originData.title }}</span>
-        <span class="origin-title-glow"></span>
-        </h2>
-
-        <!-- 副标题 -->
-        <p
-          v-if="originData.subtitle"
-          class="origin-subtitle text-lg md:text-xl text-center mt-2 md:mt-3 mb-8 md:mb-10 lg:mb-12 font-normal origin-fade-in"
-          style="line-height: 28px;"
-        >
-          {{ originData.subtitle }}
-        </p>
+        <div class="flex flex-col gap-1 md:gap-2 lg:gap-3 xl:gap-4 mb-3">
+          <!-- 标题 -->
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-semibold text-center text-gray-900"
+          >
+            <span class="origin-title-text">{{ originData.title }}</span>
+          </h2>
+          <!-- 副标题 -->
+          <p
+            v-if="originData.subtitle"
+            class="origin-subtitle text-lg md:text-xl text-center mt-2 md:mt-3 mb-8 md:mb-10 lg:mb-12 font-normal origin-fade-in"
+            style="line-height: 28px"
+          >
+            {{ originData.subtitle }}
+          </p>
+        </div>
 
         <!-- 描述文字 - 段落列表 -->
         <div class="md:space-y-1">
@@ -45,7 +50,9 @@
       </div>
 
       <!-- 手图 -->
-      <div class="relative w-full flex items-end justify-center flex-1 min-h-0 pb-4 md:pb-6">
+      <div
+        class="relative w-full flex items-end justify-center flex-1 min-h-0 pb-4 md:pb-6"
+      >
         <div class="w-full max-w-[100rem]">
           <LazyImage
             :src="originData.image"
@@ -71,7 +78,7 @@ defineProps({
 </script>
 
 <style scoped>
-  /* 标题 */
+/* 标题 */
 .origin-title {
   position: relative;
   display: block;
@@ -151,7 +158,8 @@ defineProps({
 }
 
 @keyframes elegantGradient {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -160,7 +168,8 @@ defineProps({
 }
 
 @keyframes elegantLineExpand {
-  0%, 100% {
+  0%,
+  100% {
     width: 0;
     opacity: 0;
   }

@@ -7,7 +7,7 @@
       { scrolled: isScrolled, 'navbar-hidden': !props.isVisible },
     ]"
   >
-    <div class="flex items-center justify-center gap-6 md:gap-12 lg:gap-20 xl:gap-50 2xl:gap-70 3xl:gap-120">
+    <div class="nav-container flex items-center justify-center gap-6 md:gap-12 lg:gap-20 xl:gap-50 2xl:gap-70">
       <!-- Logo -->
       <div
         @click="scrollToTop"
@@ -531,6 +531,13 @@ const scrollToTop = () => {
   transform: translateY(-100%) !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+/* 3xl 断点下的 gap 设置 */
+@media (min-width: 1920px) {
+  .nav-container {
+    gap: 560px;
+  }
 }
 
 /* 移动端菜单样式 */

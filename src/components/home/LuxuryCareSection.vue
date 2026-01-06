@@ -19,16 +19,15 @@
       </div>
 
       <!-- 文字区域 - 浮动在图片上方 -->
-      <div class="luxury-text-container absolute top-4 md:top-6 lg:top-8 xl:top-10 left-12 md:left-16 lg:left-20 xl:left-24 z-10 max-w-lg md:max-w-xl lg:max-w-2xl">
-        <div class="luxury-text-row flex flex-wrap items-center gap-1 md:gap-2">
+      <div class="absolute top-4 md:top-6 lg:top-8 xl:top-10 left-12 md:left-16 lg:left-20 xl:left-24 z-10 max-w-lg md:max-w-xl lg:max-w-2xl">
+        <div class="luxury-text-row flex flex-wrap items-center gap-1 md:gap-2 lg:gap-3 xl:gap-4">
           <p
-            class="luxury-primary-text text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-0 whitespace-nowrap"
-            style="line-height: 56px;"
+            class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight whitespace-nowrap"
           >
             {{ sectionData.primaryText }}
           </p>
           <p
-            class="luxury-secondary-text text-lg md:text-xl lg:text-xl text-gray-700 font-normal leading-relaxed mb-0 whitespace-nowrap"
+            class="text-lg md:text-xl lg:text-xl text-gray-700 font-normal leading-relaxed whitespace-nowrap"
             style="line-height: 28px;"
           >
             {{ sectionData.secondaryText }}
@@ -51,16 +50,10 @@ defineProps({
 </script>
 
 <style scoped>
-/* 文字容器浮动效果 - 左上角 */
-.luxury-text-container {
-  animation: fadeInLeft 1s ease-out;
-}
 
 .luxury-text-row p {
   margin: 0;
 }
-
-
 
 /* 文字动画 */
 @keyframes fadeInLeft {

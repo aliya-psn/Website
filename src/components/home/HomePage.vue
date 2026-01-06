@@ -7,24 +7,29 @@
       :style="{
         backgroundImage: 'url(' + pageData.home.backgroundImage + ')',
       }"
-    >
-    </div>
+    ></div>
 
     <div class="h-[80px]"></div>
 
     <!-- 主标题 -->
     <div
-      class="relative z-10 flex flex-col items-start justify-start pt-10 md:pt-14 lg:pt-18 pl-10 md:pl-18 lg:pl-26 pr-4 animate-fade-in-up"
+      class="relative z-10 flex flex-col items-start pt-10 md:pt-14 lg:pt-18 pl-10 md:pl-18 lg:pl-26 pr-4"
     >
-      <h2
-        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-left leading-tight mb-4 md:mb-6 hero-title font-semibold"
-        style="line-height: 56px;"
+      <div
+        class="text-gray-800 text-4xl md:text-5xl lg:text-6xl text-left leading-tight mb-4 md:mb-6 hero-title font-semibold flex flex-col gap-1 md:gap-2 lg:gap-3 xl:gap-4"
       >
-        {{ pageData.home.hero.title }}<br />
-        <span class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl mt-2 md:mt-3" style="line-height: 28px;">{{
-          pageData.home.hero.subtitle
-        }}</span>
-      </h2>
+        <p
+          class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight whitespace-nowrap"
+        >
+          {{ pageData.home.hero.title }}
+        </p>
+        <p
+          class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl"
+          style="line-height: 28px"
+        >
+          {{ pageData.home.hero.subtitle }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +52,6 @@ const { t } = useI18n()
 const scrollDown = () => {
   emit('scroll-down')
 }
-
 </script>
 
 <style scoped>
@@ -177,7 +181,12 @@ const scrollDown = () => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -193,7 +202,11 @@ const scrollDown = () => {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease;
 }

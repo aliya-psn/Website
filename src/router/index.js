@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 // 其他页面使用懒加载，按需加载
 const ProductPage = () => import('../views/product/ProductPage.vue')
+const Series1Page = () => import('../views/product/Series1Page.vue')
+const Series2Page = () => import('../views/product/Series2Page.vue')
+const Series3Page = () => import('../views/product/Series3Page.vue')
 const ProductDetail = () => import('../views/product/ProductDetail.vue')
 const Origin = () => import('../views/science/Origin.vue')
 const DevelopmentHistory = () => import('../views/science/DevelopmentHistory.vue')
@@ -74,6 +77,21 @@ const routes = [
     name: 'ProductDetailBySlug',
     component: ProductDetail,
     props: true
+  },
+  {
+    path: '/basic-revitalization-collection',
+    name: 'Series1Page',
+    component: Series1Page
+  },
+  {
+    path: '/advanced-repair-collection',
+    name: 'Series2Page',
+    component: Series2Page
+  },
+  {
+    path: '/limited-exclusive-collection',
+    name: 'Series3Page',
+    component: Series3Page
   },
   {
     path: '/:slug',
