@@ -35,11 +35,13 @@
       </div>
       <div class="mt-2 pt-2 border-t border-white/20 text-[10px] text-white/50">
         <div>sm: ≥640px</div>
-        <div>md: ≥900px</div>
-        <div>lg: ≥1200px</div>
-        <div>xl: ≥1600px</div>
-        <div>2xl: ≥2000px</div>
-        <div>3xl: ≥2560px</div>
+        <div>md: ≥768px</div>
+        <div>lg: ≥1024px</div>
+        <div>xl: ≥1280px</div>
+        <div>2xl: ≥1536px</div>
+        <div>3xl: ≥1920px</div>
+        <div>4xl: ≥2560px</div>
+        <div>5xl: ≥3840px</div>
       </div>
     </div>
     <button
@@ -96,16 +98,20 @@ const screenHeight = ref(window.innerHeight)
 // Tailwind 默认断点
 const breakpoints = {
   sm: 640,
-  md: 900,
-  lg: 1200,
-  xl: 1600,
-  '2xl': 2000,
-  '3xl': 2560
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  '2xl': 1536,
+  '3xl': 1920,
+  '4xl': 2560,
+  '5xl': 3840
 }
 
 // 计算当前激活的断点
 const currentBreakpoint = computed(() => {
   const width = screenWidth.value
+  if (width >= breakpoints['5xl']) return '5xl'
+  if (width >= breakpoints['4xl']) return '4xl'
   if (width >= breakpoints['3xl']) return '3xl'
   if (width >= breakpoints['2xl']) return '2xl'
   if (width >= breakpoints.xl) return 'xl'
@@ -125,7 +131,9 @@ const currentBreakpointClass = computed(() => {
     lg: 'bg-yellow-600',
     xl: 'bg-orange-600',
     '2xl': 'bg-red-600',
-    '3xl': 'bg-purple-600'
+    '3xl': 'bg-purple-600',
+    '4xl': 'bg-pink-600',
+    '5xl': 'bg-indigo-600'
   }
   return classes[bp] || 'bg-gray-600'
 })

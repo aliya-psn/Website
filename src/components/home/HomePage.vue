@@ -24,7 +24,7 @@
           {{ pageData.home.hero.title }}
         </p>
         <p
-          class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl"
+          class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed whitespace-nowrap"
           style="line-height: 28px"
         >
           {{ pageData.home.hero.subtitle }}
