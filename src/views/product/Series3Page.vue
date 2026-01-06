@@ -49,7 +49,7 @@
             class="flex flex-col items-center justify-center w-full"
           >
             <!-- 产品图片 -->
-            <div class="w-1/2">
+            <div class="w-[55%]">
               <LazyImage
                 :key="productData.descImage"
                 :src="productData.descImage"
