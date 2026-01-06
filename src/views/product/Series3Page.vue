@@ -43,18 +43,18 @@
       </div>
 
       <!-- 产品图片区域 -->
-      <div class="pt-8 md:pt-12 pb-2 md:pb-4 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div class="pt-8 md:pt-12 pb-2 md:pb-4 relative overflow-hidden w-full">
+        <div class="w-full px-6 md:px-12 relative z-10">
           <div
-            class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6"
+            class="flex flex-col items-center justify-center w-full"
           >
             <!-- 产品图片 -->
-            <div class="shrink-0">
+            <div class="w-1/2">
               <LazyImage
                 :key="productData.descImage"
                 :src="productData.descImage"
                 :alt="productData.title"
-                container-class="w-[30rem] md:w-[36rem] lg:w-[56rem] xl:w-[60rem] min-w-[30rem] md:min-w-[36rem] lg:min-w-[56rem] h-auto"
+                container-class="w-full h-auto"
                 image-class="w-full h-full object-contain"
               />
             </div>

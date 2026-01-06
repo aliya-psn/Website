@@ -23,7 +23,7 @@
       </p>
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div
-          class="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 max-w-4xl mx-auto"
+          class="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 max-w-5xl mx-auto"
         >
           <!-- 左侧：Logo 和描述 -->
           <div
@@ -68,8 +68,8 @@
             v-if="productData.descImage || productData.navItemImage"
             class="shrink-0 w-full lg:w-1/2 flex justify-center mt-4 md:mt-6 lg:mt-8 xl:mt-10"
           >
-            <div
-              class="w-full flex items-center justify-center max-w-[160px] md:max-w-[180px] lg:max-w-[200px] h-[200px] md:h-[220px] lg:h-[280px]"
+          <div
+              class="w-full flex items-center justify-center max-w-[160px] md:max-w-[240px] lg:max-w-[320px] h-[200px] md:h-[280px] lg:h-[360px]"
             >
               <LazyImage
                 :key="productData.descImage || productData.navItemImage"
@@ -85,29 +85,29 @@
       <!-- 产品列表区域 -->
       <div
         v-if="productData.productList && productData.productList.length > 0"
-        class="bg-white pb-12 md:pb-20 -mt-[60px]"
+        class="bg-white pb-12 md:pb-20 -mt-[120px]"
       >
         <div class="max-w-7xl mx-auto px-6 md:px-12">
           <!-- 产品网格 - 每行两个 -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-x-3 md:gap-x-4 gap-y-3 md:gap-y-4 max-w-4xl mx-auto"
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-3 md:gap-x-4 gap-y-3 md:gap-y-4 max-w-5xl mx-auto"
           >
             <div
-              v-for="product in productData.productList"
+              v-for="(product, index) in productData.productList"
               :key="product.id"
               @click="goToProductDetail(product)"
               class="product-card group bg-white rounded-xl overflow-hidden transition-all duration-300"
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6 h-46 md:h-54 lg:h-64 xl:h-60"
+                class="relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6 h-60 md:h-72 lg:h-78 xl:h-90"
               >
                 <LazyImage
                   :key="product.image"
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  image-class="w-full h-full max-w-[60%] object-contain mx-auto my-auto group-hover:scale-105 transition-transform duration-300"
+                  image-class="h-[85%] w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
@@ -120,7 +120,7 @@
                   {{ product.productName }}
                 </h3>
                 <!-- 产品规格 -->
-                <p class="text-[17px] text-gray-900 font-light leading-tight">
+                <p class="text-[17px] text-gray-900 font-light leading-tight mt-2">
                   {{ product.description }}
                 </p>
                 <!-- 价格 -->
