@@ -39,13 +39,12 @@
 
       <!-- 下半部分：产品图片 -->
       <div class="flex-1 flex items-center justify-center w-full min-h-0">
-        <div class="relative product-image-container">
+        <div class="relative">
           <LazyImage
             :src="experienceData.productImage"
             alt="产品"
             container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] 3xl:w-[48rem] h-auto"
-            image-class="product-image w-full h-auto object-contain"
-            root-margin="200px"
+            image-class="w-full h-auto object-contain"
           />
         </div>
       </div>
@@ -139,12 +138,4 @@ onMounted(() => {
   font-weight: 400;
 }
 
-/* 产品图片 */
-.product-image-container {
-  position: relative;
-}
-
-.product-image {
-  position: relative;
-}
 </style>

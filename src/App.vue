@@ -35,11 +35,11 @@
       </div>
       <div class="mt-2 pt-2 border-t border-white/20 text-[10px] text-white/50">
         <div>sm: ≥640px</div>
-        <div>md: ≥768px</div>
-        <div>lg: ≥1024px</div>
-        <div>xl: ≥1280px</div>
-        <div>2xl: ≥1536px</div>
-        <div>3xl: ≥1920px</div>
+        <div>md: ≥900px</div>
+        <div>lg: ≥1200px</div>
+        <div>xl: ≥1600px</div>
+        <div>2xl: ≥2000px</div>
+        <div>3xl: ≥2560px</div>
       </div>
     </div>
     <button
@@ -96,11 +96,11 @@ const screenHeight = ref(window.innerHeight)
 // Tailwind 默认断点
 const breakpoints = {
   sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
-  '2xl': 1536,
-  '3xl': 1920
+  md: 900,
+  lg: 1200,
+  xl: 1600,
+  '2xl': 2000,
+  '3xl': 2560
 }
 
 // 计算当前激活的断点
