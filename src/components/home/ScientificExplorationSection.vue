@@ -2,14 +2,14 @@
   <!-- 科学探索区域 - 首页第四个页面 -->
   <section
     id="scientific-exploration-section"
-    class="relative overflow-hidden min-h-screen"
+    class="relative overflow-hidden h-screen"
     style="background-color: #f5f5f7"
   >
     <div
-      class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20"
+      class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20"
     >
       <!-- 上半部分：标题、描述、按钮 -->
-      <div class="flex-1 flex flex-col items-center justify-center text-center">
+      <div class="flex-[0.3] flex flex-col items-center justify-center text-center">
         <!-- 标题 -->
         <div class="flex flex-col gap-1 md:gap-2 lg:gap-3 xl:gap-4 mb-3 md:mb-4">
           <h2
@@ -38,13 +38,13 @@
       </div>
 
       <!-- 下半部分：文档拼贴图 -->
-      <div class="flex-1 flex items-center justify-center w-full min-h-0">
-        <div class="w-full max-w-5xl">
+      <div class="flex-[0.7] flex items-center justify-center w-full min-h-0">
+        <div class="relative w-full h-full flex items-center justify-center">
           <LazyImage
             :src="sectionData.collageImage"
             :alt="sectionData.title"
-            container-class="w-full h-full"
-            image-class="w-full h-full object-contain object-bottom"
+            container-class="w-full h-full flex items-center justify-center"
+            image-class="h-full w-auto object-contain"
           />
         </div>
       </div>

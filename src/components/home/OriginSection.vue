@@ -2,7 +2,7 @@
   <!-- 品牌起源区域 - 首页第三个页面-->
   <section
     id="origin-section"
-    class="relative overflow-hidden min-h-screen"
+    class="relative overflow-hidden h-screen"
     style="background-color: #f5f5f7"
   >
     <!-- 装饰性背景元素 -->
@@ -17,9 +17,10 @@
 
     <!-- 内容区域 -->
     <div
-      class="relative z-10 flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20"
+      class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20"
     >
-      <div class="w-full mb-1">
+      <!-- 上半部分：标题、描述 -->
+      <div class="flex-[0.3] flex flex-col items-center justify-center text-center w-full">
         <div class="flex flex-col gap-1 md:gap-2 lg:gap-3 xl:gap-4 mb-3">
           <!-- 标题 -->
           <h2
@@ -49,16 +50,14 @@
         </div>
       </div>
 
-      <!-- 手图 -->
-      <div
-        class="relative w-full flex items-end justify-center flex-1 min-h-0 pb-4 md:pb-6"
-      >
-        <div class="w-full max-w-[100rem]">
+      <!-- 下半部分：手图 -->
+      <div class="flex-[0.7] flex items-center justify-center w-full min-h-0">
+        <div class="relative w-full h-full flex items-center justify-center">
           <LazyImage
             :src="originData.image"
             :alt="originData.title"
-            container-class="w-full h-full"
-            image-class="w-full h-full object-contain object-bottom"
+            container-class="w-full h-full flex items-center justify-center"
+            image-class="h-full w-auto object-contain"
           />
         </div>
       </div>

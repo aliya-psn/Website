@@ -2,14 +2,14 @@
   <!-- 体验区域 - 首页第二个页面 -->
   <section
     id="experience-section"
-    class="relative min-h-screen bg-[#F5F5F7] overflow-hidden"
+    class="relative h-screen bg-[#F5F5F7] overflow-hidden"
   >
     <!-- 内容区域 -->
     <div
-      class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20"
+      class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8 pt-16 md:pt-20"
     >
       <!-- 上半部分：标题、描述、按钮 -->
-      <div class="flex-1 flex flex-col items-center justify-center text-center">
+      <div class="flex-[0.3] flex flex-col items-center justify-center text-center">
         <!-- 标题 -->
         <div class="flex flex-col gap-1 md:gap-2 lg:gap-3 xl:gap-4 mb-3 md:mb-4">
           <h2
@@ -38,13 +38,13 @@
       </div>
 
       <!-- 下半部分：产品图片 -->
-      <div class="flex-1 flex items-center justify-center w-full min-h-0">
-        <div class="relative">
+      <div class="flex-[0.7] flex items-center justify-center w-full min-h-0">
+        <div class="relative w-full h-full flex items-center justify-center">
           <LazyImage
             :src="experienceData.productImage"
             alt="产品"
-            container-class="w-96 md:w-[28rem] lg:w-[40rem] xl:w-[44rem] 3xl:w-[48rem] h-auto"
-            image-class="w-full h-auto object-contain"
+            container-class="w-full h-full flex items-center justify-center"
+            image-class="h-full w-auto object-contain"
           />
         </div>
       </div>
