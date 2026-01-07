@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 // 首页使用同步导入，确保快速显示
 import Home from '../views/Home.vue'
 // 其他页面使用懒加载，按需加载
-const ProductPage = () => import('../views/product/ProductPage.vue')
 const Series1Page = () => import('../views/product/Series1Page.vue')
 const Series2Page = () => import('../views/product/Series2Page.vue')
 const Series3Page = () => import('../views/product/Series3Page.vue')
@@ -92,12 +91,6 @@ const routes = [
     path: '/limited-exclusive-collection',
     name: 'Series3Page',
     component: Series3Page
-  },
-  {
-    path: '/:slug',
-    name: 'ProductPage',
-    component: ProductPage,
-    props: true
   }
 ]
 

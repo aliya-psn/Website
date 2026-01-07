@@ -43,22 +43,18 @@
       </div>
 
       <!-- 产品图片区域 -->
-      <div class="flex-1 flex items-center justify-center relative overflow-hidden w-full">
-        <div class="w-full px-6 md:px-12 relative z-10">
-          <div
-            class="flex flex-col items-center justify-center w-full"
-          >
-            <!-- 产品图片 -->
-            <div class="w-[58%]">
-              <LazyImage
-                :key="productData.descImage"
-                :src="productData.descImage"
-                :alt="productData.title"
-                container-class="w-full h-auto"
-                image-class="w-full h-full object-contain"
-              />
-            </div>
-          </div>
+      <div
+        class="flex-1 flex items-center justify-center relative overflow-hidden w-full"
+      >
+        <!-- 产品图片 -->
+        <div class="w-[50%] md:w-[52%] lg:w-[56%] xl:w-[60%] 2xl:w-[64%] 3xl:w-[68%] 4xl:w-[72%]">
+          <LazyImage
+            :key="productData.descImage"
+            :src="productData.descImage"
+            :alt="productData.title"
+            container-class="w-full h-auto"
+            image-class="w-full h-full object-contain"
+          />
         </div>
       </div>
     </div>
@@ -75,9 +71,7 @@ const { productData: productDataSource, dataSource } = useI18nData()
 // 根据 slug 获取产品数据
 const productData = computed(() => {
   const slug = 'limited-exclusive-collection'
-  const product = productDataSource.value.products?.find(
-    (p) => p.slug === slug
-  )
+  const product = productDataSource.value.products?.find((p) => p.slug === slug)
   // 从 dropdownItems 中获取 title、description 和 image
   const dropdownItem = dataSource.value.navItems
     ?.find((item) => item.id === 'products')
@@ -97,6 +91,4 @@ const productData = computed(() => {
 })
 </script>
 
-<style scoped>
-</style>
-
+<style scoped></style>

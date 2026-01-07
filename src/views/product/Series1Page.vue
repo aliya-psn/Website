@@ -185,22 +185,23 @@ const productData = computed(() => {
 
 // 获取图片容器类名
 const getImageContainerClass = (index) => {
-  const baseClass = 'relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6'
+  const baseClass = 'relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white px-4 md:px-6 py-8 md:py-10'
   // 所有图片容器高度保持一致
   return `${baseClass} h-64 md:h-76 lg:h-88 xl:h-[25rem]`
 }
 
-// 获取图片类名
+// 获取图片类名 - 前两张图片高度占满，宽度自适应；后两张保持原有边距
 const getImageClass = (index) => {
-  const baseClass = 'w-auto object-contain object-center group-hover:scale-105 transition-transform duration-300'
+  const baseClass = 'object-contain object-center group-hover:scale-105 transition-transform duration-300'
   if (index === 0) {
-    return `${baseClass} h-[150%]`
+    // 第一张图片：高度占满，宽度自适应
+    return `${baseClass} h-full w-auto`
   } else if (index === 1) {
-    return `${baseClass} h-[170%]`
-  } else if (index === 2) {
-    return `${baseClass} h-[56%]`
-  } else if (index === 3) {
-    return `${baseClass} h-[60%]`
+    // 第二张图片：更大一点，向下偏移一点点
+    return `${baseClass} h-[158%] w-auto translate-y-3`
+  } else {
+    // 后两张图片：保持原有边距
+    return `${baseClass} h-[60%] w-auto`
   }
 }
 

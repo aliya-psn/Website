@@ -1,5 +1,5 @@
 <template>
-  <!-- 进阶修护系列页面 -->
+  <!-- 基础焕活系列页面 -->
   <div class="min-h-screen bg-white">
     <!-- 主内容区域 -->
     <div class="pt-24 md:pt-28">
@@ -68,7 +68,7 @@
             v-if="productData.descImage || productData.navItemImage"
             class="shrink-0 w-full lg:w-1/2 flex justify-center mt-4 md:mt-6 lg:mt-8 xl:mt-10"
           >
-          <div
+            <div
               class="w-full flex items-center justify-center max-w-[160px] md:max-w-[240px] lg:max-w-[320px] h-[200px] md:h-[280px] lg:h-[360px]"
             >
               <LazyImage
@@ -100,14 +100,14 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6 h-64 md:h-76 lg:h-88 xl:h-[25rem]"
+                :class="getImageContainerClass(index)"
               >
                 <LazyImage
                   :key="product.image"
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  image-class="h-[60%] w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  :image-class="getImageClass(index)"
                 />
               </div>
 
@@ -157,7 +157,7 @@ const { productData: productDataSource, dataSource } = useI18nData()
 
 // 根据 slug 获取产品数据
 const productData = computed(() => {
-  const slug = 'advanced-repair-collection'
+  const slug = 'basic-revitalization-collection'
   const product = productDataSource.value.products?.find(
     (p) => p.slug === slug
   )
@@ -182,6 +182,27 @@ const productData = computed(() => {
   }
   return product
 })
+
+// 获取图片容器类名
+const getImageContainerClass = (index) => {
+  const baseClass = 'relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6'
+  // 所有图片容器高度保持一致
+  return `${baseClass} h-64 md:h-76 lg:h-88 xl:h-[25rem]`
+}
+
+// 获取图片类名
+const getImageClass = (index) => {
+  const baseClass = 'w-auto object-contain object-center group-hover:scale-105 transition-transform duration-300'
+  if (index === 0) {
+    return `${baseClass} h-[150%]`
+  } else if (index === 1) {
+    return `${baseClass} h-[170%]`
+  } else if (index === 2) {
+    return `${baseClass} h-[56%]`
+  } else if (index === 3) {
+    return `${baseClass} h-[60%]`
+  }
+}
 
 // 跳转到产品详情页
 const goToProductDetail = (product) => {
