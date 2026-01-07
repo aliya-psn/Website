@@ -24,7 +24,7 @@
           {{ pageData.home.hero.title }}
         </p>
         <p
-          class="block font-normal hero-subtitle text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed whitespace-nowrap"
+          class="block font-normal text-lg md:text-xl lg:text-xl text-gray-900 leading-relaxed whitespace-nowrap"
           style="line-height: 28px"
         >
           {{ pageData.home.hero.subtitle }}
@@ -134,16 +134,6 @@ const scrollDown = () => {
 .hero-title {
   letter-spacing: 0.02em;
   font-weight: 600;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.hero-subtitle {
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: rgba(31, 41, 55, 0.8);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

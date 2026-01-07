@@ -31,7 +31,7 @@
           <!-- 副标题 -->
           <p
             v-if="originData.subtitle"
-            class="origin-subtitle text-lg md:text-xl text-center mt-2 md:mt-3 mb-8 md:mb-10 lg:mb-12 font-normal origin-fade-in"
+            class="origin-subtitle text-lg md:text-xl text-center mt-2 md:mt-3 mb-8 md:mb-10 lg:mb-12 font-normal text-gray-900 origin-fade-in"
             style="line-height: 28px"
           >
             {{ originData.subtitle }}
@@ -43,7 +43,7 @@
           <p
             v-for="(paragraph, index) in originData.description"
             :key="index"
-            class="origin-paragraph text-base md:text-lg font-normal text-center"
+            class="origin-paragraph text-base md:text-lg font-normal text-center text-gray-900"
           >
             {{ paragraph }}
           </p>
@@ -189,15 +189,13 @@ defineProps({
 /* 副标题 */
 .origin-subtitle {
   color: #374151;
-  font-weight: 400;
   letter-spacing: 0.03em;
   line-height: 1.75;
 }
 
 /* 段落  */
 .origin-paragraph {
-  color: #1f2937;
-  font-weight: 400;
+  color: #374151;
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
