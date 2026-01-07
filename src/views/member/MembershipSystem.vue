@@ -145,29 +145,16 @@
         </h2>
         <div class="w-full max-w-5xl mx-auto">
           <div class="w-full aspect-video bg-gray-900 overflow-hidden">
+            <!-- v-if="membershipData.skinRenewal.videoUrl"
+              :src="membershipData.skinRenewal.videoUrl" -->
             <video
-              v-if="membershipData.skinRenewal.videoUrl"
-              :src="membershipData.skinRenewal.videoUrl"
+              :src="sampleVideo"
               controls
               class="w-full h-full"
               preload="metadata"
             >
               您的浏览器不支持视频播放。
             </video>
-            <div
-              v-else
-              class="w-full h-full flex items-center justify-center text-white text-center p-8"
-            >
-              <div>
-                <svg
-                  class="w-16 h-16 mx-auto mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -233,6 +220,7 @@
 import { computed } from 'vue'
 import { useI18nData } from '../../composables/useI18nData'
 import LazyImage from '../../components/LazyImage.vue'
+import sampleVideo from '../../assets/sample.mp4'
 
 const { dataSource } = useI18nData()
 
