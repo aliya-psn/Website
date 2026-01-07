@@ -100,17 +100,14 @@
             >
               <!-- 产品图片区域 -->
               <div
-                class="relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6 h-60 md:h-72 lg:h-78 xl:h-90"
+                :class="getImageContainerClass(index)"
               >
                 <LazyImage
                   :key="product.image"
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full flex items-center justify-center"
-                  :image-class="[
-                    'w-auto object-contain group-hover:scale-105 transition-transform duration-300',
-                    index < 2 ? 'h-[120%]' : 'h-[85%]'
-                  ]"
+                  :image-class="getImageClass(index)"
                 />
               </div>
 
@@ -185,6 +182,27 @@ const productData = computed(() => {
   }
   return product
 })
+
+// 获取图片容器类名
+const getImageContainerClass = (index) => {
+  const baseClass = 'relative w-full overflow-hidden flex items-center justify-center mx-auto bg-white p-4 md:p-6'
+  // 所有图片容器高度保持一致
+  return `${baseClass} h-64 md:h-76 lg:h-88 xl:h-[25rem]`
+}
+
+// 获取图片类名
+const getImageClass = (index) => {
+  const baseClass = 'w-auto object-contain object-center group-hover:scale-105 transition-transform duration-300'
+  if (index === 0) {
+    return `${baseClass} h-[150%]`
+  } else if (index === 1) {
+    return `${baseClass} h-[170%]`
+  } else if (index === 2) {
+    return `${baseClass} h-[56%]`
+  } else if (index === 3) {
+    return `${baseClass} h-[60%]`
+  }
+}
 
 // 跳转到产品详情页
 const goToProductDetail = (product) => {

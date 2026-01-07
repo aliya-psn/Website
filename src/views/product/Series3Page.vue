@@ -1,8 +1,8 @@
 <template>
   <!-- 限量尊享系列页面 -->
-  <div class="min-h-screen bg-white">
+  <div class="h-screen bg-white overflow-hidden">
     <!-- 主内容区域 -->
-    <div class="pt-24 md:pt-28">
+    <div class="pt-24 md:pt-28 h-full flex flex-col">
       <!-- 标题区域 -->
       <div class="bg-white pt-8 pb-4">
         <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
@@ -43,13 +43,13 @@
       </div>
 
       <!-- 产品图片区域 -->
-      <div class="pt-8 md:pt-12 pb-2 md:pb-4 relative overflow-hidden w-full">
+      <div class="flex-1 flex items-center justify-center relative overflow-hidden w-full">
         <div class="w-full px-6 md:px-12 relative z-10">
           <div
             class="flex flex-col items-center justify-center w-full"
           >
             <!-- 产品图片 -->
-            <div class="w-[55%]">
+            <div class="w-[58%]">
               <LazyImage
                 :key="productData.descImage"
                 :src="productData.descImage"
