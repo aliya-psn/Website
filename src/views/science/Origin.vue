@@ -47,13 +47,11 @@
               {{ currentSlide.subtitle }}
             </span>
 
-            <div class="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
+            <div class="mt-4 sm:mt-6">
               <p
-                v-for="(paragraph, index) in formattedDescription(currentSlide)"
-                :key="index"
-                class="text-xs sm:text-sm md:text-base text-white/80 leading-normal font-light"
+                class="text-xs sm:text-sm md:text-base text-white/80 leading-normal font-light whitespace-pre-line"
               >
-                {{ paragraph }}
+                {{ currentSlide?.description }}
               </p>
             </div>
           </div>

@@ -35,13 +35,11 @@
             </div>
 
             <!-- 正文 -->
-            <div class="space-y-2 sm:space-y-3 mt-4 sm:mt-6 max-w-sm">
+            <div class="mt-4 sm:mt-6 max-w-sm">
               <p
-                v-for="(paragraph, index) in currentData.description"
-                :key="index"
-                class="text-xs sm:text-sm md:text-base text-white/80 leading-normal font-light"
+                class="text-xs sm:text-sm md:text-base text-white/80 leading-normal font-light whitespace-pre-line"
               >
-                {{ paragraph }}
+                {{ Array.isArray(currentData.description) ? currentData.description.join('\n') : currentData.description }}
               </p>
             </div>
           </div>

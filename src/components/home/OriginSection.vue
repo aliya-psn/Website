@@ -52,7 +52,7 @@
 
       <!-- 下半部分：手图 -->
       <div class="flex-[0.7] flex items-center justify-center w-full min-h-0">
-        <div class="relative w-full h-full flex items-center justify-center">
+        <div class="relative w-full h-full flex items-center justify-center pt-2">
           <LazyImage
             :src="originData.image"
             :alt="originData.title"
