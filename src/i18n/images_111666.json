@@ -1,19 +1,21 @@
 {
   "home": {
-    "backgroundImage": "https://cdn-us.imgs.moe/2026/01/12/9a2648090c44ca875ab6d72b981f925a.png",
+    "backgroundImage1": "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage2": "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "backgroundImage": "https://i.111666.best/image/p45xoqBsDSj34MHi0P8c8I.png",
 
     "experience": {
       "productImage": "https://i.111666.best/image/VA4wmKizOrzAsalF4PDVzE.png"
     },
     "origin": {
-      "image": "https://cdn-us.imgs.moe/2026/01/12/212346e9417d60d4e0e80e22c2d9daa2.png",
+      "image": "https://youke3.picui.cn/s1/2026/01/08/695f191341bcb.png",
       "imageHand": "https://i.111666.best/image/zNk5Ovc9cNHHgZxoCSeOZ0.png"
     },
     "scientificExploration": {
       "collageImage": "https://i.111666.best/image/7kzMDMAzEsn7TPtKA82FvX.png"
     },
     "luxuryCare": {
-      "image": "https://cdn-us.imgs.moe/2026/01/12/1c61b33b32a0f46b66ee362abfb07e4c.png"
+      "image": "https://i.111666.best/image/lyg6K79QL4yc4f9NSRT4OZ.png"
     }
   },
   "menu": {

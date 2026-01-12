@@ -60,11 +60,11 @@ function resolveAssetPath(path) {
  * 根据键名从 images.json 中获取实际的图片路径
  * 注意：由于使用按需加载，返回的可能是 Promise，需要在组件中处理
  * 
- * @param {string} key - 图片键名，支持点号分隔的路径，如 "home.backgroundImage1"
+ * @param {string} key - 图片键名，支持点号分隔的路径，如 "home.backgroundImage"
  * @returns {string|Promise<string>} 图片路径或 Promise
  * 
  * @example
- * getImagePath('home.backgroundImage1') // => Promise<string> 或 string
+ * getImagePath('home.backgroundImage') // => Promise<string> 或 string
  * getImagePath('product.x') // => Promise<string> 或 string
  */
 export function getImagePath(key) {
