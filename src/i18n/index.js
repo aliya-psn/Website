@@ -1,8 +1,8 @@
 import { createI18n } from 'vue-i18n'
 // 动态导入语言文件，避免同步加载所有语言
-import zhCN from './locales/zh-CN.json'
+import en from './locales/en.json'
 import images from './images.json'
-import { resolveLocaleFromIp } from '../utils/ipLocaleResolver'
+// import { resolveLocaleFromIp } from '../utils/ipLocaleResolver'
 
 // 合并图片资源到国际化消息中
 const mergeImages = (messages) => {
@@ -14,16 +14,16 @@ const mergeImages = (messages) => {
 
 // 语言文件加载器（按需加载）
 const localeLoaders = {
-  'zh-CN': () => Promise.resolve(zhCN),
-  'en': () => import('./locales/en.json').then(m => m.default)
+  'en': () => Promise.resolve(en),
+  'zh-CN': () => import('./locales/zh-CN.json').then(m => m.default)
 }
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'zh-CN', // 初始值
-  fallbackLocale: 'zh-CN',
+  locale: 'en', // 初始值
+  fallbackLocale: 'en',
   messages: {
-    'zh-CN': mergeImages(zhCN), // 默认语言同步加载
+    'en': mergeImages(en), // 默认语言同步加载
   },
 })
 
@@ -40,10 +40,10 @@ export async function loadLocale(locale) {
     return locale
   }
   
-  return 'zh-CN'
+  return 'en'
 }
 
-// 初始化语言：优先本地存储，其次 IP 映射，最后默认中文
+// 初始化语言：优先本地存储，否则默认英文
 export async function initLocale() {
   const saved = sessionStorage.getItem('locale')
   if (saved) {
@@ -51,11 +51,17 @@ export async function initLocale() {
     i18n.global.locale.value = saved
     return saved
   }
-  const ipLocale = await resolveLocaleFromIp()
-  await loadLocale(ipLocale)
-  i18n.global.locale.value = ipLocale
-  sessionStorage.setItem('locale', ipLocale)
-  return ipLocale
+  // 默认使用英文
+  i18n.global.locale.value = 'en'
+  sessionStorage.setItem('locale', 'en')
+  return 'en'
+  
+  // 以下代码已注释：根据 IP 自动切换语言
+  // const ipLocale = await resolveLocaleFromIp()
+  // await loadLocale(ipLocale)
+  // i18n.global.locale.value = ipLocale
+  // sessionStorage.setItem('locale', ipLocale)
+  // return ipLocale
 }
 
 export default i18n

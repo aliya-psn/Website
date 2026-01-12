@@ -11,20 +11,24 @@ window.__APP_LOADING__ = loadingState
 // 等待所有资源加载完成，异步执行，不阻塞页面渲染
 async function waitForResources() {
   try {
-    // 初始化语言（优先使用缓存，避免网络请求）
-    const saved = sessionStorage.getItem('locale')
-    if (saved) {
-      // 先加载语言文件，再设置 locale
-      await loadLocale(saved)
-      i18n.global.locale.value = saved
-      document.title = i18n.global.t('title')
-    } else {
-      // 异步获取 IP 语言
-      const localePromise = initLocale()
-      const localeTimeout = new Promise((resolve) => setTimeout(() => resolve('zh-CN'), 800)) // 0.8秒超时
-      const resolvedLocale = await Promise.race([localePromise, localeTimeout])
-      document.title = i18n.global.t('title')
-    }
+    // 初始化语言（优先使用缓存，否则默认英文）
+    await initLocale()
+    document.title = i18n.global.t('title')
+    
+    // 以下代码已注释：根据 IP 自动切换语言
+    // const saved = sessionStorage.getItem('locale')
+    // if (saved) {
+    //   // 先加载语言文件，再设置 locale
+    //   await loadLocale(saved)
+    //   i18n.global.locale.value = saved
+    //   document.title = i18n.global.t('title')
+    // } else {
+    //   // 异步获取 IP 语言
+    //   const localePromise = initLocale()
+    //   const localeTimeout = new Promise((resolve) => setTimeout(() => resolve('en'), 800)) // 0.8秒超时
+    //   const resolvedLocale = await Promise.race([localePromise, localeTimeout])
+    //   document.title = i18n.global.t('title')
+    // }
     
     // 等待路由准备
     await Promise.race([
