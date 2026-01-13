@@ -15,7 +15,7 @@
               :src="technologyData.qualification.certificateImage"
               :alt="technologyData.qualification.title"
               container-class="w-full"
-              image-class="w-full h-auto rounded-lg shadow-lg"
+              image-class="w-full min-h-64 md:min-h-80 lg:min-h-96 rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -34,7 +34,7 @@
               :src="technologyData.patents.patentImage"
               :alt="technologyData.patents.title"
               container-class="w-full"
-              image-class="w-full h-auto rounded-lg shadow-lg"
+              image-class="w-full min-h-64 md:min-h-80 lg:min-h-96 rounded-lg shadow-lg"
             />
           </div>
         </div>
