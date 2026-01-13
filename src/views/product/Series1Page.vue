@@ -69,11 +69,13 @@
             class="shrink-0 w-full lg:w-1/2 flex justify-center mt-4 md:mt-6 lg:mt-8 xl:mt-10"
           >
             <div
-              class="w-full flex items-center justify-center max-w-[160px] md:max-w-[240px] lg:max-w-[320px] h-[200px] md:h-[280px] lg:h-[360px]"
+              class="relative w-full flex items-center justify-center max-w-[160px] md:max-w-[240px] lg:max-w-[320px] h-[200px] md:h-[280px] lg:h-[360px] z-0"
             >
               <LazyImage
                 :key="productData.descImage || productData.navItemImage"
                 :src="productData.descImage || productData.navItemImage"
+                :force-relative="true"
+                :allow-custom-position="true"
                 container-class="w-full h-full flex items-center justify-center"
                 image-class="w-full h-full object-contain"
               />
@@ -106,6 +108,7 @@
                   :key="product.image"
                   :src="product.image"
                   :alt="product.productName"
+                  :allow-custom-position="true"
                   container-class="w-full h-full flex items-center justify-center"
                   :image-class="getImageClass(index)"
                 />

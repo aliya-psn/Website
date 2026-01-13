@@ -1,33 +1,54 @@
 <template>
-  <div 
+  <div
     ref="containerRef"
     class="lazy-image-container"
     :class="[
       containerClass,
-      // 如果图片使用 absolute 定位，容器需要 relative
-      !isAutoHeight ? 'relative' : '',
+      // 容器始终需要 relative，以确保绝对定位的图片相对于正确的容器
+      'relative',
       // 如果容器类中没有 flex，且不是 h-auto，则添加 overflow-hidden
       !containerClass.includes('flex') && !isAutoHeight ? 'overflow-hidden' : ''
     ]"
     :style="containerStyle"
   >
-    
-    <!-- 图片（统一使用一个 img，通过状态控制切换模糊图和清晰图） -->
+
+    <!-- 占位图（模糊预览） -->
     <img
-      v-if="shouldLoad && currentImageSrc"
-      ref="imgRef"
-      :src="currentImageSrc"
+      v-if="shouldLoad && resolvedPlaceholder"
+      ref="placeholderImgRef"
+      :src="resolvedPlaceholder"
       :alt="alt"
       :class="[
-        'lazy-image',
-        isAutoHeight ? 'block mx-auto' : 'absolute inset-0',
+        'placeholder-image',
+        (isAutoHeight || forceRelative) ? 'block mx-auto' : 'absolute inset-0',
         imageClass,
         {
-          'opacity-0': !isVisible,
-          'opacity-100': isVisible,
+          'hide': isLoaded
         }
       ]"
-      :style="imageStyle"
+      :style="placeholderStyle"
+      @load="handlePlaceholderLoad"
+      @error="handleError"
+      loading="lazy"
+      :fetchpriority="preload ? 'high' : 'auto'"
+    />
+
+    <!-- 清晰图 -->
+    <img
+      v-if="shouldLoad && resolvedSrc"
+      ref="imgRef"
+      :src="resolvedSrc"
+      :alt="alt"
+      :class="[
+        'full-image',
+        (isAutoHeight || forceRelative) ? 'block mx-auto' : 'inset-0',
+        imageClass,
+        {
+          'show': isLoaded,
+          'custom-position': allowCustomPosition
+        }
+      ]"
+      :style="fullImageStyle"
       @load="handleImageLoad"
       @error="handleError"
       loading="lazy"
@@ -60,6 +81,16 @@ const props = defineProps({
   containerStyle: {
     type: Object,
     default: () => ({})
+  },
+  // 强制使用相对定位（即使不包含 h-auto/w-auto）
+  forceRelative: {
+    type: Boolean,
+    default: false
+  },
+  // 允许自定义位置（不设置默认的 top 和 left）
+  allowCustomPosition: {
+    type: Boolean,
+    default: false
   },
   rootMargin: {
     type: String,
@@ -94,6 +125,7 @@ const props = defineProps({
 
 const containerRef = ref(null)
 const imgRef = ref(null)
+const placeholderImgRef = ref(null)
 const shouldLoad = ref(false)
 const isLoaded = ref(false)
 const placeholderLoaded = ref(false)
@@ -106,52 +138,23 @@ const isAutoHeight = computed(() => {
   return props.imageClass.includes('h-auto') || props.imageClass.includes('w-auto')
 })
 
-// 当前显示的图片 src（优先显示占位图，占位图加载完成后切换到清晰图）
-const currentImageSrc = computed(() => {
-  if (!shouldLoad.value) return ''
-  
-  // 如果有占位图且与主图不同，且主图未加载完成，显示占位图
-  if (resolvedPlaceholder.value && 
-      resolvedSrc.value &&
-      resolvedPlaceholder.value !== resolvedSrc.value && 
-      !isLoaded.value) {
-    return resolvedPlaceholder.value
-  }
-  
-  // 如果主图已解析，显示主图
-  if (resolvedSrc.value) {
-    return resolvedSrc.value
-  }
-  
-  // 如果只有占位图，显示占位图
-  if (resolvedPlaceholder.value) {
-    return resolvedPlaceholder.value
-  }
-  
-  return ''
-})
-
-// 图片是否可见（图片应该始终可见，通过模糊效果来区分占位图和清晰图）
-const isVisible = computed(() => {
-  // 图片应该始终可见，通过模糊效果来区分占位图和清晰图
-  return true
-})
-
-// 图片样式（根据当前状态应用模糊效果）
-const imageStyle = computed(() => {
+// 占位图样式（应用模糊效果）
+const placeholderStyle = computed(() => {
   const style = {}
-  
-  // 如果当前显示的是占位图，应用模糊效果
-  if (currentImageSrc.value === resolvedPlaceholder.value) {
-    style.filter = `blur(${blurAmount}px)`
-    style.transform = 'scale(1.05)'
-  }
-  // 如果主图未加载完成且占位图与主图相同，应用模糊效果（渐进式加载）
-  else if (!isLoaded.value && resolvedPlaceholder.value === resolvedSrc.value) {
-    style.filter = `blur(${blurAmount}px)`
-    style.transform = 'scale(1.05)'
-  }
-  
+
+  // 占位图始终应用模糊效果
+  style.filter = `blur(${props.blurAmount}px)`
+  style.transform = 'scale(1.05)'
+
+  return style
+})
+
+// 清晰图样式（无模糊效果）
+const fullImageStyle = computed(() => {
+  const style = {}
+
+  // 清晰图无额外样式
+
   return style
 })
 
@@ -230,49 +233,37 @@ const loadPlaceholder = async () => {
   }
 }
 
-// 统一的图片加载处理
+// 处理占位图加载完成
+const handlePlaceholderLoad = () => {
+  placeholderLoaded.value = true
+}
+
+// 处理清晰图加载完成
 const handleImageLoad = () => {
-  // 如果当前显示的是占位图
-  if (currentImageSrc.value === resolvedPlaceholder.value && 
-      resolvedPlaceholder.value !== resolvedSrc.value) {
-    placeholderLoaded.value = true
-    
-    // 占位图加载完成后，如果主图还未加载，等待一小段时间后自动切换到主图
-    // 这样可以确保占位图先显示，然后再切换到主图
-    if (resolvedSrc.value && !isLoaded.value) {
-      // 使用 setTimeout 确保占位图先显示，然后再切换
-      setTimeout(() => {
-        // currentImageSrc 会自动切换到 resolvedSrc.value（因为 isLoaded 还是 false）
-        // 触发主图加载
-      }, 50)
-    }
-  } else {
-    // 主图加载完成
-    isLoaded.value = true
-  }
+  isLoaded.value = true
 }
 
 // 检查是否应该开始加载图片
 const checkIntersection = () => {
   if (!containerRef.value) return
-  
+
   if (observer) {
     observer.disconnect()
   }
-  
+
   observer = new IntersectionObserver(
     async (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           shouldLoad.value = true
-          
+
           // 先解析图片路径
           const src = await resolveImageSrc(props.src)
           resolvedSrc.value = src
-          
-          // 再加载占位图（模糊预览），确保占位图先显示
+
+          // 加载占位图（模糊预览）
           await loadPlaceholder()
-          
+
           // 预加载优化：提前加载图片到浏览器缓存
           if (src && typeof src === 'string') {
             try {
@@ -281,7 +272,7 @@ const checkIntersection = () => {
               console.warn('Preload failed:', e)
             }
           }
-          
+
           observer?.unobserve(entry.target)
         }
       }
@@ -291,7 +282,7 @@ const checkIntersection = () => {
       threshold: 0.01
     }
   )
-  
+
   observer.observe(containerRef.value)
 }
 
@@ -303,18 +294,18 @@ const handleError = () => {
 // 加载图片
 const loadImage = async () => {
   if (!props.src) return
-  
+
   isLoaded.value = false
   placeholderLoaded.value = false
-  
+
   if (shouldLoad.value || !window.IntersectionObserver) {
     shouldLoad.value = true
-    
-    await loadPlaceholder()
-    
+
     const src = await resolveImageSrc(props.src)
     resolvedSrc.value = src
-    
+
+    await loadPlaceholder()
+
     if (src && typeof src === 'string') {
       try {
         await preloadImage(src)
@@ -349,11 +340,11 @@ watch(() => props.src, async (newSrc, oldSrc) => {
     }
     
     if (shouldLoad.value) {
-      await loadPlaceholder()
-      
       const src = await resolveImageSrc(newSrc)
       resolvedSrc.value = src
-      
+
+      await loadPlaceholder()
+
       if (src && typeof src === 'string') {
         try {
           await preloadImage(src)
@@ -403,13 +394,12 @@ onMounted(async () => {
     
     if (props.preload) {
       try {
-        await loadPlaceholder()
-        
         const src = await resolveImageSrc(props.src)
         if (src && typeof src === 'string') {
           await preloadImage(src)
           shouldLoad.value = true
           resolvedSrc.value = src
+          await loadPlaceholder()
         }
       } catch (e) {
         console.warn('Preload failed:', e)
@@ -444,84 +434,69 @@ onUnmounted(() => {
   display: flex;
 }
 
-/* 当图片使用 block 定位时，确保能正确响应 flex 布局 */
-.full-image.block {
-  position: static;
-}
-
-/* 确保占位图在 flex 容器中也能正确居中 */
-.lazy-image-container.flex .placeholder-image.block {
-  align-self: center;
-}
-
-.lazy-image {
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+/* 绝对定位的图片（用于填充容器） */
+.placeholder-image.absolute,
+.full-image.absolute {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity;
 }
 
-.lazy-image.opacity-0 {
-  transform: scale(1.02);
-}
-
-.lazy-image.opacity-100 {
-  transform: scale(1);
-}
-
-/* 占位图样式（模糊预览） */
-.placeholder-image {
-  z-index: 1;
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), filter 1s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, filter;
-  pointer-events: none;
-}
-
-/* 当使用 absolute 定位时，占位图和清晰图应该完全一致 */
-.placeholder-image.absolute,
-.full-image.absolute {
-  width: 100%;
-  height: 100%;
-}
-
-/* 当使用 block 定位时，占位图和清晰图应该完全一致 */
-.placeholder-image.block,
-.full-image.block {
-  position: static !important;
+/* block定位的图片（用于自适应大小） */
+.placeholder-image.block {
+  position: relative !important;
+  display: block;
   margin-left: auto !important;
   margin-right: auto !important;
   width: auto !important;
   height: auto !important;
   max-width: 100%;
   max-height: 100%;
+}
+
+.full-image.block {
+  position: absolute !important;
   display: block;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
-/* 确保在 flex 容器中也能正确居中 */
-.lazy-image-container.flex .placeholder-image.block,
-.lazy-image-container.flex .full-image.block {
-  align-self: center;
-  margin-left: auto !important;
-  margin-right: auto !important;
+/* 默认设置 top 和 left 为 0（除非 allowCustomPosition 为 true） */
+.full-image.block:not(.custom-position) {
+  top: 0 !important;
+  left: 0 !important;
 }
 
-.placeholder-image.opacity-0 {
+/* 占位图样式（模糊预览）- 始终在底部 */
+.placeholder-image {
+  z-index: 1;
+}
+
+/* 清晰图样式 - 在占位图之上 */
+.full-image {
+  z-index: 2;
+}
+
+/* 默认显示状态 */
+.placeholder-image {
+  opacity: 1;
+}
+
+.full-image {
+  opacity: 0;
+}
+
+/* 清晰图加载完成后，占位图隐藏，清晰图显示 */
+.placeholder-image.hide {
   opacity: 0 !important;
 }
 
-/* 完整图片样式 */
-.full-image {
-  z-index: 2;
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), filter 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, filter;
-}
-
-/* 渐进式加载：模糊到清晰 */
-.blur-image {
-  filter: blur(20px);
-  transform: scale(1.05);
-}
-
-.sharp-image {
-  filter: blur(0);
-  transform: scale(1);
+.full-image.show {
+  opacity: 1 !important;
 }
 </style>
