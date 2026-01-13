@@ -47,8 +47,7 @@
     "6": "https://i.111666.best/image/2tDzAYcBvcoBQwJj3oza2T.png",
     "7": "https://i.111666.best/image/62W4KckNbeTnmLpWRYsCns.png",
     "8": "https://i.111666.best/image/tAfEOHHccq70ZI1acFqhq2.png",
-    "desc2": "https://i.111666.best/image/2tDzAYcBvcoBQwJj3oza2T.png",
-    "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
+    "desc2": "https://i.111666.best/image/2tDzAYcBvcoBQwJj3oza2T.png"
   },
   "science": {
     "originHistory": {
@@ -95,11 +94,11 @@
       "1": "https://i.111666.best/image/PRf2nnL2eweJNCBOBnbkZX.png",
       "2": "https://i.111666.best/image/9zhqR57Xp51J7wR4HWDB9D.png",
       "3": "https://i.111666.best/image/cxiHmw4Tu0Qpv0IaUL3zp6.png",
-      "4": "https://i.111666.best/image/q1gdUjTrUtftJZ3oS1kI6B.png",
-      "5": "https://i.111666.best/image/xInalhH6RELpATT6zHRS2V.png",
-      "6": "https://i.111666.best/image/r3Hyil7I1fbLJvIOo0K11I.png",
-      "7": "https://i.111666.best/image/EmnUSOvbwXSgbSikqZflop.jpeg",
-      "8": "https://i.111666.best/image/loEyEy3oMnS9gew5NIH1GD.png",
+      "4": "https://cdn.jsdelivr.net/gh/aliya-psn/Images/member_4.png",
+      "5": "https://cdn.jsdelivr.net/gh/aliya-psn/Images/member_5.jpeg",
+      "6": "https://cdn.jsdelivr.net/gh/aliya-psn/Images/member_6.png",
+      "7": "https://cdn.jsdelivr.net/gh/aliya-psn/Images/member_7.jpeg",
+      "8": "https://cdn.jsdelivr.net/gh/aliya-psn/Images/member_8.png",
       "9": "https://i.111666.best/image/Fa2xJ1MyKqYxvCxPSlL2ER.jpeg",
       "10": "https://i.111666.best/image/U7w7RsbZvaxo8o824ji3nW.png",
       "11": "https://i.111666.best/image/ORkvmpxzxBsiCINgtLQvtS.png",

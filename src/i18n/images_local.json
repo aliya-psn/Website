@@ -35,8 +35,7 @@
     "2": "/src/assets/product/2.png",
     "3": "/src/assets/product/3.png",
     "4": "/src/assets/product/4.png",
-    "5": "/src/assets/product/5.png",
-    "qrCodeImage": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/miniprogram"
+    "5": "/src/assets/product/5.png"
   },
   "science": {
     "originHistory": {

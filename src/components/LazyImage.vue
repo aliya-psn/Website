@@ -7,36 +7,61 @@
   >
     <!-- 骨架屏占位符 -->
     <div 
-      v-if="!isLoaded && !hasError"
-      class="absolute inset-0 skeleton-placeholder"
+      v-if="!placeholderLoaded && !isLoaded && !hasError"
+      class="absolute inset-0 skeleton-placeholder z-10"
       :class="skeletonClass"
     >
       <div class="absolute inset-0 shimmer"></div>
     </div>
     
-    <!-- 实际图片 -->
+    <!-- 模糊占位图（低质量图片，仅当占位图与主图不同时显示） -->
+    <img
+      v-if="shouldLoad && resolvedPlaceholder && resolvedPlaceholder !== resolvedSrc"
+      ref="placeholderRef"
+      :src="resolvedPlaceholder"
+      :alt="alt"
+      :class="[
+        'lazy-image placeholder-image',
+        isAutoHeight ? 'relative' : 'absolute inset-0',
+        imageClass,
+        {
+          'opacity-100': placeholderLoaded && !isLoaded,
+          'opacity-0': isLoaded,
+        }
+      ]"
+      :style="{ filter: `blur(${blurAmount}px)`, transform: 'scale(1.05)' }"
+      @load="handlePlaceholderLoad"
+      @error="handlePlaceholderError"
+    />
+    
+    <!-- 完整清晰图片 -->
     <img
       v-if="shouldLoad && resolvedSrc"
       ref="imgRef"
       :src="resolvedSrc"
       :alt="alt"
       :class="[
-        'lazy-image',
+        'lazy-image full-image',
+        isAutoHeight ? 'relative' : 'absolute inset-0',
         imageClass,
         {
           'opacity-0': !isLoaded,
           'opacity-100': isLoaded,
+          'blur-image': !isLoaded && resolvedPlaceholder === resolvedSrc,
+          'sharp-image': isLoaded || resolvedPlaceholder !== resolvedSrc,
         }
       ]"
+      :style="!isLoaded && resolvedPlaceholder === resolvedSrc ? { filter: `blur(${blurAmount}px)`, transform: 'scale(1.05)' } : {}"
       @load="handleLoad"
       @error="handleError"
       loading="lazy"
+      :fetchpriority="preload ? 'high' : 'auto'"
     />
     
     <!-- 错误占位符 -->
     <div 
-      v-if="hasError"
-      class="absolute inset-0 flex items-center justify-center bg-gray-100"
+      v-if="hasError && !placeholderLoaded"
+      class="absolute inset-0 flex items-center justify-center bg-gray-100 z-20"
       :class="errorClass"
     >
       <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +72,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, onMounted, onUnmounted, watch, computed } from 'vue'
+import { preloadImage, preconnectDomain, prefetchImage } from '../utils/imagePreloader'
 
 const props = defineProps({
   src: {
@@ -80,28 +106,59 @@ const props = defineProps({
   },
   rootMargin: {
     type: String,
-    default: '50px' // 提前50px开始加载
+    default: '100px'
+  },
+  // 是否预加载（高优先级）
+  preload: {
+    type: Boolean,
+    default: false
+  },
+  // 是否预取（低优先级）
+  prefetch: {
+    type: Boolean,
+    default: false
+  },
+  // 模糊占位图（低质量图片URL）
+  placeholder: {
+    type: String,
+    default: ''
+  },
+  // 模糊程度（像素）
+  blurAmount: {
+    type: Number,
+    default: 20
+  },
+  // 是否自动生成占位图（如果未提供placeholder，尝试从原图URL生成缩略图）
+  autoPlaceholder: {
+    type: Boolean,
+    default: true
   }
 })
 
 const containerRef = ref(null)
 const imgRef = ref(null)
+const placeholderRef = ref(null)
 const shouldLoad = ref(false)
 const isLoaded = ref(false)
+const placeholderLoaded = ref(false)
 const hasError = ref(false)
 const resolvedSrc = ref('')
+const resolvedPlaceholder = ref('')
 let observer = null
+
+// 检测是否使用 h-auto（高度自适应）
+const isAutoHeight = computed(() => {
+  return props.imageClass.includes('h-auto')
+})
 
 // 处理异步图片路径（可能是 Promise）
 const resolveImageSrc = async (src) => {
   if (!src) return ''
   
-  // 如果已经是字符串（非 Promise），直接返回
   if (typeof src === 'string') {
     return src
   }
   
-  // 如果是 Promise，等待解析
   if (src instanceof Promise) {
     try {
       return await src
@@ -114,11 +171,77 @@ const resolveImageSrc = async (src) => {
   return src
 }
 
+// 生成占位图URL（如果支持的话）
+const generatePlaceholder = (src) => {
+  if (!src || typeof src !== 'string') return ''
+  
+  if (props.placeholder) return props.placeholder
+  
+  if (!props.autoPlaceholder) return ''
+  
+  // 尝试从URL生成占位图
+  if (src.includes('i.111666.best')) {
+    try {
+      const url = new URL(src)
+      url.searchParams.set('w', '20')
+      url.searchParams.set('q', '20')
+      return url.toString()
+    } catch (e) {
+      return src
+    }
+  }
+  
+  // 对于其他CDN或本地图片，直接使用原图（渐进式加载）
+  return src
+}
+
+// 加载占位图
+const loadPlaceholder = async () => {
+  if (!props.placeholder && !props.autoPlaceholder) return
+  
+  try {
+    if (props.placeholder) {
+      const placeholderSrc = await resolveImageSrc(props.placeholder)
+      if (placeholderSrc) {
+        resolvedPlaceholder.value = placeholderSrc
+        try {
+          await preloadImage(placeholderSrc)
+        } catch (e) {
+          // 预加载失败不影响显示
+        }
+        return
+      }
+    }
+    
+    const src = await resolveImageSrc(props.src)
+    if (src && typeof src === 'string') {
+      const generatedPlaceholder = generatePlaceholder(src)
+      if (generatedPlaceholder) {
+        resolvedPlaceholder.value = generatedPlaceholder
+        try {
+          await preloadImage(generatedPlaceholder)
+        } catch (e) {
+          // 占位图预加载失败不影响主流程
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Failed to load placeholder:', e)
+  }
+}
+
+const handlePlaceholderLoad = () => {
+  placeholderLoaded.value = true
+}
+
+const handlePlaceholderError = () => {
+  placeholderLoaded.value = false
+}
+
 // 检查是否应该开始加载图片
 const checkIntersection = () => {
   if (!containerRef.value) return
   
-  // 如果已经有 observer，先断开
   if (observer) {
     observer.disconnect()
   }
@@ -128,8 +251,23 @@ const checkIntersection = () => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           shouldLoad.value = true
-          // 解析图片路径（可能是 Promise），使用最新的 props.src
-          resolvedSrc.value = await resolveImageSrc(props.src)
+          
+          // 先加载占位图（模糊预览）
+          await loadPlaceholder()
+          
+          // 解析图片路径
+          const src = await resolveImageSrc(props.src)
+          resolvedSrc.value = src
+          
+          // 预加载优化：提前加载图片到浏览器缓存
+          if (src && typeof src === 'string') {
+            try {
+              await preloadImage(src)
+            } catch (e) {
+              console.warn('Preload failed:', e)
+            }
+          }
+          
           observer?.unobserve(entry.target)
         }
       }
@@ -157,29 +295,65 @@ const handleError = () => {
 const loadImage = async () => {
   if (!props.src) return
   
-  // 重置状态
   isLoaded.value = false
   hasError.value = false
+  placeholderLoaded.value = false
   
-  // 如果已经在视口中或已经应该加载，立即解析并加载
   if (shouldLoad.value || !window.IntersectionObserver) {
     shouldLoad.value = true
-    resolvedSrc.value = await resolveImageSrc(props.src)
+    
+    await loadPlaceholder()
+    
+    const src = await resolveImageSrc(props.src)
+    resolvedSrc.value = src
+    
+    if (src && typeof src === 'string') {
+      try {
+        await preloadImage(src)
+      } catch (e) {
+        console.warn('Preload failed:', e)
+      }
+    }
   }
 }
 
 // 监听 src 变化
 watch(() => props.src, async (newSrc, oldSrc) => {
   if (newSrc !== oldSrc && newSrc) {
-    // 重置状态
     isLoaded.value = false
     hasError.value = false
+    placeholderLoaded.value = false
+    resolvedPlaceholder.value = ''
     
-    // 如果已经在视口中，立即更新
+    if (typeof newSrc === 'string' && (newSrc.startsWith('http://') || newSrc.startsWith('https://'))) {
+      preconnectDomain(newSrc)
+    }
+    
+    if (props.prefetch && typeof newSrc === 'string') {
+      try {
+        const src = await resolveImageSrc(newSrc)
+        if (src && typeof src === 'string') {
+          prefetchImage(src)
+        }
+      } catch (e) {
+        // 忽略错误
+      }
+    }
+    
     if (shouldLoad.value) {
-      resolvedSrc.value = await resolveImageSrc(newSrc)
+      await loadPlaceholder()
+      
+      const src = await resolveImageSrc(newSrc)
+      resolvedSrc.value = src
+      
+      if (src && typeof src === 'string') {
+        try {
+          await preloadImage(src)
+        } catch (e) {
+          console.warn('Preload failed:', e)
+        }
+      }
     } else {
-      // 如果还没开始加载，重新检查交集
       if (observer) {
         observer.disconnect()
       }
@@ -188,14 +362,61 @@ watch(() => props.src, async (newSrc, oldSrc) => {
   }
 }, { immediate: false })
 
+// 监听 placeholder 变化
+watch(() => props.placeholder, async (newPlaceholder) => {
+  if (newPlaceholder && shouldLoad.value) {
+    try {
+      const placeholderSrc = await resolveImageSrc(newPlaceholder)
+      if (placeholderSrc) {
+        resolvedPlaceholder.value = placeholderSrc
+      }
+    } catch (e) {
+      console.warn('Failed to load placeholder:', e)
+    }
+  }
+})
+
 onMounted(async () => {
-  // 如果浏览器不支持 IntersectionObserver，直接加载
+  if (props.src && typeof props.src === 'string') {
+    if (props.src.startsWith('http://') || props.src.startsWith('https://')) {
+      preconnectDomain(props.src)
+    }
+    
+    if (props.prefetch) {
+      try {
+        const src = await resolveImageSrc(props.src)
+        if (src && typeof src === 'string') {
+          prefetchImage(src)
+        }
+      } catch (e) {
+        // 忽略错误
+      }
+    }
+    
+    if (props.preload) {
+      try {
+        await loadPlaceholder()
+        
+        const src = await resolveImageSrc(props.src)
+        if (src && typeof src === 'string') {
+          await preloadImage(src)
+          shouldLoad.value = true
+          resolvedSrc.value = src
+        }
+      } catch (e) {
+        console.warn('Preload failed:', e)
+      }
+    }
+  }
+  
   if (!window.IntersectionObserver) {
     await loadImage()
     return
   }
   
-  checkIntersection()
+  if (!props.preload) {
+    checkIntersection()
+  }
 })
 
 onUnmounted(() => {
@@ -211,7 +432,7 @@ onUnmounted(() => {
 }
 
 .lazy-image {
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity;
 }
 
@@ -220,6 +441,35 @@ onUnmounted(() => {
 }
 
 .lazy-image.opacity-100 {
+  transform: scale(1);
+}
+
+/* 占位图样式（模糊预览） */
+.placeholder-image {
+  z-index: 1;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, filter;
+}
+
+.placeholder-image.opacity-0 {
+  opacity: 0 !important;
+}
+
+/* 完整图片样式 */
+.full-image {
+  z-index: 2;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, filter;
+}
+
+/* 渐进式加载：模糊到清晰 */
+.blur-image {
+  filter: blur(20px);
+  transform: scale(1.05);
+}
+
+.sharp-image {
+  filter: blur(0);
   transform: scale(1);
 }
 
@@ -248,6 +498,4 @@ onUnmounted(() => {
     background-position: 200% 0;
   }
 }
-
 </style>
-

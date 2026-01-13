@@ -290,7 +290,6 @@
     "qrCodeModal": {
       "title": "Scan to Purchase",
       "description": "Use WeChat to scan the QR code below to visit the official mini-program for purchase",
-      "qrCodeImage": "product.qrCodeImage",
       "qrCodeAlt": "Mini-program QR Code",
       "footerText": "FANTASYCARE Official Mini-program"
     },

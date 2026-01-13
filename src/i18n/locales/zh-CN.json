@@ -299,7 +299,6 @@
     "qrCodeModal": {
       "title": "扫码购买",
       "description": "使用微信扫描下方二维码，前往官方小程序购买",
-      "qrCodeImage": "product.qrCodeImage",
       "qrCodeAlt": "小程序二维码",
       "footerText": "FANTASYCARE官方小程序"
     },

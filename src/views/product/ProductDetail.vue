@@ -140,7 +140,7 @@
             </p>
             
             <!-- 二维码区域 -->
-            <div class="bg-white p-4 rounded-lg border-2 border-gray-200 inline-block mb-4">
+            <!-- <div class="bg-white p-4 rounded-lg border-2 border-gray-200 inline-block mb-4">
               <LazyImage
                 :src="productConfig.qrCodeModal.qrCodeImage"
                 :alt="productConfig.qrCodeModal.qrCodeAlt"
@@ -151,7 +151,7 @@
             
             <p class="text-sm text-gray-500">
               {{ productConfig.qrCodeModal.footerText }}
-            </p>
+            </p> -->
           </div>
         </div>
       </div>

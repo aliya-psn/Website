@@ -66,13 +66,15 @@
           {{ membershipData.allergenAlert.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <LazyImage
-            :src="membershipData.allergenAlert.image"
-            :alt="membershipData.allergenAlert.title"
-            container-class="w-full"
-            image-class="w-full h-auto object-contain"
-            skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
-          />
+          <div class="w-full aspect-[16/9] overflow-hidden">
+            <LazyImage
+              :src="membershipData.allergenAlert.image"
+              :alt="membershipData.allergenAlert.title"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-contain"
+              skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
+            />
+          </div>
         </div>
       </div>
 
@@ -84,11 +86,11 @@
           {{ membershipData.dosageOptimization.title }}
         </h2>
         <div class="w-full max-w-5xl mx-auto">
-          <div class="w-full overflow-hidden">
+          <div class="w-full min-h-[360px] md:min-h-[400px]">
             <LazyImage
               :src="membershipData.dosageOptimization.image"
               :alt="membershipData.dosageOptimization.title"
-              container-class="w-full"
+              container-class="w-full h-full"
               image-class="w-full h-auto object-contain"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
@@ -108,8 +110,8 @@
             <LazyImage
               :src="membershipData.userExperience.image"
               :alt="membershipData.userExperience.title"
-              container-class="w-full"
-              image-class="w-full h-auto object-cover"
+              container-class="w-full h-full"
+              image-class="w-full h-full object-cover"
               skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
             />
           </div>
