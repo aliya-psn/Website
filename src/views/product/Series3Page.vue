@@ -47,12 +47,12 @@
         class="flex-1 flex items-center justify-center relative overflow-hidden w-full"
       >
         <!-- 产品图片 -->
-        <div class="w-[50%] md:w-[52%] lg:w-[56%] xl:w-[60%] 2xl:w-[64%] 3xl:w-[68%] 4xl:w-[72%]">
+        <div class="w-[50%] md:w-[52%] lg:w-[56%] xl:w-[60%] 2xl:w-[64%] 3xl:w-[68%] 4xl:w-[72%] h-full">
           <LazyImage
             :key="productData.descImage"
             :src="productData.descImage"
             :alt="productData.title"
-            container-class="w-full h-auto"
+            container-class="w-full h-full"
             image-class="w-full h-full object-contain"
           />
         </div>

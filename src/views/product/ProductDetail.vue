@@ -163,7 +163,7 @@
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18nData } from '../../composables/useI18nData'
-import LazyImage from '../../components/LazyImage.vue'
+import LazyImage from '../../components/LazyImage2.vue'
 
 const route = useRoute()
 const { productData: productConfig } = useI18nData()

@@ -44,12 +44,12 @@
 
       <!-- 底部大图部分 -->
       <div class="mt-20">
-        <div class="w-full mb-6 overflow-hidden bg-gray-100">
+        <div class="w-full mb-6 overflow-hidden bg-gray-100 min-h-[400px] md:min-h-[500px]">
           <LazyImage
             :src="exclusiveServicesData.globalConsultation.image"
             :alt="exclusiveServicesData.globalConsultation.title"
-            container-class="w-full"
-            image-class="w-full h-auto object-cover"
+            container-class="w-full h-full"
+            image-class="w-full h-auto object-contain"
           />
         </div>
         

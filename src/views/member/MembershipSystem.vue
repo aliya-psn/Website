@@ -40,7 +40,7 @@
                     :src="model.image"
                     :alt="model.period"
                     container-class="w-full h-full"
-                    :image-class="`w-full h-full object-cover ${model.objectPosition || 'object-center'}`"
+                    :image-class="index === 0 ? 'w-full h-full object-cover scale-110' : `w-full h-full object-cover ${model.objectPosition || 'object-center'}`"
                     skeleton-class="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100"
                   />
                 </div>
