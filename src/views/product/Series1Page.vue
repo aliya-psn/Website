@@ -207,11 +207,11 @@ const getImageClass = (index) => {
 
 // 跳转到产品详情页
 const goToProductDetail = (product) => {
-  if (product.slug) {
-    router.push(`/product/${product.slug}`)
-  } else if (product.id) {
-    router.push(`/product/${product.id}`)
-  }
+  // if (product.slug) {
+  //   router.push(`/product/${product.slug}`)
+  // } else if (product.id) {
+  //   router.push(`/product/${product.id}`)
+  // }
 }
 </script>
 
