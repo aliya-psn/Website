@@ -12,7 +12,7 @@
   <router-view />
 
   <!-- 底部备案说明 - 根据路由 meta 判断是否显示 -->
-  <Footer v-if="showFooter" :footerData="dataSource.footer" />
+  <!-- <Footer v-if="showFooter" :footerData="dataSource.footer" /> -->
 
   <!-- 屏幕尺寸调试工具 - 仅在开发环境显示 -->
   <div

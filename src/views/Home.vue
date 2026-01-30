@@ -16,7 +16,7 @@
     <LuxuryCareSection :sectionData="dataSource.home.luxuryCare" />
 
     <!-- 地图和邮箱订阅区域 -->
-    <MapNewsletterSection :sectionData="dataSource.home.mapNewsletter" />
+    <!-- <MapNewsletterSection :sectionData="dataSource.home.mapNewsletter" /> -->
   </div>
 </template>
 
