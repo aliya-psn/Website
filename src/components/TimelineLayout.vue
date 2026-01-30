@@ -113,36 +113,39 @@
     <!-- 滚动提示 - 仅在桌面端显示 -->
     <div 
       v-if="showScrollHint"
-      class="hidden lg:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 scroll-hint flex-col items-center gap-2"
+      class="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
     >
-      <!-- 向上箭头 -->
-      <svg 
-        class="w-3 h-3 sm:w-4 sm:h-4 text-white scroll-arrow-up" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-      </svg>
-      
-      <!-- 提示文字 -->
-      <span class="text-white text-xs sm:text-sm font-medium">向下滚动查看</span>
-      
-      <!-- 向下箭头 -->
-      <svg 
-        class="w-3 h-3 sm:w-4 sm:h-4 text-white scroll-arrow-down" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
+      <div class="scroll-hint flex flex-col items-center gap-2">
+        <!-- 向上箭头 -->
+        <svg 
+          class="w-3 h-3 sm:w-4 sm:h-4 text-white scroll-arrow-up" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+        
+        <!-- 提示文字 -->
+        <span class="text-white text-xs sm:text-sm font-medium whitespace-nowrap">{{ t('common.scrollDownHint') }}</span>
+        
+        <!-- 向下箭头 -->
+        <svg 
+          class="w-3 h-3 sm:w-4 sm:h-4 text-white scroll-arrow-down" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   items: {
@@ -173,6 +176,8 @@ const props = defineProps({
 
 const emit = defineEmits(['switch'])
 
+const { t } = useI18n()
+
 const currentItem = computed(() => {
   return props.items[props.currentIndex] || {}
 })
@@ -199,7 +204,8 @@ const showScrollHint = computed(() => {
 }
 
 .scroll-hint {
-  animation: fadeInUp 0.6s ease-out;
+  will-change: transform, opacity;
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .scroll-arrow-up {
@@ -211,13 +217,13 @@ const showScrollHint = computed(() => {
 }
 
 @keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateY(10px);
   }
-  to {
+  100% {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }
 

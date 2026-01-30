@@ -1,7 +1,7 @@
 <template>
-  <!-- 全部产品页面 - 目前没使用 -->
+  <!-- 全部产品页面 -->
   <div class="min-h-screen bg-white pt-24 md:pt-32 pb-20">
-    <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="w-[80%] mx-auto px-6 md:px-12">
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
         <!-- 左侧筛选栏 -->
         <aside class="w-full lg:w-64 shrink-0">
@@ -97,7 +97,7 @@
                   :src="product.image"
                   :alt="product.productName"
                   container-class="w-full h-full"
-                  image-class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  :image-class="`w-full h-full object-contain ${getImagePadding(product.slug)} group-hover:scale-105 transition-transform duration-300`"
                 />
                 <!-- 标签 -->
                 <div v-if="product.tags && product.tags.length > 0" class="absolute top-3 left-3 flex flex-col gap-2">
@@ -115,12 +115,14 @@
               <!-- 产品信息 -->
               <div class="p-4">
                 <!-- 产品名称 -->
-                <h3 class="text-sm md:text-base font-medium text-gray-900 mb-3 line-clamp-2 min-h-12">
-                  {{ product.productName }}
-                </h3>
+                <div class="min-h-12 flex items-center justify-center mb-3">
+                  <h3 class="text-sm md:text-base font-medium text-gray-900 line-clamp-2 text-center">
+                    {{ product.productName }}
+                  </h3>
+                </div>
                 
                 <!-- 价格 -->
-                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100 px-2">
                   <span class="text-lg md:text-xl font-bold text-gray-900">
                     ${{ product.price?.toLocaleString() }}
                   </span>
@@ -225,14 +227,13 @@ const toggleCustomFilter = () => {
 // 获取标签样式
 const getTagClass = (tag) => {
   // 支持中英文标签
-  if (tag === '新品' || tag === 'New') {
-    return 'bg-blue-900 text-white'
-  } else if (tag === '明星臻选' || tag === 'Star Selection') {
-    return 'bg-yellow-400 text-gray-900'
-  } else if (tag === '特价' || tag === 'Special') {
-    return 'bg-red-500 text-white'
-  }
   return 'bg-gray-200 text-gray-700'
+}
+
+// 获取图片 padding 样式
+const getImagePadding = (slug) => {
+  // slug 为 "basic-revitalization-collection-1" 或 "basic-revitalization-collection-2" 的产品使用 p-4，其他使用 p-14
+  return (slug === 'basic-revitalization-collection-1' || slug === 'basic-revitalization-collection-2') ? 'p-2' : 'p-14'
 }
 
 // 跳转到产品详情

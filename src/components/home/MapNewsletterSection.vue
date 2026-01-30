@@ -12,7 +12,7 @@
       ></div>
 
     <!-- 邮箱订阅区域 -->
-    <div class="container mx-auto px-4 md:px-8 max-w-xl mt-6 md:mt-8 lg:mt-10">
+    <!-- <div class="container mx-auto px-4 md:px-8 max-w-xl mt-6 md:mt-8 lg:mt-10">
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-3 md:mb-4 text-center">
           {{ sectionData.title }}
         </h2>
@@ -40,7 +40,7 @@
         <p v-if="submitMessage" :class="submitMessageClass" class="mt-3 text-center text-xs md:text-sm">
           {{ submitMessage }}
         </p>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

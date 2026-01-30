@@ -291,7 +291,8 @@
       "title": "Scan to Purchase",
       "description": "Use WeChat to scan the QR code below to visit the official mini-program for purchase",
       "qrCodeAlt": "Mini-program QR Code",
-      "footerText": "FANTASYCARE Official Mini-program"
+      "footerText": "FANTASYCARE Official Mini-program",
+      "buttonText": "Purchase on Official Mini-program"
     },
     "products": [
       {
@@ -303,7 +304,6 @@
             "id": 1,
             "slug": "basic-revitalization-collection-1",
             "image": "product.1",
-            "tags": ["New"],
             "productName": "Kacip Fatimah& Papaya Drink",
             "price": 49,
             "description": "NET:375mL(25mL*15)",
@@ -512,7 +512,8 @@
     "noProducts": "No Products",
     "productName": "Product Name",
     "price": "Price",
-    "currency": "From $"
+    "currency": "From $",
+    "scrollDownHint": "Scroll down to view"
   }
 }
 

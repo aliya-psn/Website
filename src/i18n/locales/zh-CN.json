@@ -300,7 +300,8 @@
       "title": "扫码购买",
       "description": "使用微信扫描下方二维码，前往官方小程序购买",
       "qrCodeAlt": "小程序二维码",
-      "footerText": "FANTASYCARE官方小程序"
+      "footerText": "FANTASYCARE官方小程序",
+      "buttonText": "前往官方小程序购买"
     },
     "products": [
       {
@@ -312,7 +313,6 @@
             "id": 1,
             "slug": "basic-revitalization-collection-1",
             "image": "product.1",
-            "tags": ["新品"],
             "productName": "木瓜饮",
             "price": 49,
             "description": "净含量：375毫升（25毫升×15支）",
@@ -521,6 +521,7 @@
     "noProducts": "暂无产品",
     "productName": "产品名称",
     "price": "价格",
-    "currency": "$"
+    "currency": "$",
+    "scrollDownHint": "向下滚动查看"
   }
 }
