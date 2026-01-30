@@ -143,8 +143,13 @@ const placeholderStyle = computed(() => {
   const style = {}
 
   // 占位图始终应用模糊效果
+  // 移除 scale 或减小到 1.01，避免尺寸不匹配导致的抖动
   style.filter = `blur(${props.blurAmount}px)`
-  style.transform = 'scale(1.05)'
+  style.transform = 'scale(1.01)'
+  style.transformOrigin = 'center center'
+  // 启用硬件加速，减少抖动
+  style.willChange = 'opacity, transform, filter'
+  style.backfaceVisibility = 'hidden'
 
   return style
 })
@@ -153,7 +158,11 @@ const placeholderStyle = computed(() => {
 const fullImageStyle = computed(() => {
   const style = {}
 
-  // 清晰图无额外样式
+  // 启用硬件加速，确保与占位图尺寸一致
+  style.transform = 'scale(1)'
+  style.transformOrigin = 'center center'
+  style.willChange = 'opacity'
+  style.backfaceVisibility = 'hidden'
 
   return style
 })
@@ -320,7 +329,6 @@ const loadImage = async () => {
 watch(() => props.src, async (newSrc, oldSrc) => {
   if (newSrc !== oldSrc && newSrc) {
     isLoaded.value = false
-    hasError.value = false
     placeholderLoaded.value = false
     resolvedPlaceholder.value = ''
     
@@ -427,6 +435,12 @@ onUnmounted(() => {
 <style scoped>
 .lazy-image-container {
   transition: opacity 0.3s ease;
+  /* 确保容器稳定，避免布局抖动 */
+  contain: layout style paint;
+  /* 启用硬件加速 */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* 当容器使用 flex 居中时，确保图片能正确居中 */
@@ -443,8 +457,16 @@ onUnmounted(() => {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity;
+  /* 包含 transform 和 filter 的过渡，使切换更平滑 */
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 启用硬件加速 */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
 }
 
 /* block定位的图片（用于自适应大小） */
