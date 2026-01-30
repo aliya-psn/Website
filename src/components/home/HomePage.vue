@@ -5,7 +5,8 @@
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 transition-transform duration-700"
       :style="{
-        backgroundImage: 'url(' + pageData.home.backgroundImage + ')',
+        // backgroundImage: 'url(' + pageData.home.backgroundImage + ')', // url方式引入
+        backgroundImage: 'url(' + homeBgImage + ')',
       }"
     ></div>
 
@@ -37,6 +38,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import homeBgImage from '../../assets/home_bg.png'
 
 const props = defineProps({
   pageData: {

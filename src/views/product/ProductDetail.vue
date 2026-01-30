@@ -1,5 +1,5 @@
 <template>
-  <!-- 产品详情页面 -->
+  <!-- 产品详情页面 - 目前没使用 -->
   <div class="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100">
     <div class="pt-24 md:pt-32 pb-20">
       <div class="max-w-7xl mx-auto px-6 md:px-12">

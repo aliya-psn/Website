@@ -2,13 +2,14 @@ import { createI18n } from 'vue-i18n'
 // 动态导入语言文件，避免同步加载所有语言
 import en from './locales/en.json'
 import images from './images.json'
+import images_local from './images_local.json'
 // import { resolveLocaleFromIp } from '../utils/ipLocaleResolver'
 
 // 合并图片资源到国际化消息中
 const mergeImages = (messages) => {
   return {
     ...messages,
-    _images: images
+    _images: images_local // 这里通过替换图片资源为本地图片资源
   }
 }
 

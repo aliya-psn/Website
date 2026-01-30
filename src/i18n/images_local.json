@@ -1,0 +1,108 @@
+{
+  "home": {
+    "backgroundImage": "/src/assets/home_bg.png",
+
+    "experience": {
+      "productImage": "/src/assets/home_experience.png"
+    },
+    "origin": {
+      "image": "/src/assets/home_origin.png"
+    },
+    "scientificExploration": {
+      "collageImage": "/src/assets/home_science.png"
+    },
+    "luxuryCare": {
+      "image": "/src/assets/home_luxury.png"
+    }
+  },
+  "menu": {
+    "scienceAnalysis": {
+      "origin": "/src/assets/menu_science_origin.png",
+      "developmentHistory": "/src/assets/menu_science_develop.png",
+      "honorsAwards": "/src/assets/menu_science_honor.png"
+    },
+    "brandHeritage": {
+      "key": "/src/assets/menu_brand_key.png",
+      "technology": "/src/assets/menu_brand_tech.png"
+    },
+    "membership": {
+      "services": "/src/assets/menu_member_service.png",
+      "system": "/src/assets/menu_member_system.png"
+    }
+  },
+  "product": {
+    "series1": "/src/assets/product_series_1.jpeg",
+    "series2": "/src/assets/product_series_2.jpeg",
+    "series3": "/src/assets/product_series_3.jpg",
+    "series3Image": "/src/assets/product_series_3_desc.png",
+    "1": "/src/assets/series_1_1.png",
+    "2": "/src/assets/series_1_2.png",
+    "3": "/src/assets/series_1_3.png",
+    "4": "/src/assets/series_1_4.png",
+    "desc": "/src/assets/series_1_4.png",
+    "5": "/src/assets/series_2_1.png",
+    "6": "/src/assets/series_2_2.png",
+    "7": "/src/assets/series_2_3.png",
+    "8": "/src/assets/series_2_4.png",
+    "desc2": "/src/assets/series_2_2.png"
+  },
+  "science": {
+    "originHistory": {
+      "1": "/src/assets/origin_1.jpeg",
+      "2": "/src/assets/origin_2.png",
+      "3": "/src/assets/origin_3.jpeg",
+      "4": "/src/assets/origin_4.jpeg",
+      "5": "/src/assets/origin_5.png"
+    },
+    "developmentHistory": {
+      "1": "/src/assets/development_1.jpeg",
+      "2": "/src/assets/development_2.jpeg",
+      "3": "/src/assets/development_3.jpeg",
+      "4": "/src/assets/development_4.png",
+      "5": "/src/assets/development_5.jpeg"
+    },
+    "awardsHistory": {
+      "1": "/src/assets/awards_1.png",
+      "2": "/src/assets/awards_2.jpg",
+      "3": "/src/assets/awards_3.jpg",
+      "4": "/src/assets/awards_4.jpg",
+      "5": "/src/assets/awards_5.png",
+      "6": "/src/assets/awards_6.png",
+      "7": "/src/assets/awards_7.jpeg",
+      "8": "/src/assets/awards_8.jpg"
+    }
+  },
+  "keyIngredients": {
+    "drShona": "/src/assets/key_1.png",
+    "teamImage": "/src/assets/key_2.jpeg"
+  },
+  "technology": {
+    "certificateImage": "/src/assets/technology_1.jpeg",
+    "patentImage": "/src/assets/technology_2.png"
+  },
+  "member": {
+    "service": {
+      "1": "/src/assets/service_1.png",
+      "2": "/src/assets/service_2.png",
+      "3": "/src/assets/product_series_3_desc.png",
+      "4": "/src/assets/service_4.png"
+    },
+    "membership": {
+      "1": "/src/assets/member_1.png",
+      "2": "/src/assets/member_2.png",
+      "3": "/src/assets/member_3.png",
+      "4": "/src/assets/member_4.png",
+      "5": "/src/assets/member_5.jpeg",
+      "6": "/src/assets/member_6.png",
+      "7": "/src/assets/member_7.jpeg",
+      "8": "/src/assets/member_8.png",
+      "9": "https://i.111666.best/image/Fa2xJ1MyKqYxvCxPSlL2ER.jpeg",
+      "10": "https://i.111666.best/image/U7w7RsbZvaxo8o824ji3nW.png",
+      "11": "https://i.111666.best/image/ORkvmpxzxBsiCINgtLQvtS.png",
+      "12": "https://i.111666.best/image/oLDMm0yKIFpQinoqmImBMa.png"
+    }
+  },
+  "video": {
+    "sample": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  }
+}

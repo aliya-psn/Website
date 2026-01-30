@@ -1,5 +1,5 @@
 <template>
-  <!-- 全部产品页面 -->
+  <!-- 全部产品页面 - 目前没使用 -->
   <div class="min-h-screen bg-white pt-24 md:pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
