@@ -52,12 +52,12 @@ export async function initLocale() {
     i18n.global.locale.value = saved
     return saved
   }
-  // 默认使用英文
+  // 默认使用英文，后续如果要采用IP自动切换语言，注释这里，放开下面的TODO
   i18n.global.locale.value = 'en'
   sessionStorage.setItem('locale', 'en')
   return 'en'
   
-  // 以下代码已注释：根据 IP 自动切换语言
+  // TODO:以下代码已注释：根据 IP 自动切换语言
   // const ipLocale = await resolveLocaleFromIp()
   // await loadLocale(ipLocale)
   // i18n.global.locale.value = ipLocale

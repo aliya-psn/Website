@@ -1,32 +1,50 @@
-# 品牌官网前端
-
-使用 Vue 3 + Vite 构建的品牌官网
-
-## 技术栈
-- Vue 3 + Vite + Vue Router
-- Tailwind CSS 4（PostCSS）样式构建
-- Vue I18n 国际化
-- VueUse 组合式工具、Motion 动效
-- Leaflet 地图组件
-
-## 目录结构
-- `src/views`：按业务分组的页面
-- `src/components`：导航、页脚、时间轴、懒加载图片等通用组件
-- `src/assets`：各业务线图片资源
-- `src/i18n`：多语言文案与图片映射
-- `src/utils`：IP 定位、常量等工具
+# 官网
+使用 Vue 3 + Vite 构建的官网
 
 ## 快速开始
-```bash
-npm install
-npm run dev
-```
-本地开发默认使用 Vite，端口见终端输出。
 
-## 构建与预览
 ```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本，打包dist
 npm run build
-npm run preview
 ```
-## 其他
-- 站点默认开启多语言，新增文案请同步更新 `src/i18n/locales/` 与图片映射。
+
+## 目录说明
+
+- `src/assets/` - 图片、字体等静态资源
+- `src/i18n/locales/` - 多语言文案文件
+- `src/i18n/images.json` - CDN 图片配置
+- `src/i18n/images_local.json` - 本地图片配置
+
+## 配置说明
+
+### 图片位置配置
+
+网站使用的图片资源位置在以下文件中配置：
+
+- **`src/i18n/images.json`** - CDN 图片地址（远程图片）- 目前不使用
+- **`src/i18n/images_local.json`** - 本地图片地址（本地资源）
+
+**修改图片：**
+1. 将图片文件放入 `src/assets/` 目录
+2. 在 `src/i18n/images_local.json` 中更新对应的图片路径
+3. 图片路径使用相对路径，例如：`"product.1": "/src/assets/product_1.jpg"`
+
+### 国际化文案配置
+
+网站支持多语言，文案文件位于：
+
+- **`src/i18n/locales/zh-CN.json`** - 中文文案
+- **`src/i18n/locales/en.json`** - 英文文案
+
+### IP 定位功能
+
+IP 自动定位功能**当前已关闭**。
+
+如需开启：打开 `src/i18n/index.js` 文件，取消注释60-65行，并注释掉55-58行的代码
+
